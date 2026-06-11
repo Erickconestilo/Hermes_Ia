@@ -1,0 +1,14 @@
+.env
+.env.*
+!.env.example
+secrets/
+logs/
+*.pem
+*.key
+id_rsa
+id_ed25519
+backup*
+*.bak
+*.backup
+*.token
+*.secret
