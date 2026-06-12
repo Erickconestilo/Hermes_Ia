@@ -13,6 +13,39 @@ Repositorio de documentación y operación para desplegar `Hermes Agent` en un V
 
 Construir una base estable, entendible y fácil de auditar antes de añadir complejidad operativa.
 
+## Prioridad actual
+
+La prioridad inmediata del proyecto es `Hermes IA`.
+
+Eso significa:
+
+- primero una instalación nativa, estable y verificable de Hermes
+- después configuración de modelo y pruebas básicas
+- solo más adelante evaluar servicios complementarios
+
+## Capacidad futura de la infraestructura
+
+Tomamos en cuenta que un VPS de Hetzner también puede servir más adelante como base para:
+
+- frontend y backend ligeros o medianos
+- `PostgreSQL` / `PostGIS`
+- `Redis`
+- `Docker`
+- una PaaS self-hosted como `Coolify` o `Dokploy`
+- `Uptime Kuma`
+- `Dozzle`
+- `n8n`
+- `GitHub Actions Runner`
+- backups, snapshots y cron jobs
+
+Esto no implica instalar todo desde el principio.
+
+Regla operativa:
+
+- no desplegar varias capas complejas el mismo día
+- priorizar primero `Hermes IA`
+- añadir el resto por fases y con documentación
+
 ## Principios
 
 - Simplicidad primero: un sistema simple que funciona antes que un sistema flexible pero frágil.
@@ -33,7 +66,23 @@ Construir una base estable, entendible y fácil de auditar antes de añadir comp
 
 ## Estado actual
 
-Fase 0 en curso: documentación base del proyecto.
+Fase 0 cerrada: documentación base y primer checkpoint Git local.
+
+Fase 1 completada:
+
+- proveedor elegido: `Hetzner`
+- servidor creado: `hermes-01`
+- plan: `CX33`
+- arquitectura: `x86`
+- ubicación: `Nuremberg`
+- imagen: `Ubuntu 24.04`
+
+Fase 2 siguiente:
+
+- acceso inicial por SSH
+- actualización base de Ubuntu
+- creación del usuario `hermes`
+- preparación mínima del sistema antes de instalar Hermes
 
 ## Fuentes
 
