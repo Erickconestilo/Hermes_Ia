@@ -56,13 +56,33 @@ Regla operativa:
 
 ## Estructura
 
-- [AGENTS.md](/C:/Users/guill/Documents/Hermes_Ia/AGENTS.md)
-- [.env.example](/C:/Users/guill/Documents/Hermes_Ia/.env.example)
-- [runbooks/](/C:/Users/guill/Documents/Hermes_Ia/runbooks)
-- [learning/bitacora.md](/C:/Users/guill/Documents/Hermes_Ia/learning/bitacora.md)
-- [scripts/](/C:/Users/guill/Documents/Hermes_Ia/scripts)
+- [AGENTS.md](AGENTS.md)
+- [.env.example](.env.example)
+- [runbooks/](runbooks/)
+- [learning/bitacora.md](learning/bitacora.md)
+- [scripts/](scripts/)
 - `logs/`
 - `secrets/`
+
+## Roadmap y Proyecto Piloto
+
+La hoja de ruta principal del proyecto está en:
+
+- [ROADMAP-HERMES.md](ROADMAP-HERMES.md)
+
+El proyecto piloto inicial para construir el sistema de trabajo con Hermes es:
+
+- [projects/hermes_ia/CONTEXTO.md](projects/hermes_ia/CONTEXTO.md)
+
+El estado técnico resumido de la instalación actual está en:
+
+- [runbooks/01-estado-actual.md](runbooks/01-estado-actual.md)
+
+Regla vigente de alcance:
+
+- `Hermes_Ia` es el único proyecto piloto inicial.
+- Todavía no se escala este sistema a `TopoField` ni `TopoTask`.
+- No se activan aún Docker, Playwright, Telegram, cron ni memoria externa como parte de Fase 0.
 
 ## Estado actual
 
@@ -88,4 +108,4 @@ Fase 2 siguiente:
 
 - Documentación oficial de Hermes / Nous Research: obligatoria antes de instalar.
 - Documentación oficial de Hetzner y Ubuntu: obligatoria antes de preparar el VPS.
-- Curso traducido incluido en [docs/curso-benjamin-hermes-transcripcion.md](/C:/Users/guill/Documents/Hermes_Ia/docs/curso-benjamin-hermes-transcripcion.md): contexto útil, pero no fuente exacta de comandos.
+- Curso traducido incluido en [docs/curso-benjamin-hermes-transcripcion.md](docs/curso-benjamin-hermes-transcripcion.md): contexto útil, pero no fuente exacta de comandos.

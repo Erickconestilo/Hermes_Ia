@@ -45,3 +45,11 @@
 - Primera prueba funcional exitosa: Hermes respondió usando `nex-agi/nex-n2-pro:free` a través de OpenRouter.
 - Segunda prueba funcional exitosa: Hermes confirmó identidad, backend terminal Linux integrado y directorio de trabajo `/home/hermes`.
 - Queda pendiente decidir con calma si conviene ejecutar `hermes doctor --fix` para migrar `config.yaml` de `v0` a `v29`.
+
+## 2026-06-13
+
+- Se cerró la idea de usar `Hermes_Ia` como proyecto piloto inicial del sistema de trabajo con IA.
+- Se decidió no escalar todavía el flujo documental ni operativo a `TopoField` ni `TopoTask`.
+- Se aprobó una Fase 0 centrada solo en estabilizar documentación y estado actual, sin tocar configuración ni instalar nuevas herramientas.
+- Se dejó como siguiente objetivo ordenar el proyecto piloto con un contexto claro, un estado actual centralizado y una lista mínima de tareas.
+- Se pospuso cualquier decisión sobre `hermes doctor --fix`, subagentes, cron, Telegram, memoria externa o nuevas interfaces hasta después de consolidar la base documental.
