@@ -4,6 +4,10 @@
 
 Conservar materiales externos valiosos sobre Hermes sin confundirlos con la fuente operativa principal de este proyecto.
 
+Documento complementario:
+
+- [backlog-futuro-hermes.md](/C:/Users/guill/Documents/Hermes_Ia/docs/backlog-futuro-hermes.md)
+
 ## Regla base
 
 En este repositorio, la documentación local y los runbooks propios prevalecen sobre tutoriales, cursos, vídeos o narrativas externas.
@@ -90,6 +94,53 @@ Estado actual:
 - goals agresivos
 - demos complejas de app-building como criterio de éxito inicial
 
+## Referencia 3: Goose
+
+Estado actual:
+
+- se considera una herramienta futura de comparación o complemento, no parte del stack principal actual
+
+### Qué aporta
+
+- otro agente open source generalista con Desktop, CLI y API
+- fuerte orientación a workflows, research, automatización y código
+- soporte amplio para MCP
+- recipes y extensiones que pueden inspirar sistemas reutilizables
+
+### Posible beneficio para este proyecto
+
+- comparar filosofías de agente frente a Hermes
+- evaluar si alguna capacidad de Goose resuelve mejor ciertos casos de uso
+- usarlo como laboratorio futuro para research, automation o recipes
+
+### Riesgos si se mete demasiado pronto
+
+- duplica complejidad mental y operativa
+- introduce otro ecosistema de configuración, modelos y extensiones
+- puede dispersar el aprendizaje antes de consolidar Hermes
+- puede crear solapamiento innecesario entre dos agentes en vez de claridad
+
+### Cómo lo usamos aquí
+
+- como idea de backlog futuro
+- como referencia comparativa
+- como posible complemento de laboratorio, no como sustituto inmediato de Hermes
+
+### Qué no hacemos todavía
+
+- instalar Goose en el VPS principal
+- integrarlo con Hermes en esta fase
+- repartir el trabajo principal entre Hermes y Goose
+- abrir una nueva línea de mantenimiento paralela sin necesidad clara
+
+### Condición para reevaluarlo
+
+Solo tendría sentido volver a estudiar Goose cuando:
+
+1. Hermes ya tenga 2 o 3 usos oficiales asentados
+2. detectemos una limitación concreta de Hermes
+3. exista una razón clara para comparar o complementar, no solo curiosidad
+
 ## Posición del proyecto
 
 La estrategia vigente de este repositorio es:
@@ -109,6 +160,7 @@ La estrategia vigente de este repositorio es:
 
 - Benjamin = visión y mapa futuro
 - Fatz = práctica y operación de campo
+- Goose = posible comparación o complemento futuro
 - runbooks del repo = verdad operativa actual
 
 ## Criterio de adopción futura
