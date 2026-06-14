@@ -27,6 +27,7 @@ A fecha actual, ya se ha validado lo siguiente:
   - `node --version`
 - configuración de OpenRouter
 - funcionamiento de Hermes con modelo principal y fallback
+- sincronización manual local ↔ VPS mediante Git local ya operativa para documentación y runbooks de `Hermes_Ia`
 
 ## Configuración actual del modelo
 
