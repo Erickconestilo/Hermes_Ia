@@ -6,25 +6,25 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 
 ## Siguiente tarea concreta
 
-- cerrar la base documental mínima de Fase 0
+- consolidar el ritual de arranque de sesión como primer uso oficial práctico de Hermes
 
 ## En curso
 
-- ordenar el contexto del proyecto piloto
-- centralizar el estado actual
-- dejar reglas de seguridad ejecutivas visibles
+- usar a Hermes como lector de contexto del proyecto piloto
+- usar a Hermes para priorizar la siguiente tarea pequeña y útil
+- validar un flujo simple de trabajo sobre `Hermes_Ia`
 
 ## Pendientes cercanas
 
-- revisar si `README.md` refleja bien el roadmap y el proyecto piloto
-- consolidar el uso de `Hermes_Ia` como único piloto inicial
+- confirmar que el ritual de arranque es útil y repetible
+- definir cuál será la primera acción real de Fase 1 más allá de resumir
 - decidir más adelante si conviene evaluar `hermes doctor --fix` con cuidado
 
 ## Bloqueos o dudas abiertas
 
 - cuándo conviene migrar `config.yaml` de `v0` a `v29`
 - cuándo merece la pena activar fases posteriores como cron, skills o perfiles
-- qué primer uso oficial de Hermes aporta más valor real
+- cuándo pasar de la sincronización manual selectiva a un flujo basado en Git remoto
 
 ## Completadas recientes
 
@@ -33,6 +33,9 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 - documentación técnica principal ampliada
 - referencias externas y backlog futuro documentados
 - roadmap base ya redactado
+- Fase 0 documental cerrada en Git
+- proyecto piloto copiado al workspace del VPS
+- Hermes validado como lector de contexto y asistente documental básico
 
 ## No hacer todavía
 
@@ -45,6 +48,6 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 
 ## Backlog cercano
 
-- definir primer uso oficial de Hermes dentro de `Hermes_Ia`
-- decidir si la siguiente fase será documental o de uso práctico controlado
-- preparar futura evaluación de PRD y RFC solo cuando Fase 0 esté cerrada
+- convertir el ritual de arranque en un hábito de sesión
+- elegir una primera acción real y pequeña de Fase 1
+- preparar futura evaluación de PRD y RFC cuando el uso práctico básico ya sea estable

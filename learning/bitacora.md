@@ -53,3 +53,32 @@
 - Se aprobó una Fase 0 centrada solo en estabilizar documentación y estado actual, sin tocar configuración ni instalar nuevas herramientas.
 - Se dejó como siguiente objetivo ordenar el proyecto piloto con un contexto claro, un estado actual centralizado y una lista mínima de tareas.
 - Se pospuso cualquier decisión sobre `hermes doctor --fix`, subagentes, cron, Telegram, memoria externa o nuevas interfaces hasta después de consolidar la base documental.
+
+## Ritual de arranque de sesion
+
+Rellenar al inicio de cada sesion sobre `Hermes_Ia`.
+
+### Arranque
+
+- Fecha:
+- Estado actual en 3 lineas:
+- Documentos leidos:
+  - `README.md`
+  - `runbooks/01-estado-actual.md`
+  - `projects/hermes_ia/CONTEXTO.md`
+  - `projects/hermes_ia/TAREAS.md`
+
+### 5 preguntas fijas
+
+1. ?Donde esta el proyecto ahora?
+2. ?Cual es la siguiente accion pequena y ejecutable?
+3. ?Que valor practico aporta esa accion?
+4. ?Que no debo intentar todavia?
+5. ?Que tendria que quedar hecho para que la sesion haya valido la pena?
+
+### Cierre
+
+- Accion elegida:
+- Resultado:
+- Pendiente para la proxima sesion:
+- Limites respetados:

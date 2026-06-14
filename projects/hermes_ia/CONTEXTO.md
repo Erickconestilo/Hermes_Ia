@@ -20,14 +20,21 @@ Está validado:
 - OpenRouter operativo
 - modelo principal y fallback funcionando
 
+Además:
+
+- Fase 0 documental ya quedó cerrada en Git
+- el proyecto ya tiene contexto base, estado actual y tareas mínimas
+- Fase 1 ya comenzó en modo controlado
+
 ## Objetivo inmediato
 
-Usar Hermes primero como:
+Usar Hermes ahora como:
 
 - asistente documental
 - lector y organizador de Markdown
 - recuperador de contexto del proyecto
 - apoyo para pensar mejor los siguientes pasos
+- ritual de arranque de sesión
 
 ## Límites actuales
 
@@ -76,7 +83,7 @@ Hermes no debe tomar todavía decisiones automáticas sobre:
 
 Al terminar esta fase, el proyecto debe tener:
 
-- contexto claro
-- estado actual centralizado
-- tareas mínimas visibles
-- límites bien definidos
+- un ritual simple y repetible de arranque de sesión con Hermes
+- capacidad de leer el contexto real del proyecto
+- capacidad de proponer la siguiente tarea pequeña y útil
+- uso práctico inicial validado sin tocar configuración

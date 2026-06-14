@@ -71,13 +71,18 @@ Todavía no se extiende esta estructura a:
 - `TopoField`
 - `TopoTask`
 
-## Siguiente paso permitido en Fase 0
+## Estado de fase actual
 
-El siguiente paso permitido es documental:
+- Fase 0 documental: cerrada
+- Fase 1: iniciada en modo controlado
 
-- ordenar el contexto del proyecto piloto
-- mantener una lista mínima de tareas
-- preparar la base para fases posteriores sin tocar configuración
+## Siguiente paso permitido en Fase 1
+
+El siguiente paso permitido es de uso práctico básico:
+
+- usar Hermes como asistente documental del proyecto piloto
+- usar Hermes como ritual de arranque de sesión
+- validar una primera acción pequeña y útil sin tocar configuración
 
 ## Qué no toca esta fase
 
