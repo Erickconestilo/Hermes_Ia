@@ -6,7 +6,7 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 
 ## Siguiente tarea concreta
 
-- usar esta peticion minima para pedir una sola tarea util dentro de `Hermes_Ia`
+- definir los 3 usos oficiales iniciales de Hermes: Research, Content y Builder
 
 ## Peticion minima de tarea
 

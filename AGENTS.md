@@ -2,7 +2,7 @@
 
 ## Propósito del repositorio
 
-Este repositorio documenta y guía el despliegue de `Hermes Agent` en un VPS de Hetzner con una estrategia inicial nativa y conservadora.
+Este repositorio documenta y guía la evolución de `Hermes Agent` en un VPS de Hetzner con una estrategia de expansión controlada: base nativa, seguridad suficiente y crecimiento por fases con pruebas pequeñas y reversibles.
 
 ## Decisiones vigentes
 
@@ -23,10 +23,11 @@ Este repositorio documenta y guía el despliegue de `Hermes Agent` en un VPS de 
 - Verificar comandos sensibles con fuentes oficiales antes de proponerlos.
 - Explicar siempre: objetivo, riesgo, alternativa, rollback y verificación.
 - Advertir explícitamente antes de cambios que puedan afectar acceso SSH, firewall o usuario administrador.
+- Si algo es riesgoso, no lo bloquees sin más: propón una prueba mínima, aislada y reversible.
 
 ## Convenciones de documentación
 
 - Usar placeholders, nunca secretos reales.
-- Documentar por fases y con pasos pequeños.
+- Documentar por fases, distinguiendo entre operativo ahora, siguiente experimento seguro, futuro planificado y descartado por ahora.
 - Registrar decisiones y dudas abiertas en los runbooks y en la bitácora.
 - Mantener el camino de migración futura a `terminal.backend = docker` sin implementarlo todavía.
