@@ -15,6 +15,53 @@ Cada sesion debe terminar con uno de estos resultados:
 
 Si no pasa una de esas cuatro cosas, la sesion no aporto suficiente.
 
+## Niveles de autonomia
+
+### Verde
+
+Permitir con poca friccion:
+
+- leer archivos
+- buscar con `grep`, `find` o `rg`
+- ejecutar `git status`
+- ejecutar `git diff`
+- crear o modificar Markdown
+- crear scripts pequenos dentro del repo
+- ejecutar scripts simples de verificacion si ya se mostro el contenido y no tocan sistema
+
+En este nivel, `Allow once` suele ser aceptable.
+
+### Amarillo
+
+Revisar antes de ejecutar:
+
+- `chmod +x`
+- scripts nuevos
+- cambios en varios archivos
+- pequenos cambios de flujo Git
+- automatizaciones internas del repo
+
+Si la accion es clara, local, reversible y de bajo riesgo, se puede permitir con `Allow once`.
+
+### Rojo
+
+Bloquear o pedir confirmacion fuerte para:
+
+- `sudo`
+- `apt`
+- `systemctl`
+- firewall
+- SSH
+- `.env`
+- claves, tokens o secretos
+- Docker
+- cron
+- Telegram
+- MCPs
+- Playwright
+- `hermes doctor --fix`
+- cambios fuera de `Hermes_Ia`
+
 ## Flujo recomendado
 
 ### 1. Preparar contexto local
@@ -118,6 +165,12 @@ Hay que cortarlo y redirigirlo si hace una de estas cosas:
 - repite decisiones ya documentadas
 - habla de Docker, cron, Telegram, MCPs o memoria externa sin permiso
 - convierte una tarea simple en una ceremonia
+
+No hay que cortarlo automaticamente si:
+
+- propone un script pequeno de verificacion
+- el contenido ya se vio
+- la accion es local, reversible y de bajo riesgo
 
 ## Anti-patrones de este proyecto
 

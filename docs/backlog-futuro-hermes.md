@@ -16,6 +16,10 @@ No implica:
 
 Cada idea debe volver a discutirse antes de entrar en fase operativa.
 
+Pero tampoco debe tratarse como un cementerio de ideas.
+
+Si una idea muestra valor claro y puede probarse con bajo riesgo, puede pasar de backlog a experimento seguro.
+
 ## Prioridad actual del proyecto
 
 Antes de abrir nuevas líneas, sigue vigente esta base:
@@ -25,6 +29,7 @@ Antes de abrir nuevas líneas, sigue vigente esta base:
 - backend `local`
 - documentación clara
 - pocos puntos de fallo
+- autonomía controlada en tareas de bajo riesgo
 
 ## Ideas futuras a revisar
 
@@ -124,6 +129,7 @@ Notas:
 
 - no cargar skills por colección
 - instalar solo si hay una tarea repetitiva clara
+- pasar a skill cuando un flujo ya haya demostrado repetición y retorno real
 
 ### 5. Telegram Gateway
 

@@ -2,7 +2,7 @@
 
 ## Propósito del repositorio
 
-Este repositorio documenta y guía la evolución de `Hermes Agent` en un VPS de Hetzner con una estrategia de expansión controlada: base nativa, seguridad suficiente y crecimiento por fases con pruebas pequeñas y reversibles.
+Este repositorio documenta y guía la evolución de `Hermes Agent` en un VPS de Hetzner con una estrategia de autonomía controlada: base nativa, seguridad suficiente y crecimiento por fases con pruebas pequeñas, aisladas y reversibles.
 
 ## Decisiones vigentes
 
@@ -10,6 +10,8 @@ Este repositorio documenta y guía la evolución de `Hermes Agent` en un VPS de 
 - Usar un usuario dedicado `hermes`, no `root`, para operar Hermes.
 - Guardar datos de Hermes en `/home/hermes/.hermes`.
 - Usar `/home/hermes/workspace` como workspace principal.
+- Tratar Hermes como agente operativo real, no como chatbot limitado.
+- Usar `Research`, `Content` y `Builder` como usos oficiales iniciales.
 - No exponer dashboard público.
 - No exponer API pública.
 - No activar Telegram, MCPs o Playwright en la fase inicial salvo exigencia oficial.
@@ -24,6 +26,12 @@ Este repositorio documenta y guía la evolución de `Hermes Agent` en un VPS de 
 - Explicar siempre: objetivo, riesgo, alternativa, rollback y verificación.
 - Advertir explícitamente antes de cambios que puedan afectar acceso SSH, firewall o usuario administrador.
 - Si algo es riesgoso, no lo bloquees sin más: propón una prueba mínima, aislada y reversible.
+
+## Autonomía operativa
+
+- Verde: permitir con poca fricción lectura, búsqueda, `git status`, `git diff`, Markdown, scripts pequeños del repo y verificaciones simples.
+- Amarillo: revisar antes de ejecutar scripts nuevos, `chmod +x`, cambios en varios archivos o automatizaciones internas pequeñas.
+- Rojo: bloquear o pedir confirmación fuerte para `sudo`, paquetes, servicios, `.env`, secretos, Docker, cron, Telegram, MCPs, Playwright, `hermes doctor --fix` y cambios fuera de `Hermes_Ia`.
 
 ## Convenciones de documentación
 

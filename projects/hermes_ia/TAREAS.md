@@ -6,7 +6,7 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 
 ## Siguiente tarea concreta
 
-- ejecutar el primer experimento seguro de `Hermes Research` y registrar una salida reutilizable
+- crear y validar un script pequeno de `Hermes Builder` para verificar cambios dentro de `projects/hermes_ia`
 
 ## Peticion minima de tarea
 
@@ -21,6 +21,7 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 - consolidar el flujo local ↔ Git ↔ VPS ↔ Hermes
 - convertir el ritual de arranque en un habito de sesion
 - usar `OPERATIVA-DIARIA.md` como referencia para ejecutar sin volver al bucle meta
+- permitir autonomia controlada en tareas verdes y amarillas bajas de `Hermes Builder`
 
 ## Pendientes cercanas
 
@@ -48,6 +49,8 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 - `gpt-5.4-mini` validado para trabajo ligero
 - usos oficiales iniciales definidos: `Research`, `Content` y `Builder`
 - guía operativa diaria creada para trabajo local ↔ VPS ↔ Hermes
+- primer briefing real de `Hermes Research` registrado
+- primera salida real de `Hermes Content` registrada
 - documentación técnica principal ampliada
 - referencias externas y backlog futuro documentados
 - roadmap base ya redactado
