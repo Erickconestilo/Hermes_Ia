@@ -6,7 +6,13 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 
 ## Siguiente tarea concreta
 
-- usar Hermes una vez con el contexto ya corregido para pedir una sola tarea nueva, pequena, util y no meta dentro de `Hermes_Ia`
+- usar esta peticion minima para pedir una sola tarea util dentro de `Hermes_Ia`
+
+## Peticion minima de tarea
+
+- archivo:
+- cambio:
+- verificacion:
 
 ## En curso
 
