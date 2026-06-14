@@ -86,8 +86,6 @@ Regla vigente de alcance:
 
 ## Estado actual
 
-## Estado actual
-
 Fase 0 documental: cerrada.
 
 Fase 1: iniciada en modo controlado.
