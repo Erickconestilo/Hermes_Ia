@@ -6,18 +6,18 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 
 ## Siguiente tarea concreta
 
-- elegir y dejar escrita una primera accion real, pequena y util de Fase 1 dentro de `Hermes_Ia`
+- usar Hermes una vez con el contexto ya corregido para pedir una sola tarea nueva, pequena, util y no meta dentro de `Hermes_Ia`
 
 ## En curso
 
 - usar a Hermes como lector de contexto del proyecto piloto
 - usar a Hermes para priorizar la siguiente tarea pequena y util
-- validar un flujo simple de trabajo sobre `Hermes_Ia`
+- consolidar el flujo local ↔ Git ↔ VPS ↔ Hermes
 - convertir el ritual de arranque en un habito de sesion
 
 ## Pendientes cercanas
 
-- dejar definida la primera accion practica de Fase 1 en una nota breve y trazable
+- elegir una tarea nueva que no repita resumenes, bitacora base ni ajustes de fase
 - decidir más adelante si conviene evaluar `hermes doctor --fix` con cuidado
 
 ## Decision provisional sobre PRD/RFC
@@ -37,11 +37,13 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 
 - instalación base de Hermes validada
 - OpenRouter operativo
+- `openai-codex` autenticado y operativo como proveedor principal
+- `gpt-5.4-mini` validado para trabajo ligero
 - documentación técnica principal ampliada
 - referencias externas y backlog futuro documentados
 - roadmap base ya redactado
 - Fase 0 documental cerrada en Git
-- proyecto piloto copiado al workspace del VPS
+- proyecto piloto sincronizado entre local y VPS por Git
 - Hermes validado como lector de contexto y asistente documental básico
 - evaluacion minima de PRD/RFC ya resuelta de forma provisional
 
@@ -56,5 +58,5 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 
 ## Backlog cercano
 
-- elegir una primera accion real y pequena de Fase 1 despues de esta decision provisional
+- pasar de tareas meta a una tarea concreta de uso real dentro de `Hermes_Ia`
 - preparar futura evaluación de PRD y RFC cuando el uso práctico básico ya sea estable

@@ -17,8 +17,10 @@ Está validado:
 - instalación nativa
 - usuario `hermes`
 - backend `local`
-- OpenRouter operativo
-- modelo principal y fallback funcionando
+- `openai-codex` autenticado como proveedor principal
+- `gpt-5.4-mini` funcionando para trabajo ligero
+- OpenRouter mantenido como fallback
+- sincronización local ↔ VPS por Git ya operativa
 
 Además:
 
@@ -30,11 +32,11 @@ Además:
 
 Usar Hermes ahora como:
 
-- asistente documental
-- lector y organizador de Markdown
-- recuperador de contexto del proyecto
-- apoyo para pensar mejor los siguientes pasos
-- ritual de arranque de sesión
+- operador de arranque y priorización diaria
+- lector y organizador de Markdown del proyecto
+- recuperador de contexto real antes de cada sesión
+- ayuda para elegir una sola tarea concreta y útil
+- apoyo práctico sin tocar configuración
 
 ## Límites actuales
 
@@ -52,9 +54,9 @@ En esta fase no se debe asumir todavía que Hermes será:
 El alcance actual se limita a:
 
 - `Hermes_Ia`
-- documentación
-- organización del estado técnico
-- preparación de una base sólida para fases posteriores
+- documentación operativa ya consolidada
+- organización del estado técnico vigente
+- uso práctico básico de Hermes dentro del proyecto
 
 Quedan fuera por ahora:
 
@@ -83,7 +85,7 @@ Hermes no debe tomar todavía decisiones automáticas sobre:
 
 Al terminar esta fase, el proyecto debe tener:
 
-- un ritual simple y repetible de arranque de sesión con Hermes
-- capacidad de leer el contexto real del proyecto
-- capacidad de proponer la siguiente tarea pequeña y útil
-- uso práctico inicial validado sin tocar configuración
+- un flujo operativo claro entre local, Git, VPS y Hermes
+- capacidad de leer el contexto real del proyecto sin caer en tareas ya hechas
+- capacidad de proponer una sola tarea pequeña y útil
+- uso práctico inicial validado sin tocar configuración ni instalar más componentes

@@ -28,17 +28,21 @@ A fecha actual, ya se ha validado lo siguiente:
 - configuración de OpenRouter
 - funcionamiento de Hermes con modelo principal y fallback
 - sincronización manual local ↔ VPS mediante Git local ya operativa para documentación y runbooks de `Hermes_Ia`
+- autenticación `openai-codex` validada en Hermes
+- respuesta funcional validada con `gpt-5.4-mini`
 
 ## Configuración actual del modelo
 
-- proveedor operativo: `OpenRouter`
-- modelo principal: `nex-agi/nex-n2-pro:free`
-- fallback: `nvidia/nemotron-3-ultra-550b-a55b:free`
+- proveedor principal: `openai-codex`
+- modelo activo para trabajo ligero: `gpt-5.4-mini`
+- fallback temporal: `OpenRouter`
+- modelo fallback actual: `nvidia/nemotron-3-ultra-550b-a55b:free`
 
 ## Estado de credenciales
 
-- OpenRouter está configurado mediante entorno local, sin documentar ni versionar la clave.
-- `hermes doctor` ya valida `OpenRouter API`.
+- `openai-codex` ya está autenticado en Hermes.
+- OpenRouter se mantiene configurado como fallback mediante entorno local, sin documentar ni versionar la clave.
+- `hermes doctor` ya valida `OpenAI Codex auth` y `OpenRouter API`.
 
 ## Advertencias no bloqueantes
 
@@ -81,9 +85,15 @@ Todavía no se extiende esta estructura a:
 
 El siguiente paso permitido es de uso práctico básico:
 
-- usar Hermes como asistente documental del proyecto piloto
-- usar Hermes como ritual de arranque de sesión
-- validar una primera acción pequeña y útil sin tocar configuración
+- usar Hermes como operador de arranque y priorización diaria del proyecto piloto
+- pedir una sola tarea concreta, pequeña y útil que no esté ya hecha
+- ejecutar tareas de documentación o coordinación solo si aportan valor real inmediato
+
+## Flujo operativo real
+
+- local: editar archivos, revisar `git diff`, hacer commit y `git push vps master`
+- VPS: entrar por `ssh` como `hermes`, ir a `/home/hermes/workspace/Hermes_Ia` y abrir `hermes`
+- Git ya no debe usarse con copias manuales archivo a archivo salvo incidencia excepcional
 
 ## Qué no toca esta fase
 
