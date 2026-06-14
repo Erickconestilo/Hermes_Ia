@@ -20,6 +20,7 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 - usar a Hermes para priorizar la siguiente tarea pequena y util
 - consolidar el flujo local ↔ Git ↔ VPS ↔ Hermes
 - convertir el ritual de arranque en un habito de sesion
+- usar `OPERATIVA-DIARIA.md` como referencia para ejecutar sin volver al bucle meta
 
 ## Pendientes cercanas
 
@@ -45,6 +46,7 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 - OpenRouter operativo
 - `openai-codex` autenticado y operativo como proveedor principal
 - `gpt-5.4-mini` validado para trabajo ligero
+- guía operativa diaria creada para trabajo local ↔ VPS ↔ Hermes
 - documentación técnica principal ampliada
 - referencias externas y backlog futuro documentados
 - roadmap base ya redactado

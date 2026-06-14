@@ -73,6 +73,7 @@ La hoja de ruta principal del proyecto está en:
 El proyecto piloto inicial para construir el sistema de trabajo con Hermes es:
 
 - [projects/hermes_ia/CONTEXTO.md](projects/hermes_ia/CONTEXTO.md)
+- [projects/hermes_ia/OPERATIVA-DIARIA.md](projects/hermes_ia/OPERATIVA-DIARIA.md)
 
 El estado técnico resumido de la instalación actual está en:
 

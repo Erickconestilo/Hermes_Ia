@@ -55,6 +55,7 @@ El alcance actual se limita a:
 
 - `Hermes_Ia`
 - documentación operativa ya consolidada
+- operativa diaria local ↔ Git ↔ VPS ↔ Hermes
 - organización del estado técnico vigente
 - uso práctico básico de Hermes dentro del proyecto
 
@@ -89,3 +90,4 @@ Al terminar esta fase, el proyecto debe tener:
 - capacidad de leer el contexto real del proyecto sin caer en tareas ya hechas
 - capacidad de proponer una sola tarea pequeña y útil
 - uso práctico inicial validado sin tocar configuración ni instalar más componentes
+- una referencia corta de trabajo diario en `projects/hermes_ia/OPERATIVA-DIARIA.md`
