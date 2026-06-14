@@ -1,11 +1,13 @@
 # CONTEXTO
 
-## Propósito
+## Objetivo real de Hermes_Ia
 
-`Hermes_Ia` es el proyecto piloto inicial para construir un sistema real de trabajo con IA usando `Hermes` como núcleo principal.
+Hermes_Ia no es solo un repositorio de documentación ni una instalación de Hermes.
 
-No es todavía un sistema multi-proyecto ni un laboratorio de todas las herramientas posibles.
-Es la base desde la que se validará el método de trabajo.
+Es el arnés personal de IA de Erick/CiudadanoInusual: una capa operativa que combina Hermes, modelos, memoria, skills, herramientas, scripts, permisos, flujos de trabajo y futuros subagentes para convertir la IA en un sistema práctico de investigación, creación de contenido, construcción técnica y apoyo personal.
+
+La meta no es tener más prompts.
+La meta es tener un sistema que piense, recuerde, ejecute, verifique y mejore conmigo.
 
 ## Estado actual
 
