@@ -129,6 +129,13 @@ Cuando el cambio ya este bien en local:
 
 La sincronizacion normal ya no debe hacerse con `scp` salvo incidente puntual.
 
+Regla de flujo para artefactos versionados:
+
+- si el resultado debe vivir en Git, Hermes debe devolver el contenido en chat
+- el archivo versionado se crea o actualiza en local
+- despues se distribuye con `git push origin master` y `git push vps master`
+- evitar que Hermes cree archivos nuevos directamente en el VPS si luego deben entrar en el repo
+
 ### 5. Usar Hermes con una instruccion corta
 
 Preferir prompts cortos y operativos.
