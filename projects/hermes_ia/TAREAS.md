@@ -6,7 +6,7 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 
 ## Siguiente tarea concreta
 
-- definir los 3 usos oficiales iniciales de Hermes: Research, Content y Builder
+- ejecutar el primer experimento seguro de `Hermes Research` y registrar una salida reutilizable
 
 ## Peticion minima de tarea
 
@@ -46,6 +46,7 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 - OpenRouter operativo
 - `openai-codex` autenticado y operativo como proveedor principal
 - `gpt-5.4-mini` validado para trabajo ligero
+- usos oficiales iniciales definidos: `Research`, `Content` y `Builder`
 - guía operativa diaria creada para trabajo local ↔ VPS ↔ Hermes
 - documentación técnica principal ampliada
 - referencias externas y backlog futuro documentados
