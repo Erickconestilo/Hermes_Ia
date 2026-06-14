@@ -82,3 +82,38 @@ Rellenar al inicio de cada sesion sobre `Hermes_Ia`.
 - Resultado:
 - Pendiente para la proxima sesion:
 - Limites respetados:
+
+## Sesion de arranque - 2026-06-14
+
+### Arranque
+
+- Fecha: 2026-06-14
+- Estado actual en 3 lineas:
+  - `Hermes_Ia` ya tiene base documental y contexto tecnico minimo.
+  - Hermes funciona en el VPS con OpenRouter y backend local.
+  - La fase actual es de uso practico inicial, sin tocar configuracion.
+- Documentos leidos:
+  - `README.md`
+  - `runbooks/01-estado-actual.md`
+  - `projects/hermes_ia/CONTEXTO.md`
+  - `projects/hermes_ia/TAREAS.md`
+
+### 5 preguntas fijas
+
+1. ?Donde esta el proyecto ahora?
+   - En Fase 1 controlada, con infraestructura base y documentacion principal ya listas.
+2. ?Cual es la siguiente accion pequena y ejecutable?
+   - Usar una vez el ritual de arranque y dejar elegida una unica tarea pequena para la proxima sesion.
+3. ?Que valor practico aporta esa accion?
+   - Convierte Hermes en una herramienta operativa minima y deja trazabilidad del flujo.
+4. ?Que no debo intentar todavia?
+   - No tocar configuracion, VPS, Docker, cron, Telegram, MCPs, memoria externa ni otros proyectos.
+5. ?Que tendria que quedar hecho para que la sesion haya valido la pena?
+   - Ritual usado una vez, cierre breve registrado y siguiente accion pequena identificada.
+
+### Cierre
+
+- Accion elegida: registrar la primera sesion real de arranque.
+- Resultado: ritual validado como primer uso practico de Hermes dentro de `Hermes_Ia`.
+- Pendiente para la proxima sesion: elegir y ejecutar una primera tarea pequena de Fase 1 sin ampliar alcance.
+- Limites respetados: no se toco configuracion, VPS ni otros proyectos.
