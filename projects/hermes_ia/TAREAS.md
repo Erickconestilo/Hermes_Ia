@@ -6,7 +6,7 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 
 ## Siguiente tarea concreta
 
-- dejar escrita una evaluacion minima de si PRD/RFC ya aporta valor para el uso documental de `Hermes_Ia`
+- elegir y dejar escrita una primera accion real, pequena y util de Fase 1 dentro de `Hermes_Ia`
 
 ## En curso
 
@@ -18,8 +18,14 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 ## Pendientes cercanas
 
 - dejar definida la primera accion practica de Fase 1 en una nota breve y trazable
-- decidir provisionalmente si PRD/RFC aporta ya o todavia no
 - decidir más adelante si conviene evaluar `hermes doctor --fix` con cuidado
+
+## Decision provisional sobre PRD/RFC
+
+- por ahora no aporta abrir un `PRD` o `RFC` completo
+- si aporta mantener una evaluacion minima documentada
+- motivo: el proyecto todavia esta consolidando uso practico basico, no una capa documental mas pesada
+- condicion para reabrir la decision: cuando el flujo de uso con Hermes ya sea estable y aparezca una necesidad real de especificacion
 
 ## Bloqueos o dudas abiertas
 
@@ -37,6 +43,7 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 - Fase 0 documental cerrada en Git
 - proyecto piloto copiado al workspace del VPS
 - Hermes validado como lector de contexto y asistente documental básico
+- evaluacion minima de PRD/RFC ya resuelta de forma provisional
 
 ## No hacer todavía
 
@@ -49,5 +56,5 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 
 ## Backlog cercano
 
-- elegir una primera accion real y pequena de Fase 1 despues de la evaluacion minima
+- elegir una primera accion real y pequena de Fase 1 despues de esta decision provisional
 - preparar futura evaluación de PRD y RFC cuando el uso práctico básico ya sea estable
