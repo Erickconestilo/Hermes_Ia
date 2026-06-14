@@ -86,9 +86,13 @@ Regla vigente de alcance:
 
 ## Estado actual
 
-Fase 0 cerrada: documentación base y primer checkpoint Git local.
+## Estado actual
 
-Fase 1 completada:
+Fase 0 documental: cerrada.
+
+Fase 1: iniciada en modo controlado.
+
+Estado validado dentro de esta fase:
 
 - proveedor elegido: `Hetzner`
 - servidor creado: `hermes-01`
@@ -96,13 +100,13 @@ Fase 1 completada:
 - arquitectura: `x86`
 - ubicación: `Nuremberg`
 - imagen: `Ubuntu 24.04`
+- acceso SSH validado
+- usuario `hermes` creado
+- Hermes instalado y operativo
+- OpenRouter configurado
+- sincronización local ↔ VPS por Git ya operativa
 
-Fase 2 siguiente:
-
-- acceso inicial por SSH
-- actualización base de Ubuntu
-- creación del usuario `hermes`
-- preparación mínima del sistema antes de instalar Hermes
+Fase 2: pendiente para más adelante, solo después de cerrar correctamente la Fase 1.
 
 ## Fuentes
 
