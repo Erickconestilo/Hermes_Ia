@@ -19,6 +19,37 @@
 - Enfoque practico: no usarla para todo; elegir una sola tarea frecuente y medir si ahorra tiempo.
 - Cierre: empezar pequeno, revisar resultados y escalar solo si hay mejora clara.
 
+## Ejemplo concreto
+
+Una prueba simple en Windows seria trabajar con la carpeta de descargas.
+
+Antes:
+
+- descargas facturas, apuntes, PDFs o capturas
+- abres cada archivo uno por uno
+- intentas recordar de que va
+- le pones un nombre rapido
+- lo mueves a una carpeta, o lo dejas acumulado
+
+Despues:
+
+- usas IA para resumir el contenido del documento o captura
+- le pides 3 nombres de archivo claros
+- decides una carpeta probable
+- revisas antes de mover nada
+
+No hace falta automatizar todo el PC. El primer objetivo es reducir una microdecision repetida: "que es este archivo y donde lo pongo".
+
+## Medicion del piloto
+
+Durante 2 semanas, medir solo tres cosas:
+
+- cuantos minutos ahorra ordenar o preparar archivos
+- cuantos errores obliga a corregir
+- si reduce o aumenta la friccion mental
+
+Si no ahorra tiempo o genera mas dudas, se descarta. Si funciona, entonces se puede pensar en automatizar una parte con Power Automate.
+
 ## Cierre util
 
-Si quieres que la IA te sirva de verdad en Windows, no empieces por buscar el prompt perfecto: empieza por una tarea repetitiva concreta que haces cada dia. Si te ahorra tiempo, reduce errores y no te complica mas la vida, ahi si hay productividad real.
+Si quieres que la IA te sirva de verdad en Windows, no empieces por buscar el prompt perfecto. Empieza por una tarea aburrida que haces cada semana y preguntate tres cosas: me ahorro tiempo, cometo menos errores y termino con menos caos. Si la respuesta es si, ahi hay productividad real. Si no, solo cambiaste una perdida de tiempo por otra mas moderna.
