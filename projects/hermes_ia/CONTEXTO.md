@@ -93,3 +93,7 @@ Al terminar esta fase, el proyecto debe tener:
 - capacidad de proponer una sola tarea pequeña y útil
 - uso práctico inicial validado sin tocar configuración ni instalar más componentes
 - una referencia corta de trabajo diario en `projects/hermes_ia/OPERATIVA-DIARIA.md`
+
+---
+
+Para detalles técnicos del VPS, modelos y proveedores, ver `docs/CODEX-BRIEF.md`
