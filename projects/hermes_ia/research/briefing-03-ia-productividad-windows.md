@@ -42,6 +42,18 @@ La lectura util para alguien que trabaja en Windows es esta:
 
 La pauta practica es no mezclar todo en un solo uso. Copilot sirve para acelerar el trabajo intelectual; Power Automate sirve para eliminar pasos mecanicos. Juntos, cubren el grueso de la productividad personal real en Windows.
 
+## Primer piloto recomendado
+
+Automatizar o asistir una sola tarea diaria en Windows:
+
+- resumir un documento largo
+- ordenar una carpeta de descargas
+- convertir notas sueltas en borrador
+- preparar una respuesta de correo
+- extraer datos repetitivos de una web o Excel
+
+Elegir solo una y medirla durante 2 semanas.
+
 ## Riesgos
 
 - privacidad y exposicion de datos: no conviene pegar informacion sensible sin revisar que cuenta, que producto y que politica se esta usando
