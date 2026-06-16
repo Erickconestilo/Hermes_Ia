@@ -99,3 +99,8 @@ Mi recomendacion prudente es esta:
 4. Antes de decidir, comprueba en TodoFP que centros ofrecen el ciclo en tu CCAA y si el titulo que te interesa esta vigente.
 
 Siguiente research posible: vivienda y credito en Espana para perfil trabajador.
+
+## Evaluacion Judge
+
+- Puntuacion: 9/10
+- Justificacion: briefing muy solido con fuentes oficiales verificables, tesis clara, riesgos identificados y conclusion accionable. Cumple todos los criterios de Research: tema concreto, evidencia con fuentes, lectura practica, riesgos y conclusion que ayuda a decidir. Evita lo generico y aporta valor real. Solo le falta datos mas especificos de demanda por CCAA para ser 10/10, pero como esta es completamente reutilizable.

@@ -18,8 +18,6 @@ Si no se puede verificar, no entra en la cola.
 
 ## Research siguientes
 
-- IA practica para productividad personal en Windows -> briefing con fuentes, riesgos y conclusion accionable -> guardar en `projects/hermes_ia/research/`
-- oportunidades de FP vinculadas a topografia, construccion o datos -> briefing con fuentes oficiales y lectura practica -> guardar en `projects/hermes_ia/research/`
 - vivienda y credito en Espana para perfil trabajador -> briefing prudente con riesgos y fuentes -> guardar en `projects/hermes_ia/research/`
 
 ## Content siguientes
@@ -30,8 +28,8 @@ Si no se puede verificar, no entra en la cola.
 
 ## Builder siguientes
 
+- crear `prompts/video.md` con plantillas para generacion, desarrollo y research de videos cortos -> guardar en `prompts/`
 - `projects/hermes_ia/verificar-cambio.sh` -> probarlo en VPS y confirmar que no deja cambios fuera de `projects/hermes_ia` -> salida de terminal limpia
-- `projects/hermes_ia/JUDGE.md` -> usarlo para puntuar `Research 02` y decidir si pasa de 8/10 -> registrar resultado si hace falta
 - `projects/hermes_ia/INDICE-OPERATIVO.md` -> agregar referencia a `QUEUE.md` si demuestra uso real -> `git diff` de una sola linea
 
 ## No entra todavia
@@ -44,3 +42,15 @@ Si no se puede verificar, no entra en la cola.
 - memoria externa
 - cambios sobre `TopoField`
 - cambios sobre `TopoTask`
+
+## Completado
+
+### Research completado
+
+- briefing-03: IA practica para productividad personal en Windows -> briefing con fuentes, riesgos y conclusion accionable -> guardado en `projects/hermes_ia/research/briefing-03-ia-productividad-windows.md`
+- briefing-04: oportunidades de FP vinculadas a topografia, construccion o datos -> briefing con fuentes oficiales y lectura practica -> guardado en `projects/hermes_ia/research/briefing-04-fp-topografia-construccion-datos.md`
+
+### Content completado
+
+- content-03: basado en `briefing-01-pymes-ia-espana.md` -> convertido en post corto para `CiudadanoInusual` -> guardado en `projects/hermes_ia/content/ciudadanoinusual/`
+- content-04: basado en aprendizaje personal con IA -> convertido en hooks + esquema + cierre -> guardado en `projects/hermes_ia/content/ciudadanoinusual/`
