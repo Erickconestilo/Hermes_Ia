@@ -25,10 +25,13 @@ Si no se puede verificar, no entra en la cola.
 
 ## Content siguientes
 
-- pieza 17: cosas que parecen productividad pero son perdida de tiempo -> hooks + lista + cierre util -> guardar en `projects/hermes_ia/content/ciudadanoinusual/`
-- pieza 18: humor de trabajador que estudia y usa IA -> hooks + escenas + cierre humano -> guardar en `projects/hermes_ia/content/ciudadanoinusual/`
-- una idea personal de aprendizaje con IA -> convertir en hooks + esquema + cierre -> guardar en `projects/hermes_ia/content/ciudadanoinusual/`
-- convertir un briefing existente en guion corto de video -> salida con hook, desarrollo y cierre -> guardar en `projects/hermes_ia/content/ciudadanoinusual/`
+## Banco 2: vida real expandida
+
+- vida compartida: pareja, convivencia, casa, cansancio y proyectos -> hooks + escenas + cierre humano -> guardar en `projects/hermes_ia/content/ciudadanoinusual/`
+- dias libres que no son libres: limpieza, mercado, coche, recados y descanso real -> hooks + escenas + cierre util -> guardar en `projects/hermes_ia/content/ciudadanoinusual/`
+- salida simple: una copa, paseo o mini viaje barato sin postureo -> hooks + esquema + cierre cercano -> guardar en `projects/hermes_ia/content/ciudadanoinusual/`
+- comida en ruta episodio real -> aplicar ranking `/25` a una comida concreta -> guardar en `projects/hermes_ia/content/ciudadanoinusual/`
+- guion publicable: convertir una pieza fuerte del banco inicial en guion corto -> hook + desarrollo + cierre -> guardar en `projects/hermes_ia/content/ciudadanoinusual/`
 
 ## Research personal / decisiones de vida
 
@@ -82,6 +85,10 @@ Si no se puede verificar, no entra en la cola.
 - content-14: errores aprendiendo IA como principiante -> hooks + lista + frase memorable -> guardado en `projects/hermes_ia/content/ciudadanoinusual/`
 - content-15: estudiar desarrollo web trabajando -> hooks + lista + frase memorable -> guardado en `projects/hermes_ia/content/ciudadanoinusual/`
 - content-16: IA util para trabajador normal -> hooks + lista + frase memorable -> guardado en `projects/hermes_ia/content/ciudadanoinusual/`
+- content-17: falsa productividad -> hooks + lista + frase memorable -> guardado en `projects/hermes_ia/content/ciudadanoinusual/`
+- content-18: comer en ruta mientras se trabaja -> hooks + secciones + frase memorable -> guardado en `projects/hermes_ia/content/ciudadanoinusual/`
+- content-19: ranking de comida en ruta -> hooks + sistema de puntuacion + frase memorable -> guardado en `projects/hermes_ia/content/ciudadanoinusual/`
+- content-20: trayecto al trabajo en moto, bus o tren -> hooks + momentos + frase memorable -> guardado en `projects/hermes_ia/content/ciudadanoinusual/`
 
 ### Builder completado
 

@@ -19,19 +19,20 @@ Saber que archivo abrir primero segun la necesidad real de la sesion.
 ## Salidas reales ya existentes
 
 - research: `projects/hermes_ia/research/briefing-01-pymes-ia-espana.md` a `projects/hermes_ia/research/briefing-06-ayudas-vivienda-cataluna-espana.md`
-- content: dieciseis salidas en `projects/hermes_ia/content/ciudadanoinusual/`
+- content: veinte salidas en `projects/hermes_ia/content/ciudadanoinusual/`
 - builder: `projects/hermes_ia/verificar-cambio.sh`
 - calidad: `projects/hermes_ia/JUDGE.md`
 
 ## Estado de produccion
 
-- banco de contenido: 16/20 piezas
+- banco de contenido inicial: 20/20 piezas completado
 - research base: 6 briefings
-- siguiente paso: revision rapida de calidad y luego pieza 17
+- siguiente paso: revisar calidad, elegir 3 piezas publicables y abrir Banco 2
 
 ## Norte de contenido
 
 - eje principal: vida real, trabajo, estudio, IA, topografia, drones, humor y aprendizaje
+- nueva expansion: convivencia, pareja, hogar, dias libres, recados, comida en ruta, ocio simple y mini viajes
 - vivienda, credito y ayudas: investigacion personal de referencia, no tema central del canal
 
 ## Regla practica

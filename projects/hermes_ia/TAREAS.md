@@ -6,7 +6,7 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 
 ## Siguiente tarea concreta
 
-- revisar calidad del banco actual y despues producir `Content 17`, usando `JUDGE.md` para aceptar solo salidas de 8/10 o mas
+- cerrar revision del banco inicial `20/20` y empezar Banco 2 con vida compartida / dias libres / convivencia / hogar / ocio simple
 
 ## Peticion minima de tarea
 
@@ -25,7 +25,8 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 
 ## Pendientes cercanas
 
-- mantener el banco de contenido avanzando hacia 20 piezas utiles para `CiudadanoInusual`
+- seleccionar las mejores piezas del banco inicial para convertirlas en guiones publicables
+- abrir Banco 2 con vida real expandida: pareja, convivencia, hogar, recados, comida, ocio simple y mini viajes
 - reenfocar el banco hacia vlog, vida real, trabajo, estudio, IA, topografia, drones, humor y aprendizaje
 - mantener vivienda/credito/ayudas como investigacion personal, no como eje del contenido
 - limpiar o respaldar la carpeta untracked `projects/hermes_ia/briefings/` del VPS si vuelve a bloquear un `git push vps`
@@ -54,7 +55,7 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 - `JUDGE.md` creado y regla minima de 8/10 adoptada para salidas validas
 - guía operativa diaria creada para trabajo local ↔ VPS ↔ Hermes
 - seis briefings reales de `Hermes Research` registrados
-- dieciseis salidas reales de `Hermes Content` registradas
+- banco inicial de veinte salidas reales de `Hermes Content` completado
 - linea de vivienda/credito/ayudas marcada como investigacion personal de referencia, no como centro de `CiudadanoInusual`
 - script `projects/hermes_ia/verificar-cambio.sh` creado para `Hermes Builder`
 - documentación técnica principal ampliada
@@ -76,7 +77,8 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 
 ## Backlog cercano
 
-- producir piezas 17-20 del banco de contenido
+- revisar banco inicial 20/20 y elegir 3 piezas candidatas a publicacion
+- producir primeras piezas del Banco 2: vida compartida, dias libres y ocio simple
 - priorizar formatos de videovlog, dia en mi vida, trabajo de campo, estudio nocturno, IA practica y humor realista
 - convertir mejores briefings en posts o guiones mas cercanos a la voz de `CiudadanoInusual`
 - preparar futura evaluación de PRD y RFC cuando el uso práctico básico ya sea estable
