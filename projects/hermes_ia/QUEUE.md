@@ -18,14 +18,14 @@ Si no se puede verificar, no entra en la cola.
 
 ## Research siguientes
 
-- ayudas vivienda Cataluna / Espana para perfil trabajador -> investigacion con fuentes oficiales vigentes -> guardar en `projects/hermes_ia/research/`
 - oportunidad laboral en topografia + IA aplicada -> briefing con fuentes y salida accionable -> guardar en `projects/hermes_ia/research/`
+- IA practica para trabajador con poco tiempo -> briefing con fuentes, riesgos y rutina aplicable -> guardar en `projects/hermes_ia/research/`
 
 ## Content siguientes
 
-- `briefing-05-vivienda-credito-espana-perfil-trabajador.md` -> convertir en version mas cercana a voz `CiudadanoInusual` si la salida 06 no llega a 8/10 -> guardar mejora en `projects/hermes_ia/content/ciudadanoinusual/`
 - una idea personal de aprendizaje con IA -> convertir en hooks + esquema + cierre -> guardar en `projects/hermes_ia/content/ciudadanoinusual/`
-- preparar pieza 07 del banco de 20 -> salida Content validada por `JUDGE.md` -> guardar en `projects/hermes_ia/content/ciudadanoinusual/`
+- preparar pieza 09 del banco de 20 -> salida Content validada por `JUDGE.md` -> guardar en `projects/hermes_ia/content/ciudadanoinusual/`
+- convertir un briefing existente en guion corto de video -> salida con hook, desarrollo y cierre -> guardar en `projects/hermes_ia/content/ciudadanoinusual/`
 
 ## Builder siguientes
 
@@ -53,6 +53,7 @@ Si no se puede verificar, no entra en la cola.
 - briefing-03: IA practica para productividad personal en Windows -> briefing con fuentes, riesgos y conclusion accionable -> guardado en `projects/hermes_ia/research/briefing-03-ia-productividad-windows.md`
 - briefing-04: oportunidades de FP vinculadas a topografia, construccion o datos -> briefing con fuentes oficiales y lectura practica -> guardado en `projects/hermes_ia/research/briefing-04-fp-topografia-construccion-datos.md`
 - briefing-05: vivienda y credito en Espana para perfil trabajador -> briefing con fuentes, ayudas publicas y prudencia financiera -> guardado en `projects/hermes_ia/research/briefing-05-vivienda-credito-espana-perfil-trabajador.md`
+- briefing-06: ayudas de vivienda en Cataluna/Espana -> briefing con fuentes oficiales y separacion activo/vigilar -> guardado en `projects/hermes_ia/research/briefing-06-ayudas-vivienda-cataluna-espana.md`
 
 ### Content completado
 
@@ -62,6 +63,8 @@ Si no se puede verificar, no entra en la cola.
 - content-04: IA en pymes/back-office -> hooks + esquema + cierre -> guardado en `projects/hermes_ia/content/ciudadanoinusual/`
 - content-05: FP, topografia, construccion y datos -> hooks + esquema + cierre -> guardado en `projects/hermes_ia/content/ciudadanoinusual/`
 - content-06: vivienda, credito y contrato indefinido -> hooks + esquema + frase memorable -> guardado en `projects/hermes_ia/content/ciudadanoinusual/`
+- content-07: ayudas de vivienda para trabajadores -> hooks + esquema + frase memorable -> guardado en `projects/hermes_ia/content/ciudadanoinusual/`
+- content-08: prestamo, aval y subvencion en vivienda -> hooks + esquema + frase memorable -> guardado en `projects/hermes_ia/content/ciudadanoinusual/`
 
 ### Builder completado
 
