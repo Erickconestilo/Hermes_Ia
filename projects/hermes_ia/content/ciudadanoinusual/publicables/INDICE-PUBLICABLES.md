@@ -31,11 +31,17 @@ No sustituye los archivos completos. Sirve para saber que existe, que formato ti
 | Post 03 - Selfie de trabajo de campo | `post-03-selfie-trabajo-campo.md` | caption para foto | version final condicionada | tapar o recortar logo de empresa |
 | Post 04 - Comida en ruta | `post-04-comida-en-ruta.md` | caption para foto | version final lista | no mostrar ticket, restaurante ni ubicacion exacta |
 
+## Carruseles publicables
+
+| Pieza | Archivo | Formato | Estado | Revision antes de publicar |
+| --- | --- | --- | --- | --- |
+| Carrusel 01 - Fisurometro y grieta | `carrusel-01-fisurometro-grieta.md` | carrusel Instagram/LinkedIn | listo con revision | no mostrar ubicacion, cliente, empresa ni codigos sensibles |
+
 ## Siguientes piezas recomendadas
 
 1. Grabar o publicar una pieza corta ya lista.
 2. Probar `Modo post` con nuevas fotos reales.
-3. Crear `Modo carrusel` solo cuando haya una idea educativa clara.
+3. Probar `Modo carrusel` con nuevas fotos reales.
 
 ## Regla de publicacion
 
