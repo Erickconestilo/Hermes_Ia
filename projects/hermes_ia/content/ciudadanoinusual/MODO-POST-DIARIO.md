@@ -48,6 +48,8 @@ Devuelve:
 Tono:
 Realista, cercano, con humor ligero, sin postureo y sin motivacion barata.
 
+Si es una foto sencilla de comida, no convertirla en manifiesto ni reflexion grande. Usar tono ligero, cotidiano y concreto: pausa, plato, hambre, faena y seguir.
+
 Reglas:
 - no crees archivos;
 - no edites el repo;
