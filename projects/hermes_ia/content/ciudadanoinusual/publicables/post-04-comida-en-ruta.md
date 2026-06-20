@@ -41,3 +41,29 @@ Publicar solo si:
 Publicable con riesgo bajo.
 
 Mantener tono ligero. No convertir fotos sencillas de comida en manifiesto.
+
+## Version final para publicar
+
+Comida de ruta, version realista: sin postureo, sin ceremonia y sin tiempo para quedarse de sobremesa.
+
+Comer, respirar y volver a la faena.
+
+## Texto alternativo
+
+Plato de comida sencillo durante una pausa de trabajo, usado como descanso breve antes de continuar la jornada.
+
+## Hashtags opcionales
+
+- #CiudadanoInusual
+- #ComidaEnRuta
+- #TrabajoDeCampo
+- #VidaReal
+
+## Checklist final
+
+- no aparece ticket
+- no aparece nombre del restaurante
+- no aparece ubicacion exacta
+- no aparecen caras de terceros
+- no se ve informacion privada
+- el caption mantiene tono ligero y cotidiano
