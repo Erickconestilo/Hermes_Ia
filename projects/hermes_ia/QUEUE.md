@@ -25,8 +25,8 @@ Si no se puede verificar, no entra en la cola.
 
 ## Content siguientes
 
-- pieza 10: trabajo de campo/topografia + aprendizaje digital -> hooks + esquema de videovlog -> guardar en `projects/hermes_ia/content/ciudadanoinusual/`
-- pieza 11: estudiar de noche sin romantizar el cansancio -> hooks + escenas + cierre honesto -> guardar en `projects/hermes_ia/content/ciudadanoinusual/`
+- pieza 12: drones + topografia + curiosidad tecnologica -> hooks + escenas + cierre util -> guardar en `projects/hermes_ia/content/ciudadanoinusual/`
+- pieza 13: estudiar de noche sin romantizar el cansancio -> hooks + escenas + cierre honesto -> guardar en `projects/hermes_ia/content/ciudadanoinusual/`
 - una idea personal de aprendizaje con IA -> convertir en hooks + esquema + cierre -> guardar en `projects/hermes_ia/content/ciudadanoinusual/`
 - convertir un briefing existente en guion corto de video -> salida con hook, desarrollo y cierre -> guardar en `projects/hermes_ia/content/ciudadanoinusual/`
 
@@ -74,6 +74,9 @@ Si no se puede verificar, no entra en la cola.
 - content-06: vivienda, credito y contrato indefinido -> hooks + esquema + frase memorable -> guardado en `projects/hermes_ia/content/ciudadanoinusual/`
 - content-07: ayudas de vivienda para trabajadores -> hooks + esquema + frase memorable -> guardado en `projects/hermes_ia/content/ciudadanoinusual/`
 - content-08: prestamo, aval y subvencion en vivienda -> hooks + esquema + frase memorable -> guardado en `projects/hermes_ia/content/ciudadanoinusual/`
+- content-09: dia en mi vida, topografia, estudio e IA -> hooks + escenas + frase memorable -> guardado en `projects/hermes_ia/content/ciudadanoinusual/`
+- content-10: topografia de campo y aprendizaje digital -> hooks + escenas + frase memorable -> guardado en `projects/hermes_ia/content/ciudadanoinusual/`
+- content-11: cosas que nadie cuenta de la topografia -> hooks + lista + frase memorable -> guardado en `projects/hermes_ia/content/ciudadanoinusual/`
 - content-09: dia en mi vida, topografia, estudio e IA -> hooks + escenas + frase memorable -> guardado en `projects/hermes_ia/content/ciudadanoinusual/`
 
 ### Builder completado

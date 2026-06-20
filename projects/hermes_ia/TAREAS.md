@@ -6,7 +6,7 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 
 ## Siguiente tarea concreta
 
-- producir `Content 10` sobre trabajo de campo / topografia / aprendizaje digital, usando `JUDGE.md` para aceptar solo salidas de 8/10 o mas
+- producir `Content 12` sobre drones / topografia / curiosidad tecnologica, usando `JUDGE.md` para aceptar solo salidas de 8/10 o mas
 
 ## Peticion minima de tarea
 
@@ -54,7 +54,7 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 - `JUDGE.md` creado y regla minima de 8/10 adoptada para salidas validas
 - guía operativa diaria creada para trabajo local ↔ VPS ↔ Hermes
 - seis briefings reales de `Hermes Research` registrados
-- nueve salidas reales de `Hermes Content` registradas
+- once salidas reales de `Hermes Content` registradas
 - linea de vivienda/credito/ayudas marcada como investigacion personal de referencia, no como centro de `CiudadanoInusual`
 - script `projects/hermes_ia/verificar-cambio.sh` creado para `Hermes Builder`
 - documentación técnica principal ampliada
@@ -76,7 +76,7 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 
 ## Backlog cercano
 
-- producir piezas 10-20 del banco de contenido
+- producir piezas 12-20 del banco de contenido
 - priorizar formatos de videovlog, dia en mi vida, trabajo de campo, estudio nocturno, IA practica y humor realista
 - convertir mejores briefings en posts o guiones mas cercanos a la voz de `CiudadanoInusual`
 - preparar futura evaluación de PRD y RFC cuando el uso práctico básico ya sea estable
