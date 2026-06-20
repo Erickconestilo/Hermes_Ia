@@ -32,3 +32,33 @@ Publicar solo si:
 ## Decision
 
 Publicable con edicion previa de privacidad.
+
+## Version final para publicar
+
+La teoria dice: "aploma la mira".
+
+La calle dice: "a ver como lo haces con esto aqui".
+
+## Texto alternativo
+
+Detalle de una mira topografica colocada junto a un coche, mostrando una situacion real de trabajo de campo donde el entorno dificulta la medicion.
+
+## Hashtags opcionales
+
+- #CiudadanoInusual
+- #Topografia
+- #TrabajoDeCampo
+- #VidaReal
+
+## Checklist final
+
+- matricula tapada o fuera del encuadre
+- marca del coche tapada o recortada si no aporta
+- ubicacion exacta no identificable
+- no se culpa al propietario del coche
+- el foco queda en el problema real de campo
+- el tono mantiene humor ligero sin atacar a nadie
+
+## Estado de publicacion
+
+No publicar sin edicion previa de privacidad.
