@@ -33,6 +33,7 @@ Para un asalariado medio en Espana, comprar vivienda hoy no es solo una cuestion
 - riesgo de tipo de interes: incluso con tipos mas normales que en el pico de la subida, una hipoteca variable o mal estructurada puede tensionar el presupuesto
 - riesgo de empleo: para un perfil trabajador, la verdadera vulnerabilidad suele ser la perdida o reduccion de ingresos, no solo el tipo hipotecario
 - riesgo de exceso de apalancamiento: si compras al limite, cualquier gasto extra, subida de comunidad, derrama o bajada de horas afecta mucho
+- riesgo de dependencia de ayudas: una ayuda puntual puede facilitar entrada o permanencia, pero no resuelve una base economica debil
 - riesgo territorial: el encarecimiento es amplio, asi que buscar zonas baratas no garantiza una compra prudente si el salario local no acompana
 
 ## Ayudas publicas a revisar
@@ -67,4 +68,4 @@ Si falla una de esas tres, la decision prudente es seguir alquilando y ahorrar, 
 
 ## Nota de prudencia
 
-Este briefing es material de investigacion y contenido educativo. No sustituye asesoramiento financiero, hipotecario, legal o fiscal personalizado.
+Este briefing es material de investigacion y contenido educativo. No sustituye asesoramiento financiero, hipotecario, legal o fiscal personalizado. Las ayudas publicas dependen de bases, plazos, compatibilidades y convocatorias activas, asi que deben verificarse en la fuente oficial vigente antes de incorporarlas a una decision real.
