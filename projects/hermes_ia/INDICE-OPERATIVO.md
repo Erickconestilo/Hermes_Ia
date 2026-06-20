@@ -27,7 +27,12 @@ Saber que archivo abrir primero segun la necesidad real de la sesion.
 
 - banco de contenido: 8/20 piezas
 - research base: 6 briefings
-- siguiente paso: pieza 09 o nuevo `Research 07`
+- siguiente paso: pieza 09 sobre vlog / dia en mi vida / trabajo / estudio / IA
+
+## Norte de contenido
+
+- eje principal: vida real, trabajo, estudio, IA, topografia, drones, humor y aprendizaje
+- vivienda, credito y ayudas: investigacion personal de referencia, no tema central del canal
 
 ## Regla practica
 

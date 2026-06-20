@@ -6,7 +6,7 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 
 ## Siguiente tarea concreta
 
-- producir la pieza `Content 09` o un nuevo briefing `Research 07`, usando `JUDGE.md` para aceptar solo salidas de 8/10 o mas
+- producir `Content 09` sobre dia en mi vida / trabajo / estudio / IA, usando `JUDGE.md` para aceptar solo salidas de 8/10 o mas
 
 ## Peticion minima de tarea
 
@@ -26,7 +26,8 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 ## Pendientes cercanas
 
 - mantener el banco de contenido avanzando hacia 20 piezas utiles para `CiudadanoInusual`
-- revisar ayudas de vivienda en Cataluna/Espana solo con fuentes oficiales vigentes
+- reenfocar el banco hacia vlog, vida real, trabajo, estudio, IA, topografia, drones, humor y aprendizaje
+- mantener vivienda/credito/ayudas como investigacion personal, no como eje del contenido
 - limpiar o respaldar la carpeta untracked `projects/hermes_ia/briefings/` del VPS si vuelve a bloquear un `git push vps`
 - decidir más adelante si conviene evaluar `hermes doctor --fix` con cuidado
 
@@ -54,6 +55,7 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 - guía operativa diaria creada para trabajo local ↔ VPS ↔ Hermes
 - seis briefings reales de `Hermes Research` registrados
 - ocho salidas reales de `Hermes Content` registradas
+- linea de vivienda/credito/ayudas marcada como investigacion personal de referencia, no como centro de `CiudadanoInusual`
 - script `projects/hermes_ia/verificar-cambio.sh` creado para `Hermes Builder`
 - documentación técnica principal ampliada
 - referencias externas y backlog futuro documentados
@@ -75,5 +77,6 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 ## Backlog cercano
 
 - producir piezas 09-20 del banco de contenido
+- priorizar formatos de videovlog, dia en mi vida, trabajo de campo, estudio nocturno, IA practica y humor realista
 - convertir mejores briefings en posts o guiones mas cercanos a la voz de `CiudadanoInusual`
 - preparar futura evaluación de PRD y RFC cuando el uso práctico básico ya sea estable

@@ -18,14 +18,23 @@ Si no se puede verificar, no entra en la cola.
 
 ## Research siguientes
 
+- dia en mi vida: trabajador de topografia que estudia desarrollo web y aprende IA -> briefing de angulos, escenas y riesgos de privacidad -> guardar en `projects/hermes_ia/research/`
+- videovlog de trabajo/estudio/IA para `CiudadanoInusual` -> briefing de formatos virales realistas -> guardar en `projects/hermes_ia/research/`
 - oportunidad laboral en topografia + IA aplicada -> briefing con fuentes y salida accionable -> guardar en `projects/hermes_ia/research/`
 - IA practica para trabajador con poco tiempo -> briefing con fuentes, riesgos y rutina aplicable -> guardar en `projects/hermes_ia/research/`
 
 ## Content siguientes
 
+- pieza 09: dia en mi vida, trabajo, estudio e IA -> hooks + escenas + cierre humano -> guardar en `projects/hermes_ia/content/ciudadanoinusual/`
+- pieza 10: trabajo de campo/topografia + aprendizaje digital -> hooks + esquema de videovlog -> guardar en `projects/hermes_ia/content/ciudadanoinusual/`
 - una idea personal de aprendizaje con IA -> convertir en hooks + esquema + cierre -> guardar en `projects/hermes_ia/content/ciudadanoinusual/`
-- preparar pieza 09 del banco de 20 -> salida Content validada por `JUDGE.md` -> guardar en `projects/hermes_ia/content/ciudadanoinusual/`
 - convertir un briefing existente en guion corto de video -> salida con hook, desarrollo y cierre -> guardar en `projects/hermes_ia/content/ciudadanoinusual/`
+
+## Research personal / decisiones de vida
+
+- vivienda, credito y ayudas publicas quedan como investigacion personal de referencia para decisiones futuras
+- no son el eje del banco de contenido de `CiudadanoInusual`
+- solo se convierten en contenido si el angulo conecta con vida real de trabajador, aprendizaje o toma de decisiones prudente
 
 ## Builder siguientes
 
