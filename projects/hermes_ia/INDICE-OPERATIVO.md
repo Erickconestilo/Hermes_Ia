@@ -20,12 +20,14 @@ Saber que archivo abrir primero segun la necesidad real de la sesion.
 
 - research: `projects/hermes_ia/research/briefing-01-pymes-ia-espana.md` a `projects/hermes_ia/research/briefing-06-ayudas-vivienda-cataluna-espana.md`
 - content: veinte salidas en `projects/hermes_ia/content/ciudadanoinusual/`
+- publicables: tres guiones en `projects/hermes_ia/content/ciudadanoinusual/publicables/`
 - builder: `projects/hermes_ia/verificar-cambio.sh`
 - calidad: `projects/hermes_ia/JUDGE.md`
 
 ## Estado de produccion
 
 - banco de contenido inicial: 20/20 piezas completado
+- guiones publicables: 3
 - research base: 6 briefings
 - siguiente paso: revisar calidad, elegir 3 piezas publicables y abrir Banco 2
 

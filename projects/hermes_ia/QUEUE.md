@@ -27,11 +27,19 @@ Si no se puede verificar, no entra en la cola.
 
 ## Banco 2: vida real expandida
 
+- probar `Modo guion` con otra situacion real -> guion publicable si pasa privacidad y calidad -> guardar en `projects/hermes_ia/content/ciudadanoinusual/publicables/`
 - vida compartida: pareja, convivencia, casa, cansancio y proyectos -> hooks + escenas + cierre humano -> guardar en `projects/hermes_ia/content/ciudadanoinusual/`
 - dias libres que no son libres: limpieza, mercado, coche, recados y descanso real -> hooks + escenas + cierre util -> guardar en `projects/hermes_ia/content/ciudadanoinusual/`
 - salida simple: una copa, paseo o mini viaje barato sin postureo -> hooks + esquema + cierre cercano -> guardar en `projects/hermes_ia/content/ciudadanoinusual/`
 - comida en ruta episodio real -> aplicar ranking `/25` a una comida concreta -> guardar en `projects/hermes_ia/content/ciudadanoinusual/`
 - guion publicable: convertir una pieza fuerte del banco inicial en guion corto -> hook + desarrollo + cierre -> guardar en `projects/hermes_ia/content/ciudadanoinusual/`
+
+## Futuro: TopoBot como inspiracion
+
+- no reactivar el TopoBot viejo por ahora
+- conservar la idea: experiencia real de obra/topografia -> post LinkedIn / guion / contenido social
+- futura integracion posible: `Modo LinkedIn Obra`, `Modo Foto a Post`, `Modo Video a Guion`
+- Hermes_Ia debe ser el cerebro; un bot futuro solo seria interfaz de captura rapida
 
 ## Research personal / decisiones de vida
 
@@ -89,6 +97,12 @@ Si no se puede verificar, no entra en la cola.
 - content-18: comer en ruta mientras se trabaja -> hooks + secciones + frase memorable -> guardado en `projects/hermes_ia/content/ciudadanoinusual/`
 - content-19: ranking de comida en ruta -> hooks + sistema de puntuacion + frase memorable -> guardado en `projects/hermes_ia/content/ciudadanoinusual/`
 - content-20: trayecto al trabajo en moto, bus o tren -> hooks + momentos + frase memorable -> guardado en `projects/hermes_ia/content/ciudadanoinusual/`
+
+### Guiones publicables completados
+
+- guion-01: ir al trabajo tambien cansa -> guardado en `projects/hermes_ia/content/ciudadanoinusual/publicables/`
+- guion-02: viernes de faena y comida en ruta -> guardado en `projects/hermes_ia/content/ciudadanoinusual/publicables/`
+- guion-03: calor, falta de respeto y faena -> guardado en `projects/hermes_ia/content/ciudadanoinusual/publicables/`
 
 ### Builder completado
 

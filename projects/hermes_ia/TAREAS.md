@@ -27,6 +27,7 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 
 - seleccionar las mejores piezas del banco inicial para convertirlas en guiones publicables
 - abrir Banco 2 con vida real expandida: pareja, convivencia, hogar, recados, comida, ocio simple y mini viajes
+- seguir probando `Modo guion` con situaciones reales y guardar solo guiones que pasen privacidad y calidad
 - reenfocar el banco hacia vlog, vida real, trabajo, estudio, IA, topografia, drones, humor y aprendizaje
 - mantener vivienda/credito/ayudas como investigacion personal, no como eje del contenido
 - limpiar o respaldar la carpeta untracked `projects/hermes_ia/briefings/` del VPS si vuelve a bloquear un `git push vps`
@@ -56,6 +57,7 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 - guía operativa diaria creada para trabajo local ↔ VPS ↔ Hermes
 - seis briefings reales de `Hermes Research` registrados
 - banco inicial de veinte salidas reales de `Hermes Content` completado
+- tres guiones publicables creados en `projects/hermes_ia/content/ciudadanoinusual/publicables/`
 - linea de vivienda/credito/ayudas marcada como investigacion personal de referencia, no como centro de `CiudadanoInusual`
 - script `projects/hermes_ia/verificar-cambio.sh` creado para `Hermes Builder`
 - documentación técnica principal ampliada
