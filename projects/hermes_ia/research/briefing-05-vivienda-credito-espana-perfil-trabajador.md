@@ -35,6 +35,26 @@ Para un asalariado medio en Espana, comprar vivienda hoy no es solo una cuestion
 - riesgo de exceso de apalancamiento: si compras al limite, cualquier gasto extra, subida de comunidad, derrama o bajada de horas afecta mucho
 - riesgo territorial: el encarecimiento es amplio, asi que buscar zonas baratas no garantiza una compra prudente si el salario local no acompana
 
+## Ayudas publicas a revisar
+
+- En Cataluna, conviene revisar la linea de Prestecs Emancipacio de la Generalitat / ICF para primera vivienda habitual. La referencia publica disponible apunta a una ampliacion hasta los 40 anos, con cobertura de hasta parte de la entrada de la primera vivienda. Aun asi, hay que verificar siempre bases vigentes, fecha de entrada en vigor, requisitos exactos y compatibilidades antes de contar con ello.
+  - https://habitatge.gencat.cat/ca/ajuts/prestecs-per-a-lemancipacio-dels-joves/
+- A nivel estatal, la Linea de Avales ICO para primera vivienda esta orientada principalmente a jovenes que no superen los 35 anos y a familias con menores a cargo. Por tanto, un perfil de 40 anos sin menores podria quedar fuera de esta via estatal, salvo que encaje en otra condicion especifica de la norma.
+  - https://www.ico.es/en/linea-avales-hipoteca-primera-vivienda
+- Tambien conviene revisar las ayudas al alquiler para la franja de 36 a 64 anos en Cataluna. La referencia oficial de Habitatge muestra que existen convocatorias para ese tramo de edad, pero dependen de estado activo, plazos y requisitos de ingresos y alquiler maximo.
+  - https://habitatge.gencat.cat/ca/ajuts/ajuts-pagament-habitatge/subvencions-pagament-lloguer/index.html
+
+## Como leer estas ayudas
+
+- estas ayudas pueden mejorar el acceso inicial o aliviar una fase concreta, pero no cambian la regla central de prudencia
+- ayudar con la entrada no equivale a poder sostener bien la vivienda en el tiempo
+- reducir una barrera de acceso no elimina el riesgo de sobreesfuerzo mensual si el ingreso sigue siendo ajustado
+- aunque exista una ayuda publica, siguen mandando tres filtros basicos: ahorro estable, colchon de emergencia separado y margen real despues de gastos fijos
+
+## Lectura estrategica
+
+Las ayudas pueden aliviar la entrada o una fase de alquiler, pero para un perfil trabajador la mejora salarial sigue pesando mas en la viabilidad de fondo. En ingresos ajustados, ganar mas margen mensual suele cambiar mas la decision que acceder a una ayuda puntual.
+
 ## Conclusion accionable
 
 Si eres un perfil trabajador, solo compraria ahora si se cumplen tres condiciones a la vez:
