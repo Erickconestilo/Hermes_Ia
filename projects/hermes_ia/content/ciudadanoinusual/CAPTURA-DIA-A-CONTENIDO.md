@@ -81,6 +81,60 @@ Hermes puede elegir uno:
 - trayecto / transporte
 - nota privada
 
+## Modos editoriales
+
+No crear muchos modos a la vez. Usar pocos modos claros y ampliar solo cuando haya uso real.
+
+### Modo guion
+
+Activo ahora.
+
+Convierte una situacion real en video vertical corto para TikTok, Instagram Reels y YouTube Shorts.
+
+Prioridad:
+- 15-30 segundos por defecto
+- 30-60 segundos si la historia necesita mas aire
+- hook fuerte
+- ritmo rapido
+- humor ligero
+- cierre memorable
+
+### Modo post
+
+Siguiente modo a trabajar.
+
+Convierte una foto, video o momento concreto en caption publicable.
+
+Debe poder devolver:
+- caption corto
+- caption medio
+- caption mas personal
+- advertencias de privacidad
+- hashtags opcionales
+
+### Modo carrusel
+
+Futuro cercano.
+
+Convierte una idea educativa, lista o aprendizaje en carrusel para Instagram o LinkedIn.
+
+Debe poder devolver:
+- slide 1 con gancho fuerte
+- 5-7 slides de desarrollo
+- cierre o llamada a la accion
+- sugerencia visual por slide
+
+### Modo reciclaje
+
+Futuro, cuando existan mas piezas publicables reales.
+
+Convierte una pieza base en varios formatos:
+- guion corto
+- post
+- carrusel
+- version LinkedIn
+- adaptacion por plataforma
+
 ## Salida esperada
 
 Si hay contenido:

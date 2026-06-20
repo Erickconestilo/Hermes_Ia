@@ -20,7 +20,7 @@ Situacion:
 [cuento aqui lo que paso en bruto]
 
 Objetivo:
-Convierte esta situacion en un guion publicable para CiudadanoInusual.
+Convierte esta situacion en un guion publicable para CiudadanoInusual como video vertical corto adaptable a TikTok, Instagram Reels y YouTube Shorts.
 
 Primero haz este filtro internamente:
 - detecta el mejor angulo;
@@ -42,11 +42,22 @@ Si falta informacion importante para que el guion quede bien, hazme preguntas br
 Si no hace falta preguntar, devuelve directamente y solo esto:
 - titulo;
 - hook inicial;
-- guion de 45-75 segundos;
+- guion de 15-30 segundos por defecto, o 30-60 segundos si la historia necesita mas aire;
 - texto en pantalla;
 - planos sugeridos;
 - cierre;
 - frase memorable.
+
+Duracion:
+- prioriza guiones de 15-30 segundos;
+- sube a 30-60 segundos si la historia tiene contexto, humor, varias escenas o un remate que necesita respirar;
+- si crees que necesita mas de 60 segundos, avisame antes y explica por que;
+- si cuento demasiado, elige el mejor angulo y condensa sin matar mi forma de hablar.
+
+Distribucion:
+- escribe pensando en un master vertical limpio reutilizable en TikTok, Instagram Reels y YouTube Shorts;
+- no dependas de una musica, trend o funcion exclusiva de una sola plataforma;
+- si una idea conviene adaptarla por plataforma, indicalo brevemente al final.
 
 Tono:
 Realista, cercano, con humor ligero, sin postureo y sin motivacion barata.
