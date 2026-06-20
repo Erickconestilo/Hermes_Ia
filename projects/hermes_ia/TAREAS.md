@@ -6,7 +6,7 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 
 ## Siguiente tarea concreta
 
-- crear y validar un script pequeno de `Hermes Builder` para verificar cambios dentro de `projects/hermes_ia`
+- producir la pieza `Content 07` o investigar ayudas de vivienda con fuentes oficiales vigentes, usando `JUDGE.md` para aceptar solo salidas de 8/10 o mas
 
 ## Peticion minima de tarea
 
@@ -25,7 +25,9 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 
 ## Pendientes cercanas
 
-- elegir una tarea nueva que no repita resumenes, bitacora base ni ajustes de fase
+- mantener el banco de contenido avanzando hacia 20 piezas utiles para `CiudadanoInusual`
+- revisar ayudas de vivienda en Cataluna/Espana solo con fuentes oficiales vigentes
+- limpiar o respaldar la carpeta untracked `projects/hermes_ia/briefings/` del VPS si vuelve a bloquear un `git push vps`
 - decidir más adelante si conviene evaluar `hermes doctor --fix` con cuidado
 
 ## Decision provisional sobre PRD/RFC
@@ -48,9 +50,11 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 - `openai-codex` autenticado y operativo como proveedor principal
 - `gpt-5.4-mini` validado para trabajo ligero
 - usos oficiales iniciales definidos: `Research`, `Content` y `Builder`
+- `JUDGE.md` creado y regla minima de 8/10 adoptada para salidas validas
 - guía operativa diaria creada para trabajo local ↔ VPS ↔ Hermes
-- primer briefing real de `Hermes Research` registrado
-- primera salida real de `Hermes Content` registrada
+- cinco briefings reales de `Hermes Research` registrados
+- seis salidas reales de `Hermes Content` registradas
+- script `projects/hermes_ia/verificar-cambio.sh` creado para `Hermes Builder`
 - documentación técnica principal ampliada
 - referencias externas y backlog futuro documentados
 - roadmap base ya redactado
@@ -70,5 +74,6 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 
 ## Backlog cercano
 
-- pasar de tareas meta a una tarea concreta de uso real dentro de `Hermes_Ia`
+- producir piezas 07-20 del banco de contenido
+- convertir mejores briefings en posts o guiones mas cercanos a la voz de `CiudadanoInusual`
 - preparar futura evaluación de PRD y RFC cuando el uso práctico básico ya sea estable
