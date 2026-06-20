@@ -19,15 +19,15 @@ Saber que archivo abrir primero segun la necesidad real de la sesion.
 ## Salidas reales ya existentes
 
 - research: `projects/hermes_ia/research/briefing-01-pymes-ia-espana.md` a `projects/hermes_ia/research/briefing-06-ayudas-vivienda-cataluna-espana.md`
-- content: once salidas en `projects/hermes_ia/content/ciudadanoinusual/`
+- content: dieciseis salidas en `projects/hermes_ia/content/ciudadanoinusual/`
 - builder: `projects/hermes_ia/verificar-cambio.sh`
 - calidad: `projects/hermes_ia/JUDGE.md`
 
 ## Estado de produccion
 
-- banco de contenido: 11/20 piezas
+- banco de contenido: 16/20 piezas
 - research base: 6 briefings
-- siguiente paso: pieza 12 sobre drones / topografia / curiosidad tecnologica
+- siguiente paso: revision rapida de calidad y luego pieza 17
 
 ## Norte de contenido
 

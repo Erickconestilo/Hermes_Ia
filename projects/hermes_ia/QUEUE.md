@@ -25,8 +25,8 @@ Si no se puede verificar, no entra en la cola.
 
 ## Content siguientes
 
-- pieza 12: drones + topografia + curiosidad tecnologica -> hooks + escenas + cierre util -> guardar en `projects/hermes_ia/content/ciudadanoinusual/`
-- pieza 13: estudiar de noche sin romantizar el cansancio -> hooks + escenas + cierre honesto -> guardar en `projects/hermes_ia/content/ciudadanoinusual/`
+- pieza 17: cosas que parecen productividad pero son perdida de tiempo -> hooks + lista + cierre util -> guardar en `projects/hermes_ia/content/ciudadanoinusual/`
+- pieza 18: humor de trabajador que estudia y usa IA -> hooks + escenas + cierre humano -> guardar en `projects/hermes_ia/content/ciudadanoinusual/`
 - una idea personal de aprendizaje con IA -> convertir en hooks + esquema + cierre -> guardar en `projects/hermes_ia/content/ciudadanoinusual/`
 - convertir un briefing existente en guion corto de video -> salida con hook, desarrollo y cierre -> guardar en `projects/hermes_ia/content/ciudadanoinusual/`
 
@@ -77,7 +77,11 @@ Si no se puede verificar, no entra en la cola.
 - content-09: dia en mi vida, topografia, estudio e IA -> hooks + escenas + frase memorable -> guardado en `projects/hermes_ia/content/ciudadanoinusual/`
 - content-10: topografia de campo y aprendizaje digital -> hooks + escenas + frase memorable -> guardado en `projects/hermes_ia/content/ciudadanoinusual/`
 - content-11: cosas que nadie cuenta de la topografia -> hooks + lista + frase memorable -> guardado en `projects/hermes_ia/content/ciudadanoinusual/`
-- content-09: dia en mi vida, topografia, estudio e IA -> hooks + escenas + frase memorable -> guardado en `projects/hermes_ia/content/ciudadanoinusual/`
+- content-12: drones, topografia y curiosidad tecnologica -> hooks + escenas + frase memorable -> guardado en `projects/hermes_ia/content/ciudadanoinusual/`
+- content-13: estudiar de noche sin romantizar el cansancio -> hooks + escenas + frase memorable -> guardado en `projects/hermes_ia/content/ciudadanoinusual/`
+- content-14: errores aprendiendo IA como principiante -> hooks + lista + frase memorable -> guardado en `projects/hermes_ia/content/ciudadanoinusual/`
+- content-15: estudiar desarrollo web trabajando -> hooks + lista + frase memorable -> guardado en `projects/hermes_ia/content/ciudadanoinusual/`
+- content-16: IA util para trabajador normal -> hooks + lista + frase memorable -> guardado en `projects/hermes_ia/content/ciudadanoinusual/`
 
 ### Builder completado
 
