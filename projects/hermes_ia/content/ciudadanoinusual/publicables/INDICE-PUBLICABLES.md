@@ -26,10 +26,10 @@ No sustituye los archivos completos. Sirve para saber que existe, que formato ti
 
 | Pieza | Archivo | Formato | Estado | Revision antes de publicar |
 | --- | --- | --- | --- | --- |
-| Post 01 - Mira bloqueada por coche | `post-01-mira-bloqueada-por-coche.md` | caption para foto | listo con edicion | tapar matricula y evitar marca/ubicacion |
-| Post 02 - Nivel bajo sol y sombra | `post-02-nivel-bajo-sol-y-sombra.md` | caption para foto | listo con revision | revisar fondo, caras, matriculas y ubicacion |
-| Post 03 - Selfie de trabajo de campo | `post-03-selfie-trabajo-campo.md` | caption para foto | listo con edicion | tapar o recortar logo de empresa |
-| Post 04 - Comida en ruta | `post-04-comida-en-ruta.md` | caption para foto | listo | no mostrar ticket, restaurante ni ubicacion exacta |
+| Post 01 - Mira bloqueada por coche | `post-01-mira-bloqueada-por-coche.md` | caption para foto | version final condicionada | tapar matricula y evitar marca/ubicacion |
+| Post 02 - Nivel bajo sol y sombra | `post-02-nivel-bajo-sol-y-sombra.md` | caption para foto | version final condicionada | revisar fondo, caras, matriculas y ubicacion |
+| Post 03 - Selfie de trabajo de campo | `post-03-selfie-trabajo-campo.md` | caption para foto | version final condicionada | tapar o recortar logo de empresa |
+| Post 04 - Comida en ruta | `post-04-comida-en-ruta.md` | caption para foto | version final lista | no mostrar ticket, restaurante ni ubicacion exacta |
 
 ## Siguientes piezas recomendadas
 

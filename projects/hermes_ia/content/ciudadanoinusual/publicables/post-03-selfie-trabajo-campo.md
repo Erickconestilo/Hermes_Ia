@@ -38,3 +38,41 @@ Publicar solo si:
 ## Decision
 
 Buena imagen de identidad, pero requiere recorte o tapado del logo antes de publicar.
+
+## Version final para publicar
+
+Topografia, sol y cara de "hoy toca aguantar".
+
+Hay dias en los que el trabajo se resume facil: equipo al lado, calor encima y seguir con la faena.
+
+No es una foto epica. Es una foto real.
+
+## Alternativa mas profesional
+
+Trabajo de campo, precision y condiciones reales.
+
+No todo lo que construye oficio se ve bonito, pero se nota al final del dia.
+
+## Texto alternativo
+
+Selfie de una jornada de trabajo de campo con chaleco reflectante y equipo topografico cerca, tomada bajo sol fuerte.
+
+## Hashtags opcionales
+
+- #CiudadanoInusual
+- #Topografia
+- #TrabajoDeCampo
+- #VidaReal
+- #Oficio
+
+## Checklist final
+
+- logo de empresa tapado o fuera del encuadre
+- ubicacion exacta no identificable
+- no aparecen datos de obra, cliente ni empresa
+- fondo urbano revisado
+- caption mantiene tono personal sin revelar informacion sensible
+
+## Estado de publicacion
+
+Publicable si se tapa o recorta el logo de empresa.
