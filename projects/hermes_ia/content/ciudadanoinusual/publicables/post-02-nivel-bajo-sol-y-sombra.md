@@ -38,3 +38,40 @@ Publicar solo si:
 ## Decision
 
 Publicable si se revisa el fondo antes.
+
+## Version final para publicar
+
+Topografia de calle: buscar el punto, buscar la sombra y seguir midiendo.
+
+## Alternativa con mas humor
+
+El nivel buscando precision.
+
+Yo buscando sombra.
+
+Los dos haciendo lo que podemos.
+
+## Texto alternativo
+
+Nivel topografico colocado en una calle con sol fuerte y sombra parcial, mostrando una jornada real de trabajo de campo.
+
+## Hashtags opcionales
+
+- #CiudadanoInusual
+- #Topografia
+- #TrabajoDeCampo
+- #VidaReal
+- #Calor
+
+## Checklist final
+
+- no aparecen caras reconocibles
+- no se ven matriculas claras
+- no aparece ubicacion exacta
+- no aparecen carteles, portales o referencias sensibles
+- el foco queda en el nivel, el sol y el trabajo de campo
+- el caption no revela cliente, empresa ni zona de trabajo
+
+## Estado de publicacion
+
+Publicable si se revisa o recorta el fondo antes.
