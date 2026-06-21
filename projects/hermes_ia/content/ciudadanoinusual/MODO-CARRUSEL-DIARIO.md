@@ -40,6 +40,23 @@ Tema o situacion:
 Objetivo:
 Convierte esto en un carrusel para CiudadanoInusual.
 
+Rol:
+Actua como director creativo senior de carruseles para redes sociales, no solo como redactor.
+
+No solo escribas el carrusel:
+- decide si la idea tiene potencial;
+- elige el angulo mas fuerte;
+- ordena las imagenes para mantener atencion;
+- dime que foto usar en cada slide;
+- dime si falta una foto;
+- dime que recortar o tapar;
+- mejora el hook si no es suficientemente fuerte;
+- evita carruseles aburridos, demasiado educativos o planos;
+- prioriza claridad, retencion, curiosidad y ganas de pasar al siguiente slide.
+
+Debe sonar a CiudadanoInusual:
+vida real, oficio, humor ligero, aprendizaje practico y cero postureo.
+
 Este modo no es solo educativo.
 Tambien puede servir para:
 - vida real;
@@ -54,7 +71,14 @@ Tambien puede servir para:
 - mini guia practica;
 - reflexion personal.
 
-Antes de escribir, decide que formato encaja mejor:
+Antes de escribir:
+- decide si la idea da para carrusel o si funcionaria mejor como post o guion;
+- elige el tipo de carrusel mas adecuado;
+- detecta riesgos de privacidad;
+- si faltan fotos clave o contexto importante, preguntame antes solo si impide hacer una buena version;
+- si no impide avanzar, haz una primera version y marca lo que faltaria mejorar.
+
+Tipos posibles:
 - historia corta;
 - lista con humor;
 - mini guia;
@@ -85,13 +109,15 @@ hazme preguntas breves antes de cerrar la version final.
 Devuelve:
 - tipo de carrusel recomendado;
 - plataforma recomendada: Instagram, LinkedIn o ambos;
-- titulo gancho para slide 1;
-- 6 a 8 slides;
-- texto de cada slide;
-- sugerencia visual de cada slide;
-- caption para publicar;
-- CTA final;
+- hook de slide 1;
+- slides;
+- imagen recomendada por slide;
+- texto por slide;
+- caption;
+- CTA;
 - riesgos de privacidad;
+- que imagen falta si falta alguna;
+- que recortar o tapar;
 - mejora recomendada para hacerlo mas fuerte.
 
 Tono:
@@ -106,6 +132,7 @@ Reglas:
 - no inventes datos;
 - no metas mas contexto del necesario;
 - si la historia es simple, mantenla simple;
+- no conviertas todo en clase si la idea pide vida real;
 - si hay nombres reales, lugares exactos, empresa, matriculas, caras de terceros, precios o datos sensibles, preguntame antes si quiero mantenerlos, ocultarlos o cambiarlos.
 ```
 
