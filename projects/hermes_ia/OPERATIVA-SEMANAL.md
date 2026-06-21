@@ -29,14 +29,20 @@ Usar Telegram y `Modo calle` para:
 - revisar privacidad;
 - pedir una version corta publicable;
 - guardar ideas que no se puedan trabajar en el momento.
+- recuperar capturas ya guardadas;
+- convertir capturas en borradores;
+- aplicar `JUDGE.md` a piezas concretas;
+- usar skills experimentales de bajo riesgo;
+- recibir imagenes o archivos mediante scripts ya probados.
 
 No hacer desde movil:
 
 - editar varios archivos del repo;
 - resolver conflictos Git;
 - tocar `.env`;
-- cambiar gateway, cron, Docker, MCPs o servicios;
+- cambiar gateway, cron recurrente, Docker, MCPs o servicios;
 - publicar algo con datos sensibles sin revisar.
+- publicar automaticamente sin aprobacion.
 
 ## Dia de portatil
 
@@ -74,4 +80,3 @@ Usar el portatil para:
 No convertir cada semana en una reunion de estrategia.
 
 Si no hay tiempo, hacer una captura buena y una revision de privacidad ya cuenta como avance.
-

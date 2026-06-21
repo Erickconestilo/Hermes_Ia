@@ -44,7 +44,7 @@ Convertir Hermes en el arnes personal de IA de Erick/CiudadanoInusual:
 | Publicacion externa | Abierta | 1 publicacion LinkedIn registrada |
 | Telegram operativo completo | Abierto | falta matriz de capacidades completa |
 | Flujo movil extremo a extremo | Abierto | falta captura movil -> pieza -> judge -> publicacion |
-| Captura Movil V1 | Abierta | falta validar con captura real desde Telegram |
+| Captura Movil V1 | En validacion real | prueba real desde Telegram; placeholder corregido; validacion anti-plantillas |
 | Judge aplicado y registrado | Abierto | falta registro minimo de evaluaciones reales |
 | Banco 2 | Iniciado | vida real, convivencia, hogar, comida, trayectos |
 | Continuidad semanal | Abierta | falta rutina semanal estable |
@@ -84,9 +84,11 @@ Convertir Hermes en el arnes personal de IA de Erick/CiudadanoInusual:
 - Dashboard o API publica.
 - Automatizaciones recurrentes sin prueba manual previa.
 
-## Incubadora de skills
+## Incubadora de skills y confianza supervisada
 
 Hermes puede crear y usar skills experimentales dentro de `HERMES_HOME` cuando detecte un flujo repetible y de bajo riesgo.
+
+Regla principal: Hermes puede expandirse en bajo riesgo si deja rastro. Hermes debe pedir permiso en alto riesgo.
 
 Indice detallado: `projects/hermes_ia/SKILLS-EXPERIMENTALES.md`.
 
@@ -103,7 +105,7 @@ Condiciones:
 
 | Skill | Estado | Ubicacion | Proposito | Condicion para formalizar |
 | --- | --- | --- | --- | --- |
-| `ciudadanoinusual-mobile-intake` | experimental activa | `HERMES_HOME` | Captura Movil V1 y Modo Calle desde Telegram | superar 3 capturas reales sin errores graves |
+| `ciudadanoinusual-mobile-intake` | experimental activa | `HERMES_HOME` | Captura Movil V1, Modo Calle y flujo Telegram para CiudadanoInusual | superar 3 capturas reales utiles sin errores graves y sin tocar Git/servicios/secretos sin permiso |
 
 ## Track B: CiudadanoInusual y feedback real
 
@@ -148,7 +150,7 @@ Condiciones:
 
 ## Tareas actuales
 
-1. Validar Captura Movil V1 con una nota real desde Telegram.
+1. Completar validacion de Captura Movil V1 hasta 3 capturas reales utiles sin errores graves.
 2. Convertir una captura movil en borrador de post/guion/carrusel.
 3. Aplicar `JUDGE.md` a esa salida y registrar decision.
 4. Publicar una pieza simple o dejarla lista con privacidad revisada.

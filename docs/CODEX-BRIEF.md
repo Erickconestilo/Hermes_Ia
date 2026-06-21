@@ -39,7 +39,7 @@ Toda idea nueva cae en una categoria: operativo ahora, siguiente experimento seg
 - No cambiar SSH, firewall, usuarios ni `.env` sin confirmacion fuerte.
 - No instalar componentes nuevos sin objetivo, riesgo, rollback y verificacion.
 - Si algo es riesgoso, proponer prueba minima, aislada y reversible.
-- No capar auto-mejora util: exigir trazabilidad y limites rojos.
+- Confianza supervisada: Hermes puede expandirse en bajo riesgo si deja rastro; debe pedir permiso en alto riesgo.
 
 ## Permitido ahora
 
@@ -48,29 +48,21 @@ Toda idea nueva cae en una categoria: operativo ahora, siguiente experimento seg
 - Telegram como canal movil autorizado.
 - Captura privada de ideas con `scripts/captura-movil.py`.
 - Envio de imagenes generadas al bot con `scripts/send-telegram-photo.py`.
-- Skills experimentales en `HERMES_HOME` si son de bajo riesgo y dejan registro.
+- Skills experimentales en `HERMES_HOME`, uso desde Telegram, borradores desde capturas, `JUDGE.md`, archivos temporales en `tmp/`/`HERMES_HOME` y registro de aprendizajes.
 - Disenar criterios de perfiles o cron sin activarlos.
 
 ## No activar todavia
 
-- Docker.
-- Cambio de `terminal.backend`.
-- Cron recurrente.
-- Kanban.
-- Perfiles reales o subagentes permanentes.
-- Playwright.
-- Discord.
-- MCPs nuevos.
-- Memoria externa tipo Engram.
-- `hermes doctor --fix`.
-- Cambios en `.env`.
-- Cambios en `TopoField` o `TopoTask`.
+- Modificar `.env`, mostrar/mover tokens, SSH, firewall, usuarios, `sudo`, paquetes o servicios.
+- Docker, cambio de `terminal.backend`, cron recurrente, Playwright, MCPs nuevos o memoria externa.
+- Publicacion automatica, borrar datos, `hermes doctor --fix`, cambios fuera de `Hermes_Ia`, `TopoField` o `TopoTask`.
+- Convertir skill experimental en oficial versionada sin aprobacion.
 
 ## Skills
 
 - Experimental en `HERMES_HOME`: permitida con auditoria posterior.
 - Oficial versionada en repo: solo tras repeticion real y aprobacion.
-- `ciudadanoinusual-mobile-intake`: experimental activa para Captura Movil V1 y Modo Calle.
+- `ciudadanoinusual-mobile-intake`: experimental activa para Captura Movil V1, Modo Calle y flujo Telegram.
 - Indice: `projects/hermes_ia/SKILLS-EXPERIMENTALES.md`.
 
 ## Root vs Docker

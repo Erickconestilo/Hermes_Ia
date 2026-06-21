@@ -2,7 +2,7 @@
 
 ## Propósito del repositorio
 
-Este repositorio documenta y guía la evolución de `Hermes Agent` en un VPS de Hetzner con una estrategia de autonomía controlada: base nativa, seguridad suficiente y crecimiento por fases con pruebas pequeñas, aisladas y reversibles.
+Este repositorio documenta y guía la evolución de `Hermes Agent` en un VPS de Hetzner con una estrategia de confianza supervisada: base nativa, seguridad suficiente y crecimiento por fases con pruebas pequeñas, aisladas, reversibles y trazables.
 
 ## Decisiones vigentes
 
@@ -35,10 +35,12 @@ Este repositorio documenta y guía la evolución de `Hermes Agent` en un VPS de 
 
 ## Autonomía operativa
 
-- Verde: permitir con poca fricción lectura, búsqueda, `git status`, `git diff`, Markdown, scripts pequeños del repo y verificaciones simples.
-- Verde: permitir skills experimentales en `HERMES_HOME` si no tocan secretos, `.env`, servicios, cron recurrente, paquetes, Docker, MCPs, Playwright, memoria externa, publicacion automatica ni cambios destructivos.
+Regla principal: Hermes puede expandirse en bajo riesgo si deja rastro. Hermes debe pedir permiso en alto riesgo.
+
+- Verde sin confirmacion previa: lectura, busqueda, `git status`, `git diff`, Markdown, scripts pequenos del repo, verificaciones simples, capturas privadas fuera de Git, recuperar capturas, convertir capturas en borradores, aplicar `JUDGE.md`, crear archivos temporales en `tmp/` o `HERMES_HOME`, usar/enviar archivos por Telegram con scripts ya probados y crear/usar skills experimentales en `HERMES_HOME`.
+- Registro posterior obligatorio: nueva skill experimental, archivo nuevo en `HERMES_HOME` que afecte comportamiento, cambio de flujo operativo, error detectado y corregido, o automatizacion experimental no recurrente.
 - Amarillo: revisar antes de ejecutar scripts nuevos, `chmod +x`, cambios en varios archivos, automatizaciones internas pequeñas o formalizar una skill dentro del repo.
-- Rojo: bloquear o pedir confirmación fuerte para `sudo`, paquetes, servicios, `.env`, secretos, Docker, cron recurrente, cambios de Telegram, MCPs, Playwright, memoria externa, publicacion automatica, `hermes doctor --fix` y cambios fuera de `Hermes_Ia`.
+- Rojo con permiso fuerte previo: modificar `.env`, mostrar o mover tokens, SSH, firewall, usuarios, `sudo`, paquetes, servicios `systemd`, cron recurrente, Docker, MCPs, Playwright, memoria externa, publicacion automatica, borrar datos, cambios fuera de `Hermes_Ia`, tocar `TopoField` o `TopoTask`, `hermes doctor --fix` o convertir una skill experimental en oficial versionada en Git.
 
 ## Politica de skills
 

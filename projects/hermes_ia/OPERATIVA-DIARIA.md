@@ -17,9 +17,13 @@ Si no pasa una de esas cuatro cosas, la sesion no aporto suficiente.
 
 ## Niveles de autonomia
 
+Regla base: confianza supervisada.
+
+Hermes puede expandirse en bajo riesgo si deja rastro. Hermes debe pedir permiso en alto riesgo.
+
 ### Verde
 
-Permitir con poca friccion:
+Permitir sin confirmacion previa si es reversible y no toca secretos:
 
 - leer archivos
 - buscar con `grep`, `find` o `rg`
@@ -28,18 +32,31 @@ Permitir con poca friccion:
 - crear o modificar Markdown
 - crear scripts pequenos dentro del repo
 - ejecutar scripts simples de verificacion si ya se mostro el contenido y no tocan sistema
-
-En este nivel, `Allow once` suele ser aceptable.
+- crear o usar skills experimentales dentro de `HERMES_HOME`
+- usar skills experimentales desde Telegram
+- guardar capturas privadas fuera de Git
+- recuperar capturas
+- convertir capturas en borradores
+- aplicar `JUDGE.md`
+- crear archivos temporales en `tmp/` o `HERMES_HOME`
+- proponer mejoras operativas
+- enviar imagenes o archivos por Telegram con scripts ya probados
+- registrar aprendizajes en bitacora o indice cuando corresponda
 
 ### Amarillo
 
-Revisar antes de ejecutar:
+Exige registro posterior, y confirmacion solo si el riesgo sube:
 
 - `chmod +x`
 - scripts nuevos
 - cambios en varios archivos
 - pequenos cambios de flujo Git
 - automatizaciones internas del repo
+- nueva skill experimental creada
+- archivo nuevo en `HERMES_HOME` que afecte comportamiento
+- cambio de flujo operativo
+- error detectado y corregido
+- automatizacion experimental no recurrente
 
 Si la accion es clara, local, reversible y de bajo riesgo, se puede permitir con `Allow once`.
 
@@ -55,12 +72,17 @@ Bloquear o pedir confirmacion fuerte para:
 - `.env`
 - claves, tokens o secretos
 - Docker
-- cron
-- cambios de Telegram fuera del gateway ya validado
+- cron recurrente
+- cambios de configuracion del gateway de Telegram
 - MCPs
 - Playwright
+- memoria externa
+- publicacion automatica en redes
+- borrar datos
 - `hermes doctor --fix`
 - cambios fuera de `Hermes_Ia`
+- tocar `TopoField` o `TopoTask`
+- convertir una skill experimental en oficial versionada en Git
 
 ## Flujo recomendado
 

@@ -4,6 +4,8 @@
 
 Registrar skills creadas por Hermes dentro de `HERMES_HOME` como incubadora de flujos repetibles de bajo riesgo.
 
+La politica vigente es confianza supervisada: Hermes puede expandirse en bajo riesgo si deja rastro; debe pedir permiso en alto riesgo.
+
 Una skill experimental no es todavia una skill oficial versionada en el repo.
 
 ## Politica
@@ -30,7 +32,7 @@ No permitido sin aprobacion:
 
 | Nombre | Ubicacion | Estado | Proposito | Condicion para formalizar |
 | --- | --- | --- | --- | --- |
-| `ciudadanoinusual-mobile-intake` | `HERMES_HOME` (`/home/hermes/.hermes/skills/note-taking/ciudadanoinusual-mobile-intake/`) | experimental activa | Captura Movil V1 y Modo Calle desde Telegram | superar 3 capturas reales sin errores graves |
+| `ciudadanoinusual-mobile-intake` | `/home/hermes/.hermes/skills/note-taking/ciudadanoinusual-mobile-intake/` | experimental activa | Captura Movil V1, Modo Calle y flujo Telegram para CiudadanoInusual | superar 3 capturas reales utiles sin errores graves y sin tocar Git/servicios/secretos sin permiso |
 
 ## Criterio de formalizacion
 

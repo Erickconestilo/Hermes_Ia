@@ -190,3 +190,11 @@ Hermes respondio que el estado real ya incluye:
 - Se creo `projects/hermes_ia/SKILLS-EXPERIMENTALES.md` como indice de skills incubadas en `HERMES_HOME`.
 - La skill `ciudadanoinusual-mobile-intake` no se borra: queda experimental activa para Captura Movil V1 y Modo Calle.
 - La formalizacion queda condicionada a 3 capturas reales sin errores graves.
+
+## Confianza supervisada - 2026-06-21
+
+- Se ajusto la politica para evitar bloqueo preventivo sobre capacidades propias de Hermes.
+- Acciones verdes: skills experimentales en `HERMES_HOME`, uso desde Telegram, capturas privadas, recuperacion de capturas, borradores, `JUDGE.md`, temporales y envio de archivos con scripts probados.
+- Acciones con registro posterior: nueva skill experimental, archivo nuevo en `HERMES_HOME`, cambio de flujo, error corregido o automatizacion experimental no recurrente.
+- Acciones rojas: secretos, `.env`, tokens, SSH, firewall, usuarios, `sudo`, servicios, cron recurrente, paquetes, Docker, MCPs, Playwright, memoria externa, publicacion automatica, borrados y cambios fuera de `Hermes_Ia`.
+- La regla queda: Hermes puede expandirse en bajo riesgo si deja rastro; debe pedir permiso en alto riesgo.
