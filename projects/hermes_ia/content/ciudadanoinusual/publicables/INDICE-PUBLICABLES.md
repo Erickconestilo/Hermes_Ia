@@ -6,6 +6,15 @@ Mapa rapido de piezas listas o casi listas para publicar.
 
 No sustituye los archivos completos. Sirve para saber que existe, que formato tiene y que falta revisar antes de publicar.
 
+## Guias operativas
+
+| Guia | Archivo | Uso |
+| --- | --- | --- |
+| Guia rapida de modos | `../GUIA-RAPIDA-MODOS.md` | recordar cuando usar modo guion, post, carrusel, referencias visuales y revision de privacidad |
+| Checklist carruseles | `CHECKLIST-CARRUSELES.md` | revisar estructura, imagenes y privacidad antes de publicar carruseles |
+| Plan semanal | `PLAN-PUBLICACION-SEMANAL.md` | ordenar publicaciones sin improvisar |
+| Auditoria publicables | `AUDITORIA-PUBLICABLES.md` | ver que esta listo, que requiere edicion y que es sensible |
+
 ## Guiones publicables
 
 | Pieza | Archivo | Formato | Estado | Revision antes de publicar |
@@ -39,6 +48,7 @@ No sustituye los archivos completos. Sirve para saber que existe, que formato ti
 | Carrusel 02 - Topografia real no glamurosa | `carrusel-02-topografia-real-no-glamurosa.md` | carrusel Instagram/LinkedIn | listo con edicion | tapar matriculas, caras, empresa, ubicaciones y detalles de obra |
 | Carrusel 03 - Malas practicas de topografia | `carrusel-03-malas-practicas-topografia.md` | carrusel Instagram/LinkedIn | pendiente de imagen propia | no publicar captura ajena; recrear con imagen propia o generica |
 | Carrusel 04 - El dia libre tambien cansa | `carrusel-04-dia-libre-tambien-cansa.md` | carrusel Instagram | pendiente de fotos propias | no mostrar vivienda, tickets, matriculas ni datos privados |
+| Carrusel 05 - Comer en ruta tambien es faena | `carrusel-05-comida-ruta-real.md` | carrusel Instagram | pendiente de fotos propias | no mostrar restaurante, tickets, caras ni ubicacion exacta |
 
 ## Siguientes piezas recomendadas
 
