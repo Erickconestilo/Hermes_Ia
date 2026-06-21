@@ -173,3 +173,11 @@ Hermes respondio que el estado real ya incluye:
 - Se creo Captura Movil V1 con `projects/hermes_ia/CAPTURA-MOVIL.md` y `scripts/captura-movil.py`.
 - Se valido el script de captura con prueba sintetica: add, list, show, update-status y export-curated usando `tmp/`.
 - Queda pendiente la prueba real desde Telegram: capturar una idea desde movil, recuperarla, convertirla en pieza, aplicar Judge y publicar o dejar lista.
+
+## Politica de autonomia progresiva - 2026-06-21
+
+- Se cambia el criterio de "bloquear skills por defecto" a "permitir incubadora con auditoria posterior".
+- Hermes puede crear skills experimentales dentro de `HERMES_HOME` si el flujo es repetible, util y de bajo riesgo.
+- Se mantienen limites rojos: secretos, `.env`, servicios, cron recurrente, Docker, MCPs, Playwright, memoria externa y publicacion automatica.
+- `ciudadanoinusual-mobile-intake` queda clasificada como skill experimental activa, no oficial.
+- La condicion para formalizarla en el repo es superar 3 capturas reales sin errores graves.

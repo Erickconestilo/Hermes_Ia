@@ -1,7 +1,6 @@
 # CODEX BRIEF
 
 ## Objetivo
-
 Foto comprimida y operativa de `Hermes_Ia` para futuras sesiones de Codex.
 
 ## Estado actual real
@@ -18,35 +17,20 @@ Foto comprimida y operativa de `Hermes_Ia` para futuras sesiones de Codex.
 - Telegram Gateway: operativo desde movil mediante bot autorizado.
 - Imagenes generadas: envio a Telegram con `scripts/send-telegram-photo.py`.
 - Captura Movil V1: en construccion; almacenamiento privado fuera de Git.
+- Skills experimentales: permitidas en `HERMES_HOME` como incubadora de bajo riesgo.
 - Fase 0 documental: cerrada.
 - Fase 1: activa en modo controlado.
 - `CiudadanoInusual`: sistema editorial activo.
 
 ## Norte estrategico
-
 `Hermes_Ia` es el arnes personal de IA de Erick/CiudadanoInusual.
 
-Debe ayudar a:
+Debe ayudar a investigar con fuentes, convertir vida real en contenido, mejorar el sistema con scripts/docs utiles y capturar ideas desde movil.
 
-- investigar con fuentes y riesgos;
-- convertir vida real en contenido;
-- mejorar el propio sistema con scripts y docs utiles;
-- capturar ideas desde movil cuando no hay portatil.
-
-Inspiraciones: Benjamin Cordero, Fatz y Gentleman Programming.
-
-Regla: adaptar, no copiar stacks completos.
+Inspiraciones: Benjamin Cordero, Fatz y Gentleman Programming. Regla: adaptar, no copiar stacks completos.
 
 ## Clasificacion obligatoria
-
-Toda idea nueva cae en una categoria:
-
-1. operativo ahora
-2. siguiente experimento seguro
-3. futuro planificado
-4. descartado por ahora
-
-Si no cae claramente en una, no se ejecuta.
+Toda idea nueva cae en una categoria: operativo ahora, siguiente experimento seguro, futuro planificado o descartado por ahora. Si no cae claramente en una, no se ejecuta.
 
 ## Seguridad vigente
 
@@ -55,6 +39,7 @@ Si no cae claramente en una, no se ejecuta.
 - No cambiar SSH, firewall, usuarios ni `.env` sin confirmacion fuerte.
 - No instalar componentes nuevos sin objetivo, riesgo, rollback y verificacion.
 - Si algo es riesgoso, proponer prueba minima, aislada y reversible.
+- No capar auto-mejora util: exigir trazabilidad y limites rojos.
 
 ## Permitido ahora
 
@@ -63,7 +48,8 @@ Si no cae claramente en una, no se ejecuta.
 - Telegram como canal movil autorizado.
 - Captura privada de ideas con `scripts/captura-movil.py`.
 - Envio de imagenes generadas al bot con `scripts/send-telegram-photo.py`.
-- Disenar criterios de futuras skills, perfiles o cron sin activarlos.
+- Skills experimentales en `HERMES_HOME` si son de bajo riesgo y dejan registro.
+- Disenar criterios de perfiles o cron sin activarlos.
 
 ## No activar todavia
 
@@ -80,6 +66,12 @@ Si no cae claramente en una, no se ejecuta.
 - Cambios en `.env`.
 - Cambios en `TopoField` o `TopoTask`.
 
+## Skills
+
+- Experimental en `HERMES_HOME`: permitida con auditoria posterior.
+- Oficial versionada en repo: solo tras repeticion real y aprobacion.
+- `ciudadanoinusual-mobile-intake`: experimental activa para Captura Movil V1 y Modo Calle.
+
 ## Root vs Docker
 
 - `root`: solo bootstrap, recuperacion o administracion puntual.
@@ -87,22 +79,11 @@ Si no cae claramente en una, no se ejecuta.
 - Docker: futuro sandbox para Builder fuerte, no cambio inmediato.
 
 ## Usos oficiales
+Hermes Research investiga IA, tecnologia, FP, vivienda, topografia y oportunidades con fuentes, riesgos y conclusion accionable.
 
-Investiga IA, tecnologia, FP, vivienda, topografia y oportunidades.
+Hermes Content transforma ideas, fotos, vivencias y research en contenido para `CiudadanoInusual`. Formatos activos: Modo guion, Modo post, Modo carrusel y Modo calle.
 
-Debe usar fuentes, riesgos y conclusion accionable.
-
-### Hermes Content
-
-Transforma ideas, fotos, vivencias y research en contenido para `CiudadanoInusual`.
-
-Formatos activos: Modo guion, Modo post, Modo carrusel y Modo calle.
-
-### Hermes Builder
-
-Mejora `Hermes_Ia` con docs, scripts y verificaciones.
-
-No toca `TopoField` ni `TopoTask` en esta fase.
+Hermes Builder mejora `Hermes_Ia` con docs, scripts y verificaciones. No toca `TopoField` ni `TopoTask` en esta fase.
 
 ## Inventario editorial
 
@@ -127,7 +108,7 @@ Validar Mobile Ops V1:
 
 ## Futuro planificado
 
-- Skills solo tras repeticion real.
+- Formalizar skills solo tras repeticion real.
 - Perfiles/subagentes cuando haya usos estables.
 - Cron solo con prueba manual previa y no recurrente.
 - Docker backend como sandbox futuro.

@@ -59,6 +59,7 @@ Convertir Hermes en el arnes personal de IA de Erick/CiudadanoInusual:
 - Telegram Gateway para hablar con Hermes desde movil.
 - Envio de imagenes generadas a Telegram.
 - Git como mecanismo de sincronizacion.
+- Skills experimentales dentro de `HERMES_HOME` como incubadora de flujos repetibles de bajo riesgo.
 
 ### Siguiente experimento seguro
 
@@ -68,7 +69,7 @@ Convertir Hermes en el arnes personal de IA de Erick/CiudadanoInusual:
 
 ### Futuro planificado
 
-- Skills solo cuando un flujo se repita varias veces.
+- Formalizar skills oficiales versionadas solo cuando un flujo se repita varias veces y supere auditoria.
 - Perfiles/subagentes cuando Research, Content, Builder y Judge ya tengan uso estable.
 - Cron con una sola tarea no recurrente antes de cualquier automatizacion persistente.
 - Docker solo como sandbox futuro para Builder fuerte.
@@ -82,6 +83,25 @@ Convertir Hermes en el arnes personal de IA de Erick/CiudadanoInusual:
 - Kanban.
 - Dashboard o API publica.
 - Automatizaciones recurrentes sin prueba manual previa.
+
+## Incubadora de skills
+
+Hermes puede crear y usar skills experimentales dentro de `HERMES_HOME` cuando detecte un flujo repetible y de bajo riesgo.
+
+Condiciones:
+
+- no tocar secretos, `.env` ni servicios;
+- no activar cron recurrente;
+- no instalar paquetes;
+- no tocar Docker, MCPs, Playwright ni memoria externa;
+- no publicar en redes;
+- no hacer cambios destructivos;
+- no modificar el repo sin diff claro;
+- dejar registro de que creo, donde vive y para que sirve.
+
+| Skill | Estado | Ubicacion | Proposito | Condicion para formalizar |
+| --- | --- | --- | --- | --- |
+| `ciudadanoinusual-mobile-intake` | experimental activa | `HERMES_HOME` | Captura Movil V1 y Modo Calle desde Telegram | superar 3 capturas reales sin errores graves |
 
 ## Track B: CiudadanoInusual y feedback real
 
@@ -146,4 +166,3 @@ Mobile Ops V1 queda cerrado solo cuando:
 ## Regla de decision
 
 Si una idea nueva no mejora ejecucion real, captura movil, publicacion, verificacion o aprendizaje medible, vuelve al backlog.
-
