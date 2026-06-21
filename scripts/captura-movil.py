@@ -17,6 +17,14 @@ from zoneinfo import ZoneInfoNotFoundError
 DEFAULT_STORE = Path("/home/hermes/.hermes/data/ciudadanoinusual/capturas.jsonl")
 VALID_INPUT_TYPES = {"text", "voice", "image_note"}
 VALID_STATUSES = {"inbox", "reviewed", "converted", "discarded"}
+TEMPLATE_TEXT_MARKERS = (
+    "[cuenta aquí",
+    "Antes de guardar:",
+    "Devuélveme únicamente",
+    "No lo conviertas todavía",
+    "Detecta riesgos de privacidad",
+)
+TEMPLATE_TEXT_ERROR = "El texto parece incluir instrucciones o plantilla. Pasa solo la situación real."
 
 
 def madrid_now() -> datetime:
@@ -63,6 +71,12 @@ def parse_csv(value: str) -> list[str]:
     return [item.strip() for item in value.split(",") if item.strip()]
 
 
+def validate_original_text(text: str) -> None:
+    normalized_text = text.casefold()
+    if any(marker.casefold() in normalized_text for marker in TEMPLATE_TEXT_MARKERS):
+        raise SystemExit(TEMPLATE_TEXT_ERROR)
+
+
 def find_record(records: list[dict[str, Any]], capture_id: str) -> dict[str, Any]:
     matches = [record for record in records if record["id"].startswith(capture_id)]
     if not matches:
@@ -75,6 +89,7 @@ def find_record(records: list[dict[str, Any]], capture_id: str) -> dict[str, Any
 def cmd_add(args: argparse.Namespace) -> int:
     if args.input_type not in VALID_INPUT_TYPES:
         raise SystemExit(f"Invalid input_type. Use one of: {', '.join(sorted(VALID_INPUT_TYPES))}")
+    validate_original_text(args.text)
 
     path = store_path()
     records = read_records(path)

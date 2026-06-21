@@ -86,3 +86,20 @@ Una Captura Movil V1 funciona cuando:
 - se puede exportar una version curada;
 - el archivo privado no aparece en `git status`.
 
+## Validacion anti-plantilla
+
+`add` debe rechazar textos que incluyan instrucciones o placeholders del prompt en vez de una situacion real.
+
+Prueba manual:
+
+```bash
+python3 scripts/captura-movil.py add --text "[cuenta aquí una situación real de hoy]"
+```
+
+Resultado esperado:
+
+```text
+El texto parece incluir instrucciones o plantilla. Pasa solo la situación real.
+```
+
+El comando no debe crear ningun registro nuevo.
