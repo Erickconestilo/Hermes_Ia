@@ -33,7 +33,8 @@ Usar Telegram y `Modo calle` para:
 - convertir capturas en borradores;
 - aplicar `JUDGE.md` a piezas concretas;
 - usar skills experimentales de bajo riesgo;
-- recibir imagenes o archivos mediante scripts ya probados.
+- recibir imagenes o archivos mediante scripts ya probados;
+- probar `/whoami`, `/status`, notas de voz y `/background` pequeno si no toca servicios ni configuracion.
 
 No hacer desde movil:
 

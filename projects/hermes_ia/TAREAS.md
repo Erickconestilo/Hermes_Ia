@@ -6,7 +6,7 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 
 ## Siguiente tarea concreta
 
-- validar Captura Movil V1 desde Telegram: guardar una idea real, recuperarla, convertirla en pieza y aplicar `JUDGE.md`
+- probar desde Telegram `/whoami` y `/status`, registrar el resultado sin datos sensibles y decidir si `/background` pequeno queda como siguiente experimento seguro
 
 ## Peticion minima de tarea
 
@@ -21,13 +21,15 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 - consolidar el flujo local ↔ Git ↔ VPS ↔ Hermes
 - convertir el ritual de arranque en un habito de sesion
 - usar `OPERATIVA-DIARIA.md` como referencia para ejecutar sin volver al bucle meta
-- permitir autonomia controlada en tareas verdes y amarillas bajas de `Hermes Builder`
+- permitir confianza supervisada en tareas verdes y amarillas bajas de `Hermes Builder`
 - usar `CiudadanoInusual` como banco operativo de contenido real: guiones, posts, carruseles y publicacion movil
 - usar Telegram como canal movil de entrada, no como automatizacion sin control
 
 ## Pendientes cercanas
 
 - probar Captura Movil V1 desde movil con una foto o situacion real
+- probar envio de archivo, recepcion de imagen, nota de voz y `/background` pequeno desde Telegram
+- registrar capacidades reales de Telegram separando probado, asumido y descartado
 - publicar o dejar lista una primera pieza real desde el flujo movil
 - abrir Banco 2 con vida real expandida: pareja, convivencia, hogar, recados, comida, ocio simple y mini viajes
 - seguir probando `Modo guion`, `Modo post` y `Modo carrusel` con situaciones reales

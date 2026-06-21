@@ -49,6 +49,7 @@ Toda idea nueva cae en una categoria: operativo ahora, siguiente experimento seg
 - Captura privada de ideas con `scripts/captura-movil.py`.
 - Envio de imagenes generadas al bot con `scripts/send-telegram-photo.py`.
 - Skills experimentales en `HERMES_HOME`, uso desde Telegram, borradores desde capturas, `JUDGE.md`, archivos temporales en `tmp/`/`HERMES_HOME` y registro de aprendizajes.
+- Pruebas no destructivas desde Telegram: `/whoami`, `/status`, envio/recepcion de archivos o imagenes, notas de voz y `/background` pequeno con registro posterior.
 - Disenar criterios de perfiles o cron sin activarlos.
 
 ## No activar todavia
@@ -89,14 +90,14 @@ Hermes Builder mejora `Hermes_Ia` con docs, scripts y verificaciones. No toca `T
 
 ## Siguiente experimento seguro
 
-Validar Mobile Ops V1:
+Validar capacidades reales de Mobile Ops V1:
 
-1. capturar idea desde Telegram;
-2. guardarla fuera de Git con `scripts/captura-movil.py`;
-3. revisar privacidad;
-4. convertirla en post, guion, carrusel o nota privada;
-5. aplicar `JUDGE.md`;
-6. publicar manualmente o dejar lista;
+1. probar `/whoami` y `/status` desde Telegram;
+2. probar envio de archivo, recepcion de imagen y nota de voz;
+3. probar `/background` con tarea pequena no destructiva;
+4. capturar idea desde Telegram y guardarla fuera de Git;
+5. convertirla en nota, borrador o pieza solo si aporta;
+6. aplicar `JUDGE.md` cuando haya salida concreta;
 7. registrar aprendizaje.
 
 ## Futuro planificado

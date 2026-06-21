@@ -41,6 +41,7 @@ Permitir sin confirmacion previa si es reversible y no toca secretos:
 - crear archivos temporales en `tmp/` o `HERMES_HOME`
 - proponer mejoras operativas
 - enviar imagenes o archivos por Telegram con scripts ya probados
+- probar `/whoami`, `/status`, imagenes, archivos, voz y `/background` pequeno desde Telegram si la tarea es no destructiva
 - registrar aprendizajes en bitacora o indice cuando corresponda
 
 ### Amarillo

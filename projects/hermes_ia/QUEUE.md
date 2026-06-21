@@ -49,6 +49,18 @@ Si no se puede verificar, no entra en la cola.
 
 ## Builder siguientes
 
+- probar `/whoami` desde Telegram -> confirmar alcance real de permisos del bot -> registrar respuesta sin datos sensibles
+- probar `/status` desde Telegram -> confirmar estado de sesion y gateway -> registrar resultado minimo
+- probar envio de archivo desde Telegram a Hermes -> verificar recepcion sin versionar privados -> nota de resultado
+- probar recepcion de imagen desde Telegram -> confirmar que Hermes puede verla o describirla -> nota de capacidad real
+- probar nota de voz desde Telegram -> confirmar si transcribe o si requiere configuracion adicional -> registrar limite real
+- probar `/background` con una tarea pequena no destructiva -> confirmar que devuelve resultado al chat -> registrar si queda como experimento seguro
+- captura de decision personal -> guardar una decision breve fuera de Git -> recuperar y resumir sin convertirla en publicacion
+- registro de idea no publicable -> capturar una idea privada -> clasificarla como nota, decision o backlog
+- resumen semanal manual -> pedir desde Telegram un resumen de capturas recientes -> revisar en portatil
+- priorizar tarea de portatil -> pedir a Hermes una sola tarea para la proxima sesion de laptop -> verificar que no sea publicacion por defecto
+- briefing corto desde Telegram -> pedir research breve con fuentes o limites -> guardar resumen curado solo si aporta
+- Builder seguro desde movil -> pedir mejora de script/doc/verificacion sin tocar servicios ni configuracion -> revisar diff en portatil
 - validar Captura Movil V1 desde Telegram -> captura privada, recuperacion y conversion a borrador -> evidencia sin versionar datos privados
 - crear `prompts/video.md` con plantillas para generacion, desarrollo y research de videos cortos -> guardar en `prompts/`
 - limpiar o respaldar la carpeta untracked `projects/hermes_ia/briefings/` del VPS -> evitar conflictos de `git push vps` -> `git status --short` limpio en VPS
@@ -57,7 +69,7 @@ Si no se puede verificar, no entra en la cola.
 ## No entra todavia
 
 - cron recurrente
-- cambios adicionales de Telegram fuera del gateway ya validado
+- cambios de configuracion del gateway de Telegram fuera de pruebas no destructivas
 - Docker backend
 - perfiles reales
 - subagentes

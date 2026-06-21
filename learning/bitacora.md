@@ -198,3 +198,12 @@ Hermes respondio que el estado real ya incluye:
 - Acciones con registro posterior: nueva skill experimental, archivo nuevo en `HERMES_HOME`, cambio de flujo, error corregido o automatizacion experimental no recurrente.
 - Acciones rojas: secretos, `.env`, tokens, SSH, firewall, usuarios, `sudo`, servicios, cron recurrente, paquetes, Docker, MCPs, Playwright, memoria externa, publicacion automatica, borrados y cambios fuera de `Hermes_Ia`.
 - La regla queda: Hermes puede expandirse en bajo riesgo si deja rastro; debe pedir permiso en alto riesgo.
+
+## Alineacion con documentacion oficial Hermes - 2026-06-21
+
+- La documentacion oficial confirma que el Gateway de Telegram soporta texto, imagenes, archivos, voz, comandos internos y sesiones en background.
+- `/whoami` y `/status` pasan a experimento seguro porque solo verifican alcance y estado.
+- `/background` pasa a experimento seguro solo para tareas pequenas, no destructivas y registradas.
+- Cron oficial soporta tareas one-shot y recurrentes, pero en `Hermes_Ia` cron recurrente sigue rojo; una prueba one-shot queda como futuro con permiso.
+- `AGENTS.md` queda confirmado como contexto operativo valido del proyecto, por lo que debe reflejar la politica real de confianza supervisada.
+- La skill `ciudadanoinusual-mobile-intake` queda registrada como experimental activa, no oficial versionada.

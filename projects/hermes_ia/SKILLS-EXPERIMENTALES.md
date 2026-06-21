@@ -30,9 +30,9 @@ No permitido sin aprobacion:
 
 ## Registro actual
 
-| Nombre | Ubicacion | Estado | Proposito | Condicion para formalizar |
-| --- | --- | --- | --- | --- |
-| `ciudadanoinusual-mobile-intake` | `/home/hermes/.hermes/skills/note-taking/ciudadanoinusual-mobile-intake/` | experimental activa | Captura Movil V1, Modo Calle y flujo Telegram para CiudadanoInusual | superar 3 capturas reales utiles sin errores graves y sin tocar Git/servicios/secretos sin permiso |
+| Nombre | Ubicacion | Proposito | Estado | Fecha detectada | Riesgos | Evidencia de uso | Condicion para formalizar | Condicion para archivar |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `ciudadanoinusual-mobile-intake` | `/home/hermes/.hermes/skills/note-taking/ciudadanoinusual-mobile-intake/` | Captura Movil V1, Modo Calle y flujo Telegram para CiudadanoInusual | experimental activa | 2026-06-21 | guardar plantillas como captura real; conservar datos sensibles; cambiar flujo sin registro | prueba real desde Telegram; placeholder accidental corregido; validacion anti-plantillas en `scripts/captura-movil.py` | superar 3 capturas reales utiles sin errores graves y sin tocar Git/servicios/secretos sin permiso | archivar si genera errores repetidos, riesgo de privacidad, ruido operativo o no aporta utilidad real |
 
 ## Criterio de formalizacion
 
