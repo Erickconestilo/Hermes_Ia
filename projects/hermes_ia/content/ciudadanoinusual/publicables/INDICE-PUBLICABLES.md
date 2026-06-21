@@ -14,6 +14,7 @@ No sustituye los archivos completos. Sirve para saber que existe, que formato ti
 | Checklist carruseles | `CHECKLIST-CARRUSELES.md` | revisar estructura, imagenes y privacidad antes de publicar carruseles |
 | Plan semanal | `PLAN-PUBLICACION-SEMANAL.md` | ordenar publicaciones sin improvisar |
 | Auditoria publicables | `AUDITORIA-PUBLICABLES.md` | ver que esta listo, que requiere edicion y que es sensible |
+| Indice de publicaciones | `../publicaciones/INDICE-PUBLICACIONES.md` | revisar piezas ya publicadas y aprendizaje real |
 
 ## Guiones publicables
 
