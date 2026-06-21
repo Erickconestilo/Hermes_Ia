@@ -38,6 +38,7 @@ No sustituye los archivos completos. Sirve para saber que existe, que formato ti
 | Carrusel 01 - Fisurometro y grieta | `carrusel-01-fisurometro-grieta.md` | carrusel Instagram/LinkedIn | listo con revision | no mostrar ubicacion, cliente, empresa ni codigos sensibles |
 | Carrusel 02 - Topografia real no glamurosa | `carrusel-02-topografia-real-no-glamurosa.md` | carrusel Instagram/LinkedIn | listo con edicion | tapar matriculas, caras, empresa, ubicaciones y detalles de obra |
 | Carrusel 03 - Malas practicas de topografia | `carrusel-03-malas-practicas-topografia.md` | carrusel Instagram/LinkedIn | pendiente de imagen propia | no publicar captura ajena; recrear con imagen propia o generica |
+| Carrusel 04 - El dia libre tambien cansa | `carrusel-04-dia-libre-tambien-cansa.md` | carrusel Instagram | pendiente de fotos propias | no mostrar vivienda, tickets, matriculas ni datos privados |
 
 ## Siguientes piezas recomendadas
 
