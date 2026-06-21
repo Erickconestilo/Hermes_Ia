@@ -119,6 +119,103 @@ No todo es la foto bonita del aparato.
 Tambien esta lo demas.
 Y lo demas cuenta bastante.
 
+## Version Instagram mas afilada
+
+Usar esta version si se prioriza ritmo visual, retencion y humor de oficio.
+
+### Slide 1
+
+Imagen:
+
+Estacion en pozo o foto mas impactante.
+
+Texto:
+
+Topografia no siempre es tripode bonito.
+
+### Slide 2
+
+Imagen:
+
+Estacion en calle.
+
+Texto:
+
+A veces es medir
+con coches, ruido
+y cero espacio.
+
+### Slide 3
+
+Imagen:
+
+Estacion dentro del pozo.
+
+Texto:
+
+A veces es bajar donde
+ya mirar da respeto.
+
+### Slide 4
+
+Imagen:
+
+Arenal raro o terreno dificil.
+
+Texto:
+
+A veces el terreno dice:
+"hoy no te lo pongo facil".
+
+### Slide 5
+
+Imagen:
+
+Fisurómetro o grieta.
+
+Texto:
+
+Y a veces todo depende
+de un detalle pequeno.
+
+### Slide 6
+
+Imagen:
+
+Obra con materiales u obstaculos.
+
+Texto:
+
+Materiales en medio.
+Obstaculos.
+Adaptarse o parar.
+
+### Slide 7
+
+Imagen:
+
+Cierre humano: botas, herramienta, sombra del tripode o estacion en calle.
+
+Texto:
+
+No siempre es limpio.
+No siempre es comodo.
+Pero tambien es oficio.
+
+### Caption Instagram afilado
+
+La topografia desde fuera puede parecer limpia, ordenada y casi elegante.
+
+Luego llega la calle:
+coches, barro, calor, pozo, obstaculos y detalles pequenos que nadie mira hasta que toca mirarlos.
+
+No todo el oficio sale bonito en foto.
+Pero justamente ahi se ve lo real.
+
+### CTA Instagram
+
+Cual foto te parece mas "esto tambien es topografia"?
+
 ## Caption LinkedIn
 
 Una parte poco visible de la topografia es que no siempre trabaja en condiciones limpias, comodas o previsibles.
