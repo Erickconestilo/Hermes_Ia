@@ -117,3 +117,48 @@ Rellenar al inicio de cada sesion sobre `Hermes_Ia`.
 - Resultado: ritual validado como primer uso practico de Hermes dentro de `Hermes_Ia`.
 - Pendiente para la proxima sesion: elegir y ejecutar una primera tarea pequena de Fase 1 sin ampliar alcance.
 - Limites respetados: no se toco configuracion, VPS ni otros proyectos.
+
+## Sesion Telegram Gateway - 2026-06-21
+
+### Arranque
+
+- Objetivo: activar Telegram como canal movil para hablar con Hermes desde el telefono.
+- Alcance autorizado: configurar bot, guardar token en `.env`, validar respuesta basica y dejar gateway persistente.
+- Limites: no Docker, no cambio de backend, no MCPs, no Playwright, no memoria externa, no secretos en Git.
+
+### Resultado
+
+- Se creo un bot de Telegram para Hermes.
+- El token se guardo directamente en `/home/hermes/.hermes/.env`.
+- Se configuro allowlist para limitar el uso al usuario autorizado.
+- Se instalo y activo el servicio de usuario `hermes-gateway.service`.
+- Se habilito `systemd linger` para que el gateway sobreviva al cierre de SSH.
+- Hermes respondio desde el movil al mensaje `hola`.
+
+### Respuesta observada de Hermes
+
+```text
+Hola Erick, que necesitas
+```
+
+### Verificacion documental
+
+Despues de actualizar la documentacion, se pidio a Hermes desde Telegram:
+
+```text
+Lee docs/CODEX-BRIEF.md y dime en 3 lineas que cambio hoy sobre Telegram.
+```
+
+Hermes respondio que el estado real ya incluye:
+
+- backend local
+- `openai-codex` como auth principal
+- Telegram Gateway operativo desde movil
+- `CiudadanoInusual` como sistema editorial activo
+- cron, Kanban, Docker, perfiles y MCPs aun no activados
+
+### Cierre
+
+- Telegram pasa de futuro planificado a operativo ahora, solo como canal movil autorizado.
+- Cambios adicionales de Telegram siguen siendo sensibles y requieren confirmacion.
+- Documentacion especifica: `runbooks/09-telegram-gateway.md`.
