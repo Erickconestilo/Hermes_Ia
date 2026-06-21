@@ -45,6 +45,12 @@ Reiniciar el gateway:
 hermes gateway restart
 ```
 
+Enviar una imagen generada al chat de Telegram:
+
+```bash
+python3 scripts/send-telegram-photo.py /ruta/a/imagen.png "caption opcional"
+```
+
 Ver logs recientes:
 
 ```bash
@@ -123,6 +129,17 @@ Systemd linger is enabled
 
 El bot respondio desde el movil despues de arrancar el servicio.
 
+## Imagenes generadas
+
+El proveedor de imagenes se habilita mediante `FAL_KEY` en `/home/hermes/.hermes/.env`.
+
+Regla operativa:
+
+- si Hermes genera una imagen desde Telegram, no basta con describirla;
+- debe enviar el archivo con `python3 scripts/send-telegram-photo.py <ruta-imagen> "<caption>"`;
+- tambien debe devolver la ruta exacta del archivo generado;
+- no debe mostrar `FAL_KEY`, `TELEGRAM_BOT_TOKEN` ni IDs privados.
+
 ## Limites vigentes
 
 Telegram queda operativo solo como canal movil autorizado.
@@ -137,4 +154,3 @@ Sigue fuera de alcance:
 - activar memoria externa
 - exponer dashboard o API publica
 - guardar secretos en Git
-

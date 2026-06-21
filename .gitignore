@@ -3,6 +3,8 @@
 !.env.example
 secrets/
 logs/
+tmp/
+__pycache__/
 *.pem
 *.key
 id_rsa

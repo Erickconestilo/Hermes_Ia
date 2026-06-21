@@ -27,6 +27,7 @@ Este repositorio documenta y guía la evolución de `Hermes Agent` en un VPS de 
 - Explicar siempre: objetivo, riesgo, alternativa, rollback y verificación.
 - Advertir explícitamente antes de cambios que puedan afectar acceso SSH, firewall o usuario administrador.
 - Si algo es riesgoso, no lo bloquees sin más: propón una prueba mínima, aislada y reversible.
+- Si desde Telegram generas una imagen en el VPS, envia el archivo final con `python3 scripts/send-telegram-photo.py <ruta-imagen> "<caption>"` y devuelve tambien la ruta.
 
 ## Autonomía operativa
 
