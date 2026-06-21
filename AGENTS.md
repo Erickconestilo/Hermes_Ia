@@ -27,7 +27,7 @@ Este repositorio documenta y guía la evolución de `Hermes Agent` en un VPS de 
 - Explicar siempre: objetivo, riesgo, alternativa, rollback y verificación.
 - Advertir explícitamente antes de cambios que puedan afectar acceso SSH, firewall o usuario administrador.
 - Si algo es riesgoso, no lo bloquees sin más: propón una prueba mínima, aislada y reversible.
-- Si desde Telegram generas una imagen en el VPS, envia el archivo final con `python3 scripts/send-telegram-photo.py <ruta-imagen> "<caption>"` y devuelve tambien la ruta.
+- Si desde Telegram el usuario pide una imagen, no basta con describirla. Si Hermes genera, encuentra, recorta, edita u optimiza una imagen en el VPS, debe enviar el archivo final con `python3 scripts/send-telegram-photo.py <ruta-imagen> "<caption>"` y devolver tambien la ruta exacta.
 - Si desde Telegram recibes una idea para `CiudadanoInusual`, usa Captura Movil V1 antes de convertirla en contenido: guarda la nota con `python3 scripts/captura-movil.py add`, devuelve el `id` y marca riesgos de privacidad.
 
 ## Autonomía operativa

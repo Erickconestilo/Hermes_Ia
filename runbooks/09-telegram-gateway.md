@@ -45,7 +45,7 @@ Reiniciar el gateway:
 hermes gateway restart
 ```
 
-Enviar una imagen generada al chat de Telegram:
+Enviar una imagen al chat de Telegram:
 
 ```bash
 python3 scripts/send-telegram-photo.py /ruta/a/imagen.png "caption opcional"
@@ -112,7 +112,7 @@ Resultado:
 | Respuesta basica | enviar `hola` desde movil | probado | respuesta rapida observada | no |
 | Servicio persistente | `hermes gateway status` | probado | `User gateway service is running` | no |
 | Lectura de contexto | pedir resumen de `docs/CODEX-BRIEF.md` | probado | respuesta con estado actualizado | no |
-| Envio de imagen generada | `scripts/send-telegram-photo.py` | probado | `ok: true` y `message_id` | no |
+| Envio de imagen al usuario | `scripts/send-telegram-photo.py` | probado | `ok: true` y `message_id` | no |
 | Captura Movil V1 | guardar nota desde Telegram | no probado | script creado, falta prueba real | si |
 | Analisis de imagen recibida | enviar foto desde movil y pedir revision | no probado | sin evidencia todavia | si |
 | Nota de voz / STT | enviar audio desde movil | no probado | sin evidencia todavia | si |
@@ -145,16 +145,29 @@ Systemd linger is enabled
 
 El bot respondio desde el movil despues de arrancar el servicio.
 
-## Imagenes generadas
+## Imagenes generadas, encontradas o editadas
 
 El proveedor de imagenes se habilita mediante `FAL_KEY` en `/home/hermes/.hermes/.env`.
 
 Regla operativa:
 
-- si Hermes genera una imagen desde Telegram, no basta con describirla;
-- debe enviar el archivo con `python3 scripts/send-telegram-photo.py <ruta-imagen> "<caption>"`;
+- si el usuario pide una imagen desde Telegram, no basta con describirla;
+- si Hermes genera, encuentra, recorta, edita u optimiza una imagen, debe enviar el archivo final con `python3 scripts/send-telegram-photo.py <ruta-imagen> "<caption>"`;
 - tambien debe devolver la ruta exacta del archivo generado;
 - no debe mostrar `FAL_KEY`, `TELEGRAM_BOT_TOKEN` ni IDs privados.
+
+Ejemplo:
+
+```bash
+python3 scripts/send-telegram-photo.py /home/hermes/workspace/generated/avatar-hermes.png "Avatar Hermes Agent"
+```
+
+Respuesta esperada:
+
+```text
+Imagen enviada por Telegram.
+Ruta: /home/hermes/workspace/generated/avatar-hermes.png
+```
 
 ## Captura Movil V1
 
