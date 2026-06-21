@@ -162,3 +162,14 @@ Hermes respondio que el estado real ya incluye:
 - Telegram pasa de futuro planificado a operativo ahora, solo como canal movil autorizado.
 - Cambios adicionales de Telegram siguen siendo sensibles y requieren confirmacion.
 - Documentacion especifica: `runbooks/09-telegram-gateway.md`.
+
+## Sprint semanal 01 - 2026-06-21
+
+- Se reconcilio el estado real del proyecto: Fase 0 cerrada, Fase 1 activa, Telegram Gateway operativo y `gpt-5.4` como modelo principal.
+- Se creo `ROADMAP-HERMES.md` como fuente canonica de fases, tracks, tareas actuales y limites.
+- Se corrigieron documentos que todavia trataban Telegram como futuro o mencionaban `gpt-5.4-mini` como modelo activo.
+- Se actualizo el inventario editorial real: 6 research, 20 content base, 6 guiones, 6 posts, 6 carruseles y 1 publicacion registrada.
+- Se creo `OPERATIVA-SEMANAL.md` para separar trabajo movil y trabajo de portatil.
+- Se creo Captura Movil V1 con `projects/hermes_ia/CAPTURA-MOVIL.md` y `scripts/captura-movil.py`.
+- Se valido el script de captura con prueba sintetica: add, list, show, update-status y export-curated usando `tmp/`.
+- Queda pendiente la prueba real desde Telegram: capturar una idea desde movil, recuperarla, convertirla en pieza, aplicar Judge y publicar o dejar lista.

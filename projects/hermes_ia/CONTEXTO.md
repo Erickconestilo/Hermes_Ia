@@ -20,9 +20,10 @@ Está validado:
 - usuario `hermes`
 - backend `local`
 - `openai-codex` autenticado como proveedor principal
-- `gpt-5.4-mini` funcionando para trabajo ligero
+- `gpt-5.4` funcionando como modelo principal
 - OpenRouter mantenido como fallback
 - sincronización local ↔ VPS por Git ya operativa
+- Telegram Gateway operativo desde movil
 
 Además:
 
@@ -39,6 +40,7 @@ Usar Hermes ahora como:
 - recuperador de contexto real antes de cada sesión
 - ayuda para elegir una sola tarea concreta y útil
 - apoyo práctico sin tocar configuración
+- canal movil para capturar ideas, fotos y situaciones desde la calle
 
 ## Límites actuales
 
@@ -46,7 +48,7 @@ En esta fase no se debe asumir todavía que Hermes será:
 
 - sistema multiagente completo
 - gestor de varios proyectos a la vez
-- pipeline con cron
+- pipeline con cron recurrente
 - interfaz pública
 - sistema con memoria externa
 - orquestador de herramientas complejas
@@ -80,7 +82,7 @@ Hermes no debe tomar todavía decisiones automáticas sobre:
 - configuración sensible
 - despliegues
 - cron
-- integraciones de mensajería
+- cambios adicionales de mensajería fuera del gateway ya validado
 - cambios sobre otros proyectos
 - nuevas herramientas no aprobadas
 

@@ -28,7 +28,7 @@ Registrar como quedo activado el acceso movil a Hermes mediante Telegram, sin gu
 Entrar al VPS:
 
 ```bash
-ssh -i $HOME/.ssh/hermes_hetzner_ed25519 hermes@167.233.91.185
+ssh -i $HOME/.ssh/hermes_hetzner_ed25519 hermes@<IP_O_ALIAS_DEL_VPS>
 cd /home/hermes/workspace/Hermes_Ia
 source /home/hermes/.profile
 ```
@@ -105,6 +105,22 @@ Resultado:
 - Hermes leyo la documentacion actualizada.
 - Ya no repitio que Telegram estaba pendiente para fases futuras.
 
+## Matriz de capacidades
+
+| Capacidad | Prueba | Resultado | Evidencia | Pendiente |
+| --- | --- | --- | --- | --- |
+| Respuesta basica | enviar `hola` desde movil | probado | respuesta rapida observada | no |
+| Servicio persistente | `hermes gateway status` | probado | `User gateway service is running` | no |
+| Lectura de contexto | pedir resumen de `docs/CODEX-BRIEF.md` | probado | respuesta con estado actualizado | no |
+| Envio de imagen generada | `scripts/send-telegram-photo.py` | probado | `ok: true` y `message_id` | no |
+| Captura Movil V1 | guardar nota desde Telegram | no probado | script creado, falta prueba real | si |
+| Analisis de imagen recibida | enviar foto desde movil y pedir revision | no probado | sin evidencia todavia | si |
+| Nota de voz / STT | enviar audio desde movil | no probado | sin evidencia todavia | si |
+| Escritura temporal segura | crear prueba en `tmp/` | no probado | pendiente | si |
+| Accion sensible con confirmacion | pedir accion roja o amarilla | no probado | pendiente | si |
+
+No marcar una capacidad como cerrada sin evidencia concreta.
+
 ## Incidencias resueltas
 
 ### Proceso manual confundido con gateway real
@@ -139,6 +155,28 @@ Regla operativa:
 - debe enviar el archivo con `python3 scripts/send-telegram-photo.py <ruta-imagen> "<caption>"`;
 - tambien debe devolver la ruta exacta del archivo generado;
 - no debe mostrar `FAL_KEY`, `TELEGRAM_BOT_TOKEN` ni IDs privados.
+
+## Captura Movil V1
+
+Ruta privada prevista:
+
+```text
+/home/hermes/.hermes/data/ciudadanoinusual/capturas.jsonl
+```
+
+Comando base:
+
+```bash
+python3 scripts/captura-movil.py add --text "nota en bruto" --tags "calle,contenido" --privacy-flags "ubicacion" --suggested-format "post"
+```
+
+Reglas:
+
+- no guardar capturas privadas en Git;
+- preservar `original_text`;
+- marcar riesgos de privacidad;
+- devolver el `id` de captura;
+- convertir a contenido solo despues de revisar.
 
 ## Limites vigentes
 

@@ -16,7 +16,7 @@ Usuario operativo del VPS y tambien nombre del agente CLI instalado de forma nat
 
 ### Fase 1 controlada
 
-Etapa actual del proyecto: Hermes ya funciona, pero se usa con alcance limitado, sin tocar todavia Docker, cron, Telegram, MCPs ni memoria externa.
+Etapa actual del proyecto: Hermes ya funciona y Telegram Gateway esta operativo como canal movil controlado, pero no se activan todavia Docker, cron recurrente, MCPs ni memoria externa.
 
 ### openai-codex
 

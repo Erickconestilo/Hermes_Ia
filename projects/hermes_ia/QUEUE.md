@@ -49,14 +49,15 @@ Si no se puede verificar, no entra en la cola.
 
 ## Builder siguientes
 
+- validar Captura Movil V1 desde Telegram -> captura privada, recuperacion y conversion a borrador -> evidencia sin versionar datos privados
 - crear `prompts/video.md` con plantillas para generacion, desarrollo y research de videos cortos -> guardar en `prompts/`
 - limpiar o respaldar la carpeta untracked `projects/hermes_ia/briefings/` del VPS -> evitar conflictos de `git push vps` -> `git status --short` limpio en VPS
 - `projects/hermes_ia/verificar-cambio.sh` -> probarlo en VPS cuando toque Builder -> salida de terminal limpia
 
 ## No entra todavia
 
-- cron
-- Telegram
+- cron recurrente
+- cambios adicionales de Telegram fuera del gateway ya validado
 - Docker backend
 - perfiles reales
 - subagentes
@@ -109,3 +110,5 @@ Si no se puede verificar, no entra en la cola.
 - script de verificacion de cambios creado -> `projects/hermes_ia/verificar-cambio.sh`
 - juez minimo de calidad creado -> `projects/hermes_ia/JUDGE.md`
 - indice operativo creado -> `projects/hermes_ia/INDICE-OPERATIVO.md`
+- Telegram Gateway operativo desde movil -> `runbooks/09-telegram-gateway.md`
+- envio de imagenes generadas a Telegram -> `scripts/send-telegram-photo.py`

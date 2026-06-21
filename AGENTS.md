@@ -22,12 +22,13 @@ Este repositorio documenta y guía la evolución de `Hermes Agent` en un VPS de 
 ## Reglas de trabajo
 
 - Priorizar la verdad técnica sobre repetir el curso o confirmar sesgos.
-- Tratar [docs/curso-benjamin-hermes-transcripcion.md](/C:/Users/guill/Documents/Hermes_Ia/docs/curso-benjamin-hermes-transcripcion.md) como contexto conceptual, no como autoridad operativa.
+- Tratar [docs/curso-benjamin-hermes-transcripcion.md](docs/curso-benjamin-hermes-transcripcion.md) como contexto conceptual, no como autoridad operativa.
 - Verificar comandos sensibles con fuentes oficiales antes de proponerlos.
 - Explicar siempre: objetivo, riesgo, alternativa, rollback y verificación.
 - Advertir explícitamente antes de cambios que puedan afectar acceso SSH, firewall o usuario administrador.
 - Si algo es riesgoso, no lo bloquees sin más: propón una prueba mínima, aislada y reversible.
 - Si desde Telegram generas una imagen en el VPS, envia el archivo final con `python3 scripts/send-telegram-photo.py <ruta-imagen> "<caption>"` y devuelve tambien la ruta.
+- Si desde Telegram recibes una idea para `CiudadanoInusual`, usa Captura Movil V1 antes de convertirla en contenido: guarda la nota con `python3 scripts/captura-movil.py add`, devuelve el `id` y marca riesgos de privacidad.
 
 ## Autonomía operativa
 

@@ -1,17 +1,20 @@
 # Hermes IA
 
-Repositorio de documentación y operación para desplegar `Hermes Agent` en un VPS de Hetzner con una estrategia inicial deliberadamente simple:
+Repositorio de documentación y operación para evolucionar `Hermes Agent` en un VPS de Hetzner como arnés personal de IA de Erick/CiudadanoInusual.
+
+La estrategia vigente sigue siendo simple, pero ya no es Fase 0:
 
 - instalación nativa en Ubuntu
 - usuario dedicado `hermes`
 - sin Docker al inicio
 - sin dashboard público
 - sin API pública
-- sin Telegram, MCPs ni Playwright en la fase inicial salvo requisito oficial
+- Telegram Gateway operativo como canal movil controlado
+- sin MCPs ni Playwright en la fase inicial salvo requisito oficial
 
 ## Objetivo
 
-Construir una base estable, entendible y fácil de auditar antes de añadir complejidad operativa.
+Construir un sistema de trabajo con IA estable, entendible y fácil de auditar antes de añadir complejidad operativa.
 
 ## Prioridad actual
 
@@ -19,9 +22,10 @@ La prioridad inmediata del proyecto es `Hermes IA`.
 
 Eso significa:
 
-- primero una instalación nativa, estable y verificable de Hermes
-- después configuración de modelo y pruebas básicas
-- solo más adelante evaluar servicios complementarios
+- mantener la instalación nativa estable y verificable
+- usar Hermes para Research, Content, Builder y Mobile Ops
+- producir contenido y aprendizaje real para `CiudadanoInusual`
+- evaluar servicios complementarios solo cuando haya caso de uso claro
 
 ## Capacidad futura de la infraestructura
 
@@ -83,7 +87,8 @@ Regla vigente de alcance:
 
 - `Hermes_Ia` es el único proyecto piloto inicial.
 - Todavía no se escala este sistema a `TopoField` ni `TopoTask`.
-- No se activan aún Docker, Playwright, Telegram, cron ni memoria externa como parte de Fase 0.
+- No se activan Docker, Playwright, cron, MCPs ni memoria externa.
+- Telegram Gateway ya está operativo, pero cambios adicionales de Telegram siguen siendo sensibles.
 
 ## Estado actual
 
@@ -102,10 +107,13 @@ Estado validado dentro de esta fase:
 - acceso SSH validado
 - usuario `hermes` creado
 - Hermes instalado y operativo
-- OpenRouter configurado
+- proveedor principal `openai-codex` con `gpt-5.4`
+- OpenRouter configurado como fallback
 - sincronización local ↔ VPS por Git ya operativa
+- Telegram Gateway operativo desde móvil
+- primera publicación externa asistida por Hermes registrada
 
-Fase 2: pendiente para más adelante, solo después de cerrar correctamente la Fase 1.
+La siguiente prioridad no es abrir Fase 2: es cerrar Mobile Ops V1 con captura móvil, privacidad, Judge y publicación/seguimiento.
 
 ## Fuentes
 

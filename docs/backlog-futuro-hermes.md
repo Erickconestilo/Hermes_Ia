@@ -151,9 +151,16 @@ Riesgo:
 
 - medio
 
-Fase sugerida:
+Estado actual:
 
-- después de definir 2 o 3 usos oficiales
+- gateway basico ya operativo en Fase 1
+- cambios adicionales siguen siendo sensibles
+
+Siguiente evaluacion:
+
+- matriz de capacidades reales desde Telegram
+- Captura Movil V1
+- una prueba manual antes de cualquier cron recurrente
 
 ### 6. Mejora de memoria
 

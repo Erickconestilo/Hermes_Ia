@@ -6,7 +6,7 @@ Conservar materiales externos valiosos sobre Hermes sin confundirlos con la fuen
 
 Documento complementario:
 
-- [backlog-futuro-hermes.md](/C:/Users/guill/Documents/Hermes_Ia/docs/backlog-futuro-hermes.md)
+- [backlog-futuro-hermes.md](backlog-futuro-hermes.md)
 
 ## Regla base
 
@@ -29,7 +29,7 @@ No se usan como:
 
 Archivo relacionado:
 
-- [curso-benjamin-hermes-transcripcion.md](/C:/Users/guill/Documents/Hermes_Ia/docs/curso-benjamin-hermes-transcripcion.md)
+- [curso-benjamin-hermes-transcripcion.md](curso-benjamin-hermes-transcripcion.md)
 
 ### Qué aporta
 
@@ -152,7 +152,7 @@ La estrategia vigente de este repositorio es:
 - sin Docker al inicio
 - sin dashboard público
 - sin API pública
-- sin Telegram
+- Telegram Gateway basico ya operativo como canal movil controlado
 - sin MCPs
 - sin Playwright al inicio salvo necesidad real
 

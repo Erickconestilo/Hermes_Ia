@@ -2,33 +2,49 @@
 
 ## Estado general
 
-Inventario actual:
+Inventario verificado el 2026-06-21:
 
-- 3 guiones publicables
-- 3 checklists de grabacion
-- 4 posts visuales
-- 2 carruseles publicables
-- 1 indice operativo de publicables
+- 6 briefings de Research
+- 20 salidas base de Content
+- 6 guiones publicables
+- 4 checklists de grabacion
+- 6 posts visuales
+- 6 carruseles
+- 1 formato recurrente de ranking de comida en ruta
+- 1 publicacion externa registrada
 
 ## Lectura ejecutiva
 
-El sistema ya no esta solo en fase de ideas. Hay piezas reales listas o casi listas para publicar.
+El sistema ya no esta en fase de ideas.
 
-El bloqueo principal ya no es falta de contenido, sino edicion visual y decision de publicacion.
+Hay banco inicial, piezas publicables y primera publicacion real.
+
+El bloqueo principal ya no es producir mas borradores, sino cerrar flujo:
+
+- captura movil
+- privacidad
+- seleccion
+- publicacion
+- feedback
+- Judge aplicado a piezas concretas
 
 ## Listo para publicar con baja friccion
 
 - `post-04-comida-en-ruta.md`
 - `guion-01-ir-al-trabajo-tambien-cansa.md`, si se graban planos sin datos sensibles
 - `guion-02-viernes-faena-comida-en-ruta.md`, si no se muestra restaurante ni ubicacion
+- `guion-06-faena-cerrada-partida-guardada.md`, si se evita obra, empresa, cliente y terceros
 
 ## Listo con edicion previa
 
 - `post-01-mira-bloqueada-por-coche.md`: tapar matricula/marca
 - `post-02-nivel-bajo-sol-y-sombra.md`: revisar fondo y matriculas
 - `post-03-selfie-trabajo-campo.md`: tapar o recortar logo de empresa
+- `post-05-topografia-sol-polvo-paciencia.md`: tapar logos, matriculas, carteles y detalles de obra
+- `post-06-presentacion-daw-trabajar-estudiar.md`: recortar caras, pantalla, centro y datos del proyecto
 - `carrusel-01-fisurometro-grieta.md`: revisar ubicacion/codigos sensibles
 - `carrusel-02-topografia-real-no-glamurosa.md`: revisar todas las fotos por privacidad
+- `carrusel-06-topografia-sol-y-estacion.md`: tapar logos, matriculas, carteles, caras y detalles de obra
 
 ## Sensible
 
@@ -39,6 +55,20 @@ Motivo:
 - aparece una companera
 - hay un incidente desagradable
 - requiere consentimiento y cuidado de ubicacion
+
+## Pendiente por imagen propia
+
+- `carrusel-03-malas-practicas-topografia.md`
+
+Motivo:
+
+- no publicar captura ajena;
+- recrear con imagen propia, generica o generada.
+
+## Pendiente por fotos suficientes
+
+- `carrusel-04-dia-libre-tambien-cansa.md`
+- `carrusel-05-comida-ruta-real.md`
 
 ## Riesgos repetidos
 
@@ -52,28 +82,23 @@ Motivo:
 
 ## Prioridad recomendada
 
-1. Publicar o preparar el post de comida en ruta.
-2. Editar una foto tecnica simple y publicar un post de oficio.
-3. Probar un carrusel con fotos propias ya revisadas.
-4. Mantener el meme de mala practica solo como inspiracion, no como imagen directa.
+1. Validar Captura Movil V1 con una nota real desde Telegram.
+2. Publicar o preparar una pieza de baja friccion.
+3. Registrar resultado en `publicaciones/INDICE-PUBLICACIONES.md`.
+4. Aplicar Judge a una pieza concreta, no a todo el banco.
+5. Medir si el formato merece repetirse.
 
 ## Porcentaje de avance
 
-Contenido base:
-
-- guiones: 70%
-- posts visuales: 75%
-- carruseles: 40%
-- sistema editorial: 65%
-- preparacion real para publicar: 45%
+- contenido base: 100%
+- guiones: 80%
+- posts visuales: 80%
+- carruseles: 65%
+- sistema editorial: 75%
+- preparacion real para publicar: 60%
+- feedback y aprendizaje por publicaciones: 15%
+- Mobile Ops: 45%
 
 Lectura global:
 
-`Hermes_Ia` esta aproximadamente al 60% de una primera base editorial funcional para `CiudadanoInusual`.
-
-Falta menos crear ideas y mas ejecutar:
-
-- editar imagenes
-- grabar planos
-- publicar pruebas
-- medir que formato conecta mejor
+`Hermes_Ia` esta aproximadamente al 70% de una primera base editorial funcional para `CiudadanoInusual`, pero solo al 35% de un sistema de publicacion y feedback semanal estable.

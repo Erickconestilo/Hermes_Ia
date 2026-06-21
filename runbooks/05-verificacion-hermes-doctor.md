@@ -46,7 +46,7 @@ Registrar:
   - el backend deseado sigue siendo `local`
   - no queremos Docker todavía
   - no queremos Playwright todavía salvo exigencia real
-  - no queremos Telegram ni Discord en esta etapa
+  - Telegram Gateway ya esta operativo; no queremos Discord ni cambios adicionales de mensajeria en esta etapa
 
 ## Pruebas funcionales posteriores
 

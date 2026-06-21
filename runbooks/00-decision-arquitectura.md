@@ -27,7 +27,7 @@ Orden de prioridades:
 - Docker no se usa como backend de terminal al inicio.
 - Dashboard no expuesto públicamente.
 - API no expuesta públicamente.
-- Telegram no configurado todavía.
+- Telegram Gateway basico configurado como experimento controlado de Fase 1.
 - MCPs no instalados todavía.
 - Playwright no instalado todavía salvo requisito oficial.
 

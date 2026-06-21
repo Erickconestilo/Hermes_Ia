@@ -6,7 +6,7 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 
 ## Siguiente tarea concreta
 
-- adaptar el sistema editorial a flujo movil primero: `Modo calle`, revision de privacidad rapida y publicacion simple desde el movil
+- validar Captura Movil V1 desde Telegram: guardar una idea real, recuperarla, convertirla en pieza y aplicar `JUDGE.md`
 
 ## Peticion minima de tarea
 
@@ -23,10 +23,11 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 - usar `OPERATIVA-DIARIA.md` como referencia para ejecutar sin volver al bucle meta
 - permitir autonomia controlada en tareas verdes y amarillas bajas de `Hermes Builder`
 - usar `CiudadanoInusual` como banco operativo de contenido real: guiones, posts, carruseles y publicacion movil
+- usar Telegram como canal movil de entrada, no como automatizacion sin control
 
 ## Pendientes cercanas
 
-- probar `Modo calle` desde movil con una foto o situacion real
+- probar Captura Movil V1 desde movil con una foto o situacion real
 - publicar o dejar lista una primera pieza real desde el flujo movil
 - abrir Banco 2 con vida real expandida: pareja, convivencia, hogar, recados, comida, ocio simple y mini viajes
 - seguir probando `Modo guion`, `Modo post` y `Modo carrusel` con situaciones reales
@@ -52,15 +53,18 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 - instalación base de Hermes validada
 - OpenRouter operativo
 - `openai-codex` autenticado y operativo como proveedor principal
-- `gpt-5.4-mini` validado para trabajo ligero
+- `gpt-5.4` validado como modelo principal por `openai-codex`
 - usos oficiales iniciales definidos: `Research`, `Content` y `Builder`
 - `JUDGE.md` creado y regla minima de 8/10 adoptada para salidas validas
 - guía operativa diaria creada para trabajo local ↔ VPS ↔ Hermes
 - seis briefings reales de `Hermes Research` registrados
 - banco inicial de veinte salidas reales de `Hermes Content` completado
-- tres guiones publicables creados en `projects/hermes_ia/content/ciudadanoinusual/publicables/`
-- cuatro posts visuales publicables creados
-- cinco carruseles publicables o casi publicables creados
+- seis guiones publicables creados en `projects/hermes_ia/content/ciudadanoinusual/publicables/`
+- seis posts visuales publicables creados
+- seis carruseles publicables o casi publicables creados
+- primera publicacion externa asistida por Hermes registrada
+- Telegram Gateway operativo desde movil y persistido con `systemd`
+- envio de imagenes generadas a Telegram validado con `scripts/send-telegram-photo.py`
 - `Modo guion`, `Modo post` y `Modo carrusel` creados y probados
 - guia rapida de modos, prompts de edicion y plan semanal creados
 - linea de vivienda/credito/ayudas marcada como investigacion personal de referencia, no como centro de `CiudadanoInusual`
@@ -77,7 +81,7 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 
 - no tocar `TopoField`
 - no tocar `TopoTask`
-- no activar cron
+- no activar cron recurrente
 - no instalar más herramientas
 - no introducir memoria externa
 - no abrir fases de subagentes ni Kanban todavía

@@ -2,183 +2,147 @@
 
 ## Objetivo
 
-Dar a futuras sesiones de Codex una foto comprimida, fiable y operativa de `Hermes_Ia` para evitar reinicios lentos, resúmenes repetidos y decisiones ya cerradas.
+Foto comprimida y operativa de `Hermes_Ia` para futuras sesiones de Codex.
 
 ## Estado actual real
 
-- Proyecto activo: `C:\Users\guill\Documents\Hermes_Ia`
-- VPS: `hermes-01`
-- Proveedor: `Hetzner`
-- Plan: `CX33 x86`
-- Región: `Nuremberg`
-- Sistema: `Ubuntu 24.04.4 LTS`
-- Instalación de Hermes: nativa
-- Usuario operativo: `hermes`
-- Backend actual: `local`
-- Auth principal: `openai-codex`
-- Modelo principal actual: `gpt-5.4`
-- Fallback temporal: `OpenRouter`
-- Sync local ↔ VPS: por Git, ya operativa
-- Telegram Gateway: operativo desde movil mediante bot autorizado
-- Fase 0 documental: cerrada
-- Fase 1: iniciada en modo controlado
-- `CiudadanoInusual`: sistema editorial activo con guiones, posts, carruseles y flujo de publicacion movil en desarrollo
+- Repo local: `C:\Users\guill\Documents\Hermes_Ia`
+- VPS: `hermes-01`, Hetzner CX33 x86, Ubuntu 24.04.
+- Instalacion Hermes: nativa.
+- Usuario operativo: `hermes`.
+- Backend actual: `local`.
+- Auth principal: `openai-codex`.
+- Modelo principal: `gpt-5.4`.
+- Fallback: OpenRouter.
+- Sync local, GitHub y VPS: Git operativo.
+- Telegram Gateway: operativo desde movil mediante bot autorizado.
+- Imagenes generadas: envio a Telegram con `scripts/send-telegram-photo.py`.
+- Captura Movil V1: en construccion; almacenamiento privado fuera de Git.
+- Fase 0 documental: cerrada.
+- Fase 1: activa en modo controlado.
+- `CiudadanoInusual`: sistema editorial activo.
 
-## Norte estratégico
+## Norte estrategico
 
-`Hermes_Ia` ya no es solo una instalación protegida.
-La dirección actual es evolucionarlo de forma gradual hacia un sistema operativo personal de IA adaptado a la vida, aprendizaje y proyectos del usuario.
+`Hermes_Ia` es el arnes personal de IA de Erick/CiudadanoInusual.
 
-Inspiraciones útiles:
+Debe ayudar a:
 
-- Benjamin Cordero: visión amplia y mapa de madurez
-- Fatz: operación práctica en VPS
-- Gentleman Programming: estructura, perfiles, skills y método
+- investigar con fuentes y riesgos;
+- convertir vida real en contenido;
+- mejorar el propio sistema con scripts y docs utiles;
+- capturar ideas desde movil cuando no hay portatil.
 
-No se copian sus stacks literalmente.
-Se adaptan solo las piezas que aporten valor real a este proyecto.
+Inspiraciones: Benjamin Cordero, Fatz y Gentleman Programming.
 
-## Regla de clasificación obligatoria
+Regla: adaptar, no copiar stacks completos.
 
-Cada idea nueva debe quedar en una de estas categorías:
+## Clasificacion obligatoria
+
+Toda idea nueva cae en una categoria:
 
 1. operativo ahora
 2. siguiente experimento seguro
 3. futuro planificado
 4. descartado por ahora
 
-Si no cae claramente en una de esas cuatro, no se ejecuta.
+Si no cae claramente en una, no se ejecuta.
 
-## Reglas de seguridad vigentes
+## Seguridad vigente
 
-- no guardar secretos reales en Git
-- no operar Hermes como `root` salvo bootstrap o recuperación
-- no cambiar SSH, firewall o usuarios sin análisis explícito
-- no instalar ni activar componentes nuevos sin objetivo, riesgo, alternativa, rollback y verificación
-- si algo es riesgoso, no bloquearlo sin más: proponer una prueba mínima, aislada y reversible
+- No guardar secretos reales en Git.
+- No operar Hermes como `root` salvo bootstrap o recuperacion.
+- No cambiar SSH, firewall, usuarios ni `.env` sin confirmacion fuerte.
+- No instalar componentes nuevos sin objetivo, riesgo, rollback y verificacion.
+- Si algo es riesgoso, proponer prueba minima, aislada y reversible.
 
-## Qué sí se permite diseñar ahora
+## Permitido ahora
 
-- usos oficiales de Hermes
-- estructura documental y operativa
-- flujos de trabajo local ↔ Git ↔ VPS ↔ Hermes
-- experimentos pequeños de Research, Content y Builder
-- criterios para futuras skills
-- criterios para futuros perfiles o subagentes
-- pruebas documentales o de prompt que no toquen configuración
-- uso movil de Hermes por Telegram ya validado para tareas simples y operativas
+- Markdown, Git, scripts pequenos del repo y verificaciones locales.
+- Research, Content y Builder dentro de `Hermes_Ia`.
+- Telegram como canal movil autorizado.
+- Captura privada de ideas con `scripts/captura-movil.py`.
+- Envio de imagenes generadas al bot con `scripts/send-telegram-photo.py`.
+- Disenar criterios de futuras skills, perfiles o cron sin activarlos.
 
-## Qué no se permite instalar o activar todavía
+## No activar todavia
 
-- Docker
-- cambio de `terminal.backend`
-- cron
-- Kanban
-- perfiles reales o subagentes reales
-- Playwright
-- Discord
-- cambios adicionales de Telegram fuera del gateway ya validado
-- MCPs nuevos
-- memoria externa tipo Engram
-- `hermes doctor --fix`
-- cambios en `.env`
-- cambios en `TopoField` o `TopoTask`
+- Docker.
+- Cambio de `terminal.backend`.
+- Cron recurrente.
+- Kanban.
+- Perfiles reales o subagentes permanentes.
+- Playwright.
+- Discord.
+- MCPs nuevos.
+- Memoria externa tipo Engram.
+- `hermes doctor --fix`.
+- Cambios en `.env`.
+- Cambios en `TopoField` o `TopoTask`.
 
-## Decisión provisional root vs Docker
+## Root vs Docker
 
-- `root`: solo para bootstrap, recuperación o administración puntual
-- `hermes`: usuario normal de operación diaria
-- Docker: permitido solo como línea futura de sandbox para Builder/código
-- Docker no se instala ni se evalúa como cambio inmediato de backend
+- `root`: solo bootstrap, recuperacion o administracion puntual.
+- `hermes`: operacion diaria.
+- Docker: futuro sandbox para Builder fuerte, no cambio inmediato.
 
-## Usos oficiales iniciales
+## Usos oficiales
 
-### 1. Hermes Research
+Investiga IA, tecnologia, FP, vivienda, topografia y oportunidades.
 
-Ámbitos esperados:
+Debe usar fuentes, riesgos y conclusion accionable.
 
-- IA y tecnología
-- oportunidades en España
-- FP, vivienda, topografía
-- herramientas y aprendizaje
+### Hermes Content
 
-Regla:
+Transforma ideas, fotos, vivencias y research en contenido para `CiudadanoInusual`.
 
-- usar fuentes y análisis, no solo opinión rápida
+Formatos activos: Modo guion, Modo post, Modo carrusel y Modo calle.
 
-### 2. Hermes Content
+### Hermes Builder
 
-Ámbitos esperados:
+Mejora `Hermes_Ia` con docs, scripts y verificaciones.
 
-- ideas
-- hooks
-- guiones
-- posts
-- ebooks
-- contenido para `CiudadanoInusual`
+No toca `TopoField` ni `TopoTask` en esta fase.
 
-Regla:
+## Inventario editorial
 
-- convertir observación y research en piezas reutilizables
+- Research: 6 briefings.
+- Content base: 20 salidas.
+- Guiones publicables: 6.
+- Posts visuales: 6.
+- Carruseles: 6.
+- Publicaciones registradas: 1.
 
-### 3. Hermes Builder
+## Siguiente experimento seguro
 
-Ámbitos esperados:
+Validar Mobile Ops V1:
 
-- `Hermes_Ia`
-- `TopoField`
-- `TopoTask`
-- scripts
-- documentación
-- código
-
-Regla:
-
-- en esta fase solo diseñar y preparar el método
-- no tocar todavía `TopoField` ni `TopoTask`
-
-## Siguiente experimento seguro recomendado
-
-Validar flujo movil primero para `CiudadanoInusual`:
-
-- capturar foto/video/situacion desde movil
-- usar `Modo calle`
-- decidir post/guion/carrusel/nota privada
-- revisar privacidad
-- publicar pieza simple o dejarla para PC
-- usar Telegram como canal rapido de entrada a Hermes cuando no haya portatil
-
-Resultado esperado:
-
-- una pieza publicada o lista para publicar usando el movil como punto de entrada
+1. capturar idea desde Telegram;
+2. guardarla fuera de Git con `scripts/captura-movil.py`;
+3. revisar privacidad;
+4. convertirla en post, guion, carrusel o nota privada;
+5. aplicar `JUDGE.md`;
+6. publicar manualmente o dejar lista;
+7. registrar aprendizaje.
 
 ## Futuro planificado
 
-- skills solo cuando un flujo se repita varias veces
-- perfiles o subagentes cuando los usos oficiales ya sean claros
-- Docker backend como sandbox futuro para Builder
-- memoria externa solo si la memoria actual se queda corta con evidencia real
+- Skills solo tras repeticion real.
+- Perfiles/subagentes cuando haya usos estables.
+- Cron solo con prueba manual previa y no recurrente.
+- Docker backend como sandbox futuro.
+- Memoria externa solo si la memoria actual falla con evidencia.
 
 ## Descartado por ahora
 
-- instalar Docker ya
-- activar cron ya
-- activar Kanban ya
-- abrir dashboard o API pública
-- mover el backend a Docker
-- expandir el sistema a `TopoField` o `TopoTask` en esta fase
+- Instalar Docker ya.
+- Activar cron recurrente ya.
+- Abrir dashboard o API publica.
+- Mover backend a Docker.
+- Expandir el sistema a otros proyectos.
 
-## Regla operativa para Codex
+## Regla para Codex
 
-Priorizar cambios que produzcan:
+Priorizar cambios que produzcan archivo util, mejora real, decision registrada o verificacion reproducible.
 
-- un archivo útil nuevo
-- una mejora real de un archivo existente
-- una decisión concreta registrada
-- una verificación reproducible
-
-Evitar:
-
-- resúmenes repetidos
-- prompts interminables
-- meta-documentación sin salida operativa
+Evitar resumen repetido, prompts interminables y meta-documentacion sin salida operativa.
