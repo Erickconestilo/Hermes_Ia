@@ -62,3 +62,10 @@ Estado tras la ultima prueba real:
 - foto + instruccion breve de guardado ya funciona;
 - la skill prioriza captura sobre analisis visual cuando la intencion es clara;
 - el siguiente umbral ya no es de uso basico, sino de decision de versionado oficial o permanencia en `HERMES_HOME`.
+
+Decision aprobada:
+
+- no oficializar una sola skill monolitica;
+- preparar separacion futura en:
+  - skill de captura/recuperacion privada;
+  - skill de conversion ligera a contenido.

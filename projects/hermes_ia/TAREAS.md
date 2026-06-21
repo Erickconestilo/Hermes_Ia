@@ -6,7 +6,7 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 
 ## Siguiente tarea concreta
 
-- decidir si `ciudadanoinusual-mobile-intake` ya debe pasar a skill oficial versionada o si sigue un ciclo mas como candidata a formalizacion
+- convertir `projects/hermes_ia/SPEC-FORMALIZACION-CAPTURA-MOVIL.md` en un plan minimo de separacion: skill de captura privada por un lado y skill de conversion ligera por otro
 
 ## Peticion minima de tarea
 
@@ -27,9 +27,9 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 
 ## Pendientes cercanas
 
-- registrar criterio final de versionado para `ciudadanoinusual-mobile-intake` despues de validar entrada natural real
+- definir nombres, limites y outputs minimos de las dos skills futuras derivadas de `ciudadanoinusual-mobile-intake`
 - registrar limite real de archivos soportados desde Telegram separando PDF/imagen validos y tipos rechazados
-- decidir si la skill ya merece pasar de candidata a formalizacion a skill oficial versionada
+- decidir si la skill remota actual sigue viva en `HERMES_HOME` durante la migracion o si se congela al empezar el versionado
 - decidir si `Personal Ops V1` entra ya como siguiente uso estable desde Telegram
 - preparar Personal Ops V1 solo despues de cerrar Mobile Ops V1 basico
 - publicar o dejar lista una primera pieza real desde el flujo movil
@@ -76,6 +76,8 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 - tercera captura real util guardada, convertida y evaluada con `JUDGE.md`
 - `ciudadanoinusual-mobile-intake` ya pasa a candidata a formalizacion tras `3/3` capturas reales utiles
 - entrada natural validada en uso real con foto + instruccion breve de guardado
+- mini especificacion de formalizacion creada para decidir versionado oficial sin depender del chat
+- decision de arquitectura tomada: futura formalizacion separada en captura privada y conversion ligera
 - envio de imagenes generadas a Telegram validado con `scripts/send-telegram-photo.py`
 - `Modo guion`, `Modo post` y `Modo carrusel` creados y probados
 - guia rapida de modos, prompts de edicion y plan semanal creados
