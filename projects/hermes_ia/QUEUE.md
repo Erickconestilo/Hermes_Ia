@@ -66,6 +66,19 @@ Si no se puede verificar, no entra en la cola.
 - limpiar o respaldar la carpeta untracked `projects/hermes_ia/briefings/` del VPS -> evitar conflictos de `git push vps` -> `git status --short` limpio en VPS
 - `projects/hermes_ia/verificar-cambio.sh` -> probarlo en VPS cuando toque Builder -> salida de terminal limpia
 
+## Personal Ops V1 siguientes
+
+- captura de decision personal -> guardar decision, opciones y motivo fuera de Git -> recuperar resumen sin convertirlo en contenido
+- duda recurrente -> guardar duda y contexto minimo -> revisar si vuelve a aparecer en la semana
+- idea no publicable -> registrar como nota privada -> clasificar como tarea, decision o descarte
+- resumen semanal manual -> pedir a Hermes sintesis de capturas revisadas -> validar que no inventa ni publica
+- priorizar portatil -> elegir una sola tarea de laptop -> verificar que queda en `TAREAS.md` si procede
+
+## Automatizacion controlada futura
+
+- cron one-shot -> disenar prueba puntual con permiso explicito -> no activar hasta aprobar riesgo y rollback
+- background pequeno -> ejecutar tarea no destructiva desde Telegram -> registrar resultado y limite
+
 ## No entra todavia
 
 - cron recurrente

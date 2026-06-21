@@ -30,6 +30,8 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 - probar Captura Movil V1 desde movil con una foto o situacion real
 - probar envio de archivo, recepcion de imagen, nota de voz y `/background` pequeno desde Telegram
 - registrar capacidades reales de Telegram separando probado, asumido y descartado
+- probar primera captura de decision personal no publicable desde Telegram
+- preparar Personal Ops V1 solo despues de cerrar Mobile Ops V1 basico
 - publicar o dejar lista una primera pieza real desde el flujo movil
 - abrir Banco 2 con vida real expandida: pareja, convivencia, hogar, recados, comida, ocio simple y mini viajes
 - seguir probando `Modo guion`, `Modo post` y `Modo carrusel` con situaciones reales
@@ -84,6 +86,7 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 - no tocar `TopoField`
 - no tocar `TopoTask`
 - no activar cron recurrente
+- no activar cron one-shot sin permiso explicito
 - no instalar más herramientas
 - no introducir memoria externa
 - no abrir fases de subagentes ni Kanban todavía

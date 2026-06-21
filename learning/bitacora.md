@@ -207,3 +207,11 @@ Hermes respondio que el estado real ya incluye:
 - Cron oficial soporta tareas one-shot y recurrentes, pero en `Hermes_Ia` cron recurrente sigue rojo; una prueba one-shot queda como futuro con permiso.
 - `AGENTS.md` queda confirmado como contexto operativo valido del proyecto, por lo que debe reflejar la politica real de confianza supervisada.
 - La skill `ciudadanoinusual-mobile-intake` queda registrada como experimental activa, no oficial versionada.
+
+## Roadmap fuera de publicaciones - 2026-06-21
+
+- Se separa Mobile Ops de la produccion de contenido para evitar que todo avance termine en publicaciones.
+- Se crea Track C: Personal Ops V1 para decisiones, dudas recurrentes, ideas no publicables, resumen semanal manual y priorizacion de portatil.
+- Se crea Track D: Automatizacion controlada para distinguir background pequeno, cron one-shot futuro y cron recurrente rojo.
+- Captura Movil V1 refuerza la validacion anti-plantillas con marcadores adicionales del prompt.
+- La siguiente prioridad operativa es probar capacidades reales de Telegram y una captura personal no publicable antes de abrir mas contenido.

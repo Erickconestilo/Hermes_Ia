@@ -27,6 +27,8 @@ Foto comprimida y operativa de `Hermes_Ia` para futuras sesiones de Codex.
 
 Debe ayudar a investigar con fuentes, convertir vida real en contenido, mejorar el sistema con scripts/docs utiles y capturar ideas desde movil.
 
+Tambien debe empezar a cubrir Personal Ops: decisiones, dudas recurrentes, ideas no publicables, resumen semanal manual y priorizacion de sesiones de portatil.
+
 Inspiraciones: Benjamin Cordero, Fatz y Gentleman Programming. Regla: adaptar, no copiar stacks completos.
 
 ## Clasificacion obligatoria
@@ -104,7 +106,8 @@ Validar capacidades reales de Mobile Ops V1:
 
 - Formalizar skills solo tras repeticion real.
 - Perfiles/subagentes cuando haya usos estables.
-- Cron solo con prueba manual previa y no recurrente.
+- Personal Ops V1 despues de cerrar Mobile Ops V1 basico.
+- Cron one-shot solo con permiso explicito y prueba manual previa.
 - Docker backend como sandbox futuro.
 - Memoria externa solo si la memoria actual falla con evidencia.
 

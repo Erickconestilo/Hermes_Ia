@@ -60,6 +60,7 @@ Convertir Hermes en el arnes personal de IA de Erick/CiudadanoInusual:
 - Envio de imagenes generadas a Telegram.
 - Git como mecanismo de sincronizacion.
 - Skills experimentales dentro de `HERMES_HOME` como incubadora de flujos repetibles de bajo riesgo.
+- Skill `ciudadanoinusual-mobile-intake` como experimental activa.
 
 ### Siguiente experimento seguro
 
@@ -159,6 +160,43 @@ Condiciones:
 - Convertir vivienda/credito/ayudas en eje central del canal.
 - Publicar capturas ajenas como contenido propio.
 - Publicar datos de obra, empresa, cliente, ubicacion exacta o terceros sin revision.
+
+## Track C: Personal Ops V1
+
+### Objetivo
+
+Usar Hermes desde movil no solo para contenido, sino para vida, decisiones y trabajo personal.
+
+### Futuro inmediato
+
+Este track empieza despues de cerrar Mobile Ops V1 basico.
+
+Funciones iniciales:
+
+- capturar decisiones;
+- guardar dudas recurrentes;
+- registrar ideas no publicables;
+- resumir semana manualmente;
+- priorizar proxima sesion de portatil;
+- convertir capturas en tareas;
+- ayudar a elegir siguiente accion sin quedar bloqueado.
+
+### Limite
+
+Personal Ops no publica, no toca secretos, no automatiza decisiones sensibles y no sustituye criterio humano.
+
+## Track D: Automatizacion controlada
+
+### Futuro planificado
+
+- Cron one-shot: futuro experimento seguro con permiso explicito.
+- Background sessions: experimento seguro si la tarea es pequena, no destructiva y queda registrada.
+
+### Rojo por ahora
+
+- Cron recurrente sin permiso fuerte.
+- Automatizaciones que toquen servicios, `.env`, secretos, Docker, MCPs, Playwright o memoria externa.
+- Publicacion automatica en redes.
 
 ## Tareas actuales
 

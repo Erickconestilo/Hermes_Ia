@@ -23,6 +23,8 @@ TEMPLATE_TEXT_MARKERS = (
     "Devuélveme",
     "No lo conviertas",
     "Detecta riesgos",
+    "Usa scripts/captura-movil.py",
+    "No metas nada en Git",
 )
 TEMPLATE_TEXT_ERROR = "El texto parece incluir instrucciones o plantilla. Pasa solo la situación real."
 

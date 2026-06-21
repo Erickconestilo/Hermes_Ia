@@ -90,7 +90,7 @@ Una Captura Movil V1 funciona cuando:
 
 `add` debe rechazar textos que incluyan instrucciones o placeholders del prompt en vez de una situacion real.
 
-Prueba manual:
+Ejemplo incorrecto:
 
 ```bash
 python3 scripts/captura-movil.py add --text "[cuenta aquí una situación real de hoy]"
@@ -103,3 +103,25 @@ El texto parece incluir instrucciones o plantilla. Pasa solo la situación real.
 ```
 
 El comando no debe crear ningun registro nuevo.
+
+Tambien debe rechazarse si el texto contiene instrucciones como:
+
+- `Antes de guardar:`
+- `Devuélveme`
+- `No lo conviertas`
+- `Detecta riesgos`
+- `Usa scripts/captura-movil.py`
+- `No metas nada en Git`
+
+Ejemplo correcto:
+
+```bash
+python3 scripts/captura-movil.py add --text "Hoy en la faena hizo mucho calor, paramos a comer algo sencillo y luego seguimos con otra tarea de campo." --tags "calle,trabajo" --privacy-flags "ubicacion" --suggested-format "guion"
+```
+
+Resultado esperado:
+
+- se crea una captura con `status` `inbox`;
+- `original_text` conserva solo la situacion real;
+- no se guarda ninguna instruccion del prompt;
+- el archivo privado sigue fuera de Git.
