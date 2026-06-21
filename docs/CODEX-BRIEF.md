@@ -19,6 +19,7 @@ Dar a futuras sesiones de Codex una foto comprimida, fiable y operativa de `Herm
 - Modelo principal actual: `gpt-5.4`
 - Fallback temporal: `OpenRouter`
 - Sync local ↔ VPS: por Git, ya operativa
+- Telegram Gateway: operativo desde movil mediante bot autorizado
 - Fase 0 documental: cerrada
 - Fase 1: iniciada en modo controlado
 - `CiudadanoInusual`: sistema editorial activo con guiones, posts, carruseles y flujo de publicacion movil en desarrollo
@@ -65,6 +66,7 @@ Si no cae claramente en una de esas cuatro, no se ejecuta.
 - criterios para futuras skills
 - criterios para futuros perfiles o subagentes
 - pruebas documentales o de prompt que no toquen configuración
+- uso movil de Hermes por Telegram ya validado para tareas simples y operativas
 
 ## Qué no se permite instalar o activar todavía
 
@@ -74,7 +76,8 @@ Si no cae claramente en una de esas cuatro, no se ejecuta.
 - Kanban
 - perfiles reales o subagentes reales
 - Playwright
-- Telegram o Discord
+- Discord
+- cambios adicionales de Telegram fuera del gateway ya validado
 - MCPs nuevos
 - memoria externa tipo Engram
 - `hermes doctor --fix`
@@ -143,6 +146,7 @@ Validar flujo movil primero para `CiudadanoInusual`:
 - decidir post/guion/carrusel/nota privada
 - revisar privacidad
 - publicar pieza simple o dejarla para PC
+- usar Telegram como canal rapido de entrada a Hermes cuando no haya portatil
 
 Resultado esperado:
 

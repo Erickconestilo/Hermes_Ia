@@ -29,12 +29,14 @@ A fecha actual, ya se ha validado lo siguiente:
 - funcionamiento de Hermes con modelo principal y fallback
 - sincronización manual local ↔ VPS mediante Git local ya operativa para documentación y runbooks de `Hermes_Ia`
 - autenticación `openai-codex` validada en Hermes
-- respuesta funcional validada con `gpt-5.4-mini`
+- respuesta funcional validada con `gpt-5.4`
+- Telegram Gateway configurado, autorizado solo para el usuario permitido y validado desde movil
+- servicio de usuario `hermes-gateway.service` activo con `systemd` y `linger` habilitado
 
 ## Configuración actual del modelo
 
 - proveedor principal: `openai-codex`
-- modelo activo para trabajo ligero: `gpt-5.4-mini`
+- modelo principal activo: `gpt-5.4`
 - fallback temporal: `OpenRouter`
 - modelo fallback actual: `nvidia/nemotron-3-ultra-550b-a55b:free`
 
@@ -43,15 +45,16 @@ A fecha actual, ya se ha validado lo siguiente:
 - `openai-codex` ya está autenticado en Hermes.
 - OpenRouter se mantiene configurado como fallback mediante entorno local, sin documentar ni versionar la clave.
 - `hermes doctor` ya valida `OpenAI Codex auth` y `OpenRouter API`.
+- Telegram usa token guardado en `/home/hermes/.hermes/.env`, no versionado en Git.
 
 ## Advertencias no bloqueantes
 
 Quedan abiertas, pero no impiden el uso actual:
 
-- `config.yaml` pendiente de migración de `v0` a `v29`
+- `config.yaml` migrado y validado como `v29`
 - Docker no instalado
 - Playwright Chromium no instalado
-- Telegram y Discord no instalados
+- Discord no instalado
 - skills hub no inicializado
 
 ## Decisiones vigentes
@@ -61,7 +64,7 @@ Quedan abiertas, pero no impiden el uso actual:
 - el backend actual es `local`
 - no se expone dashboard público
 - no se expone API pública
-- no se activa Telegram todavía
+- Telegram Gateway queda operativo solo como canal movil autorizado
 - no se activan MCPs todavía
 - no se instala Playwright todavía salvo necesidad real
 
@@ -103,7 +106,7 @@ Esta fase no incluye:
 - Docker
 - Playwright
 - cron
-- Telegram
+- cambios adicionales de Telegram fuera del gateway ya validado
 - memoria externa
 - perfiles o subagentes
 - cambios sobre otros proyectos

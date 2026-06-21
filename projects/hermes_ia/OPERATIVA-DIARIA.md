@@ -56,7 +56,7 @@ Bloquear o pedir confirmacion fuerte para:
 - claves, tokens o secretos
 - Docker
 - cron
-- Telegram
+- cambios de Telegram fuera del gateway ya validado
 - MCPs
 - Playwright
 - `hermes doctor --fix`
@@ -170,7 +170,7 @@ Hay que cortarlo y redirigirlo si hace una de estas cosas:
 - vuelve a resumir fases ya cerradas
 - propone otra plantilla sin uso inmediato
 - repite decisiones ya documentadas
-- habla de Docker, cron, Telegram, MCPs o memoria externa sin permiso
+- habla de Docker, cron, cambios de Telegram, MCPs o memoria externa sin permiso
 - convierte una tarea simple en una ceremonia
 
 No hay que cortarlo automaticamente si:

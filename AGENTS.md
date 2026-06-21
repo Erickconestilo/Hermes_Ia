@@ -14,7 +14,8 @@ Este repositorio documenta y guía la evolución de `Hermes Agent` en un VPS de 
 - Usar `Research`, `Content` y `Builder` como usos oficiales iniciales.
 - No exponer dashboard público.
 - No exponer API pública.
-- No activar Telegram, MCPs o Playwright en la fase inicial salvo exigencia oficial.
+- Telegram Gateway queda activado como experimento controlado de Fase 1 para acceso movil.
+- No activar MCPs o Playwright en la fase inicial salvo exigencia oficial.
 - No usar `--yolo`.
 - No guardar secretos reales en archivos versionados.
 
@@ -31,7 +32,7 @@ Este repositorio documenta y guía la evolución de `Hermes Agent` en un VPS de 
 
 - Verde: permitir con poca fricción lectura, búsqueda, `git status`, `git diff`, Markdown, scripts pequeños del repo y verificaciones simples.
 - Amarillo: revisar antes de ejecutar scripts nuevos, `chmod +x`, cambios en varios archivos o automatizaciones internas pequeñas.
-- Rojo: bloquear o pedir confirmación fuerte para `sudo`, paquetes, servicios, `.env`, secretos, Docker, cron, Telegram, MCPs, Playwright, `hermes doctor --fix` y cambios fuera de `Hermes_Ia`.
+- Rojo: bloquear o pedir confirmación fuerte para `sudo`, paquetes, servicios, `.env`, secretos, Docker, cron, cambios de Telegram, MCPs, Playwright, `hermes doctor --fix` y cambios fuera de `Hermes_Ia`.
 
 ## Convenciones de documentación
 
