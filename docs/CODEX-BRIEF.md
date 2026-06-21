@@ -16,11 +16,12 @@ Dar a futuras sesiones de Codex una foto comprimida, fiable y operativa de `Herm
 - Usuario operativo: `hermes`
 - Backend actual: `local`
 - Auth principal: `openai-codex`
-- Modelo ligero validado: `gpt-5.4-mini`
+- Modelo principal actual: `gpt-5.4`
 - Fallback temporal: `OpenRouter`
 - Sync local ↔ VPS: por Git, ya operativa
 - Fase 0 documental: cerrada
 - Fase 1: iniciada en modo controlado
+- `CiudadanoInusual`: sistema editorial activo con guiones, posts, carruseles y flujo de publicacion movil en desarrollo
 
 ## Norte estratégico
 
@@ -87,7 +88,7 @@ Si no cae claramente en una de esas cuatro, no se ejecuta.
 - Docker: permitido solo como línea futura de sandbox para Builder/código
 - Docker no se instala ni se evalúa como cambio inmediato de backend
 
-## Usos oficiales iniciales a definir
+## Usos oficiales iniciales
 
 ### 1. Hermes Research
 
@@ -135,15 +136,17 @@ Regla:
 
 ## Siguiente experimento seguro recomendado
 
-Definir por escrito los 3 usos oficiales iniciales de Hermes:
+Validar flujo movil primero para `CiudadanoInusual`:
 
-- Research
-- Content
-- Builder
+- capturar foto/video/situacion desde movil
+- usar `Modo calle`
+- decidir post/guion/carrusel/nota privada
+- revisar privacidad
+- publicar pieza simple o dejarla para PC
 
 Resultado esperado:
 
-- un archivo o sección concreta con objetivo, entradas, salidas, límites y primer caso de uso de cada uno
+- una pieza publicada o lista para publicar usando el movil como punto de entrada
 
 ## Futuro planificado
 

@@ -6,7 +6,7 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 
 ## Siguiente tarea concreta
 
-- cerrar revision del banco inicial `20/20` y empezar Banco 2 con vida compartida / dias libres / convivencia / hogar / ocio simple
+- adaptar el sistema editorial a flujo movil primero: `Modo calle`, revision de privacidad rapida y publicacion simple desde el movil
 
 ## Peticion minima de tarea
 
@@ -22,16 +22,17 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 - convertir el ritual de arranque en un habito de sesion
 - usar `OPERATIVA-DIARIA.md` como referencia para ejecutar sin volver al bucle meta
 - permitir autonomia controlada en tareas verdes y amarillas bajas de `Hermes Builder`
+- usar `CiudadanoInusual` como banco operativo de contenido real: guiones, posts, carruseles y publicacion movil
 
 ## Pendientes cercanas
 
-- seleccionar las mejores piezas del banco inicial para convertirlas en guiones publicables
+- probar `Modo calle` desde movil con una foto o situacion real
+- publicar o dejar lista una primera pieza real desde el flujo movil
 - abrir Banco 2 con vida real expandida: pareja, convivencia, hogar, recados, comida, ocio simple y mini viajes
-- seguir probando `Modo guion` con situaciones reales y guardar solo guiones que pasen privacidad y calidad
-- reenfocar el banco hacia vlog, vida real, trabajo, estudio, IA, topografia, drones, humor y aprendizaje
+- seguir probando `Modo guion`, `Modo post` y `Modo carrusel` con situaciones reales
+- medir que formatos son mas faciles de repetir sin quemarse
 - mantener vivienda/credito/ayudas como investigacion personal, no como eje del contenido
 - limpiar o respaldar la carpeta untracked `projects/hermes_ia/briefings/` del VPS si vuelve a bloquear un `git push vps`
-- decidir más adelante si conviene evaluar `hermes doctor --fix` con cuidado
 
 ## Decision provisional sobre PRD/RFC
 
@@ -42,9 +43,9 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 
 ## Bloqueos o dudas abiertas
 
-- cuándo conviene migrar `config.yaml` de `v0` a `v29`
 - cuándo merece la pena activar fases posteriores como cron, skills o perfiles
 - cuándo pasar de la sincronización manual selectiva a un flujo basado en Git remoto
+- que piezas publicadas realmente conectan con audiencia
 
 ## Completadas recientes
 
@@ -58,6 +59,10 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 - seis briefings reales de `Hermes Research` registrados
 - banco inicial de veinte salidas reales de `Hermes Content` completado
 - tres guiones publicables creados en `projects/hermes_ia/content/ciudadanoinusual/publicables/`
+- cuatro posts visuales publicables creados
+- cinco carruseles publicables o casi publicables creados
+- `Modo guion`, `Modo post` y `Modo carrusel` creados y probados
+- guia rapida de modos, prompts de edicion y plan semanal creados
 - linea de vivienda/credito/ayudas marcada como investigacion personal de referencia, no como centro de `CiudadanoInusual`
 - script `projects/hermes_ia/verificar-cambio.sh` creado para `Hermes Builder`
 - documentación técnica principal ampliada
@@ -79,8 +84,8 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 
 ## Backlog cercano
 
-- revisar banco inicial 20/20 y elegir 3 piezas candidatas a publicacion
 - producir primeras piezas del Banco 2: vida compartida, dias libres y ocio simple
 - priorizar formatos de videovlog, dia en mi vida, trabajo de campo, estudio nocturno, IA practica y humor realista
-- convertir mejores briefings en posts o guiones mas cercanos a la voz de `CiudadanoInusual`
+- convertir mejores fotos y situaciones reales en piezas publicadas o listas para publicar
+- crear una rutina semanal de revision de resultados
 - preparar futura evaluación de PRD y RFC cuando el uso práctico básico ya sea estable

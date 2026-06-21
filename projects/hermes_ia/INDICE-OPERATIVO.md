@@ -15,12 +15,16 @@ Saber que archivo abrir primero segun la necesidad real de la sesion.
 - si quiero evaluar si una salida merece guardarse: `projects/hermes_ia/JUDGE.md`
 - si quiero aclarar terminos del proyecto: `projects/hermes_ia/GLOSARIO.md`
 - si quiero una accion inmediata corta: `projects/hermes_ia/USO-IMMEDIATO.md`
+- si quiero recordar modos de contenido: `projects/hermes_ia/content/ciudadanoinusual/GUIA-RAPIDA-MODOS.md`
+- si estoy desde el movil y no se que modo usar: `projects/hermes_ia/content/ciudadanoinusual/MODO-CALLE.md`
+- si quiero publicar desde movil: `projects/hermes_ia/content/ciudadanoinusual/FLUJO-MOVIL-PUBLICACION.md`
+- si quiero ver piezas listas: `projects/hermes_ia/content/ciudadanoinusual/publicables/INDICE-PUBLICABLES.md`
 
 ## Salidas reales ya existentes
 
 - research: `projects/hermes_ia/research/briefing-01-pymes-ia-espana.md` a `projects/hermes_ia/research/briefing-06-ayudas-vivienda-cataluna-espana.md`
 - content: veinte salidas en `projects/hermes_ia/content/ciudadanoinusual/`
-- publicables: tres guiones en `projects/hermes_ia/content/ciudadanoinusual/publicables/`
+- publicables: guiones, posts visuales y carruseles en `projects/hermes_ia/content/ciudadanoinusual/publicables/`
 - builder: `projects/hermes_ia/verificar-cambio.sh`
 - calidad: `projects/hermes_ia/JUDGE.md`
 
@@ -28,8 +32,10 @@ Saber que archivo abrir primero segun la necesidad real de la sesion.
 
 - banco de contenido inicial: 20/20 piezas completado
 - guiones publicables: 3
+- posts visuales publicables: 4
+- carruseles publicables o casi publicables: 5
 - research base: 6 briefings
-- siguiente paso: revisar calidad, elegir 3 piezas publicables y abrir Banco 2
+- siguiente paso: probar flujo movil, publicar piezas simples y abrir Banco 2
 
 ## Norte de contenido
 
