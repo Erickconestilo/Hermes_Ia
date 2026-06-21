@@ -23,7 +23,7 @@ Saber que archivo abrir primero segun la necesidad real de la sesion.
 - si quiero publicar desde movil: `projects/hermes_ia/content/ciudadanoinusual/FLUJO-MOVIL-PUBLICACION.md`
 - si quiero ver piezas listas: `projects/hermes_ia/content/ciudadanoinusual/publicables/INDICE-PUBLICABLES.md`
 - si quiero ver el roadmap canonico: `ROADMAP-HERMES.md`
-- si quiero ver skills experimentales activas: `ROADMAP-HERMES.md` -> "Incubadora de skills"
+- si quiero ver skills experimentales activas: `projects/hermes_ia/SKILLS-EXPERIMENTALES.md`
 
 ## Salidas reales ya existentes
 

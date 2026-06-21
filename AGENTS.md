@@ -46,6 +46,7 @@ Este repositorio documenta y guía la evolución de `Hermes Agent` en un VPS de 
 - Skill oficial versionada en el repo: solo despues de repeticion real, diff claro y aprobacion explicita.
 - Cambios de sistema o secretos: siempre pedir permiso antes.
 - No borrar skills experimentales utiles solo por existir; observarlas y corregir solo si generan ruido, riesgo o efectos no deseados.
+- Registro de skills experimentales: `projects/hermes_ia/SKILLS-EXPERIMENTALES.md`.
 
 ## Convenciones de documentación
 

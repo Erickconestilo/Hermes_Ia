@@ -181,3 +181,12 @@ Hermes respondio que el estado real ya incluye:
 - Se mantienen limites rojos: secretos, `.env`, servicios, cron recurrente, Docker, MCPs, Playwright, memoria externa y publicacion automatica.
 - `ciudadanoinusual-mobile-intake` queda clasificada como skill experimental activa, no oficial.
 - La condicion para formalizarla en el repo es superar 3 capturas reales sin errores graves.
+
+## Consolidacion Mobile Ops - 2026-06-21
+
+- Captura Movil V1 ya tuvo prueba real desde Telegram.
+- La primera captura incluyo un placeholder accidental y se corrigio creando una captura limpia.
+- Se amplio la validacion anti-plantillas para rechazar instrucciones del prompt antes de guardar.
+- Se creo `projects/hermes_ia/SKILLS-EXPERIMENTALES.md` como indice de skills incubadas en `HERMES_HOME`.
+- La skill `ciudadanoinusual-mobile-intake` no se borra: queda experimental activa para Captura Movil V1 y Modo Calle.
+- La formalizacion queda condicionada a 3 capturas reales sin errores graves.

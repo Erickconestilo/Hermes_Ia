@@ -88,6 +88,8 @@ Convertir Hermes en el arnes personal de IA de Erick/CiudadanoInusual:
 
 Hermes puede crear y usar skills experimentales dentro de `HERMES_HOME` cuando detecte un flujo repetible y de bajo riesgo.
 
+Indice detallado: `projects/hermes_ia/SKILLS-EXPERIMENTALES.md`.
+
 Condiciones:
 
 - no tocar secretos, `.env` ni servicios;

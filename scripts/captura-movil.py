@@ -20,9 +20,9 @@ VALID_STATUSES = {"inbox", "reviewed", "converted", "discarded"}
 TEMPLATE_TEXT_MARKERS = (
     "[cuenta aquí",
     "Antes de guardar:",
-    "Devuélveme únicamente",
-    "No lo conviertas todavía",
-    "Detecta riesgos de privacidad",
+    "Devuélveme",
+    "No lo conviertas",
+    "Detecta riesgos",
 )
 TEMPLATE_TEXT_ERROR = "El texto parece incluir instrucciones o plantilla. Pasa solo la situación real."
 
