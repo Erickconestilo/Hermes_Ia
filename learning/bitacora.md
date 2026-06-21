@@ -226,3 +226,12 @@ Hermes respondio que el estado real ya incluye:
 - La recepcion de imagen desde Telegram quedo validada: Hermes confirma recepcion, describe breve, marca privacidad y recomienda formato.
 - La nota de voz / STT quedo validada: Hermes confirma recepcion, resume fielmente y recomienda formato sin publicar.
 - `/background` pequeno quedo validado para lecturas no destructivas; el unico ruido detectado fue desincronizacion previa del repo y eco raro de markdown en nombres de archivo.
+
+## Cierre Mobile Ops V1 - 2026-06-21
+
+- Se completo el primer flujo movil extremo a extremo con captura real, recuperacion en portatil/VPS, borrador util, aplicacion de `JUDGE.md`, registro y cambio de estado en JSONL.
+- Se completo una segunda captura real con el mismo cierre operativo, dejando `2/3` para evaluar futura formalizacion de la skill experimental.
+- La recepcion de imagen por Telegram ya no solo describe: tambien devuelve nombre y ruta accesible en cache.
+- La recepcion de documento PDF por Telegram quedo validada con ruta accesible y lectura basica posterior.
+- Quedo documentado un limite real del canal: archivos `.asc` rechazados por tipo no permitido.
+- A partir de aqui, `Mobile Ops V1` queda cerrado; lo que sigue ya no es validar la base, sino consolidar la skill experimental y decidir el siguiente uso estable.

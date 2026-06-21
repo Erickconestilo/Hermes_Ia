@@ -6,7 +6,7 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 
 ## Siguiente tarea concreta
 
-- validar el primer flujo movil completo: capturar una idea privada real desde Telegram, recuperarla en portatil, convertirla en borrador y pasarla por `JUDGE.md`
+- completar la tercera captura real util desde Telegram para decidir si `ciudadanoinusual-mobile-intake` ya puede pasar de experimental activa a candidata a formalizacion
 
 ## Peticion minima de tarea
 
@@ -27,9 +27,8 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 
 ## Pendientes cercanas
 
-- probar envio de archivo desde Telegram a Hermes y registrar el limite real del canal movil
-- cerrar matriz real de capacidades de Telegram separando probado, asumido y descartado
 - consolidar Captura Movil V1 con 3 capturas reales utiles sin errores graves
+- registrar limite real de archivos soportados desde Telegram separando PDF/imagen validos y tipos rechazados
 - decidir si `Personal Ops V1` entra ya como siguiente uso estable desde Telegram
 - preparar Personal Ops V1 solo despues de cerrar Mobile Ops V1 basico
 - publicar o dejar lista una primera pieza real desde el flujo movil
@@ -71,6 +70,8 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 - `/whoami` y `/status` validados desde Telegram
 - recepcion de imagen y nota de voz validadas desde Telegram
 - `/background` pequeno validado para tareas no destructivas
+- primer flujo movil extremo a extremo cerrado: captura -> recuperacion -> borrador -> `JUDGE.md` -> registro
+- recepcion de documento PDF desde Telegram validada con ruta accesible
 - envio de imagenes generadas a Telegram validado con `scripts/send-telegram-photo.py`
 - `Modo guion`, `Modo post` y `Modo carrusel` creados y probados
 - guia rapida de modos, prompts de edicion y plan semanal creados

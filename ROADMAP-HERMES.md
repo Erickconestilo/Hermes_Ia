@@ -43,9 +43,9 @@ Convertir Hermes en el arnes personal de IA de Erick/CiudadanoInusual:
 | Envio de imagenes por Telegram | Cerrado | `scripts/send-telegram-photo.py` probado |
 | Publicacion externa | Abierta | 1 publicacion LinkedIn registrada |
 | Telegram operativo base | Cerrado | `/whoami`, `/status`, imagen, voz y `/background` pequeno validados |
-| Flujo movil extremo a extremo | Abierto | falta captura movil -> pieza -> judge -> publicacion |
+| Flujo movil extremo a extremo | Cerrado | captura privada -> recuperacion -> borrador -> Judge -> registro completados |
 | Captura Movil V1 | Operativa | prueba real desde Telegram; placeholder corregido; skill experimental ajustada; validacion anti-plantillas |
-| Judge aplicado y registrado | Abierto | falta registro minimo de evaluaciones reales |
+| Judge aplicado y registrado | Cerrado | `projects/hermes_ia/JUDGE-REGISTRO.md` con piezas reales evaluadas |
 | Banco 2 | Iniciado | vida real, convivencia, hogar, comida, trayectos |
 | Continuidad semanal | Abierta | falta rutina semanal estable |
 
@@ -64,8 +64,8 @@ Convertir Hermes en el arnes personal de IA de Erick/CiudadanoInusual:
 
 ### Siguiente experimento seguro
 
-- Completar el primer flujo movil extremo a extremo: captura privada -> recuperacion -> borrador -> `JUDGE.md`.
-- Probar recepcion de archivo desde Telegram para confirmar limite real del canal movil.
+- Completar la tercera captura real util para decidir si la skill experimental ya merece ruta de formalizacion.
+- Delimitar soporte real de archivos: PDF valido, imagen valida, tipos rechazados como `.asc`.
 - Operativa semanal: decidir que se hace desde movil y que se reserva para portatil.
 
 ### Futuro planificado
@@ -200,11 +200,11 @@ Personal Ops no publica, no toca secretos, no automatiza decisiones sensibles y 
 
 ## Tareas actuales
 
-1. Probar envio de archivo desde Telegram y registrar limite real sin versionar privados.
-2. Completar validacion de Captura Movil V1 hasta 3 capturas reales utiles sin errores graves.
-3. Convertir una captura movil en borrador, aplicar `JUDGE.md` y registrar decision.
-4. Decidir si `Personal Ops V1` entra ya como siguiente uso oficial de movil.
-5. Registrar el criterio final sobre `/background` pequeno como experimento seguro.
+1. Completar validacion de Captura Movil V1 hasta 3 capturas reales utiles sin errores graves.
+2. Registrar limite real de archivos soportados desde Telegram sin versionar privados.
+3. Decidir si `Personal Ops V1` entra ya como siguiente uso oficial de movil.
+4. Registrar el criterio final sobre `/background` pequeno como experimento seguro.
+5. Elegir si la siguiente captura real se convierte en nota privada, guion o post.
 
 ## Condiciones de cierre de Mobile Ops V1
 
@@ -216,6 +216,12 @@ Mobile Ops V1 queda cerrado solo cuando:
 - Se convierte una captura en una pieza util.
 - Se aplica Judge y se registra decision.
 - Se publica o se deja lista una pieza con privacidad revisada.
+
+Estado a 2026-06-21:
+
+- todas las condiciones anteriores ya quedaron cumplidas en uso real;
+- Mobile Ops V1 se considera cerrado;
+- la formalizacion de la skill experimental sigue aparte y requiere `3/3` capturas reales utiles sin errores graves.
 
 ## Regla de decision
 

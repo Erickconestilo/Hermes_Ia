@@ -17,6 +17,8 @@ No se evalua todo el banco. Solo piezas reales o piezas candidatas a publicacion
 | --- | --- | --- | --- | --- | --- |
 | 2026-06-21 | `publicaciones/linkedin-01-hermes-ia-vps.md` | publicacion real | 8/10 | valida | medir impresiones, reacciones y comentarios |
 | 2026-06-21 | `publicables/post-04-comida-en-ruta.md` | post visual | 8/10 | valida con privacidad revisada | publicar si la imagen no muestra ticket, local, terceros ni ubicacion exacta |
+| 2026-06-21 | `cap-20260621164445-a8b3b3c4` | nota privada / borrador | 8/10 | valida como pieza util privada | probar recepcion de archivo desde Telegram y luego cerrar Mobile Ops V1 |
+| 2026-06-21 | `cap-20260621144924-102d3226` | nota privada / borrador | 8/10 | valida como borrador privado util | completar tercera captura real util y decidir formalizacion experimental |
 
 ## Observaciones
 
@@ -48,5 +50,4 @@ Riesgo:
 
 ## Pendiente
 
-Aplicar Judge a la primera pieza nacida desde Captura Movil V1 cuando exista una captura real.
-
+Aplicar Judge a la siguiente pieza nacida desde Captura Movil V1 y seguir acumulando 3 capturas reales utiles sin errores graves.

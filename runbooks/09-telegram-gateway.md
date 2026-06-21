@@ -115,11 +115,14 @@ Resultado:
 | Envio de imagen al usuario | `scripts/send-telegram-photo.py` | probado | `ok: true` y `message_id` | no |
 | Captura Movil V1 | guardar nota privada desde Telegram | probado | captura real almacenada en JSONL y recuperada despues | no |
 | Analisis de imagen recibida | enviar foto desde movil y pedir revision | probado | Hermes confirmo recepcion, descripcion breve, privacidad y formato | no |
+| Recepcion de imagen con ruta accesible | enviar imagen desde Telegram y pedir tipo, nombre y ruta | probado | `img_a2a463577f73.jpg` en `/home/hermes/.hermes/image_cache/img_a2a463577f73.jpg` | no |
+| Documento PDF con ruta accesible | enviar PDF desde Telegram y pedir tipo, nombre y ruta | probado | `T05_260602 (1).pdf` en `/home/hermes/.hermes/cache/documents/doc_0c8906524a18_T05_260602 (1).pdf` | no |
 | Nota de voz / STT | enviar audio desde movil | probado | Hermes confirmo recepcion, resumen fiel y formato recomendado | no |
 | Escritura temporal segura | crear prueba en `tmp/` | no probado | pendiente | si |
 | `/whoami` | slash command desde Telegram | probado | user ID, tier y comandos devueltos | no |
 | `/status` | slash command desde Telegram | probado | session ID, ultima actividad y plataformas conectadas | no |
 | `/background` pequeno | lectura no destructiva de `TAREAS.md` | probado | devolvio una sola tarea prioritaria | no |
+| Archivo `.asc` | enviar `.asc` desde Telegram | rechazado | el flujo no acepta ese tipo de archivo | limite conocido |
 | Accion sensible con confirmacion | pedir accion roja o amarilla | no probado | pendiente | si |
 
 No marcar una capacidad como cerrada sin evidencia concreta.
@@ -218,6 +221,14 @@ Estado real a 2026-06-21:
 - recuperacion privada probada;
 - anti-plantillas activa en `scripts/captura-movil.py`;
 - la skill experimental actual vive en `HERMES_HOME`, no en Git.
+
+Estado ampliado:
+
+- al menos una captura ya completo el ciclo captura -> recuperacion -> borrador -> Judge -> registro;
+- una segunda captura real tambien quedo convertida y registrada;
+- recepcion de imagen con ruta accesible validada;
+- recepcion de PDF con ruta accesible validada;
+- tipos como `.asc` quedan fuera del soporte actual de este flujo.
 
 ## Limites vigentes
 
