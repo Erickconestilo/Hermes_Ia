@@ -32,7 +32,7 @@ No permitido sin aprobacion:
 
 | Nombre | Ubicacion | Estado | Proposito | Fecha detectada | Evidencia de uso | Riesgos | Permisos | Limites | Condicion para formalizar | Condicion para archivar |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| `ciudadanoinusual-mobile-intake` | `/home/hermes/.hermes/skills/note-taking/ciudadanoinusual-mobile-intake/` | experimental activa | Captura Movil V1, Modo Calle y flujo Telegram para CiudadanoInusual | 2026-06-21 | prueba real desde Telegram; placeholder accidental corregido; validacion anti-plantillas en `scripts/captura-movil.py` | guardar plantillas como captura real; conservar datos sensibles; cambiar flujo sin registro | capturas privadas fuera de Git, recuperacion, borradores y registro posterior | no tocar Git, servicios, `.env`, secretos, cron recurrente ni sistema sin permiso | superar 3 capturas reales utiles sin errores graves y sin tocar Git/servicios/secretos sin permiso | archivar si mete plantillas en `original_text`, inventa, toca Git sin permiso, modifica sistema o empeora el flujo |
+| `ciudadanoinusual-mobile-intake` | `/home/hermes/.hermes/skills/note-taking/ciudadanoinusual-mobile-intake/` | candidata a formalizacion | Captura Movil V1, Modo Calle y flujo Telegram para CiudadanoInusual | 2026-06-21 | 3 capturas reales utiles; recuperacion privada; Judge aplicado; archivo e imagen recibidos por Telegram; foto + instruccion breve de guardado validada | conservar datos sensibles; cambiar flujo sin registro; seguir mezclando captura con redaccion si la intencion es ambigua | capturas privadas fuera de Git, recuperacion, borradores y registro posterior | no tocar Git, servicios, `.env`, secretos, cron recurrente ni sistema sin permiso | mantener `3/3` sin errores graves y sostener entrada natural fiable sin perder privacidad ni trazabilidad | archivar si vuelve a meter plantillas en `original_text`, inventa, toca Git sin permiso, modifica sistema o empeora el flujo |
 
 ## Criterio de formalizacion
 
@@ -43,3 +43,22 @@ Una skill experimental puede pasar a skill oficial versionada solo si:
 - no aumenta riesgo operativo;
 - queda claro que mejora ejecucion y no solo documentacion;
 - Erick aprueba formalizarla en el repo.
+
+## Estado actual de decision
+
+`ciudadanoinusual-mobile-intake` ya no esta solo en incubacion temprana.
+
+Con `3/3` capturas reales utiles y uso real desde Telegram, pasa a candidata a formalizacion.
+
+Todavia no debe considerarse oficial porque le falta una mejora minima:
+
+- aceptar mejor texto libre;
+- aceptar foto + contexto breve;
+- aceptar nota de voz + intencion explicita de guardado;
+- y, si la intencion no esta clara, preguntar una sola vez antes de desviarse a analisis o contenido.
+
+Estado tras la ultima prueba real:
+
+- foto + instruccion breve de guardado ya funciona;
+- la skill prioriza captura sobre analisis visual cuando la intencion es clara;
+- el siguiente umbral ya no es de uso basico, sino de decision de versionado oficial o permanencia en `HERMES_HOME`.

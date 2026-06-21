@@ -60,11 +60,11 @@ Convertir Hermes en el arnes personal de IA de Erick/CiudadanoInusual:
 - Envio de imagenes generadas a Telegram.
 - Git como mecanismo de sincronizacion.
 - Skills experimentales dentro de `HERMES_HOME` como incubadora de flujos repetibles de bajo riesgo.
-- Skill `ciudadanoinusual-mobile-intake` como experimental activa.
+- Skill `ciudadanoinusual-mobile-intake` como candidata a formalizacion.
 
 ### Siguiente experimento seguro
 
-- Completar la tercera captura real util para decidir si la skill experimental ya merece ruta de formalizacion.
+- Decidir si `ciudadanoinusual-mobile-intake` ya pasa a skill oficial versionada o si debe seguir un ciclo mas en `HERMES_HOME`.
 - Delimitar soporte real de archivos: PDF valido, imagen valida, tipos rechazados como `.asc`.
 - Operativa semanal: decidir que se hace desde movil y que se reserva para portatil.
 
@@ -89,10 +89,10 @@ Convertir Hermes en el arnes personal de IA de Erick/CiudadanoInusual:
 
 | Capacidad oficial | Estado real en `Hermes_Ia` | Riesgo | Politica local |
 | --- | --- | --- | --- |
-| Telegram Gateway con texto, imagenes, archivos y voz | texto, imagen recibida y voz validados; archivo aun pendiente | medio | experimento seguro si no toca secretos ni servicios |
+| Telegram Gateway con texto, imagenes, archivos y voz | texto, imagen, voz y PDF validados; `.asc` rechazado | medio | experimento seguro si no toca secretos ni servicios |
 | Comandos `/whoami` y `/status` | validados desde Telegram | bajo | permitidos con registro posterior |
 | `/background` desde mensajeria | validado en tareas pequenas no destructivas | medio | permitido solo para tareas no destructivas y registradas |
-| Skills experimentales | `ciudadanoinusual-mobile-intake` creada en `HERMES_HOME` | bajo-medio | permitidas como incubadora con auditoria posterior |
+| Skills experimentales | `ciudadanoinusual-mobile-intake` en `HERMES_HOME`, candidata a formalizacion con entrada natural ya validada | bajo-medio | permitidas como incubadora con auditoria posterior |
 | Toolsets amplios por plataforma | disponibles segun instalacion | variable | usar solo capacidades necesarias; Docker/MCPs/Playwright siguen rojos |
 | Cron one-shot y recurrente | no activo | medio-alto | one-shot futuro con permiso; recurrente sigue rojo |
 | Context files `AGENTS.md` | activo como politica del repo | bajo | mantener actualizado y conciso |
@@ -118,7 +118,7 @@ Condiciones:
 
 | Skill | Estado | Ubicacion | Proposito | Condicion para formalizar |
 | --- | --- | --- | --- | --- |
-| `ciudadanoinusual-mobile-intake` | experimental activa | `HERMES_HOME` | Captura Movil V1, Modo Calle y flujo Telegram para CiudadanoInusual | superar 3 capturas reales utiles sin errores graves y sin tocar Git/servicios/secretos sin permiso |
+| `ciudadanoinusual-mobile-intake` | candidata a formalizacion | `HERMES_HOME` | Captura Movil V1, Modo Calle y flujo Telegram para CiudadanoInusual | mantener `3/3` utiles y confirmar si ya merece versionado oficial |
 
 ## Track B: CiudadanoInusual y feedback real
 
@@ -200,11 +200,11 @@ Personal Ops no publica, no toca secretos, no automatiza decisiones sensibles y 
 
 ## Tareas actuales
 
-1. Completar validacion de Captura Movil V1 hasta 3 capturas reales utiles sin errores graves.
+1. Decidir si `ciudadanoinusual-mobile-intake` ya pasa a skill oficial versionada o sigue un ciclo mas en incubadora.
 2. Registrar limite real de archivos soportados desde Telegram sin versionar privados.
 3. Decidir si `Personal Ops V1` entra ya como siguiente uso oficial de movil.
 4. Registrar el criterio final sobre `/background` pequeno como experimento seguro.
-5. Elegir si la siguiente captura real se convierte en nota privada, guion o post.
+5. Elegir una prueba corta adicional solo si hace falta para resolver la decision de versionado.
 
 ## Condiciones de cierre de Mobile Ops V1
 
@@ -221,7 +221,7 @@ Estado a 2026-06-21:
 
 - todas las condiciones anteriores ya quedaron cumplidas en uso real;
 - Mobile Ops V1 se considera cerrado;
-- la formalizacion de la skill experimental sigue aparte y requiere `3/3` capturas reales utiles sin errores graves.
+- la skill ya supero `3/3` y queda como candidata a formalizacion, no como oficial final.
 
 ## Regla de decision
 

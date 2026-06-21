@@ -235,3 +235,17 @@ Hermes respondio que el estado real ya incluye:
 - La recepcion de documento PDF por Telegram quedo validada con ruta accesible y lectura basica posterior.
 - Quedo documentado un limite real del canal: archivos `.asc` rechazados por tipo no permitido.
 - A partir de aqui, `Mobile Ops V1` queda cerrado; lo que sigue ya no es validar la base, sino consolidar la skill experimental y decidir el siguiente uso estable.
+
+## Skill candidata a formalizacion - 2026-06-21
+
+- `ciudadanoinusual-mobile-intake` supera la condicion de `3/3` capturas reales utiles sin errores graves.
+- Pasa de `experimental activa` a `candidata a formalizacion`.
+- No se marca todavia como skill oficial porque la entrada sigue siendo demasiado rigida para movil.
+- Se define una mejora minima obligatoria: aceptar mejor texto libre, foto + contexto breve y nota de voz + intencion explicita de guardado.
+
+## Validacion de entrada natural - 2026-06-21
+
+- Se aplico un parche remoto en `HERMES_HOME` para priorizar guardado de captura cuando la intencion es clara.
+- La skill ya acepta mejor `foto + instruccion breve de guardado` sin exigir plantilla completa.
+- La ultima prueba real devolvio `id`, `estado`, `privacy_flags`, `suggested_format` y ruta del almacen, en vez de desviarse a descripcion o redaccion.
+- El cuello de botella principal deja de ser la entrada natural y pasa a ser la decision de versionado oficial o no.
