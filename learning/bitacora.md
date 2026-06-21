@@ -215,3 +215,14 @@ Hermes respondio que el estado real ya incluye:
 - Se crea Track D: Automatizacion controlada para distinguir background pequeno, cron one-shot futuro y cron recurrente rojo.
 - Captura Movil V1 refuerza la validacion anti-plantillas con marcadores adicionales del prompt.
 - La siguiente prioridad operativa es probar capacidades reales de Telegram y una captura personal no publicable antes de abrir mas contenido.
+
+## Validacion real de capacidades Telegram - 2026-06-21
+
+- `/whoami` quedo validado desde Telegram y devolvio alcance real del bot para el usuario actual.
+- `/status` quedo validado y mostro sesion activa, ultima actividad y plataforma conectada.
+- Captura Movil V1 ya guardo una captura privada real en JSONL fuera de Git y luego se recupero correctamente.
+- La primera recuperacion fallo por la skill experimental `ciudadanoinusual-mobile-intake`, que se quedaba en trazas de herramientas; se ajusto la skill en `HERMES_HOME` y la sesion nueva de Telegram ya respondio bien.
+- El parseo de metadata tambien se corrigio: `Privacidad: no publicar` pasa a `privacy_flags: ["no_publicar"]`.
+- La recepcion de imagen desde Telegram quedo validada: Hermes confirma recepcion, describe breve, marca privacidad y recomienda formato.
+- La nota de voz / STT quedo validada: Hermes confirma recepcion, resume fielmente y recomienda formato sin publicar.
+- `/background` pequeno quedo validado para lecturas no destructivas; el unico ruido detectado fue desincronizacion previa del repo y eco raro de markdown en nombres de archivo.

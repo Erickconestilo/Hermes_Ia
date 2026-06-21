@@ -113,10 +113,13 @@ Resultado:
 | Servicio persistente | `hermes gateway status` | probado | `User gateway service is running` | no |
 | Lectura de contexto | pedir resumen de `docs/CODEX-BRIEF.md` | probado | respuesta con estado actualizado | no |
 | Envio de imagen al usuario | `scripts/send-telegram-photo.py` | probado | `ok: true` y `message_id` | no |
-| Captura Movil V1 | guardar nota desde Telegram | no probado | script creado, falta prueba real | si |
-| Analisis de imagen recibida | enviar foto desde movil y pedir revision | no probado | sin evidencia todavia | si |
-| Nota de voz / STT | enviar audio desde movil | no probado | sin evidencia todavia | si |
+| Captura Movil V1 | guardar nota privada desde Telegram | probado | captura real almacenada en JSONL y recuperada despues | no |
+| Analisis de imagen recibida | enviar foto desde movil y pedir revision | probado | Hermes confirmo recepcion, descripcion breve, privacidad y formato | no |
+| Nota de voz / STT | enviar audio desde movil | probado | Hermes confirmo recepcion, resumen fiel y formato recomendado | no |
 | Escritura temporal segura | crear prueba en `tmp/` | no probado | pendiente | si |
+| `/whoami` | slash command desde Telegram | probado | user ID, tier y comandos devueltos | no |
+| `/status` | slash command desde Telegram | probado | session ID, ultima actividad y plataformas conectadas | no |
+| `/background` pequeno | lectura no destructiva de `TAREAS.md` | probado | devolvio una sola tarea prioritaria | no |
 | Accion sensible con confirmacion | pedir accion roja o amarilla | no probado | pendiente | si |
 
 No marcar una capacidad como cerrada sin evidencia concreta.
@@ -133,6 +136,24 @@ Resolucion:
 - Luego se instalo el servicio de usuario con `hermes gateway install`.
 - Se detuvo el proceso manual.
 - Se arranco el servicio `hermes-gateway.service`.
+
+### Skill experimental que se quedaba en trazas de herramientas
+
+Durante la primera recuperacion privada de una captura, Telegram solo mostro trazas como `skill_view` y `python3 scripts/captura-movil.py show...`, pero no la respuesta final.
+
+Resolucion:
+
+- Se verifico que `scripts/captura-movil.py show` funcionaba bien en VPS.
+- Se localizo la skill experimental `ciudadanoinusual-mobile-intake` en `HERMES_HOME`.
+- Se corrigio la skill para obligar respuesta final despues de cualquier lectura o recuperacion.
+- Se ajusto el parseo de metadata para que `Privacidad: no publicar` se convierta en `privacy_flags: ["no_publicar"]`.
+- Se abrio una sesion nueva en Telegram para evitar cache de la conversacion anterior.
+
+Resultado:
+
+- la recuperacion privada paso a responder bien;
+- una captura nueva ya quedo con `privacy_flags` correctos;
+- el fallo era de flujo de skill, no del gateway ni del servicio.
 
 ## Estado final
 
@@ -190,6 +211,13 @@ Reglas:
 - marcar riesgos de privacidad;
 - devolver el `id` de captura;
 - convertir a contenido solo despues de revisar.
+
+Estado real a 2026-06-21:
+
+- guardado privado probado;
+- recuperacion privada probada;
+- anti-plantillas activa en `scripts/captura-movil.py`;
+- la skill experimental actual vive en `HERMES_HOME`, no en Git.
 
 ## Limites vigentes
 

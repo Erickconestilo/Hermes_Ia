@@ -42,9 +42,9 @@ Convertir Hermes en el arnes personal de IA de Erick/CiudadanoInusual:
 | Telegram Gateway basico | Cerrado | `runbooks/09-telegram-gateway.md` y respuesta desde movil |
 | Envio de imagenes por Telegram | Cerrado | `scripts/send-telegram-photo.py` probado |
 | Publicacion externa | Abierta | 1 publicacion LinkedIn registrada |
-| Telegram operativo completo | Abierto | falta matriz de capacidades completa |
+| Telegram operativo base | Cerrado | `/whoami`, `/status`, imagen, voz y `/background` pequeno validados |
 | Flujo movil extremo a extremo | Abierto | falta captura movil -> pieza -> judge -> publicacion |
-| Captura Movil V1 | En validacion real | prueba real desde Telegram; placeholder corregido; validacion anti-plantillas |
+| Captura Movil V1 | Operativa | prueba real desde Telegram; placeholder corregido; skill experimental ajustada; validacion anti-plantillas |
 | Judge aplicado y registrado | Abierto | falta registro minimo de evaluaciones reales |
 | Banco 2 | Iniciado | vida real, convivencia, hogar, comida, trayectos |
 | Continuidad semanal | Abierta | falta rutina semanal estable |
@@ -64,8 +64,8 @@ Convertir Hermes en el arnes personal de IA de Erick/CiudadanoInusual:
 
 ### Siguiente experimento seguro
 
-- Captura Movil V1: guardar ideas brutas privadas en JSONL fuera de Git.
-- Matriz de pruebas de Telegram: `/whoami`, `/status`, envio de archivo, recepcion de imagen, nota de voz y `/background` pequeno.
+- Completar el primer flujo movil extremo a extremo: captura privada -> recuperacion -> borrador -> `JUDGE.md`.
+- Probar recepcion de archivo desde Telegram para confirmar limite real del canal movil.
 - Operativa semanal: decidir que se hace desde movil y que se reserva para portatil.
 
 ### Futuro planificado
@@ -89,9 +89,9 @@ Convertir Hermes en el arnes personal de IA de Erick/CiudadanoInusual:
 
 | Capacidad oficial | Estado real en `Hermes_Ia` | Riesgo | Politica local |
 | --- | --- | --- | --- |
-| Telegram Gateway con texto, imagenes, archivos y voz | texto validado; imagenes y archivos en prueba; voz pendiente | medio | experimento seguro si no toca secretos ni servicios |
-| Comandos `/whoami` y `/status` | pendientes de prueba documentada | bajo | permitidos con registro posterior |
-| `/background` desde mensajeria | pendiente de prueba pequena | medio | permitido solo para tareas no destructivas y registradas |
+| Telegram Gateway con texto, imagenes, archivos y voz | texto, imagen recibida y voz validados; archivo aun pendiente | medio | experimento seguro si no toca secretos ni servicios |
+| Comandos `/whoami` y `/status` | validados desde Telegram | bajo | permitidos con registro posterior |
+| `/background` desde mensajeria | validado en tareas pequenas no destructivas | medio | permitido solo para tareas no destructivas y registradas |
 | Skills experimentales | `ciudadanoinusual-mobile-intake` creada en `HERMES_HOME` | bajo-medio | permitidas como incubadora con auditoria posterior |
 | Toolsets amplios por plataforma | disponibles segun instalacion | variable | usar solo capacidades necesarias; Docker/MCPs/Playwright siguen rojos |
 | Cron one-shot y recurrente | no activo | medio-alto | one-shot futuro con permiso; recurrente sigue rojo |
@@ -200,11 +200,11 @@ Personal Ops no publica, no toca secretos, no automatiza decisiones sensibles y 
 
 ## Tareas actuales
 
-1. Probar `/whoami` y `/status` desde Telegram y registrar alcance real sin datos sensibles.
-2. Probar envio de archivo, recepcion de imagen y nota de voz desde Telegram.
-3. Probar `/background` con una tarea pequena no destructiva.
-4. Completar validacion de Captura Movil V1 hasta 3 capturas reales utiles sin errores graves.
-5. Convertir una captura movil en borrador, aplicar `JUDGE.md` y registrar decision.
+1. Probar envio de archivo desde Telegram y registrar limite real sin versionar privados.
+2. Completar validacion de Captura Movil V1 hasta 3 capturas reales utiles sin errores graves.
+3. Convertir una captura movil en borrador, aplicar `JUDGE.md` y registrar decision.
+4. Decidir si `Personal Ops V1` entra ya como siguiente uso oficial de movil.
+5. Registrar el criterio final sobre `/background` pequeno como experimento seguro.
 
 ## Condiciones de cierre de Mobile Ops V1
 

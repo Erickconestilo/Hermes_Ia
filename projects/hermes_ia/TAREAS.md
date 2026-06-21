@@ -6,7 +6,7 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 
 ## Siguiente tarea concreta
 
-- probar desde Telegram `/whoami` y `/status`, registrar el resultado sin datos sensibles y decidir si `/background` pequeno queda como siguiente experimento seguro
+- validar el primer flujo movil completo: capturar una idea privada real desde Telegram, recuperarla en portatil, convertirla en borrador y pasarla por `JUDGE.md`
 
 ## Peticion minima de tarea
 
@@ -27,10 +27,10 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 
 ## Pendientes cercanas
 
-- probar Captura Movil V1 desde movil con una foto o situacion real
-- probar envio de archivo, recepcion de imagen, nota de voz y `/background` pequeno desde Telegram
-- registrar capacidades reales de Telegram separando probado, asumido y descartado
-- probar primera captura de decision personal no publicable desde Telegram
+- probar envio de archivo desde Telegram a Hermes y registrar el limite real del canal movil
+- cerrar matriz real de capacidades de Telegram separando probado, asumido y descartado
+- consolidar Captura Movil V1 con 3 capturas reales utiles sin errores graves
+- decidir si `Personal Ops V1` entra ya como siguiente uso estable desde Telegram
 - preparar Personal Ops V1 solo despues de cerrar Mobile Ops V1 basico
 - publicar o dejar lista una primera pieza real desde el flujo movil
 - abrir Banco 2 con vida real expandida: pareja, convivencia, hogar, recados, comida, ocio simple y mini viajes
@@ -68,6 +68,9 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 - seis carruseles publicables o casi publicables creados
 - primera publicacion externa asistida por Hermes registrada
 - Telegram Gateway operativo desde movil y persistido con `systemd`
+- `/whoami` y `/status` validados desde Telegram
+- recepcion de imagen y nota de voz validadas desde Telegram
+- `/background` pequeno validado para tareas no destructivas
 - envio de imagenes generadas a Telegram validado con `scripts/send-telegram-photo.py`
 - `Modo guion`, `Modo post` y `Modo carrusel` creados y probados
 - guia rapida de modos, prompts de edicion y plan semanal creados
