@@ -89,10 +89,41 @@ Si el usuario pide recuperar o resumir una captura ya guardada, debe devolver:
 
 Debe:
 
-- usar lectura por `id`
+- permitir recuperacion por `id`, por ultima captura, por posicion reciente o por referencia semantica corta
 - no cambiar estado por defecto
 - no convertir a contenido salvo peticion explicita
 - mantenerse en lane privado
+
+Regla de usabilidad:
+
+- el `id` es para el sistema;
+- el usuario no debe depender de memorizar ids largos para recuperar capturas recientes.
+
+Formas validas de recuperacion humana:
+
+- `Recupera la captura <id>`
+- `Recupera la ultima captura`
+- `Dime mis ultimas 5 capturas`
+- `Dime mis ultimas 10 capturas`
+- `Recupera la numero 2 de las ultimas 5`
+- `Recupera mi ultima decision`
+- `Recupera la del ramen`
+
+Regla de resolucion:
+
+- si hay `id`, usar ese;
+- si el usuario dice `ultima`, usar la mas reciente;
+- si el usuario pide `ultimas 5` o `ultimas 10`, devolver lista humana corta;
+- si el usuario usa referencia semantica y hay una sola coincidencia razonable, usarla;
+- si hay ambiguedad, hacer una sola pregunta corta.
+
+Formato recomendado para listar recientes:
+
+- `id`
+- `tipo`
+- `resumen en una linea`
+
+La lista debe ser humana y corta, no un volcado largo de JSON.
 
 Lane privado valido:
 
@@ -166,7 +197,7 @@ La skill cumple su contrato si:
 1. guarda sin perder el texto real;
 2. no mete plantillas en `original_text`;
 3. devuelve trazabilidad minima;
-4. recupera por `id` sin desviar a contenido;
+4. recupera por `id` y por formas humanas sin desviar a contenido;
 5. inspecciona adjuntos sin inventar;
 6. respeta privacidad y limites.
 

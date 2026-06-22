@@ -58,6 +58,20 @@ Si la intencion no esta clara, Hermes puede hacer una sola pregunta corta para d
 4. proponer una sola siguiente accion
 5. recuperar despues desde portatil o Telegram si hace falta
 
+## Regla de recuperacion humana
+
+Personal Ops V1 debe ser usable sin obligarte a memorizar ids largos.
+
+Formas validas de pedir recuperacion:
+
+- `Recupera la ultima captura`
+- `Dime mis ultimas 5 capturas`
+- `Recupera la numero 2`
+- `Recupera mi ultima decision`
+- `Recupera la nota sobre prioridades del portatil`
+
+Si hay ambiguedad, Hermes debe hacer una sola pregunta corta.
+
 ## Ejemplos de uso real
 
 ### Prioridad de sesion
