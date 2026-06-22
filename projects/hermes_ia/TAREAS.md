@@ -6,7 +6,7 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 
 ## Siguiente tarea concreta
 
-- validar recuperacion humana de capturas sin depender de ids largos
+- elegir si la siguiente implementacion oficial minima sera `ciudadanoinusual-captura-privada` o si primero se consolida una semana mas de uso
 
 ## Cierres operativos pendientes
 
@@ -60,7 +60,6 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 ## Pendientes cercanas
 
 - probar dos usos reales mas de `Personal Ops V1` y medir si reduce friccion de portatil
-- probar listado `ultimas 5` o `ultimas 10` y recuperacion por posicion o referencia semantica corta
 - abrir Banco 2 con vida real expandida: pareja, convivencia, hogar, recados, comida, ocio simple y mini viajes
 - seguir probando `Modo guion`, `Modo post` y `Modo carrusel` con situaciones reales
 - medir que formatos son mas faciles de repetir sin quemarse
@@ -109,6 +108,7 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 - plan minimo de separacion creado para ejecutar la division sin romper Mobile Ops
 - skill puente `ciudadanoinusual-mobile-intake` mantenida un ciclo mas en `HERMES_HOME` con alcance congelado
 - `Personal Ops V1` activado en modo controlado para decisiones, prioridades y notas privadas
+- recuperacion humana validada con `ultimas 5`, `numero 2` y `mi ultima decision`
 - envio de imagenes generadas a Telegram validado con `scripts/send-telegram-photo.py`
 - Mobile Ops V1 cerrado como ciclo base con evidencia real
 - criterio de `/background` pequeno aceptado como experimento seguro no destructivo

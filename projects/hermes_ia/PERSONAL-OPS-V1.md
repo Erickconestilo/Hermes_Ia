@@ -42,6 +42,15 @@ Personal Ops V1 existe para reducir friccion mental, no para sustituir criterio 
 - decision sugerida
 - resumen corto
 
+## Regla de formato movil
+
+Cuando Hermes devuelva algo que luego vas a reutilizar, debe intentar que salga facil de copiar:
+
+- listas cortas;
+- una referencia por linea;
+- ids o rutas aislados si hacen falta;
+- evitar mezclar el dato util dentro de demasiado texto.
+
 ## Regla principal
 
 Si el usuario plantea algo como decision, duda, prioridad, tarea o nota personal, Hermes debe tratarlo primero como `Personal Ops`, no como `Content`.

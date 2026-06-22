@@ -125,6 +125,13 @@ Formato recomendado para listar recientes:
 
 La lista debe ser humana y corta, no un volcado largo de JSON.
 
+Regla de salida para movil:
+
+- cuando devuelva ids, rutas o referencias reutilizables, debe entregarlas en formato facil de copiar;
+- priorizar una linea por item;
+- si el contenido se va a reutilizar luego, preferir bloque simple o texto limpio antes que parrafo largo;
+- no esconder el dato importante dentro de explicaciones largas.
+
 Lane privado valido:
 
 - nota privada
@@ -199,7 +206,8 @@ La skill cumple su contrato si:
 3. devuelve trazabilidad minima;
 4. recupera por `id` y por formas humanas sin desviar a contenido;
 5. inspecciona adjuntos sin inventar;
-6. respeta privacidad y limites.
+6. respeta privacidad y limites;
+7. devuelve referencias en formato razonablemente copiable desde movil.
 
 ## Frontera con la skill 2
 
