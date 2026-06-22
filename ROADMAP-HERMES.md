@@ -246,6 +246,12 @@ Estado a 2026-06-21:
 - la skill ya supero `3/3` y queda como candidata a formalizacion, no como oficial final.
 - `/background` pequeno queda aceptado como experimento seguro para tareas no destructivas y registrables.
 
+Estado ampliado a 2026-06-22:
+
+- la recuperacion humana ya no depende solo de leer ids largos;
+- Telegram ya muestra botones de copia para `ultimas 5 capturas` en el runtime real de Hermes;
+- la mejora sigue siendo operativa-remota en `HERMES_HOME`, pendiente de decidir si merece formalizacion posterior.
+
 ## Decision de arquitectura ya tomada
 
 Sobre `ciudadanoinusual-mobile-intake`:

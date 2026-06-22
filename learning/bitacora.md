@@ -249,3 +249,11 @@ Hermes respondio que el estado real ya incluye:
 - La skill ya acepta mejor `foto + instruccion breve de guardado` sin exigir plantilla completa.
 - La ultima prueba real devolvio `id`, `estado`, `privacy_flags`, `suggested_format` y ruta del almacen, en vez de desviarse a descripcion o redaccion.
 - El cuello de botella principal deja de ser la entrada natural y pasa a ser la decision de versionado oficial o no.
+
+## Recuperacion humana con copia - 2026-06-22
+
+- Se parcheo el gateway real de Telegram en `HERMES_HOME` para anadir botones de copia en respuestas con ids o rutas reutilizables.
+- La primera prueba artificial funciono, pero la validacion real mostro que el flujo normal pasaba por `edit_message`, no solo por `send`.
+- Tras extender el parche a `send`, `edit_message` y continuaciones, `Dime mis ultimas 5 capturas` mostro botones `Copiar ID 1..5` en Telegram.
+- La mejora reduce una friccion real: ya no hace falta memorizar o copiar a mano ids largos desde movil.
+- No se versiono en Git porque vive en el runtime real de Hermes bajo `HERMES_HOME`; queda documentado como mejora operativa validada.

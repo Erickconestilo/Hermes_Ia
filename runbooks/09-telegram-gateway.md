@@ -228,6 +228,8 @@ Estado ampliado:
 - una segunda captura real tambien quedo convertida y registrada;
 - recepcion de imagen con ruta accesible validada;
 - recepcion de PDF con ruta accesible validada;
+- recuperacion de `ultimas 5 capturas` validada con botones `Copiar ID` en Telegram;
+- esta mejora hoy vive en `HERMES_HOME` dentro del runtime real de Hermes, no en Git;
 - tipos como `.asc` quedan fuera del soporte actual de este flujo.
 
 ## Limite real de archivos soportados desde Telegram

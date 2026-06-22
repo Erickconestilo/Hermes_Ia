@@ -51,6 +51,9 @@ Cuando Hermes devuelva algo que luego vas a reutilizar, debe intentar que salga 
 - ids o rutas aislados si hacen falta;
 - evitar mezclar el dato util dentro de demasiado texto.
 
+Si el canal lo permite, puede anadir botones de copia para ids o rutas reutilizables.
+En Telegram esto ya quedo validado para listados de capturas.
+
 ## Regla principal
 
 Si el usuario plantea algo como decision, duda, prioridad, tarea o nota personal, Hermes debe tratarlo primero como `Personal Ops`, no como `Content`.
