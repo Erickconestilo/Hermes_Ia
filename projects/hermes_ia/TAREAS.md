@@ -6,7 +6,39 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 
 ## Siguiente tarea concreta
 
-- convertir `projects/hermes_ia/SPEC-FORMALIZACION-CAPTURA-MOVIL.md` en un plan minimo de separacion: skill de captura privada por un lado y skill de conversion ligera por otro
+- elegir si la siguiente implementacion oficial minima sera `ciudadanoinusual-captura-privada` o si primero se consolida una semana mas de uso
+
+## Cierres operativos pendientes
+
+### 1. Contrato final de captura privada
+
+- estado: cerrado
+- evidencia: `projects/hermes_ia/CONTRATO-CAPTURA-PRIVADA.md`
+- resultado: el alcance, inputs, outputs, limites y frontera con la skill 2 ya quedaron definidos
+
+### 2. Limite real de archivos soportados desde Telegram
+
+- estado: cerrado
+- evidencia: `runbooks/09-telegram-gateway.md`
+- resultado: PDF, imagen, voz y `.asc` ya quedaron documentados con su estado real observado
+
+### 3. Decision sobre `Personal Ops V1`
+
+- estado: cerrado
+- evidencia: `projects/hermes_ia/PERSONAL-OPS-V1.md` y `ROADMAP-HERMES.md`
+- resultado: Personal Ops V1 entra ya en modo controlado como uso movil privado no publicable
+
+### 4. Formalizacion o incubacion extra de la skill remota
+
+- estado: cerrado
+- evidencia: `ROADMAP-HERMES.md` y `projects/hermes_ia/SKILLS-EXPERIMENTALES.md`
+- resultado: la skill sigue un ciclo mas en `HERMES_HOME` solo como puente, sin ganar alcance nuevo y con retirada prevista tras probar las dos skills oficiales minimas
+
+### 5. Contrato final de conversion ligera
+
+- estado: cerrado
+- evidencia: `projects/hermes_ia/CONTRATO-CONVERSION-LIGERA.md`
+- resultado: el alcance, inputs, outputs, privacidad, Judge y frontera con la skill 1 ya quedaron definidos
 
 ## Peticion minima de tarea
 
@@ -27,12 +59,7 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 
 ## Pendientes cercanas
 
-- definir nombres, limites y outputs minimos de las dos skills futuras derivadas de `ciudadanoinusual-mobile-intake`
-- registrar limite real de archivos soportados desde Telegram separando PDF/imagen validos y tipos rechazados
-- decidir si la skill remota actual sigue viva en `HERMES_HOME` durante la migracion o si se congela al empezar el versionado
-- decidir si `Personal Ops V1` entra ya como siguiente uso estable desde Telegram
-- preparar Personal Ops V1 solo despues de cerrar Mobile Ops V1 basico
-- publicar o dejar lista una primera pieza real desde el flujo movil
+- probar dos usos reales mas de `Personal Ops V1` y medir si reduce friccion de portatil
 - abrir Banco 2 con vida real expandida: pareja, convivencia, hogar, recados, comida, ocio simple y mini viajes
 - seguir probando `Modo guion`, `Modo post` y `Modo carrusel` con situaciones reales
 - medir que formatos son mas faciles de repetir sin quemarse
@@ -48,8 +75,8 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 
 ## Bloqueos o dudas abiertas
 
-- cuándo merece la pena activar fases posteriores como cron, skills o perfiles
-- cuándo pasar de la sincronización manual selectiva a un flujo basado en Git remoto
+- cuando versionar oficialmente la skill derivada de captura movil
+- si `Personal Ops V1` debe entrar ya o esperar una semana mas de uso real
 - que piezas publicadas realmente conectan con audiencia
 
 ## Completadas recientes
@@ -78,7 +105,12 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 - entrada natural validada en uso real con foto + instruccion breve de guardado
 - mini especificacion de formalizacion creada para decidir versionado oficial sin depender del chat
 - decision de arquitectura tomada: futura formalizacion separada en captura privada y conversion ligera
+- plan minimo de separacion creado para ejecutar la division sin romper Mobile Ops
+- skill puente `ciudadanoinusual-mobile-intake` mantenida un ciclo mas en `HERMES_HOME` con alcance congelado
+- `Personal Ops V1` activado en modo controlado para decisiones, prioridades y notas privadas
 - envio de imagenes generadas a Telegram validado con `scripts/send-telegram-photo.py`
+- Mobile Ops V1 cerrado como ciclo base con evidencia real
+- criterio de `/background` pequeno aceptado como experimento seguro no destructivo
 - `Modo guion`, `Modo post` y `Modo carrusel` creados y probados
 - guia rapida de modos, prompts de edicion y plan semanal creados
 - linea de vivienda/credito/ayudas marcada como investigacion personal de referencia, no como centro de `CiudadanoInusual`

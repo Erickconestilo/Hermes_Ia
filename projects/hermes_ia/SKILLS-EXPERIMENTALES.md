@@ -32,7 +32,7 @@ No permitido sin aprobacion:
 
 | Nombre | Ubicacion | Estado | Proposito | Fecha detectada | Evidencia de uso | Riesgos | Permisos | Limites | Condicion para formalizar | Condicion para archivar |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| `ciudadanoinusual-mobile-intake` | `/home/hermes/.hermes/skills/note-taking/ciudadanoinusual-mobile-intake/` | candidata a formalizacion | Captura Movil V1, Modo Calle y flujo Telegram para CiudadanoInusual | 2026-06-21 | 3 capturas reales utiles; recuperacion privada; Judge aplicado; archivo e imagen recibidos por Telegram; foto + instruccion breve de guardado validada | conservar datos sensibles; cambiar flujo sin registro; seguir mezclando captura con redaccion si la intencion es ambigua | capturas privadas fuera de Git, recuperacion, borradores y registro posterior | no tocar Git, servicios, `.env`, secretos, cron recurrente ni sistema sin permiso | mantener `3/3` sin errores graves y sostener entrada natural fiable sin perder privacidad ni trazabilidad | archivar si vuelve a meter plantillas en `original_text`, inventa, toca Git sin permiso, modifica sistema o empeora el flujo |
+| `ciudadanoinusual-mobile-intake` | `/home/hermes/.hermes/skills/note-taking/ciudadanoinusual-mobile-intake/` | skill puente activa por un ciclo mas | Captura Movil V1, Modo Calle y flujo Telegram para CiudadanoInusual | 2026-06-21 | 3 capturas reales utiles; recuperacion privada; Judge aplicado; archivo e imagen recibidos por Telegram; foto + instruccion breve de guardado validada | conservar datos sensibles; cambiar flujo sin registro; seguir mezclando captura con redaccion si la intencion es ambigua; retrasar demasiado el versionado oficial | capturas privadas fuera de Git, recuperacion, borradores y registro posterior | no tocar Git, servicios, `.env`, secretos, cron recurrente ni sistema sin permiso; no ganar alcance nuevo | implementar la skill oficial 1 y mantener el flujo movil estable mientras actua como puente | archivar cuando la skill oficial 1 y la skill oficial 2 pasen prueba minima o si vuelve a meter plantillas en `original_text`, inventa, toca Git sin permiso, modifica sistema o empeora el flujo |
 
 ## Criterio de formalizacion
 
@@ -69,3 +69,6 @@ Decision aprobada:
 - preparar separacion futura en:
   - skill de captura/recuperacion privada;
   - skill de conversion ligera a contenido.
+- mantener la skill actual un ciclo mas solo como puente operativo;
+- no darle mas alcance nuevo;
+- retirarla cuando las dos skills oficiales minimas ya esten probadas.

@@ -230,6 +230,24 @@ Estado ampliado:
 - recepcion de PDF con ruta accesible validada;
 - tipos como `.asc` quedan fuera del soporte actual de este flujo.
 
+## Limite real de archivos soportados desde Telegram
+
+Esta tabla recoge solo lo que ya fue probado en uso real.
+
+| Tipo | Estado real | Que hace hoy Hermes | Evidencia resumida |
+| --- | --- | --- | --- |
+| Imagen | valido | recibe, guarda en cache accesible, puede describirla, revisar privacidad y recomendar formato | imagen recibida y ruta accesible validada en `image_cache` |
+| Nota de voz | valido | recibe audio, hace transcripcion o resumen fiel y recomienda formato | nota de voz validada con confirmacion y resumen |
+| PDF | valido | recibe, guarda en cache accesible y puede decir que contiene o extraer texto segun el flujo | PDF recibido con ruta accesible y lectura basica validada |
+| `.asc` | rechazado | no entra en este flujo de carga | rechazo observado por tipo no permitido |
+
+Regla operativa:
+
+- no prometer soporte universal de archivos;
+- si el tipo ya esta validado, usarlo con prudencia;
+- si el tipo ya esta rechazado, decirlo claro;
+- si un tipo nuevo no fue probado, tratarlo como no validado todavia.
+
 ## Limites vigentes
 
 Telegram queda operativo solo como canal movil autorizado.

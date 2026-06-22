@@ -45,6 +45,7 @@ Convertir Hermes en el arnes personal de IA de Erick/CiudadanoInusual:
 | Telegram operativo base | Cerrado | `/whoami`, `/status`, imagen, voz y `/background` pequeno validados |
 | Flujo movil extremo a extremo | Cerrado | captura privada -> recuperacion -> borrador -> Judge -> registro completados |
 | Captura Movil V1 | Operativa | prueba real desde Telegram; placeholder corregido; skill experimental ajustada; validacion anti-plantillas |
+| Personal Ops V1 | Activo en modo controlado | `projects/hermes_ia/PERSONAL-OPS-V1.md` |
 | Judge aplicado y registrado | Cerrado | `projects/hermes_ia/JUDGE-REGISTRO.md` con piezas reales evaluadas |
 | Banco 2 | Iniciado | vida real, convivencia, hogar, comida, trayectos |
 | Continuidad semanal | Abierta | falta rutina semanal estable |
@@ -60,13 +61,12 @@ Convertir Hermes en el arnes personal de IA de Erick/CiudadanoInusual:
 - Envio de imagenes generadas a Telegram.
 - Git como mecanismo de sincronizacion.
 - Skills experimentales dentro de `HERMES_HOME` como incubadora de flujos repetibles de bajo riesgo.
-- Skill `ciudadanoinusual-mobile-intake` como candidata a formalizacion.
+- Skill `ciudadanoinusual-mobile-intake` activa como skill puente de incubadora durante un ciclo mas.
 
 ### Siguiente experimento seguro
 
-- Decidir si `ciudadanoinusual-mobile-intake` ya pasa a skill oficial versionada o si debe seguir un ciclo mas en `HERMES_HOME`.
-- Delimitar soporte real de archivos: PDF valido, imagen valida, tipos rechazados como `.asc`.
-- Operativa semanal: decidir que se hace desde movil y que se reserva para portatil.
+- Decidir que parte de la operativa siguiente queda en movil y que parte se reserva para portatil.
+- Elegir si el siguiente paso es implementar ya la skill oficial 1 o abrir primero `Personal Ops V1`.
 
 ### Futuro planificado
 
@@ -118,7 +118,7 @@ Condiciones:
 
 | Skill | Estado | Ubicacion | Proposito | Condicion para formalizar |
 | --- | --- | --- | --- | --- |
-| `ciudadanoinusual-mobile-intake` | candidata a formalizacion | `HERMES_HOME` | Captura Movil V1, Modo Calle y flujo Telegram para CiudadanoInusual | mantener `3/3` utiles y confirmar si ya merece versionado oficial |
+| `ciudadanoinusual-mobile-intake` | skill puente activa por un ciclo mas | `HERMES_HOME` | Captura Movil V1, Modo Calle y flujo Telegram para CiudadanoInusual | implementar y probar la skill oficial 1 sin romper el flujo movil |
 
 ## Track B: CiudadanoInusual y feedback real
 
@@ -169,7 +169,7 @@ Usar Hermes desde movil no solo para contenido, sino para vida, decisiones y tra
 
 ### Futuro inmediato
 
-Este track empieza despues de cerrar Mobile Ops V1 basico.
+Este track ya puede usarse en modo controlado porque Mobile Ops V1 basico quedo cerrado.
 
 Funciones iniciales:
 
@@ -184,6 +184,13 @@ Funciones iniciales:
 ### Limite
 
 Personal Ops no publica, no toca secretos, no automatiza decisiones sensibles y no sustituye criterio humano.
+
+### Estado activado
+
+- activo en modo controlado;
+- usa Telegram como entrada principal;
+- no requiere skill nueva oficial todavia;
+- se apoya en captura privada y recuperacion breve.
 
 ## Track D: Automatizacion controlada
 
@@ -200,11 +207,26 @@ Personal Ops no publica, no toca secretos, no automatiza decisiones sensibles y 
 
 ## Tareas actuales
 
-1. Decidir si `ciudadanoinusual-mobile-intake` ya pasa a skill oficial versionada o sigue un ciclo mas en incubadora.
-2. Registrar limite real de archivos soportados desde Telegram sin versionar privados.
-3. Decidir si `Personal Ops V1` entra ya como siguiente uso oficial de movil.
-4. Registrar el criterio final sobre `/background` pequeno como experimento seguro.
-5. Elegir una prueba corta adicional solo si hace falta para resolver la decision de versionado.
+1. Elegir si la siguiente implementacion oficial minima sera `ciudadanoinusual-captura-privada` o si primero se consolida una semana mas de uso.
+2. Probar dos usos reales mas de `Personal Ops V1` y registrar si reduce friccion de portatil.
+
+## Regla de cierre operativo
+
+Un item no se considera cerrado por estar escrito en un markdown.
+
+Se cierra solo cuando existen las cuatro piezas:
+
+1. prueba real o decision ejecutada;
+2. resultado observable;
+3. registro corto en el archivo correcto;
+4. conclusion operativa reutilizable.
+
+Aplicacion practica:
+
+- si falta prueba, sigue abierto;
+- si falta evidencia o registro, sigue abierto;
+- si ya hay evidencia suficiente, se cierra y sale de `TAREAS.md`;
+- si no toca en esta fase, pasa a descartado por ahora, no a cerrado.
 
 ## Condiciones de cierre de Mobile Ops V1
 
@@ -222,6 +244,17 @@ Estado a 2026-06-21:
 - todas las condiciones anteriores ya quedaron cumplidas en uso real;
 - Mobile Ops V1 se considera cerrado;
 - la skill ya supero `3/3` y queda como candidata a formalizacion, no como oficial final.
+- `/background` pequeno queda aceptado como experimento seguro para tareas no destructivas y registrables.
+
+## Decision de arquitectura ya tomada
+
+Sobre `ciudadanoinusual-mobile-intake`:
+
+- sigue un ciclo mas en `HERMES_HOME`;
+- no gana mas alcance nuevo;
+- se usa solo como skill puente operativa;
+- no se versiona como skill oficial monolitica;
+- debe retirarse en cuanto `ciudadanoinusual-captura-privada` y `ciudadanoinusual-conversion-ligera` tengan implementacion minima y prueba basica.
 
 ## Regla de decision
 

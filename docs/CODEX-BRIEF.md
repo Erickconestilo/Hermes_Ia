@@ -16,7 +16,8 @@ Foto comprimida y operativa de `Hermes_Ia` para futuras sesiones de Codex.
 - Sync local, GitHub y VPS: Git operativo.
 - Telegram Gateway: operativo desde movil mediante bot autorizado.
 - Imagenes generadas: envio a Telegram con `scripts/send-telegram-photo.py`.
-- Captura Movil V1: en construccion; almacenamiento privado fuera de Git.
+- Captura Movil V1: operativa; almacenamiento privado fuera de Git.
+- Personal Ops V1: activo en modo controlado desde Telegram para decisiones, prioridades y notas privadas.
 - Skills experimentales: permitidas en `HERMES_HOME` como incubadora de bajo riesgo.
 - Fase 0 documental: cerrada.
 - Fase 1: activa en modo controlado.
@@ -27,7 +28,7 @@ Foto comprimida y operativa de `Hermes_Ia` para futuras sesiones de Codex.
 
 Debe ayudar a investigar con fuentes, convertir vida real en contenido, mejorar el sistema con scripts/docs utiles y capturar ideas desde movil.
 
-Tambien debe empezar a cubrir Personal Ops: decisiones, dudas recurrentes, ideas no publicables, resumen semanal manual y priorizacion de sesiones de portatil.
+Tambien cubre Personal Ops en modo controlado: decisiones, dudas recurrentes, ideas no publicables, resumen semanal manual y priorizacion de sesiones de portatil.
 
 Inspiraciones: Benjamin Cordero, Fatz y Gentleman Programming. Regla: adaptar, no copiar stacks completos.
 
@@ -106,7 +107,6 @@ Validar capacidades reales de Mobile Ops V1:
 
 - Formalizar skills solo tras repeticion real.
 - Perfiles/subagentes cuando haya usos estables.
-- Personal Ops V1 despues de cerrar Mobile Ops V1 basico.
 - Cron one-shot solo con permiso explicito y prueba manual previa.
 - Docker backend como sandbox futuro.
 - Memoria externa solo si la memoria actual falla con evidencia.
