@@ -1,5 +1,13 @@
 # AGENTS.md
 
+## Entrada obligatoria
+
+Antes de operar sobre este repositorio, cualquier agente, modelo, herramienta o sesion de Codex debe leer primero:
+
+- [docs/governance/BOOTSTRAP.md](docs/governance/BOOTSTRAP.md)
+
+`BOOTSTRAP.md` define el orden de lectura, la jerarquia de decision, los limites de autonomia y las condiciones de parada. Si hay conflicto entre este archivo y la gobernanza, se aplica la jerarquia indicada en `BOOTSTRAP.md`.
+
 ## Propósito del repositorio
 
 Este repositorio documenta y guía la evolución de `Hermes Agent` en un VPS de Hetzner con una estrategia de confianza supervisada: base nativa, seguridad suficiente y crecimiento por fases con pruebas pequeñas, aisladas, reversibles y trazables.
