@@ -19,6 +19,7 @@ Saber que archivo abrir primero segun la necesidad real de la sesion.
 - si quiero aclarar terminos del proyecto: `projects/hermes_ia/GLOSARIO.md`
 - si quiero una accion inmediata corta: `projects/hermes_ia/USO-IMMEDIATO.md`
 - si quiero recordar modos de contenido: `projects/hermes_ia/content/ciudadanoinusual/GUIA-RAPIDA-MODOS.md`
+- si quiero crear contenido con comandos cortos: `projects/hermes_ia/content/ciudadanoinusual/HERMES-CREADOR.md`
 - si estoy desde el movil y no se que modo usar: `projects/hermes_ia/content/ciudadanoinusual/MODO-CALLE.md`
 - si quiero publicar desde movil: `projects/hermes_ia/content/ciudadanoinusual/FLUJO-MOVIL-PUBLICACION.md`
 - si quiero ver piezas listas: `projects/hermes_ia/content/ciudadanoinusual/publicables/INDICE-PUBLICABLES.md`
@@ -31,6 +32,7 @@ Saber que archivo abrir primero segun la necesidad real de la sesion.
 - content: veinte salidas en `projects/hermes_ia/content/ciudadanoinusual/`
 - publicables: guiones, posts visuales y carruseles en `projects/hermes_ia/content/ciudadanoinusual/publicables/`
 - publicaciones: piezas publicadas en `projects/hermes_ia/content/ciudadanoinusual/publicaciones/`
+- creador: comandos editoriales minimos en `projects/hermes_ia/content/ciudadanoinusual/HERMES-CREADOR.md`
 - builder: `projects/hermes_ia/verificar-cambio.sh`
 - calidad: `projects/hermes_ia/JUDGE.md`
 
@@ -42,7 +44,7 @@ Saber que archivo abrir primero segun la necesidad real de la sesion.
 - carruseles publicables o casi publicables: 6
 - publicaciones externas registradas: 1
 - research base: 6 briefings
-- siguiente paso: validar Captura Movil V1 y flujo movil extremo a extremo
+- siguiente paso: probar Hermes Creador minimo con una pieza real usando `¿Qué toca hoy?`, `Video`, `Historia` o `He publicado`
 
 ## Norte de contenido
 

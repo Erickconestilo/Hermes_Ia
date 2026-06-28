@@ -6,7 +6,7 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 
 ## Siguiente tarea concreta
 
-- elegir si la siguiente implementacion oficial minima sera `ciudadanoinusual-captura-privada` o si primero se consolida una semana mas de uso
+- probar `Hermes Creador minimo` con una situacion real y verificar si reduce friccion editorial sin pedir prompts largos
 
 ## Cierres operativos pendientes
 
@@ -48,6 +48,7 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 
 ## En curso
 
+- usar `Hermes Creador minimo` para decidir formato, revisar privacidad y preparar borradores de `CiudadanoInusual`
 - usar a Hermes como lector de contexto del proyecto piloto
 - usar a Hermes para priorizar la siguiente tarea pequena y util
 - consolidar el flujo local ↔ Git ↔ VPS ↔ Hermes
@@ -59,6 +60,7 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 
 ## Pendientes cercanas
 
+- ejecutar una prueba real de cada comando: `¿Qué toca hoy?`, `Video`, `Historia` y `He publicado`
 - probar dos usos reales mas de `Personal Ops V1` y medir si reduce friccion de portatil
 - abrir Banco 2 con vida real expandida: pareja, convivencia, hogar, recados, comida, ocio simple y mini viajes
 - seguir probando `Modo guion`, `Modo post` y `Modo carrusel` con situaciones reales
@@ -123,6 +125,8 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 - proyecto piloto sincronizado entre local y VPS por Git
 - Hermes validado como lector de contexto y asistente documental básico
 - evaluacion minima de PRD/RFC ya resuelta de forma provisional
+- gobernanza V1 aprobada y publicada en `origin`
+- `Hermes Creador minimo` creado como contrato operativo editorial para `CiudadanoInusual`
 
 ## No hacer todavía
 

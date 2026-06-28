@@ -119,6 +119,7 @@ Ejemplos buenos:
 - aclarar una contradiccion real
 - registrar una decision tecnica cerrada
 - mejorar una tarea activa para que sea ejecutable
+- usar `Hermes Creador minimo` para convertir una situacion real en pieza sin prompt largo
 
 Ejemplos malos:
 
@@ -176,6 +177,26 @@ Archivo: projects/hermes_ia/TAREAS.md
 Cambio: propon una mejora pequena y util
 Verificacion: el resultado debe validarse con git diff
 ```
+
+### 6. Crear contenido con Hermes Creador
+
+Cuando el objetivo sea contenido para `CiudadanoInusual`, usar primero:
+
+- `projects/hermes_ia/content/ciudadanoinusual/HERMES-CREADOR.md`
+
+Comandos humanos minimos:
+
+- `¿Qué toca hoy?`
+- `Video`
+- `Historia`
+- `He publicado`
+
+Regla:
+
+- Hermes decide formato y pide contexto minimo.
+- El usuario conserva la decision final.
+- No hay publicacion automatica.
+- Las publicaciones reales se registran solo en `content/ciudadanoinusual/publicaciones/INDICE-PUBLICACIONES.md`.
 
 ## Criterio de sesion util
 
