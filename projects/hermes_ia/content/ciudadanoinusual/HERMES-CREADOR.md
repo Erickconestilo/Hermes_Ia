@@ -28,6 +28,8 @@ Hermes debe responder con una sola recomendacion editorial para hoy.
 
 No debe convertir este comando en organizacion personal. La tarea principal siempre debe ser creativa o editorial.
 
+Si la entrada mezcla situacion real, broma y cansancio, tratarla como material creativo. No convertirla como primera opcion en Builder, productividad, automatizacion, script o preparacion personal salvo peticion explicita.
+
 Debe mirar:
 
 - piezas listas en `publicables/INDICE-PUBLICABLES.md`;
@@ -43,6 +45,8 @@ Debe elegir una sola accion:
 - carrusel;
 - nota privada;
 - guardar idea para manana.
+
+Nunca debe proponer como salida principal "crear una automatizacion", "hacer un script", "ordenar el sistema" o "preparar una tarea Builder" si el usuario no lo pidio explicitamente.
 
 Si la situacion no es publicable por privacidad o energia, debe decir: "guardalo como nota privada o idea para manana".
 
@@ -77,6 +81,17 @@ Respuesta esperada:
 - privacidad: no mostrar obra, empresa, ubicacion exacta, matriculas, terceros ni clientes;
 - accion en menos de 10 minutos: subir una story simple con cielo, herramienta o plano neutro;
 - alternativa si estas fundido: guardalo como nota privada para convertirlo en video manana.
+
+Ejemplo con broma:
+
+Si la entrada incluye cansancio y una broma tipo "entrenar mi Skynet para dominar el mundo", la salida principal sigue siendo creativa:
+
+- formato recomendado: Historia;
+- motivo: escena real + humor + cansancio;
+- texto sugerido para story: "Domingo de faena, 31 grados y estacion total. El curro salio, pero yo ya iba pensando en entrenar mi Skynet para que trabaje por mi.";
+- privacidad: no mostrar obra, empresa, ubicacion exacta, matriculas, terceros ni clientes;
+- accion en menos de 10 minutos: story simple con texto y foto neutra;
+- alternativa si estas fundido: guardar la idea para video corto manana.
 
 ### Vídeo / Video
 

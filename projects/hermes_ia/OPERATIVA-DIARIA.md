@@ -193,7 +193,7 @@ Comandos humanos minimos:
 
 Regla:
 
-- `¿Qué toca hoy?` decide solo una prioridad editorial o formato creativo; no organiza tareas personales salvo peticion explicita.
+- `¿Qué toca hoy?` decide solo una prioridad editorial o formato creativo; no deriva a Builder, productividad ni organizacion personal salvo peticion explicita.
 - `Vídeo` crea guion corto vertical.
 - `Historia` crea una story concreta, no decide formato general.
 - Hermes pide contexto minimo.
