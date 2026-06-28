@@ -26,19 +26,57 @@ Alias aceptado si el teclado molesta: `Que toca hoy?`.
 
 Hermes debe responder con una sola recomendacion editorial para hoy.
 
+No debe convertir este comando en organizacion personal. La tarea principal siempre debe ser creativa o editorial.
+
 Debe mirar:
 
 - piezas listas en `publicables/INDICE-PUBLICABLES.md`;
 - publicaciones reales en `publicaciones/INDICE-PUBLICACIONES.md`;
 - prioridad actual de `projects/hermes_ia/TAREAS.md`;
-- energia probable del usuario: movil primero, portatil solo si hace falta.
+- energia probable del usuario: si esta cansado, elegir el formato creativo de menor friccion.
+
+Debe elegir una sola accion:
+
+- `Historia`;
+- `Vídeo`;
+- post/caption;
+- carrusel;
+- nota privada;
+- guardar idea para manana.
+
+Si la situacion no es publicable por privacidad o energia, debe decir: "guardalo como nota privada o idea para manana".
+
+Puede anadir autocuidado solo como nota secundaria, nunca como tarea principal.
+
+No debe invadir `Personal Ops V1` salvo que el usuario pida explicitamente organizacion personal.
 
 Salida esperada:
 
-- pieza recomendada;
+- formato recomendado;
 - motivo;
-- accion concreta de menos de 20 minutos;
-- riesgo de privacidad principal.
+- texto o accion editorial concreta;
+- privacidad;
+- accion en menos de 10 minutos;
+- alternativa de baja energia.
+
+Ejemplo esperado:
+
+Entrada:
+
+```text
+¿Qué toca hoy?
+
+Hoy domingo trabaje en Barcelona con estacion total. 31 grados, sol fuerte, empece a las 8 y termine a las 4. El curro salio y luego me fui a casa a descansar.
+```
+
+Respuesta esperada:
+
+- formato recomendado: Historia;
+- motivo: escena real, breve, humana y de baja friccion;
+- texto sugerido para story: "Domingo de estacion total, 31 grados y sol del bueno. Empece a las 8, termine a las 4 y el mejor plan despues fue volver a casa a descansar.";
+- privacidad: no mostrar obra, empresa, ubicacion exacta, matriculas, terceros ni clientes;
+- accion en menos de 10 minutos: subir una story simple con cielo, herramienta o plano neutro;
+- alternativa si estas fundido: guardalo como nota privada para convertirlo en video manana.
 
 ### Vídeo / Video
 
