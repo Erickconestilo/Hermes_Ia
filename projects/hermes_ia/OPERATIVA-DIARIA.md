@@ -187,13 +187,16 @@ Cuando el objetivo sea contenido para `CiudadanoInusual`, usar primero:
 Comandos humanos minimos:
 
 - `¿Qué toca hoy?`
-- `Video`
+- `Vídeo`
 - `Historia`
 - `He publicado`
 
 Regla:
 
-- Hermes decide formato y pide contexto minimo.
+- `¿Qué toca hoy?` decide prioridad o formato si el usuario no sabe por donde empezar.
+- `Vídeo` crea guion corto vertical.
+- `Historia` crea una story concreta, no decide formato general.
+- Hermes pide contexto minimo.
 - El usuario conserva la decision final.
 - No hay publicacion automatica.
 - Las publicaciones reales se registran solo en `content/ciudadanoinusual/publicaciones/INDICE-PUBLICACIONES.md`.

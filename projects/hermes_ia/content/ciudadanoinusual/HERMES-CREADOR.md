@@ -4,7 +4,7 @@
 
 Reducir friccion para crear contenido real de `CiudadanoInusual` sin pedir prompts largos ni publicar automaticamente.
 
-Hermes Creador no sustituye criterio humano. Ayuda a decidir formato, pedir contexto minimo, preparar borradores, revisar privacidad y registrar aprendizaje cuando una pieza se publica.
+Hermes Creador no sustituye criterio humano. Ayuda a decidir que conviene hacer hoy, crear piezas simples, revisar privacidad y registrar aprendizaje cuando una pieza se publica.
 
 ## Regla principal
 
@@ -40,7 +40,7 @@ Salida esperada:
 - accion concreta de menos de 20 minutos;
 - riesgo de privacidad principal.
 
-### Video
+### Vídeo / Video
 
 Uso:
 
@@ -50,6 +50,8 @@ Video
 Situacion:
 [cuento lo que paso]
 ```
+
+Alias aceptado: `Vídeo`.
 
 Hermes debe crear un guion corto para TikTok, Instagram Reels o YouTube Shorts.
 
@@ -65,7 +67,7 @@ Salida esperada:
 - frase memorable;
 - riesgos de privacidad.
 
-### Historia
+### Historia / Story / Stories
 
 Uso:
 
@@ -76,15 +78,20 @@ Situacion:
 [cuento la escena, foto o idea]
 ```
 
-Hermes debe decidir si la historia funciona mejor como post, carrusel, guion o nota privada.
+Alias aceptados: `Story`, `Stories`.
+
+Hermes debe crear una historia/story concreta para Instagram, WhatsApp, Facebook o TikTok Story.
+
+No debe usar este comando como router general. Si el usuario no sabe que formato conviene, usar `¿Qué toca hoy?` o `Modo calle`.
 
 Salida esperada:
 
-- formato recomendado;
-- angulo;
-- borrador;
+- texto principal de la story;
+- texto alternativo corto;
+- sticker, encuesta o pregunta opcional;
+- plano o imagen recomendada;
 - que tapar, recortar o evitar;
-- si es publicable o solo referencia interna.
+- si es seguro publicar como story.
 
 ### He publicado
 
@@ -150,4 +157,4 @@ Hermes Creador funciona cuando:
 - reduce una decision editorial real;
 - no publica automaticamente;
 - revisa privacidad;
-- deja claro si una pieza es borrador, publicable o publicada.
+- deja claro si una pieza es borrador, story lista, publicable o publicada.
