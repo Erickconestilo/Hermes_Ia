@@ -10,11 +10,11 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 
 ## Cierres operativos pendientes
 
-### 1. Contrato final de captura privada
+### 1. Contrato final de captura privada y conversion ligera
 
 - estado: cerrado
-- evidencia: `projects/hermes_ia/CONTRATO-CAPTURA-PRIVADA.md`
-- resultado: el alcance, inputs, outputs, limites y frontera con la skill 2 ya quedaron definidos
+- evidencia: `projects/hermes_ia/CAPTURA.md` (consolida lo que antes eran 4 archivos: los contratos de captura privada y conversion ligera, mas la spec de formalizacion y el plan de separacion)
+- resultado: el alcance, inputs, outputs, limites y frontera entre las dos skills ya quedaron definidos
 
 ### 2. Limite real de archivos soportados desde Telegram
 
@@ -33,12 +33,6 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 - estado: cerrado
 - evidencia: `ROADMAP-HERMES.md` y `projects/hermes_ia/SKILLS-EXPERIMENTALES.md`
 - resultado: la skill sigue un ciclo mas en `HERMES_HOME` solo como puente, sin ganar alcance nuevo y con retirada prevista tras probar las dos skills oficiales minimas
-
-### 5. Contrato final de conversion ligera
-
-- estado: cerrado
-- evidencia: `projects/hermes_ia/CONTRATO-CONVERSION-LIGERA.md`
-- resultado: el alcance, inputs, outputs, privacidad, Judge y frontera con la skill 1 ya quedaron definidos
 
 ## Peticion minima de tarea
 
