@@ -27,6 +27,8 @@ Saber que archivo abrir primero segun la necesidad real de la sesion.
 - si quiero ver piezas listas: `projects/hermes_ia/content/ciudadanoinusual/publicables/INDICE-PUBLICABLES.md`
 - si quiero ver el roadmap canonico: `ROADMAP-HERMES.md`
 - si quiero ver skills experimentales activas: `projects/hermes_ia/SKILLS-EXPERIMENTALES.md`
+- si quiero el contrato de las futuras skills de captura/conversion: `projects/hermes_ia/CAPTURA.md`
+- si quiero traspasar el contexto a una sesion nueva sin perder nada: `projects/hermes_ia/PROMPT-TRASPASO-SESION.md`
 
 ## Salidas reales ya existentes
 
