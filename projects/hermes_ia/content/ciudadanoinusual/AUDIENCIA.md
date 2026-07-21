@@ -122,7 +122,7 @@ Regla: **si un borrador termina en logro, esta mal cerrado.** Debe terminar en "
 ### Lo que no es la voz
 
 - humor de chiste (el tuyo es de supervivencia, seco, autocritico);
-- solemnidad (`GUIA-RAPIDA-MODOS` ya avisa: "si es comida sencilla, no convertirlo en manifiesto");
+- solemnidad (regla heredada, recogida en `COMANDOS.md`: "si es comida sencilla, no convertirlo en manifiesto");
 - consejo desde arriba (piezas 01-08 caen en esto);
 - vocabulario tecnico sin traducir.
 

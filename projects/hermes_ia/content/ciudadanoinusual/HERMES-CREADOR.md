@@ -197,7 +197,9 @@ Si hay duda, la pieza queda como borrador o referencia interna.
 
 ## Relacion con archivos existentes
 
-- `GUIA-RAPIDA-MODOS.md`: explica modos detallados.
+- `COMANDOS.md`: superficie de comandos vigente y que devuelve cada formato. Los nombres de comando de este archivo (`¿Que toca hoy?`, `Video`, `Historia`, `He publicado`) quedan sustituidos por `hoy`, `guion`, `post` y `publicado`. El resto de este documento (comportamiento esperado, regla anti-deriva Builder, privacidad) sigue vigente.
+- `AUDIENCIA.md`: a quien le hablas, con que voz y a quien no.
+- `APRENDIZAJES.md`: que funciona y que no, con evidencia.
 - `publicables/INDICE-PUBLICABLES.md`: piezas listas o casi listas.
 - `publicaciones/INDICE-PUBLICACIONES.md`: solo publicaciones reales y aprendizaje posterior.
 - `JUDGE.md`: criterio minimo de calidad si una pieza debe guardarse como valida.

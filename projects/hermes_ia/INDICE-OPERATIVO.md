@@ -18,9 +18,11 @@ Saber que archivo abrir primero segun la necesidad real de la sesion.
 - si quiero ver evaluaciones reales ya aplicadas: `projects/hermes_ia/JUDGE-REGISTRO.md`
 - si quiero aclarar terminos del proyecto: `projects/hermes_ia/GLOSARIO.md`
 - si quiero una accion inmediata corta: `projects/hermes_ia/USO-IMMEDIATO.md`
-- si quiero recordar modos de contenido: `projects/hermes_ia/content/ciudadanoinusual/GUIA-RAPIDA-MODOS.md`
-- si quiero crear contenido con comandos cortos: `projects/hermes_ia/content/ciudadanoinusual/HERMES-CREADOR.md`
-- si estoy desde el movil y no se que modo usar: `projects/hermes_ia/content/ciudadanoinusual/MODO-CALLE.md`
+- si quiero recordar los comandos: `projects/hermes_ia/content/ciudadanoinusual/COMANDOS.md`
+- si estoy desde el movil y no se que formato usar: mandar la foto o la nota sin comando; ver `COMANDOS.md`, Nivel 0
+- si quiero saber a quien le hablo y con que voz: `projects/hermes_ia/content/ciudadanoinusual/AUDIENCIA.md`
+- si quiero ver que funciona y que no: `projects/hermes_ia/content/ciudadanoinusual/APRENDIZAJES.md`
+- si quiero el contrato de comportamiento editorial: `projects/hermes_ia/content/ciudadanoinusual/HERMES-CREADOR.md`
 - si quiero publicar desde movil: `projects/hermes_ia/content/ciudadanoinusual/FLUJO-MOVIL-PUBLICACION.md`
 - si quiero ver piezas listas: `projects/hermes_ia/content/ciudadanoinusual/publicables/INDICE-PUBLICABLES.md`
 - si quiero ver el roadmap canonico: `ROADMAP-HERMES.md`

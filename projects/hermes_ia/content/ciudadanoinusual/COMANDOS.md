@@ -147,7 +147,72 @@ No devolver un menu de opciones. Elegir uno, decir por que en una linea y dar la
 
 ---
 
-## 5. Equivalencias: nada se pierde
+## 5. Que devuelve cada formato
+
+Esto no lo escribe el usuario. Es lo que Hermes debe producir en cada caso. Recogido de los archivos de modo que este documento sustituye.
+
+### `post`
+
+Devuelve:
+
+- caption corto (1-2 lineas, para publicar rapido);
+- caption medio (3-6 lineas, con contexto o humor);
+- caption mas personal (voz propia, una idea clara);
+- texto alternativo para accesibilidad;
+- hashtags solo si aportan contexto, nunca de relleno;
+- advertencias de privacidad si aplica.
+
+Regla de tono: si es una foto sencilla de comida, no convertirla en manifiesto. Ligero, cotidiano y concreto: pausa, plato, hambre, faena y seguir.
+
+### `guion`
+
+Devuelve:
+
+- titulo;
+- hook inicial;
+- guion de 15-30 segundos por defecto;
+- version de 30-60 segundos solo si la historia lo necesita;
+- texto en pantalla;
+- planos sugeridos;
+- cierre;
+- frase memorable;
+- riesgos de privacidad.
+
+Antes de escribir: detectar el mejor angulo, decidir si hay historia publicable o es mejor nota privada, y no inventar detalles.
+
+### `carrusel`
+
+Hermes actua como **director creativo**, no como redactor. Debe decidir si la idea tiene potencial y decirlo claro si no lo tiene.
+
+Devuelve:
+
+- tipo de carrusel recomendado (historia corta, lista con humor, mini guia, antes/despues, errores aprendidos, cosas que nadie te cuenta, reflexion de vida real, educativo);
+- angulo elegido;
+- slides con su texto;
+- que foto usar en cada slide y cual falta;
+- que recortar o tapar;
+- caption y CTA;
+- plataforma recomendada;
+- riesgos de privacidad.
+
+Regla de plataforma:
+
+- **Instagram**: ritmo visual, frases cortas, emocion o humor;
+- **LinkedIn**: oficio, aprendizaje, claridad profesional;
+- **ambas**: adaptar el caption y el tono final a cada una.
+
+Si la idea no da para carrusel, decirlo y proponer `post` o `guion` en su lugar.
+
+### Reglas comunes a los tres
+
+- no crear archivos, no editar el repo, no hacer commit salvo peticion explicita;
+- no inventar detalles;
+- si falta contexto importante, preguntar solo si impide hacer una version decente; si no lo impide, avanzar y marcar que faltaria;
+- si la idea es floja, decirlo.
+
+---
+
+## 6. Equivalencias: nada se pierde
 
 | Antes | Ahora |
 | --- | --- |
@@ -170,7 +235,7 @@ De quince entradas con seis plantillas a seis palabras sin plantilla.
 
 ---
 
-## 6. Archivos que este documento sustituye
+## 7. Archivos que este documento sustituye
 
 Para no repetir el problema que diagnostico la auditoria (el repo solo crece), este archivo **reemplaza** la superficie de comandos de:
 
@@ -192,7 +257,7 @@ Lo que **no** sustituye:
 
 ---
 
-## 7. Criterio de terminado
+## 8. Criterio de terminado
 
 Esta redisenado bien cuando:
 
