@@ -6,6 +6,7 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 
 ## Siguiente tarea concreta
 
+- localizar o resetear la contrasena de `sudo` del usuario `hermes` en el VPS; sin eso no se puede ejecutar `runbooks/02-seguridad.md` (endurecimiento SSH), que quedo bloqueado el 2026-07-21 en el primer paso
 - probar `Hermes Creador minimo` con una situacion real usando el Nivel 0 de `COMANDOS.md` (mandar foto o nota sin palabra clave) y verificar si de verdad reduce la friccion de calle que se reporto el 2026-07-21
 
 ## Cierres operativos pendientes

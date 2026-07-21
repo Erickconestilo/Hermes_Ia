@@ -302,4 +302,11 @@ Hermes respondio que el estado real ya incluye:
 - Verificacion critica: `capturas.jsonl` (el unico dato del sistema sin copia en Git) se recupero y confirmo con `test -f` + `echo "CAPTURAS OK"`.
 - Carpeta de prueba borrada despues de verificar (`rm -rf /home/hermes/restore-test`).
 - Resultado: **el backup ya no es una suposicion, es un hallazgo verificado**. Cierra el hallazgo de seguridad "backup/restore nunca probado" de `AUDITORIA-2026-07-21.md`.
-- Pendiente menor: hay dos backups en `/home/hermes/backups/` (3.1G total, sin rotacion todavia); decidir politica de retencion y destino externo del `.tar.gz` (sigue pendiente segun `runbooks/06-backup-restore.md`).
+- Pendiente menor: se limpio despues a un solo backup (se borro el mas viejo, `195114`); sigue pendiente decidir politica de retencion y destino externo del `.tar.gz` (segun `runbooks/06-backup-restore.md`).
+
+## Endurecimiento SSH bloqueado por falta de contrasena sudo - 2026-07-21
+
+- Se intento el paso 1 de `runbooks/02-seguridad.md` (copia de `/etc/ssh/sshd_config` con `sudo cp`).
+- Bloqueo: Erick no tiene a mano la contrasena de `sudo` del usuario `hermes` (distinta de la clave SSH usada para conectar).
+- Ningun cambio se aplico: el comando se cancelo en el prompt de contrasena antes de ejecutarse. `sshd_config` sigue intacto, sin riesgo.
+- Pendiente para la proxima sesion: localizar o resetear la contrasena de `sudo` de `hermes` antes de retomar el endurecimiento SSH. Sin eso, el runbook no se puede ejecutar.
