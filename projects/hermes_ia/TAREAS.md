@@ -6,6 +6,7 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 
 ## Siguiente tarea concreta
 
+- ejecutar la Fase 1 de `runbooks/10-telegram-comandos-nativos.md` en el VPS: registrar el menu nativo `/` de Telegram con `setMyCommands` (bajo riesgo, minutos, permiso ya concedido 2026-07-21)
 - probar `Hermes Creador minimo` con una situacion real y verificar si reduce friccion editorial sin pedir prompts largos
 
 ## Cierres operativos pendientes

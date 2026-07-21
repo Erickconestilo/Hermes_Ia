@@ -257,3 +257,13 @@ Hermes respondio que el estado real ya incluye:
 - Tras extender el parche a `send`, `edit_message` y continuaciones, `Dime mis ultimas 5 capturas` mostro botones `Copiar ID 1..5` en Telegram.
 - La mejora reduce una friccion real: ya no hace falta memorizar o copiar a mano ids largos desde movil.
 - No se versiono en Git porque vive en el runtime real de Hermes bajo `HERMES_HOME`; queda documentado como mejora operativa validada.
+
+## Friccion real de comandos en la calle - 2026-07-21
+
+- Uso real reportado: incluso la superficie reducida de seis palabras (`guion post carrusel hoy publicado guarda`) genero friccion en movil. Cita textual: "me lie y termine aburriendome... es que hasta dificil de memorizar son".
+- Diagnostico: el problema no es la cantidad de palabras, es depender de memorizar cualquier cosa estando cansado y en la calle.
+- Decision: construir menu nativo `/` de Telegram (Fase 1) y botones tactiles en las respuestas de Hermes Creador (Fase 2), reutilizando el patron ya probado de botones `Copiar ID` de la sesion "Recuperacion humana con copia" (2026-06-22).
+- Clasificacion: zona roja segun `AGENTS.md` (cambio de configuracion del gateway de Telegram).
+- **Permiso explicito concedido por Erick el 2026-07-21**, en conversacion directa, al elegir la opcion "botones reales en Telegram" sobre la alternativa de solo simplificar el documento.
+- Plan completo, riesgo, rollback y pasos: `runbooks/10-telegram-comandos-nativos.md`.
+- Pendiente de ejecucion: esta sesion no tiene acceso SSH al VPS. La Fase 1 (registrar el menu con `setMyCommands`) es de bajo riesgo y se puede ejecutar en minutos. La Fase 2 (botones) requiere localizar y extender el parche existente de `HERMES_HOME`.

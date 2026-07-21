@@ -8,6 +8,8 @@ Principio 4 de la Constitucion: *"si una funcion obliga al usuario a recordar de
 
 Este archivo aplica ese principio a los comandos.
 
+**Aviso de uso real (2026-07-21):** incluso estas seis palabras generaron friccion real en la calle ("me lie y termine aburriendome"). La solucion de fondo no es reducir mas las palabras: es dejar de depender de memorizarlas. Ver `runbooks/10-telegram-comandos-nativos.md` para el plan de menu nativo `/` y botones tactiles en Telegram, que sustituye la necesidad de recordar cualquiera de las seis palabras de abajo. Mientras esa mejora no este ejecutada en el VPS, estas palabras siguen siendo el respaldo valido, y el Nivel 0 (mandar la foto sin nada) sigue siendo el camino principal.
+
 ---
 
 ## 1. El problema medido
