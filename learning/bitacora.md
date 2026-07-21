@@ -17,7 +17,7 @@
 - Se creó el servidor `hermes-01` con plan `CX33`, `x86`, `Nuremberg` y `Ubuntu 24.04`.
 - Se validó el acceso SSH inicial al VPS.
 - El acceso sin forzar identidad cayó a autenticación por contraseña, lo que confirmó que el cliente SSH local no estaba usando por defecto la clave correcta.
-- El acceso correcto se consiguió con `ssh -i $HOME/.ssh/hermes_hetzner_ed25519 root@167.233.91.185`.
+- El acceso correcto se consiguió con `ssh -i $HOME/.ssh/hermes_hetzner_ed25519 root@<HETZNER_VPS_IP>`.
 - Se verificó el estado base del servidor con `whoami`, `hostnamectl`, `pwd` y `ls -la /root`.
 - Resultado de la verificación: acceso como `root`, hostname `hermes-01`, `Ubuntu 24.04.4 LTS`, arquitectura `x86-64` y home `/root`.
 - Se actualizó Ubuntu y se confirmó que no quedaron paquetes pendientes con `apt list --upgradable`.

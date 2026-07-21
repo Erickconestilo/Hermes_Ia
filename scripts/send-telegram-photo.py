@@ -9,6 +9,7 @@ import mimetypes
 import os
 from pathlib import Path
 import sys
+import urllib.error
 import urllib.request
 import uuid
 
@@ -83,8 +84,15 @@ def main() -> int:
         headers={"Content-Type": f"multipart/form-data; boundary={boundary}"},
     )
 
-    with urllib.request.urlopen(request, timeout=60) as response:
-        result = json.loads(response.read().decode("utf-8"))
+    try:
+        with urllib.request.urlopen(request, timeout=60) as response:
+            result = json.loads(response.read().decode("utf-8"))
+    except urllib.error.HTTPError as exc:
+        print(f"ERROR: Telegram sendPhoto failed with HTTP {exc.code}.", file=sys.stderr)
+        return 1
+    except urllib.error.URLError as exc:
+        print(f"ERROR: Telegram sendPhoto failed: {exc.reason}.", file=sys.stderr)
+        return 1
 
     if not result.get("ok"):
         print("ERROR: Telegram sendPhoto failed.", file=sys.stderr)
