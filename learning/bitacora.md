@@ -267,3 +267,11 @@ Hermes respondio que el estado real ya incluye:
 - **Permiso explicito concedido por Erick el 2026-07-21**, en conversacion directa, al elegir la opcion "botones reales en Telegram" sobre la alternativa de solo simplificar el documento.
 - Plan completo, riesgo, rollback y pasos: `runbooks/10-telegram-comandos-nativos.md`.
 - Pendiente de ejecucion: esta sesion no tiene acceso SSH al VPS. La Fase 1 (registrar el menu con `setMyCommands`) es de bajo riesgo y se puede ejecutar en minutos. La Fase 2 (botones) requiere localizar y extender el parche existente de `HERMES_HOME`.
+
+## Fase 1 ejecutada - 2026-07-21
+
+- Erick ejecuto en el VPS el `curl` de `setMyCommands` de `runbooks/10-telegram-comandos-nativos.md`.
+- Respuesta de la API de Telegram: `{"ok":true,"result":true}`.
+- Los seis comandos (`hoy`, `guion`, `post`, `carrusel`, `publicado`, `guarda`) quedaron registrados en el menu nativo del bot.
+- Pendiente de confirmar: que el menu aparece al pulsar `/` en el chat desde el movil, y que tocar cada comando responde igual que escribir la palabra a mano (Paso 4 del runbook). Si `/hoy` no se comporta igual que `hoy`, hace falta el ajuste de alias descrito en ese paso.
+- Fase 2 (botones tactiles) sigue pendiente, sin ejecutar.
