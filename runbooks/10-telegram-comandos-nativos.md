@@ -33,8 +33,16 @@ Esto no cambia como Hermes interpreta el texto. `/hoy` sigue siendo simplemente 
 
 ### Paso 1 - Conectar al VPS
 
+Desde PowerShell local:
+
+```powershell
+cd C:\Users\guill\Documents\Hermes_Ia
+ssh hermes
+```
+
+Ya dentro del VPS:
+
 ```bash
-ssh -i $HOME/.ssh/hermes_hetzner_ed25519 hermes@<HETZNER_VPS_IP>
 cd /home/hermes/workspace/Hermes_Ia
 source /home/hermes/.profile
 ```

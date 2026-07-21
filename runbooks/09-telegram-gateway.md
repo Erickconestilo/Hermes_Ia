@@ -28,9 +28,16 @@ Registrar como quedo activado el acceso movil a Hermes mediante Telegram, sin gu
 Entrar al VPS:
 
 ```bash
-ssh -i $HOME/.ssh/hermes_hetzner_ed25519 hermes@<IP_O_ALIAS_DEL_VPS>
+ssh hermes
 cd /home/hermes/workspace/Hermes_Ia
 source /home/hermes/.profile
+hermes
+```
+
+`ssh hermes` usa el alias ya configurado en `~/.ssh/config` local (evita repetir clave, usuario e IP cada vez). Si el alias no esta disponible en una maquina nueva, la forma larga equivalente es:
+
+```bash
+ssh -i $HOME/.ssh/hermes_hetzner_ed25519 hermes@<HETZNER_VPS_IP>
 ```
 
 Ver estado del gateway:

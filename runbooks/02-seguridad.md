@@ -103,10 +103,12 @@ sudo systemctl restart ssh
 
 # 7. VERIFICACION OBLIGATORIA: abrir una terminal nueva (sin cerrar la actual)
 #    y confirmar que la conexión por clave sigue funcionando:
-ssh -i $HOME/.ssh/hermes_hetzner_ed25519 hermes@<HETZNER_VPS_IP>
+ssh hermes
 
 # 8. Solo si el paso 7 funciona, cerrar la sesión SSH original
 ```
+
+Si el alias `hermes` de `~/.ssh/config` no estuviera disponible, la forma larga equivalente es `ssh -i $HOME/.ssh/hermes_hetzner_ed25519 hermes@<HETZNER_VPS_IP>`.
 
 Verificación adicional recomendada (no bloqueante para este runbook, evaluar por separado):
 
