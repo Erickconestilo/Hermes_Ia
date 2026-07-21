@@ -10,17 +10,23 @@ Antes de modificar el repositorio, Codex, OpenCode, Hermes, un agente especializ
 
 ## Orden obligatorio de lectura
 
-Antes de actuar, leer en este orden:
+Núcleo minimo, siempre, para cualquier tarea por pequeña que sea:
 
-1. `docs/governance/CONSTITUTION.md`
-2. `docs/governance/ORCHESTRATOR.md`
-3. `docs/governance/CODEX-OPERATING-POLICY.md`
-4. `docs/governance/MASTER-PLAN.md`
-5. `AGENTS.md`
-6. `ROADMAP-HERMES.md`
-7. `docs/CODEX-BRIEF.md`
-8. `projects/hermes_ia/TAREAS.md`
-9. Archivos específicos de la tarea actual.
+1. `docs/governance/CONSTITUTION.md` — las leyes.
+2. `AGENTS.md` — el semáforo verde/amarillo/rojo de autonomía.
+3. `docs/CODEX-BRIEF.md` — foto comprimida del estado real actual.
+4. `projects/hermes_ia/TAREAS.md` — qué toca hacer ahora.
+
+Con estos cuatro ya se puede actuar en la mayoría de tareas locales, reversibles y documentales.
+
+Lectura condicional, solo si la tarea la necesita:
+
+- `docs/governance/ORCHESTRATOR.md` — si la tarea implica coordinar varios dominios o agentes especializados.
+- `docs/governance/CODEX-OPERATING-POLICY.md` — si se opera específicamente como Codex y hay dudas sobre su política propia.
+- `docs/governance/MASTER-PLAN.md` y `ROADMAP-HERMES.md` — si la tarea toca la fase actual, el plan por fases o una decisión de roadmap.
+- Archivos específicos de la tarea actual — siempre, al final, sea cual sea la tarea.
+
+Esta reducción (2026-07-21) responde al propio Principio 4 de la Constitución: "si una función obliga al usuario a recordar demasiados pasos, la función está mal diseñada". El orden anterior exigía leer 9 documentos (~1.400 líneas) antes de tocar nada, incluso para un cambio trivial. `docs/CODEX-BRIEF.md` ya resume lo esencial de `MASTER-PLAN.md`, `ROADMAP-HERMES.md` y el estado operativo, por eso puede sustituirlos como lectura obligatoria por defecto.
 
 Si hay conflicto entre documentos, prevalece este orden:
 
