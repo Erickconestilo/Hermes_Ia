@@ -36,6 +36,8 @@ Si hay conflicto entre documentos, prevalece este orden:
 4. `AGENTS.md`.
 5. Documentación específica.
 
+**Nota de reconciliación (2026-07-21):** esta lista resuelve contradicciones entre reglas escritas — no dice qué hay que leer siempre. `AGENTS.md` es lectura obligatoria (núcleo mínimo, arriba); Política operativa de Codex y Roadmap son lectura condicional. Que algo sea condicional no le da más peso en un conflicto: solo significa que no toda tarea obliga a leerlo. Si una tarea concreta sí activa la lectura de Política de Codex o Roadmap y algo ahí contradice a `AGENTS.md`, gana el que esté más arriba en esta lista.
+
 ## Regla principal
 
 No ejecutar cambios por entusiasmo.
@@ -66,15 +68,15 @@ Eso significa:
 
 ## Cuándo debe detenerse
 
-Codex debe parar y pedir confirmación solo si va a:
+Codex debe parar y pedir confirmación si la acción entra en la zona roja del semáforo de `AGENTS.md` (sección "Autonomía operativa"): `.env`, secretos, SSH, firewall, usuarios, `sudo`, paquetes, servicios, Docker, cron recurrente, MCPs, Playwright, memoria externa, publicación automática, borrar datos, `hermes doctor --fix`, convertir una skill experimental en oficial versionada, cambios fuera de `Hermes_Ia`, o tocar `TopoField`/`TopoTask`.
+
+**Esta lista no se repite aquí para evitar que las dos versiones diverjan con el tiempo.** `AGENTS.md` es la fuente detallada; si alguna vez no coinciden, gana `AGENTS.md` en lo operativo (es más específico) salvo que contradiga la Constitución.
+
+Además de la zona roja operativa, deben pararse por separado las decisiones de producto o arquitectura — estas no viven en el semáforo de `AGENTS.md` porque no son acciones del día a día:
 
 - borrar funcionalidad existente;
 - sustituir arquitectura base;
-- tocar `.env`, secretos, SSH, firewall, usuarios, `sudo` o servicios;
-- activar Docker, cron recurrente, MCPs, Playwright o memoria externa;
-- publicar en redes;
 - mover dinero o ejecutar decisiones financieras;
-- tocar `TopoField` o `TopoTask`;
 - cambiar la visión de Hermes;
 - crear una dependencia fuerte con una herramienta o proveedor;
 - no poder inferir una decisión de producto sin riesgo.

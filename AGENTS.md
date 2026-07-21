@@ -49,6 +49,7 @@ Regla principal: Hermes puede expandirse en bajo riesgo si deja rastro. Hermes d
 - Registro posterior obligatorio: nueva skill experimental, archivo nuevo en `HERMES_HOME` que afecte comportamiento, cambio de flujo operativo, error detectado y corregido, o automatizacion experimental no recurrente.
 - Amarillo: revisar antes de ejecutar scripts nuevos, `chmod +x`, cambios en varios archivos, automatizaciones internas pequeñas o formalizar una skill dentro del repo.
 - Rojo con permiso fuerte previo: modificar `.env`, mostrar o mover tokens, SSH, firewall, usuarios, `sudo`, paquetes, servicios `systemd`, cron recurrente, Docker, MCPs, Playwright, memoria externa, publicacion automatica, borrar datos, cambios fuera de `Hermes_Ia`, tocar `TopoField` o `TopoTask`, `hermes doctor --fix` o convertir una skill experimental en oficial versionada en Git.
+- Esta es la zona roja **operativa** (acciones de sistema). Existe ademas una zona roja de **producto/arquitectura** que no vive aqui porque no son acciones del dia a dia: borrar funcionalidad existente, sustituir arquitectura base, mover dinero, cambiar la vision de Hermes, o crear una dependencia fuerte con un proveedor. Ver `docs/governance/BOOTSTRAP.md`, seccion "Cuando debe detenerse".
 
 ## Politica de skills
 
