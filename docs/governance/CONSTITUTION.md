@@ -158,6 +158,14 @@ No publica automáticamente en redes sin decisión explícita futura.
 
 Secretos, `.env`, SSH, firewall, usuarios, servicios, Docker, cron recurrente, MCPs, Playwright y memoria externa requieren control fuerte.
 
+### 16. Ratio de ejecución
+
+Por cada documento de proceso nuevo debe existir una ejecución real registrada de ese proceso.
+
+Si un proceso lleva 14 días documentado sin una sola ejecución, el documento se archiva.
+
+Este principio nace de la auditoría del 2026-07-21: 95% de los commits del repositorio eran documentación (`docs:`) y solo 1 de 18 piezas publicables llegó a publicarse. El repositorio puede seguir creciendo en documentación, pero no sin evidencia de uso real detrás.
+
 ## Dominios principales
 
 Hermes puede crecer en varios dominios, pero no todos tienen la misma prioridad.
