@@ -293,3 +293,13 @@ Hermes respondio que el estado real ya incluye:
 - El propio `hermes gateway restart` ya dejo el menu nativo restaurado por su cuenta; no hizo falta ninguna accion manual adicional.
 - Solucion adoptada para la friccion de calle: Nivel 0 de `COMANDOS.md` (mandar la foto o nota sin palabra clave). No depende de Telegram, no se pierde en reinicios.
 - `runbooks/10-telegram-comandos-nativos.md` reescrito para reflejar el cierre: documenta el intento completo como hallazgo tecnico util, deja el comando de restauracion del menu nativo por si hiciera falta en el futuro, y marca la Fase 2 (botones) como pendiente de re-evaluar bajo esta misma logica antes de invertir tiempo en ella.
+
+## Backup y restore verificados - 2026-07-21
+
+- Ejecutado en el VPS siguiendo `runbooks/06-backup-restore.md`.
+- Backup: `tar -czf .../hermes-backup-20260721-195322.tar.gz -C /home/hermes .hermes workspace`. Resultado: 1.7G, con aviso no fatal `tar: .hermes: file changed as we read it` (archivo modificado en vivo durante la compresion, esperable con el gateway corriendo; no impidio crear el backup).
+- Restore de verificacion en `/home/hermes/restore-test/` (ruta temporal, sin tocar `/home/hermes` real): extraccion completa de `.hermes` y `workspace`.
+- Verificacion critica: `capturas.jsonl` (el unico dato del sistema sin copia en Git) se recupero y confirmo con `test -f` + `echo "CAPTURAS OK"`.
+- Carpeta de prueba borrada despues de verificar (`rm -rf /home/hermes/restore-test`).
+- Resultado: **el backup ya no es una suposicion, es un hallazgo verificado**. Cierra el hallazgo de seguridad "backup/restore nunca probado" de `AUDITORIA-2026-07-21.md`.
+- Pendiente menor: hay dos backups en `/home/hermes/backups/` (3.1G total, sin rotacion todavia); decidir politica de retencion y destino externo del `.tar.gz` (sigue pendiente segun `runbooks/06-backup-restore.md`).
