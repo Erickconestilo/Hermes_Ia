@@ -1,8 +1,10 @@
 .env
 .env.*
 !.env.example
-secrets/
-logs/
+secrets/*
+!secrets/.gitkeep
+logs/*
+!logs/.gitkeep
 tmp/
 __pycache__/
 *.pem
