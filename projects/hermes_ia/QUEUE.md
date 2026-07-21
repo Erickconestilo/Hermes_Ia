@@ -27,7 +27,7 @@ Si no se puede verificar, no entra en la cola.
 
 ## Banco 2: vida real expandida
 
-- probar `Modo guion` con otra situacion real -> guion publicable si pasa privacidad y calidad -> guardar en `projects/hermes_ia/content/ciudadanoinusual/publicables/`
+- probar el comando `guion` con otra situacion real -> guion publicable si pasa privacidad y calidad -> guardar en `projects/hermes_ia/content/ciudadanoinusual/publicables/`
 - vida compartida: pareja, convivencia, casa, cansancio y proyectos -> hooks + escenas + cierre humano -> guardar en `projects/hermes_ia/content/ciudadanoinusual/`
 - dias libres que no son libres: limpieza, mercado, coche, recados y descanso real -> hooks + escenas + cierre util -> guardar en `projects/hermes_ia/content/ciudadanoinusual/`
 - salida simple: una copa, paseo o mini viaje barato sin postureo -> hooks + esquema + cierre cercano -> guardar en `projects/hermes_ia/content/ciudadanoinusual/`

@@ -52,12 +52,12 @@ Objetivo:
 
 Reducir fricción para crear contenido.
 
-Comandos humanos mínimos:
+Comandos humanos mínimos (plan original de esta fase; los nombres reales quedaron simplificados despues, ver `projects/hermes_ia/content/ciudadanoinusual/COMANDOS.md`):
 
-- `¿Qué toca hoy?`
-- `Vídeo`
-- `Historia`
-- `He publicado`
+- `¿Qué toca hoy?` -> hoy `hoy`
+- `Vídeo` -> hoy `guion`
+- `Historia` -> hoy `post` o Nivel 0
+- `He publicado` -> hoy `publicado`
 
 Debe hacer:
 

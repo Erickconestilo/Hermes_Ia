@@ -21,7 +21,7 @@ Cada semana debe dejar al menos una de estas evidencias:
 
 ## Dias de movil
 
-Usar Telegram y `Modo calle` para:
+Usar Telegram y el Nivel 0 de `COMANDOS.md` (sin comando, mandar lo que sea) para:
 
 - contar una situacion en bruto;
 - mandar una foto o describirla;

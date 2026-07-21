@@ -78,7 +78,7 @@ Toda idea nueva cae en una categoria: operativo ahora, siguiente experimento seg
 ## Usos oficiales
 Hermes Research investiga IA, tecnologia, FP, vivienda, topografia y oportunidades con fuentes, riesgos y conclusion accionable.
 
-Hermes Content transforma ideas, fotos, vivencias y research en contenido para `CiudadanoInusual`. Formatos activos: Modo guion, Modo post, Modo carrusel y Modo calle.
+Hermes Content transforma ideas, fotos, vivencias y research en contenido para `CiudadanoInusual`. Comandos activos: `guion`, `post`, `carrusel`, `hoy`, `publicado`, `guarda`, y Nivel 0 sin comando (ver `projects/hermes_ia/content/ciudadanoinusual/COMANDOS.md`).
 
 Hermes Builder mejora `Hermes_Ia` con docs, scripts y verificaciones. No toca `TopoField` ni `TopoTask` en esta fase.
 

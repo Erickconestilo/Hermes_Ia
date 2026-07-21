@@ -60,10 +60,10 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 
 ## Pendientes cercanas
 
-- ejecutar una prueba real de cada comando: `¿Qué toca hoy?`, `Video`, `Historia` y `He publicado`
+- ejecutar una prueba real de cada comando vigente: `hoy`, `guion`, `post`, `publicado` (ver `COMANDOS.md`; nombres antiguos `¿Qué toca hoy?`/`Video`/`Historia`/`He publicado` ya sustituidos)
 - probar dos usos reales mas de `Personal Ops V1` y medir si reduce friccion de portatil
 - abrir Banco 2 con vida real expandida: pareja, convivencia, hogar, recados, comida, ocio simple y mini viajes
-- seguir probando `Modo guion`, `Modo post` y `Modo carrusel` con situaciones reales
+- seguir probando `guion`, `post` y `carrusel` con situaciones reales
 - medir que formatos son mas faciles de repetir sin quemarse
 - mantener vivienda/credito/ayudas como investigacion personal, no como eje del contenido
 - limpiar o respaldar la carpeta untracked `projects/hermes_ia/briefings/` del VPS si vuelve a bloquear un `git push vps`

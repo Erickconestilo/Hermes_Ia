@@ -39,7 +39,7 @@ Selfie trabajando en campo con chaleco reflectante, equipo topografico cerca, so
 
 ### Uso posible
 
-- `Modo post`
+- `post`
 - post de identidad personal
 - guion corto sobre calor y trabajo de campo
 - post profesional suave para LinkedIn
@@ -76,8 +76,8 @@ Equipo topografico trabajando en calle, con sol fuerte, sombra parcial y entorno
 
 ### Uso posible
 
-- `Modo guion`
-- `Modo post`
+- `guion`
+- `post`
 - pieza sobre trabajar bajo sol
 - pieza sobre paciencia y precision en topografia
 - apoyo visual para contenido de oficio
@@ -114,7 +114,7 @@ Mira topografica junto a un coche que impide aplomar o trabajar con comodidad.
 
 ### Uso posible
 
-- `Modo post`
+- `post`
 - guion corto humoristico
 - pieza tipo "cosas que nadie te cuenta de topografia"
 - carrusel futuro sobre problemas reales en campo
@@ -151,7 +151,7 @@ Plato de comida durante una pausa de jornada.
 
 ### Uso posible
 
-- `Modo post`
+- `post`
 - guion corto de comida en ruta
 - ranking ciudadano inusual
 - pieza sobre comer para seguir trabajando
@@ -187,8 +187,8 @@ Estacion topografica dentro de un pozo u obra profunda, con maquinaria grande, t
 
 ### Uso posible
 
-- `Modo post`
-- `Modo carrusel`
+- `post`
+- `carrusel`
 - pieza sobre "lo que la gente no ve de la topografia"
 - post mas profesional para LinkedIn
 
@@ -223,8 +223,8 @@ Estacion topografica montada en acera junto a una via urbana con trafico, cielo 
 
 ### Uso posible
 
-- `Modo post`
-- `Modo guion`
+- `post`
+- `guion`
 - carrusel sobre topografia en ciudad
 - pieza de identidad profesional
 
@@ -259,7 +259,7 @@ Captura de TikTok con una estacion colocada en una situacion de mala practica o 
 
 ### Uso posible
 
-- inspiracion para `Modo carrusel`
+- inspiracion para `carrusel`
 - pieza de humor tecnico sin reutilizar imagen ajena
 - lista de errores o cosas que dan miedo en topografia
 
@@ -293,7 +293,7 @@ Grieta en pared de piedra con puntos o chinchetas colocadas para preparar seguim
 
 ### Uso posible
 
-- `Modo carrusel`
+- `carrusel`
 - mini guia practica
 - post educativo simple
 - pieza para Instagram y LinkedIn
@@ -328,7 +328,7 @@ Monton de arena o material de obra con forma curiosa, parecido a un termitero o 
 
 ### Uso posible
 
-- `Modo post`
+- `post`
 - story con humor
 - pieza de comida/trayecto/faena ligera
 - carrusel futuro de "cosas raras que ves trabajando"
@@ -365,7 +365,7 @@ Zona de obra con materiales, tuberias, maquinaria, bloques, camiones y entorno d
 ### Uso posible
 
 - referencia interna
-- `Modo post` con mucho cuidado
+- `post` con mucho cuidado
 - carrusel sobre "lo que hay alrededor de una medicion"
 - apoyo visual para reflexion sobre trabajo de campo
 

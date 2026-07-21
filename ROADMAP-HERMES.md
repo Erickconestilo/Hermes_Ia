@@ -124,10 +124,8 @@ Condiciones:
 
 ### Operativo ahora
 
-- Modo guion.
-- Modo post.
-- Modo carrusel.
-- Modo calle.
+- Comandos `guion`, `post`, `carrusel` (ver `projects/hermes_ia/content/ciudadanoinusual/COMANDOS.md`; sustituyen a los antiguos `Modo guion`/`Modo post`/`Modo carrusel`/`Modo calle`).
+- Nivel 0 sin comando (mandar foto o nota y que Hermes decida) para uso en calle.
 - Indice de publicables.
 - Indice de publicaciones.
 - Revision de privacidad antes de publicar.

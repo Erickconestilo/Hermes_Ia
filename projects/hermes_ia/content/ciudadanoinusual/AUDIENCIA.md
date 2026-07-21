@@ -4,7 +4,7 @@
 
 Definir a quien le habla `CiudadanoInusual`, con que voz y a quien no.
 
-La Constitucion define quien eres tu. Este archivo define quien esta al otro lado. Sin eso, `¿Que toca hoy?` solo puede decidir desde tu energia, nunca desde el interes de alguien.
+La Constitucion define quien eres tu. Este archivo define quien esta al otro lado. Sin eso, el comando `hoy` solo puede decidir desde tu energia, nunca desde el interes de alguien.
 
 Este documento no es una hipotesis inventada. Esta inferido de las 20 piezas de `Hermes Content`, los 6 briefings de Research y las 18 piezas publicables que ya existen en el repositorio.
 

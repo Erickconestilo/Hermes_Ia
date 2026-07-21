@@ -12,7 +12,11 @@ Una entrada breve debe convertirse en una salida util.
 
 Si falta contexto, Hermes pregunta poco. Si no falta, avanza.
 
-## Comandos minimos
+## Nota de nombres de comando (2026-07-21)
+
+Los nombres de comando usados en las secciones de abajo (`¿Qué toca hoy?`, `Vídeo`, `Historia`, `He publicado`) quedaron sustituidos por `COMANDOS.md`: `hoy`, `guion`, `post`, `publicado`, mas Nivel 0 (mandar foto o nota sin comando). El comportamiento esperado de cada uno descrito abajo sigue vigente; solo cambio la palabra que lo activa. Ver `COMANDOS.md` para la superficie de comandos actual y que debe devolver cada formato.
+
+## Comandos minimos (nombres historicos, ver nota arriba)
 
 ### ¿Qué toca hoy?
 

@@ -184,18 +184,19 @@ Cuando el objetivo sea contenido para `CiudadanoInusual`, usar primero:
 
 - `projects/hermes_ia/content/ciudadanoinusual/HERMES-CREADOR.md`
 
-Comandos humanos minimos:
+Comandos humanos minimos (ver `projects/hermes_ia/content/ciudadanoinusual/COMANDOS.md` para el detalle completo):
 
-- `¿Qué toca hoy?`
-- `Vídeo`
-- `Historia`
-- `He publicado`
+- Nivel 0, sin comando: mandar foto, nota de voz o texto suelto y que Hermes decida.
+- `hoy`
+- `guion`
+- `post`
+- `publicado`
 
 Regla:
 
-- `¿Qué toca hoy?` decide solo una prioridad editorial o formato creativo; no deriva a Builder, productividad ni organizacion personal salvo peticion explicita.
-- `Vídeo` crea guion corto vertical.
-- `Historia` crea una story concreta, no decide formato general.
+- `hoy` decide solo una prioridad editorial o formato creativo; no deriva a Builder, productividad ni organizacion personal salvo peticion explicita.
+- `guion` crea guion corto vertical.
+- `post` crea un caption o story concreta, no decide formato general.
 - Hermes pide contexto minimo.
 - El usuario conserva la decision final.
 - No hay publicacion automatica.

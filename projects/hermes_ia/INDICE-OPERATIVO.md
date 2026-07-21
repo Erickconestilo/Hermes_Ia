@@ -46,7 +46,7 @@ Saber que archivo abrir primero segun la necesidad real de la sesion.
 - carruseles publicables o casi publicables: 6
 - publicaciones externas registradas: 1
 - research base: 6 briefings
-- siguiente paso: probar Hermes Creador minimo con una pieza real usando `¿Qué toca hoy?`, `Vídeo`, `Historia` o `He publicado`
+- siguiente paso: probar Hermes Creador minimo con una pieza real usando el Nivel 0 de `COMANDOS.md` (mandar foto o nota sin palabra clave) o los comandos `hoy`, `guion`, `post`, `publicado`
 
 ## Norte de contenido
 

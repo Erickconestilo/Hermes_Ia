@@ -8,7 +8,7 @@ Adaptar `CiudadanoInusual` a la realidad del usuario: muchas ideas, fotos y vide
 
 1. Capturar foto, video o situacion.
 2. Revisar rapido si hay datos sensibles.
-3. Usar `Modo calle` desde el movil.
+3. Mandarlo tal cual desde el movil, sin comando (Nivel 0 de `COMANDOS.md`).
 4. Dejar que Hermes decida: post, guion, carrusel o nota privada.
 5. Si el riesgo es bajo, publicar o guardar borrador.
 6. Si requiere edicion, dejarlo para PC.
@@ -40,20 +40,12 @@ Dejar para PC si:
 
 ## Prompt rapido
 
-```text
-Modo calle
+No hace falta escribir nada de esto: es lo que Hermes ya hace por defecto ante cualquier foto o nota sin comando (Nivel 0 de `COMANDOS.md`). Se deja aqui solo como referencia de que cubre:
 
-Estoy desde el movil.
-
-Contexto rapido:
-[cuento lo que tengo]
-
-Necesito:
 - decidir formato;
 - revisar privacidad;
 - sacar una version corta;
-- saber si puedo publicar ahora o dejarlo para PC.
-```
+- decir si se puede publicar ahora o hay que dejarlo para PC.
 
 ## Rutina movil en 30 segundos
 
