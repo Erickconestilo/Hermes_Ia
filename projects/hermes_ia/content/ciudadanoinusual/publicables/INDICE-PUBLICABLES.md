@@ -10,7 +10,10 @@ No sustituye los archivos completos. Sirve para saber que existe, que formato ti
 
 | Guia | Archivo | Uso |
 | --- | --- | --- |
-| Guia rapida de modos | `../GUIA-RAPIDA-MODOS.md` | recordar cuando usar modo guion, post, carrusel, referencias visuales y revision de privacidad |
+| Comandos | `../COMANDOS.md` | las seis palabras que hay que recordar; sustituye a la guia rapida de modos |
+| Audiencia | `../AUDIENCIA.md` | a quien le hablas, con que voz y a quien no |
+| Aprendizajes | `../APRENDIZAJES.md` | que funciona y que no, con evidencia |
+| Guia rapida de modos | `../GUIA-RAPIDA-MODOS.md` | SUSTITUIDO por `../COMANDOS.md`, pendiente de eliminar |
 | Checklist carruseles | `CHECKLIST-CARRUSELES.md` | revisar estructura, imagenes y privacidad antes de publicar carruseles |
 | Plan semanal | `PLAN-PUBLICACION-SEMANAL.md` | ordenar publicaciones sin improvisar |
 | Auditoria publicables | `AUDITORIA-PUBLICABLES.md` | ver que esta listo, que requiere edicion y que es sensible |
