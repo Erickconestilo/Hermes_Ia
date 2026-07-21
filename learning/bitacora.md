@@ -275,3 +275,12 @@ Hermes respondio que el estado real ya incluye:
 - Los seis comandos (`hoy`, `guion`, `post`, `carrusel`, `publicado`, `guarda`) quedaron registrados en el menu nativo del bot.
 - Pendiente de confirmar: que el menu aparece al pulsar `/` en el chat desde el movil, y que tocar cada comando responde igual que escribir la palabra a mano (Paso 4 del runbook). Si `/hoy` no se comporta igual que `hoy`, hace falta el ajuste de alias descrito en ese paso.
 - Fase 2 (botones tactiles) sigue pendiente, sin ejecutar.
+
+### Verificacion y hallazgo - 2026-07-21
+
+- Video enviado por Erick mostro el menu `/` con los ~24 comandos nativos de Hermes Agent (`/help`, `/status`, `/restart`, `/background`, etc.), sin los seis nuevos. Sospecha inicial: sobrescritura por el gateway.
+- `getMyCommands` ejecutado despues confirmo que los seis SI estan registrados en Telegram: `{"ok":true,"result":[hoy, guion, post, carrusel, publicado, guarda]}`.
+- Diagnostico correcto: `setMyCommands` reemplazo la lista nativa de Hermes por los seis nuevos (no fusiona, sustituye). El video probablemente reflejaba cache del cliente de Telegram antes del refresco, o el estado justo antes del reemplazo.
+- Decision de Erick: dejar el menu solo con los seis comandos de `Hermes Creador`. Los comandos nativos de Hermes siguen funcionando igual si se escriben a mano; solo dejan de aparecer en el autocompletado `/`.
+- Riesgo abierto sin confirmar: si `hermes gateway restart` o `hermes update` re-registran la lista nativa por su cuenta, sobrescribiendo los seis sin aviso. Verificar tras el proximo restart o update; si se pierden, repetir el mismo `curl`.
+- Detalle completo en `runbooks/10-telegram-comandos-nativos.md`, seccion "Hallazgo real".

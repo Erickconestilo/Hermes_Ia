@@ -84,6 +84,19 @@ Si alguno falla porque Hermes no reconoce el `/` inicial: la correccion es que l
 
 Al terminar la Fase 1, anadir entrada en `learning/bitacora.md` con: fecha, comandos registrados, resultado de la prueba del paso 4, y si hizo falta el ajuste de alias.
 
+### Hallazgo real (2026-07-21): `setMyCommands` reemplaza, no fusiona
+
+Al ejecutar el `curl` del Paso 2, `getMyCommands` confirmo que los seis comandos quedaron registrados en Telegram tal cual. Pero la lista nativa de Hermes Agent (unos 24 comandos: `/help`, `/status`, `/restart`, `/background`, `/approve`, `/rollback`, etc.) desaparecio del menu tactil `/` — `setMyCommands` sustituye la lista entera del scope por defecto, no la amplia.
+
+Decision tomada: dejar el menu solo con los seis comandos de `Hermes Creador`. Los comandos nativos de Hermes siguen funcionando exactamente igual si se escriben a mano (el registro de `setMyCommands` solo controla el autocompletado, no que funcione un comando); simplemente ya no aparecen al pulsar `/`.
+
+Riesgo pendiente de confirmar: se desconoce si `hermes gateway restart` o `hermes update` vuelven a registrar la lista nativa de Hermes por su cuenta, lo que sobrescribiria estos seis comandos sin aviso. Verificacion recomendada:
+
+- despues de cualquier `hermes gateway restart` o `hermes update`, comprobar que el menu `/` sigue mostrando los seis;
+- si se pierden, volver a ejecutar el mismo `curl` del Paso 2 (idempotente, sin riesgo, diez segundos).
+
+Si en el futuro se prefiere recuperar tambien los comandos nativos en el menu tactil, hay que reconstruir su lista completa (las descripciones truncadas en capturas de pantalla no bastan) y enviar un `setMyCommands` con los 24 + los 6 juntos.
+
 ---
 
 ## Fase 2 - Botones tactiles en la respuesta (hacer despues, mas trabajo)
