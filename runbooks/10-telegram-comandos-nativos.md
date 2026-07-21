@@ -1,179 +1,77 @@
-# 10 - Comandos nativos y botones en Telegram
+# 10 - Comandos nativos y botones en Telegram (cerrado: no viable por el menu `/`)
 
-## Objetivo
+## Resultado final (2026-07-21)
 
-Eliminar la memorizacion de comandos en el uso movil de `Hermes Creador`. Hoy hace falta recordar palabras (`guion`, `post`, `carrusel`, `hoy`, `publicado`, `guarda`). El objetivo es que en la calle no haga falta recordar nada: se pulsa `/` y Telegram muestra el menu, o se pulsa un boton en la propia respuesta de Hermes.
+Este runbook documento un intento real que **no funciono como se esperaba** y quedo revertido. Se conserva completo porque el hallazgo tecnico es reutilizable si en el futuro se reconsidera.
 
-Motivo: uso real registrado en `learning/bitacora.md` — el sistema de palabras genero fricción y abandono ("me lie y termine aburriendome"). Un menu nativo y botones tactiles no se olvidan porque no hace falta recordarlos: los ensena la propia interfaz.
+**Conclusion:** no usar `setMyCommands` para publicitar los comandos de `Hermes Creador`. El menu `/` de Telegram es propiedad de Hermes Agent (gateway nativo) y se resetea en cada `hermes gateway restart` / `hermes update`, sobrescribiendo cualquier lista personalizada sin aviso. Mantenerlo habria significado volver a ejecutar el mismo `curl` despues de cada reinicio, para siempre — carga manual recurrente, justo lo contrario de lo que se buscaba.
 
-## Por que es zona roja
-
-`AGENTS.md` clasifica "cambios en la configuracion del gateway de Telegram fuera de pruebas no destructivas" como rojo: requiere permiso explicito previo. `QUEUE.md` lo lista en "no entra todavia".
-
-**Permiso concedido:** 2026-07-21, en conversacion directa con Erick, al elegir explicitamente la opcion "botones reales en Telegram" frente a la alternativa de solo simplificar el documento. Registrar esta fecha en `learning/bitacora.md` al ejecutar.
-
-## Por que no se ejecuta desde aqui
-
-Esta sesion de trabajo no tiene acceso SSH al VPS `hermes-01`. Los pasos de este runbook deben ejecutarse tu, o en una sesion futura con acceso al VPS. Este documento deja todo listo para copiar y pegar.
-
-## Riesgo y rollback
-
-Riesgo: bajo en la Fase 1 (es una llamada a la API de Telegram, reversible al instante). Riesgo: medio en la Fase 2 (toca codigo del gateway en `HERMES_HOME`, que ya se ha editado antes con exito segun `runbooks/09-telegram-gateway.md`, seccion "Recuperacion humana con copia").
-
-Rollback Fase 1: volver a llamar `setMyCommands` con una lista vacia, o con la lista anterior.
-Rollback Fase 2: restaurar la copia del archivo de gateway hecha antes de editar (paso 0 de la Fase 2).
+**Solucion real adoptada:** el Nivel 0 de `projects/hermes_ia/content/ciudadanoinusual/COMANDOS.md` ("manda lo que sea, sin palabra clave, Hermes decide") ya resuelve la friccion de la calle sin depender de ningun registro de Telegram. Las seis palabras (`guion`, `post`, `carrusel`, `hoy`, `publicado`, `guarda`) siguen funcionando igual que siempre porque nunca dependieron del menu `/`: son texto plano interpretado por Hermes, no comandos de Telegram.
 
 ---
 
-## Fase 1 - Menu nativo `/` (hacer primero, es la de menor riesgo)
+## Como se llego a esta conclusion
 
-Telegram permite registrar una lista de comandos que aparece al pulsar el icono `/` o el boton de menu del chat. El usuario no escribe nada: toca `/`, ve la lista con descripcion, y elige.
+### Motivo original
 
-Esto no cambia como Hermes interpreta el texto. `/hoy` sigue siendo simplemente el texto `/hoy` cuando llega a Hermes — el `/` inicial es una convencion de Telegram para mostrar el menu, no magia adicional. Por eso este primer paso es seguro: en el peor caso, si Hermes no reconoce el `/` inicial, basta con que la palabra despues de la barra siga funcionando igual que hoy (`hoy`, `guion`, etc.), y se ajusta la deteccion en el prompt/skill si hace falta.
+Uso real reportado por Erick el 2026-07-21: incluso seis palabras generaron friccion en la calle ("me lie y termine aburriendome... es que hasta dificil de memorizar son"). Se propuso usar el menu nativo `/` de Telegram (tocar en vez de escribir) como solucion.
 
-### Paso 1 - Conectar al VPS
+### Fase 1 ejecutada
 
-Desde PowerShell local:
+Se registro el menu con `setMyCommands` (ver comando completo mas abajo). La API de Telegram confirmo el registro: `{"ok":true,"result":true}`, y `getMyCommands` inmediatamente despues devolvio los seis comandos correctamente.
 
-```powershell
-cd C:\Users\guill\Documents\Hermes_Ia
-ssh hermes
-```
+### Lo que se rompio sin darnos cuenta
 
-Ya dentro del VPS:
+`setMyCommands` **sustituye** la lista completa del scope por defecto, no la amplia. Al registrar los seis, desaparecieron del menu tactil los ~24 comandos nativos de Hermes Agent (`/help`, `/status`, `/restart`, `/background`, `/approve`, `/rollback`, etc.).
 
-```bash
-cd /home/hermes/workspace/Hermes_Ia
-source /home/hermes/.profile
-```
+Primera decision (parcial): aceptar la perdida del menu nativo, ya que esos comandos siguen funcionando escritos a mano aunque no aparezcan en el autocompletado.
 
-### Paso 2 - Registrar el menu de comandos
+### La prueba que cambio la decision
 
-Ejecutar en el VPS, donde ya vive el token real:
+Erick reinicio el gateway (`hermes gateway restart`) para probar. Resultado: el menu volvio a mostrar los ~24 comandos nativos, y los seis de `Hermes Creador` desaparecieron. Verificado con `getMyCommands`, que devolvio la lista nativa completa, sin rastro de los seis.
+
+**Conclusion tecnica confirmada:** el propio `hermes gateway` reafirma su lista de comandos nativos en cada arranque/reinicio (probablemente vía su propia llamada a `setMyCommands` al iniciar). Cualquier lista personalizada queda con vida util de "hasta el proximo restart".
+
+### Decision final
+
+Ante dos opciones — mantener el forcejeo (re-ejecutar el `curl` tras cada `restart`/`update`, indefinidamente) o abandonar el menu `/` como vector para los seis comandos — Erick eligio la segunda: restaurar el menu nativo de Hermes y apoyarse en el Nivel 0 de `COMANDOS.md` para la friccion de calle.
+
+---
+
+## Restaurar el menu nativo de Hermes
+
+Ejecutar en el VPS si el menu `/` sigue mostrando solo los seis comandos de `Hermes Creador`:
 
 ```bash
 source /home/hermes/.hermes/.env
 
 curl -s -X POST "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/setMyCommands" \
   -H "Content-Type: application/json" \
-  -d '{
-    "commands": [
-      {"command": "hoy", "description": "Que toca hoy - una recomendacion editorial"},
-      {"command": "guion", "description": "Convertir en guion de video corto"},
-      {"command": "post", "description": "Convertir en post o caption"},
-      {"command": "carrusel", "description": "Convertir en carrusel"},
-      {"command": "publicado", "description": "Registrar una publicacion real"},
-      {"command": "guarda", "description": "Nota privada, no es contenido"}
-    ]
-  }'
+  -d '{"commands":[{"command":"help","description":"Show available commands"},{"command":"new","description":"Start a new session (fresh session ID + history)"},{"command":"stop","description":"Kill all running background processes"},{"command":"status","description":"Show session info"},{"command":"resume","description":"Resume a previously-named session"},{"command":"sessions","description":"Browse and resume previous sessions"},{"command":"model","description":"Switch model for this session"},{"command":"debug","description":"Upload debug report (system info + logs) and get shareable links"},{"command":"restart","description":"Gracefully restart the gateway after draining active runs"},{"command":"update","description":"Update Hermes Agent to the latest version"},{"command":"commands","description":"Browse all commands and skills (paginated)"},{"command":"approve","description":"Approve a pending dangerous command"},{"command":"deny","description":"Deny a pending dangerous command"},{"command":"queue","description":"Queue a prompt for the next turn (doesn'"'"'t interrupt)"},{"command":"steer","description":"Inject a message after the next tool call without interrupting"},{"command":"background","description":"Run a prompt in the background"},{"command":"reasoning","description":"Manage reasoning effort and display"},{"command":"usage","description":"Show token usage and rate limits for the current session"},{"command":"platform","description":"Pause, resume, or list a failing gateway platform"},{"command":"profile","description":"Show active profile name and home directory"},{"command":"whoami","description":"Show your slash command access (admin / user)"},{"command":"start","description":"Acknowledge platform start pings without a reply"},{"command":"topic","description":"Enable or inspect Telegram DM topic sessions"},{"command":"retry","description":"Retry the last message (resend to agent)"},{"command":"undo","description":"Back up N user turns and re-prompt (default 1)"},{"command":"title","description":"Set a title for the current session"},{"command":"branch","description":"Branch the current session (explore a different path)"},{"command":"compress","description":"Compress conversation context (add '"'"'here [N]'"'"' to keep recent N turns)"},{"command":"rollback","description":"List or restore filesystem checkpoints"},{"command":"agents","description":"Show active agents and running tasks"}]}'
 ```
 
-Respuesta esperada: `{"ok":true,"result":true}`.
+Verificar con `getMyCommands` (mismo patron que en los pasos anteriores) que devuelve la lista nativa completa.
 
-### Paso 3 - Verificar en el telefono
-
-Abrir el chat de Telegram con el bot, pulsar el icono `/` o escribir `/`. Debe aparecer la lista de seis comandos con su descripcion, tocable sin escribir nada mas.
-
-### Paso 4 - Probar cada comando real
-
-Tocar `/hoy` desde el menu (no escribirlo a mano) y confirmar que Hermes responde igual que si se hubiera escrito `hoy`. Repetir con `/guion`, `/post`, `/carrusel`, `/publicado`, `/guarda`.
-
-Si alguno falla porque Hermes no reconoce el `/` inicial: la correccion es que la skill/prompt de enrutado trate `/hoy`, `/guion`, etc. como alias exactos de `hoy`, `guion`, etc. (quitar la barra antes de interpretar). Esto se ajusta en el mismo lugar donde ya se corrigio el parseo de `Privacidad: no publicar` (ver incidencia "Skill experimental que se quedaba en trazas de herramientas" en `runbooks/09-telegram-gateway.md`).
-
-### Registrar en bitacora
-
-Al terminar la Fase 1, anadir entrada en `learning/bitacora.md` con: fecha, comandos registrados, resultado de la prueba del paso 4, y si hizo falta el ajuste de alias.
-
-### Hallazgo real (2026-07-21): `setMyCommands` reemplaza, no fusiona
-
-Al ejecutar el `curl` del Paso 2, `getMyCommands` confirmo que los seis comandos quedaron registrados en Telegram tal cual. Pero la lista nativa de Hermes Agent (unos 24 comandos: `/help`, `/status`, `/restart`, `/background`, `/approve`, `/rollback`, etc.) desaparecio del menu tactil `/` — `setMyCommands` sustituye la lista entera del scope por defecto, no la amplia.
-
-Decision tomada: dejar el menu solo con los seis comandos de `Hermes Creador`. Los comandos nativos de Hermes siguen funcionando exactamente igual si se escriben a mano (el registro de `setMyCommands` solo controla el autocompletado, no que funcione un comando); simplemente ya no aparecen al pulsar `/`.
-
-Riesgo pendiente de confirmar: se desconoce si `hermes gateway restart` o `hermes update` vuelven a registrar la lista nativa de Hermes por su cuenta, lo que sobrescribiria estos seis comandos sin aviso. Verificacion recomendada:
-
-- despues de cualquier `hermes gateway restart` o `hermes update`, comprobar que el menu `/` sigue mostrando los seis;
-- si se pierden, volver a ejecutar el mismo `curl` del Paso 2 (idempotente, sin riesgo, diez segundos).
-
-Si en el futuro se prefiere recuperar tambien los comandos nativos en el menu tactil, hay que reconstruir su lista completa (las descripciones truncadas en capturas de pantalla no bastan) y enviar un `setMyCommands` con los 24 + los 6 juntos.
+En la practica, esto probablemente no hace falta ejecutarlo a mano: el propio `hermes gateway restart` ya lo hace por su cuenta, segun lo observado. Se deja aqui documentado por si algun dia el gateway no se reinicia solo y el menu se queda a medias.
 
 ---
 
-## Fase 2 - Botones tactiles en la respuesta (hacer despues, mas trabajo)
+## Que queda vigente para la friccion de la calle
 
-Objetivo: cuando Hermes propone un formato ("esto parece un post"), la respuesta incluye botones para confirmar o cambiar, en vez de tener que escribir la palabra correcta.
+`projects/hermes_ia/content/ciudadanoinusual/COMANDOS.md`, Nivel 0: mandar la foto, nota de voz o texto suelto, sin palabra clave. Hermes decide formato, revisa privacidad y da una version usable. No depende de Telegram, no se pierde en un reinicio, no hace falta recordar nada.
 
-Ejemplo de lo que deberia verse en el chat:
-
-```text
-Hermes: Esto tiene pinta de post — foto de comida en ruta, sin
-identificadores visibles.
-
-[ Usar como post ]  [ Prefiero guion ]  [ Prefiero carrusel ]  [ Guardar privado ]
-```
-
-### Por que esto ya es posible en este proyecto
-
-`runbooks/09-telegram-gateway.md`, seccion "Recuperacion humana con copia" (2026-06-22), registra que ya se parcheo el gateway real en `HERMES_HOME` para anadir botones `Copiar ID 1..5` a las respuestas de recuperacion de capturas. La capacidad tecnica ya existe y ya funciono en produccion. Esto no es un experimento nuevo: es extender un patron ya probado a un caso de uso distinto.
-
-### Por que este runbook no trae el diff exacto
-
-El parche vive en `HERMES_HOME` en el VPS, fuera de este repositorio Git (igual que el resto de la capa de runtime de Hermes). Esta sesion no tiene visibilidad de ese archivo. Los pasos siguientes son el procedimiento, no el codigo final.
-
-### Paso 0 - Copia de seguridad
-
-Antes de tocar nada, localizar el archivo que ya anade los botones de `Copiar ID` y copiarlo:
-
-```bash
-# el nombre exacto depende de como quedo organizado HERMES_HOME;
-# buscar por el texto de los botones ya conocidos
-grep -rl "Copiar ID" /home/hermes/.hermes/ 2>/dev/null
-```
-
-Copiar el archivo encontrado con sufijo de fecha antes de editar.
-
-### Paso 1 - Entender el patron existente
-
-Leer como esta construido el teclado de botones de `Copiar ID` (probablemente un `inline_keyboard` de la API de Telegram, con filas de botones y un `callback_data` por boton). Ese mismo mecanismo es el que hay que reutilizar.
-
-### Paso 2 - Anadir el teclado a las respuestas de `Hermes Creador`
-
-Cuando la skill de contenido (la que hoy interpreta `guion`/`post`/`carrusel`/Nivel 0) propone un formato, adjuntar un `inline_keyboard` con las opciones relevantes. Cada boton debe llevar en su `callback_data` la accion exacta (equivalente a que el usuario hubiera escrito esa palabra).
-
-### Paso 3 - Manejar la pulsacion del boton
-
-El gateway debe recibir el `callback_query` cuando se pulsa un boton y tratarlo exactamente como si el usuario hubiera escrito el texto correspondiente (`post`, `guion`, `carrusel`, `guarda`). Si el patron de `Copiar ID` ya resuelve un `callback_query`, extender esa misma funcion en vez de crear una nueva.
-
-### Paso 4 - Probar en real
-
-Mandar una foto sin comando, confirmar que la respuesta trae botones, pulsar uno y confirmar que Hermes actua igual que si se hubiera escrito la palabra.
-
-### Rollback
-
-Restaurar el archivo copiado en el Paso 0 y reiniciar el gateway:
-
-```bash
-hermes gateway restart
-```
-
-### Registrar en bitacora
-
-Fecha, que boton se probo, resultado, y si el `callback_data` quedo documentado en `SKILLS-EXPERIMENTALES.md` (si el cambio vive como skill) o directamente en este runbook (si es del gateway base).
+Las seis palabras (`guion`, `post`, `carrusel`, `hoy`, `publicado`, `guarda`) siguen disponibles como atajo cuando ya se sabe que se quiere, escribiendolas a mano. Nunca dependieron del menu `/` — eso fue exclusivamente el experimento fallido de este runbook.
 
 ---
 
-## Como queda el uso una vez hecho esto
+## Fase 2 (botones tactiles) - re-evaluar bajo esta luz
 
-Antes (hoy, sin este cambio): memorizar seis palabras o escribirlas mal y perder la respuesta.
+La idea original de Fase 2 (botones bajo cada respuesta de Hermes, reutilizando el patron de "Copiar ID") sigue siendo tecnicamente distinta de este problema: esos botones se generan por mensaje, no como un registro estatico en Telegram, por lo que no deberian sufrir el mismo reseteo en cada restart.
 
-Despues de la Fase 1: pulsar `/`, ver la lista, tocar una.
-
-Despues de la Fase 2: ni siquiera eso — mandar la foto o la nota, y tocar el boton que Hermes ya propuso.
-
-El Nivel 0 de `COMANDOS.md` ("manda lo que sea, Hermes decide") sigue siendo el camino principal. Este runbook no lo sustituye: lo hace mas facil de confirmar o corregir sin escribir nada.
+Si en el futuro se retoma, verificar primero esa hipotesis con una prueba pequena antes de invertir mas tiempo, dado lo ocurrido aqui.
 
 ## Relacion con otros archivos
 
-- `projects/hermes_ia/content/ciudadanoinusual/COMANDOS.md`: las seis palabras siguen validas como respaldo (escritorio, o si el menu nativo falla).
-- `runbooks/09-telegram-gateway.md`: precedente tecnico del parche de botones y comandos de referencia del gateway.
-- `projects/hermes_ia/SKILLS-EXPERIMENTALES.md`: si el cambio de Fase 2 se implementa como skill, registrarlo ahi.
+- `projects/hermes_ia/content/ciudadanoinusual/COMANDOS.md`: Nivel 0 es la solucion vigente para la friccion de calle.
+- `runbooks/09-telegram-gateway.md`: comandos de referencia del gateway y precedente del patron de botones.
+- `learning/bitacora.md`: registro cronologico completo del intento, el hallazgo y la decision final.

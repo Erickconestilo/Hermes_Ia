@@ -284,3 +284,12 @@ Hermes respondio que el estado real ya incluye:
 - Decision de Erick: dejar el menu solo con los seis comandos de `Hermes Creador`. Los comandos nativos de Hermes siguen funcionando igual si se escriben a mano; solo dejan de aparecer en el autocompletado `/`.
 - Riesgo abierto sin confirmar: si `hermes gateway restart` o `hermes update` re-registran la lista nativa por su cuenta, sobrescribiendo los seis sin aviso. Verificar tras el proximo restart o update; si se pierden, repetir el mismo `curl`.
 - Detalle completo en `runbooks/10-telegram-comandos-nativos.md`, seccion "Hallazgo real".
+
+### Cierre del experimento - 2026-07-21
+
+- Erick ejecuto `hermes gateway restart` para probar la persistencia. Resultado: el menu volvio a mostrar los ~24 comandos nativos de Hermes; los seis de `Hermes Creador` desaparecieron. `getMyCommands` lo confirmo.
+- Confirmado: el riesgo que quedo anotado como abierto se materializo. `hermes gateway` reafirma su propia lista de comandos en cada arranque/reinicio.
+- Decision final de Erick: no mantener el forcejeo contra el reinicio del gateway. Se abandona el uso del menu `/` de Telegram como vector para los seis comandos.
+- El propio `hermes gateway restart` ya dejo el menu nativo restaurado por su cuenta; no hizo falta ninguna accion manual adicional.
+- Solucion adoptada para la friccion de calle: Nivel 0 de `COMANDOS.md` (mandar la foto o nota sin palabra clave). No depende de Telegram, no se pierde en reinicios.
+- `runbooks/10-telegram-comandos-nativos.md` reescrito para reflejar el cierre: documenta el intento completo como hallazgo tecnico util, deja el comando de restauracion del menu nativo por si hiciera falta en el futuro, y marca la Fase 2 (botones) como pendiente de re-evaluar bajo esta misma logica antes de invertir tiempo en ella.

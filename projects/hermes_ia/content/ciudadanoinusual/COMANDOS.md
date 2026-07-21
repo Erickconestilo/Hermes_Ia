@@ -8,7 +8,9 @@ Principio 4 de la Constitucion: *"si una funcion obliga al usuario a recordar de
 
 Este archivo aplica ese principio a los comandos.
 
-**Aviso de uso real (2026-07-21):** incluso estas seis palabras generaron friccion real en la calle ("me lie y termine aburriendome"). La solucion de fondo no es reducir mas las palabras: es dejar de depender de memorizarlas. Ver `runbooks/10-telegram-comandos-nativos.md` para el plan de menu nativo `/` y botones tactiles en Telegram, que sustituye la necesidad de recordar cualquiera de las seis palabras de abajo. Mientras esa mejora no este ejecutada en el VPS, estas palabras siguen siendo el respaldo valido, y el Nivel 0 (mandar la foto sin nada) sigue siendo el camino principal.
+**Aviso de uso real (2026-07-21):** incluso estas seis palabras generaron friccion real en la calle ("me lie y termine aburriendome"). Se probo publicitarlas en el menu nativo `/` de Telegram, pero ese menu es propiedad de Hermes Agent y se resetea en cada `hermes gateway restart` / `update` (ver `runbooks/10-telegram-comandos-nativos.md` para el detalle del intento fallido). Mantenerlo habria significado reconfigurarlo a mano tras cada reinicio, para siempre.
+
+**La solucion real para la calle es el Nivel 0.** No escribas ninguna de las seis palabras: manda la foto, la nota de voz o el texto suelto tal cual, y Hermes decide el formato. No depende de Telegram, no se pierde en un reinicio, no hay nada que memorizar. Las seis palabras de abajo siguen funcionando (son texto plano interpretado por Hermes, nunca dependieron del menu de Telegram) y sirven como atajo solo cuando ya sabes exactamente que formato quieres.
 
 ---
 

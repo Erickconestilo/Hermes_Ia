@@ -6,9 +6,7 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 
 ## Siguiente tarea concreta
 
-- confirmar desde el movil que el menu `/` de Telegram muestra los seis comandos y que cada uno responde igual que escribir la palabra a mano (Paso 4 de `runbooks/10-telegram-comandos-nativos.md`); la llamada a `setMyCommands` ya se ejecuto el 2026-07-21 con `{"ok":true,"result":true}`
-- si el paso anterior se confirma bien, evaluar si conviene ya la Fase 2 (botones tactiles) del mismo runbook
-- probar `Hermes Creador minimo` con una situacion real y verificar si reduce friccion editorial sin pedir prompts largos
+- probar `Hermes Creador minimo` con una situacion real usando el Nivel 0 de `COMANDOS.md` (mandar foto o nota sin palabra clave) y verificar si de verdad reduce la friccion de calle que se reporto el 2026-07-21
 
 ## Cierres operativos pendientes
 
