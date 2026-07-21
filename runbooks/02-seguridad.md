@@ -12,6 +12,27 @@ Resumir las reglas ejecutivas de seguridad del proyecto `Hermes_Ia` sin duplicar
 - no operar Hermes como `root`
 - mantener el sistema lo más simple posible en las fases iniciales
 
+## Deteccion automatica de secretos (2026-07-21)
+
+`scripts/verificar-secretos.sh` revisa lo que esta en stage antes de cada commit: claves OpenAI (`sk-...`), tokens de GitHub, tokens de bot de Telegram, claves privadas (`BEGIN ... PRIVATE KEY`), claves AWS, e IPs publicas que deberian ser `<HETZNER_VPS_IP>`. No requiere instalar `gitleaks` ni ninguna herramienta nueva: es un `grep` con patrones conocidos.
+
+Ya esta instalado como hook (`.git/hooks/pre-commit`) y probado: bloqueo un commit real con un secreto de prueba antes de que entrara al historial.
+
+**`.git/hooks/` no se versiona en Git.** Si clonas el repo de nuevo en otra maquina, hay que reinstalar el hook una vez:
+
+```bash
+cp scripts/verificar-secretos.sh .git/hooks/pre-commit
+chmod +x .git/hooks/pre-commit
+```
+
+Uso manual, sin esperar a un commit:
+
+```bash
+bash scripts/verificar-secretos.sh
+```
+
+Si el hook da un falso positivo y hace falta forzar el commit de todas formas: `git commit --no-verify`. Usarlo con cuidado, revisando antes a mano lo que se esta forzando.
+
 ## Secretos y archivos sensibles
 
 No deben entrar en Git:
