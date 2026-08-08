@@ -31,6 +31,16 @@ Ubicación:
 - `projects/hermes_ia/TAREAS.md`
 - runbooks relevantes.
 
+### Memoria compartida entre agentes
+
+Indice corto de cambios importantes, comun a Claude, Codex y Hermes: una sola fuente rapida para no reconstruir contexto cada vez desde cero ni depender de que cada agente lea toda la bitacora.
+
+Ubicacion:
+
+- `learning/MEMORIA.md`
+
+Regla: una linea por entrada, entre 40 y 150 caracteres (fecha + hecho concreto). No sustituye `learning/bitacora.md`, solo apunta a ella. No es lectura obligatoria de `BOOTSTRAP.md`, es referencia rapida opcional.
+
 ### Memoria operativa
 
 Contiene lo que está activo ahora.

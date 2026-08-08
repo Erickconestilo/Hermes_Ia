@@ -3,6 +3,10 @@
 ## Objetivo
 Foto comprimida y operativa de `Hermes_Ia` para futuras sesiones de Codex.
 
+## Memoria rapida compartida
+
+`learning/MEMORIA.md` es el indice corto (una linea, 40-150 caracteres) de cambios importantes, leible por Claude, Codex y Hermes por igual. Revisar ahi antes de asumir el estado del repo desde cero. Detalle completo siempre en `learning/bitacora.md`.
+
 ## Estado actual real
 
 - Repo local: `C:\Users\guill\Documents\Hermes_Ia`
