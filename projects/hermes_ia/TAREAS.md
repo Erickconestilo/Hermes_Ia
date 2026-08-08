@@ -9,8 +9,13 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 - probar `Hermes Creador minimo` con una situacion real usando el Nivel 0 de `COMANDOS.md` (mandar foto o nota sin palabra clave) y verificar si de verdad reduce la friccion de calle que se reporto el 2026-07-21
 - decidir si se aplican las actualizaciones pendientes del VPS y se reinicia (detectado el 2026-08-08 durante el endurecimiento SSH: `System restart required`, 6 actualizaciones inmediatas + 13 via ESM Apps); no se toco por estar fuera de alcance de esa tarea
 
+## Siguiente tarea concreta (nuevo, 2026-08-08)
+
+- decidir si se ejecuta la migracion de config de Hermes `v29 -> v33` (`hermes doctor --fix`); zona roja de `AGENTS.md`, requiere permiso explicito aparte
+
 ## Cerrado recientemente
 
+- Hermes Agent actualizado de 0.16.0 a 0.20.0 (20883 commits): ejecutado y verificado el 2026-08-08, ver `learning/bitacora.md`. Backup completo tomado antes de actualizar. Gateway reiniciado y probado en real por Telegram (mensaje + `/whoami`). Pendiente aparte y no bloqueante: migracion de config v29->v33 y vulnerabilidades npm de build-tool.
 - endurecimiento SSH (`runbooks/02-seguridad.md`): ejecutado y verificado el 2026-08-08, ver `learning/bitacora.md`. `PasswordAuthentication no` activo; `PermitRootLogin` ya estaba correcto. Pendiente aparte y no bloqueante: `fail2ban`/`ufw`, requieren permiso explicito por ser cambio de sistema.
 
 ## Cierres operativos pendientes

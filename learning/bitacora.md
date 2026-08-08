@@ -326,3 +326,15 @@ Hermes respondio que el estado real ya incluye:
 - Resultado: `PasswordAuthentication no` activo; `PermitRootLogin` ya estaba en modo seguro desde antes de esta sesion. Cierra el hallazgo "endurecimiento SSH pendiente de ejecutar y verificar" de `runbooks/02-seguridad.md` y el Hallazgo relacionado de `AUDITORIA-2026-07-21.md`.
 - Detectado durante la ejecucion, sin tocar por estar fuera de alcance: el VPS reporta `*** System restart required ***` y actualizaciones pendientes (6 inmediatas + 13 via ESM Apps). Ningun paquete se actualizo ni se reinicio el servidor en esta sesion.
 - Verificacion adicional que el propio runbook marca como no bloqueante sigue sin ejecutar: `fail2ban` y `ufw`. Son cambios de sistema (zona roja de `AGENTS.md`), requieren permiso explicito aparte de este cierre.
+
+## Hermes Agent actualizado de 0.16.0 a 0.20.0 - 2026-08-08
+
+- Motivo: la instalacion estaba 20883 commits detras de `origin/main` (sin actualizar desde la instalacion inicial en junio).
+- Ejecutado desde `hermes` por SSH: `hermes update --check` (confirmo el atraso) -> `hermes update --backup` (snapshot completo previo en `~/.hermes/backups/pre-update-2026-08-08-105353.zip`, 105.8 MB).
+- Cambios locales sin commitear en el codigo fuente de `hermes-agent` (no en config, no en datos) se dejaron en git stash sin reaplicar (`git stash apply 7fcd89348a81b6a0a2bac1e4113c2fbe39d40816` si algun dia hacen falta) por no haber constancia de que fueran ediciones intencionales.
+- Dependencias Python y Node actualizadas sin errores. Skills sincronizadas: `default: +7 new, ↑2 updated, ~2 user-modified` (las 2 personalizaciones locales se respetaron).
+- `hermes doctor` post-update: sin errores criticos. Un hallazgo real pendiente: config `v29 -> v33` desactualizada (`hermes doctor --fix` la migraria, pero es zona roja de `AGENTS.md` -- queda fuera de este cierre, requiere permiso aparte). El resto de avisos (Docker, agent-browser, API keys de Discord/web search, vulnerabilidades npm de build-tool) son estado esperado por decision ya tomada en `ROADMAP-HERMES.md`, no regresiones nuevas.
+- Hallazgo durante el cierre: `hermes update` actualizo el codigo en disco pero no reinicio el proceso del gateway en ejecucion (seguia corriendo el PID de hace 2 semanas con la version vieja). Paso adicional no documentado en el runbook local: `hermes gateway restart` fue necesario para que el Telegram Gateway cargara la version nueva.
+- Verificacion real, no solo de logs: Erick probo el bot desde Telegram (mensaje normal + `/whoami`) y respondio correctamente tras el reinicio.
+- Resultado: `hermes --version` -> `0.20.0 (2026.8.3)`. Gateway activo con PID nuevo desde 2026-08-08 10:59:39 UTC.
+- Pendiente para otra sesion, no bloqueante: migracion de config v29->v33 (`hermes doctor --fix`, zona roja, pide permiso aparte); vulnerabilidades npm de build-tool en `agent-browser`/`web`/`ui-tui` (bajo impacto, runtime no afectado).
