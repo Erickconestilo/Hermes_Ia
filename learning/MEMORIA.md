@@ -10,3 +10,5 @@ No sustituye la bitacora. No es lectura obligatoria de `BOOTSTRAP.md` (para no s
 
 - 2026-08-08: SSH endurecido, `PasswordAuthentication no` activo. Detalle: bitacora.md
 - 2026-08-08: Hermes Agent actualizado 0.16.0 -> 0.20.0 (20883 commits). Detalle: bitacora.md
+- 2026-08-08: Hermes 0.20.0 trae panel web (`hermes dashboard`); apagado, no expuesto. Ver bitacora.
+- 2026-08-08: Config Hermes migrada v29->v33; verify_on_stop corregido a "auto". Ver bitacora.

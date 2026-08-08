@@ -338,3 +338,20 @@ Hermes respondio que el estado real ya incluye:
 - Verificacion real, no solo de logs: Erick probo el bot desde Telegram (mensaje normal + `/whoami`) y respondio correctamente tras el reinicio.
 - Resultado: `hermes --version` -> `0.20.0 (2026.8.3)`. Gateway activo con PID nuevo desde 2026-08-08 10:59:39 UTC.
 - Pendiente para otra sesion, no bloqueante: migracion de config v29->v33 (`hermes doctor --fix`, zona roja, pide permiso aparte); vulnerabilidades npm de build-tool en `agent-browser`/`web`/`ui-tui` (bajo impacto, runtime no afectado).
+
+### Hallazgo - Hermes 0.20.0 trae panel web (`hermes dashboard`) - 2026-08-08
+
+- La actualizacion incluye un dashboard web completo (chat, config, modelos, sesiones, cron, canales, analiticas). Confirmado en documentacion oficial de Nous Research.
+- Estado actual: no esta corriendo, no se expone. El `update` solo genero los archivos estaticos (`web_dist`), no un servidor activo.
+- Por defecto se ata a `127.0.0.1:9119` (solo accesible desde el propio VPS, sin login). Atarlo a `0.0.0.0` exige configurar usuario/contrasena u OAuth o el propio Hermes se niega a arrancar -- no se puede exponer por accidente.
+- Coincide con la decision ya vigente en `AGENTS.md`/`README.md`: sin dashboard publico. No se activo nada.
+- Forma segura de probarlo si hace falta: tunel SSH (`ssh -L 9119:127.0.0.1:9119 hermes` + `hermes dashboard --no-open` en el VPS), nunca abrir el puerto directamente.
+
+## Migracion de config Hermes v29 -> v33 - 2026-08-08
+
+- Backup previo: `~/.hermes/config.yaml.bak-20260808`.
+- `hermes config check`: `Required` vacio, nada obligatorio faltaba. La lista larga de `Optional` es el catalogo completo de integraciones no usadas (Discord, Slack, WhatsApp, etc.), esperado en `○`.
+- `hermes config migrate`: aplicado sin fricción. Dos avisos revisados:
+  - `agent.verify_on_stop` quedo en `false` tras la migracion (Hermes no exige verificar codigo editado antes de dar por terminada una respuesta). Corregido a `"auto"` (activo en CLI/TUI, apagado en mensajeria) con `hermes config set agent.verify_on_stop auto` -- mas alineado con el principio de evidencia antes que intuicion.
+  - Warnings de toolset desconocido para `teams` y `google_chat`: sin impacto, plataformas no usadas ni configuradas.
+- Verificado con `hermes doctor`: `Config version up to date (v33)`, sin aviso de `verify_on_stop`. Quedan 4 avisos menores ya conocidos (vulnerabilidades npm de build-tool, API keys opcionales sin configurar) -- ninguno nuevo ni bloqueante.
