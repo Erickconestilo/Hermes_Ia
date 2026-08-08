@@ -6,8 +6,12 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 
 ## Siguiente tarea concreta
 
-- localizar o resetear la contrasena de `sudo` del usuario `hermes` en el VPS; sin eso no se puede ejecutar `runbooks/02-seguridad.md` (endurecimiento SSH), que quedo bloqueado el 2026-07-21 en el primer paso
 - probar `Hermes Creador minimo` con una situacion real usando el Nivel 0 de `COMANDOS.md` (mandar foto o nota sin palabra clave) y verificar si de verdad reduce la friccion de calle que se reporto el 2026-07-21
+- decidir si se aplican las actualizaciones pendientes del VPS y se reinicia (detectado el 2026-08-08 durante el endurecimiento SSH: `System restart required`, 6 actualizaciones inmediatas + 13 via ESM Apps); no se toco por estar fuera de alcance de esa tarea
+
+## Cerrado recientemente
+
+- endurecimiento SSH (`runbooks/02-seguridad.md`): ejecutado y verificado el 2026-08-08, ver `learning/bitacora.md`. `PasswordAuthentication no` activo; `PermitRootLogin` ya estaba correcto. Pendiente aparte y no bloqueante: `fail2ban`/`ufw`, requieren permiso explicito por ser cambio de sistema.
 
 ## Cierres operativos pendientes
 

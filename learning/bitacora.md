@@ -310,3 +310,19 @@ Hermes respondio que el estado real ya incluye:
 - Bloqueo: Erick no tiene a mano la contrasena de `sudo` del usuario `hermes` (distinta de la clave SSH usada para conectar).
 - Ningun cambio se aplico: el comando se cancelo en el prompt de contrasena antes de ejecutarse. `sshd_config` sigue intacto, sin riesgo.
 - Pendiente para la proxima sesion: localizar o resetear la contrasena de `sudo` de `hermes` antes de retomar el endurecimiento SSH. Sin eso, el runbook no se puede ejecutar.
+
+## Endurecimiento SSH ejecutado y verificado - 2026-08-08
+
+- Bloqueo de la sesion anterior resuelto: Erick recupero la contrasena de `sudo` de `hermes`.
+- Ejecutado `runbooks/02-seguridad.md` paso a paso desde PowerShell -> `ssh hermes` -> VPS, sin cerrar la sesion hasta verificar.
+- Paso 1: backup creado, `/etc/ssh/sshd_config.bak-20260808`.
+- Paso 2 (estado previo): `permitrootlogin without-password` (ya correcto, sin cambio necesario), `passwordauthentication yes` (unico cambio real pendiente), `port 22` (sin cambio).
+- Paso 3: confirmado login por clave antes de tocar nada (`grep -c "ssh-" ~/.ssh/authorized_keys` -> `1`).
+- Paso 4: verificado que no existe override en `/etc/ssh/sshd_config.d/` (sin archivo de cloud-init tocando `PasswordAuthentication`); el `yes` efectivo venia del default de OpenSSH con la linea comentada. Cambio aplicado con `sed` sobre la linea 66: `#PasswordAuthentication yes` -> `PasswordAuthentication no`.
+- Paso 5: `sudo sshd -t` sin errores de sintaxis.
+- Paso 6: `sudo systemctl restart ssh`.
+- Paso 7 (verificacion obligatoria): segunda conexion `ssh hermes` desde ventana nueva de PowerShell, sin cerrar la original. Entro por clave sin pedir contrasena. Verificado con exito.
+- Paso 8: sesion original cerrada tras confirmar el paso 7.
+- Resultado: `PasswordAuthentication no` activo; `PermitRootLogin` ya estaba en modo seguro desde antes de esta sesion. Cierra el hallazgo "endurecimiento SSH pendiente de ejecutar y verificar" de `runbooks/02-seguridad.md` y el Hallazgo relacionado de `AUDITORIA-2026-07-21.md`.
+- Detectado durante la ejecucion, sin tocar por estar fuera de alcance: el VPS reporta `*** System restart required ***` y actualizaciones pendientes (6 inmediatas + 13 via ESM Apps). Ningun paquete se actualizo ni se reinicio el servidor en esta sesion.
+- Verificacion adicional que el propio runbook marca como no bloqueante sigue sin ejecutar: `fail2ban` y `ufw`. Son cambios de sistema (zona roja de `AGENTS.md`), requieren permiso explicito aparte de este cierre.

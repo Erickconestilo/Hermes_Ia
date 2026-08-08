@@ -90,7 +90,9 @@ Para el detalle de la creación del usuario `hermes`, ownership y validación de
 
 - [02-usuario-hermes-seguridad.md](02-usuario-hermes-seguridad.md)
 
-## Endurecimiento SSH (pendiente de ejecutar y verificar)
+## Endurecimiento SSH (ejecutado y verificado el 2026-08-08)
+
+Estado: cerrado. `PasswordAuthentication no` aplicado y verificado con una segunda sesion antes de cerrar la original. `PermitRootLogin` ya estaba en `prohibit-password` desde antes, sin cambios. Detalle completo en `learning/bitacora.md`. Los dos pasos no bloqueantes (`fail2ban`, `ufw`) siguen sin ejecutar, ver "Verificacion adicional recomendada" mas abajo.
 
 Motivo: el repositorio es público y ha expuesto históricamente la IP del VPS en texto plano (ya corregido en `learning/bitacora.md`). Reducir superficie de ataque en el punto de entrada real.
 
