@@ -28,6 +28,8 @@ Convertir Hermes en el arnes personal de IA de Erick/CiudadanoInusual:
 - Fallback: OpenRouter.
 - Sincronizacion: Git local -> GitHub `origin` y VPS `vps`.
 - Telegram Gateway: operativo como servicio de usuario `hermes-gateway.service`.
+- Version Hermes Agent: `0.20.0` (actualizado el 2026-08-08 desde `0.16.0`, 20883 commits de atraso; ver `learning/bitacora.md`). Pendiente aparte: migracion de config `v29 -> v33` (zona roja, requiere permiso explicito).
+- SSH del VPS endurecido el 2026-08-08: `PasswordAuthentication no` activo, `PermitRootLogin` ya estaba en `prohibit-password`. Pendiente aparte: `fail2ban`/`ufw`.
 - Imagenes generadas: envio a Telegram mediante `scripts/send-telegram-photo.py`.
 
 ## Estado por fases y evidencias

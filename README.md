@@ -82,6 +82,7 @@ Regla operativa:
 - [.env.example](.env.example)
 - [runbooks/](runbooks/)
 - [learning/bitacora.md](learning/bitacora.md)
+- [learning/MEMORIA.md](learning/MEMORIA.md): indice corto de cambios importantes, referencia rapida opcional (no es lectura obligatoria)
 - [scripts/](scripts/)
 - `logs/`
 - `secrets/`

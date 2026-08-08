@@ -59,3 +59,11 @@ Registrar:
 ## Pendiente razonable
 
 - Evaluar más adelante `hermes doctor --fix` para migrar el archivo de configuración sin mezclar esa tarea con la instalación base.
+
+## Mantenimiento periodico (desde 2026-08-08)
+
+La instalacion estuvo sin actualizar de junio a agosto y acumulo 20883 commits de atraso (ver `learning/bitacora.md`, "Hermes Agent actualizado de 0.16.0 a 0.20.0"). Para no repetirlo:
+
+- revisar `hermes update --check` aproximadamente una vez al mes (chequeo manual, no cron; sigue en zona roja segun `AGENTS.md`).
+- si hay atraso grande, seguir el mismo procedimiento verificado: `hermes update --backup` -> no restaurar cambios locales sin motivo conocido -> `hermes gateway restart` -> validar con `hermes doctor`, `hermes --version`, `hermes gateway status` y una prueba real desde Telegram.
+- registrar el resultado en `learning/bitacora.md`.
