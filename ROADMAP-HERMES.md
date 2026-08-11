@@ -48,6 +48,7 @@ Convertir Hermes en el arnes personal de IA de Erick/CiudadanoInusual:
 | Flujo movil extremo a extremo | Cerrado | captura privada -> recuperacion -> borrador -> Judge -> registro completados |
 | Captura Movil V1 | Operativa | prueba real desde Telegram; placeholder corregido; skill experimental ajustada; validacion anti-plantillas |
 | Personal Ops V1 | Activo en modo controlado | `projects/hermes_ia/PERSONAL-OPS-V1.md` |
+| Empleo Ops V0 | Futuro experimento controlado; no operativo | contrato y prueba sintetica en `projects/hermes_ia/EMPLEO-OPS-V0.md` |
 | Judge aplicado y registrado | Cerrado | `projects/hermes_ia/JUDGE-REGISTRO.md` con piezas reales evaluadas |
 | Banco 2 | Iniciado | vida real, convivencia, hogar, comida, trayectos |
 | Continuidad semanal | Abierta | falta rutina semanal estable |
@@ -192,7 +193,17 @@ Personal Ops no publica, no toca secretos, no automatiza decisiones sensibles y 
 - no requiere skill nueva oficial todavia;
 - se apoya en captura privada y recuperacion breve.
 
-## Track D: Automatizacion controlada
+## Track D: Financial Ops — Empleo Ops V0
+
+### Futuro planificado, no operativo
+
+- El contrato minimo y su prueba documental sintetica estan diseñados en `projects/hermes_ia/EMPLEO-OPS-V0.md`.
+- CareerOps, JobSync y cualquier herramienta externa permanecen en `NO-GO`.
+- Los datos profesionales reales permanecen bloqueados por F-01, F-03 y F-10 de `AUDITORIA-INTEGRAL-2026-08-11.md`.
+- La proxima accion posterior es corregir y probar F-01 con fixtures ficticios.
+- Este experimento pertenece a Financial Ops y no desplaza la prioridad vigente de Hermes Creador.
+
+## Track E: Automatizacion controlada
 
 ### Futuro planificado
 
