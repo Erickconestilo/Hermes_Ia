@@ -82,7 +82,8 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 - evidencia unica: `projects/hermes_ia/EMPLEO-OPS-V0.md`
 - herramientas externas: `NO-GO` actual para CareerOps, JobSync y equivalentes
 - datos reales: bloqueados por F-01, F-03 y F-10 de `AUDITORIA-INTEGRAL-2026-08-11.md`
-- proxima accion posterior: corregir y probar F-01 con fixtures ficticios
+- F-01 Fase A: `PARTIAL`; los dos scripts versionados tienen correcciones probadas con fixtures ficticios, pero la ejecución genérica por terminal sigue abierta y nada se aplicó al runtime
+- proxima accion posterior: revisar y, sólo con aprobación, aplicar de forma reversible los scripts y reglas candidatas; mantener F-01 abierto hasta probar protección global
 - prioridad: no desplaza la siguiente tarea concreta ni la Fase 1 de Hermes Creador
 
 ## Bloqueos o dudas abiertas
