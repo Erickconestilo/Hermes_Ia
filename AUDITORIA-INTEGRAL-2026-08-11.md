@@ -176,6 +176,7 @@ La publicación mediante `os.replace` evita archivos JSONL parcialmente escritos
 - **Rollback:** no sustituir las copias existentes hasta validar la nueva; versionar manifiesto y conservar una generación anterior.
 - **Verificación posterior:** restauración completa sin red, validación de permisos, apertura de base de estado y ensayo de arranque sin credenciales productivas.
 - **¿Bloquea Empleo Ops?:** Sí antes de almacenar el perfil profesional maestro.
+- **Fase A 2026-08-13:** diseño documentado en `projects/hermes_ia/F03-BACKUP-RESTORE.md`; el estado sigue `DESIGNADO`, no cerrado. Los artefactos visibles continúan locales al mismo filesystem del VPS, sin cifrado portable, copia externa ni restore completo, consistente y reproducible del conjunto actual.
 
 ### F-04 — Runtime semánticamente actual, pero materialmente atrasado
 

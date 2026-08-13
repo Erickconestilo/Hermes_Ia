@@ -200,7 +200,8 @@ Personal Ops no publica, no toca secretos, no automatiza decisiones sensibles y 
 - El contrato minimo y su prueba documental sintetica estan diseñados en `projects/hermes_ia/EMPLEO-OPS-V0.md`.
 - CareerOps, JobSync y cualquier herramienta externa permanecen en `NO-GO`.
 - Los datos profesionales reales permanecen bloqueados por F-01, F-03 y F-10 de `AUDITORIA-INTEGRAL-2026-08-11.md`.
-- La proxima accion posterior es corregir y probar F-01 con fixtures ficticios.
+- F-01 Fase A: `PARTIAL`; los scripts y pruebas están versionados, pero la protección global de terminal sigue abierta.
+- F-03 Fase A: `DESIGNADO`; el diseño de backup cifrado externo y restore verificable está en `projects/hermes_ia/F03-BACKUP-RESTORE.md`, sin ejecución real.
 - Este experimento pertenece a Financial Ops y no desplaza la prioridad vigente de Hermes Creador.
 
 ## Track E: Automatizacion controlada

@@ -86,6 +86,14 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 - proxima accion posterior: revisar y, sólo con aprobación, aplicar de forma reversible los scripts y reglas candidatas; mantener F-01 abierto hasta probar protección global
 - prioridad: no desplaza la siguiente tarea concreta ni la Fase 1 de Hermes Creador
 
+## F-03 — Backup y restore verificable
+
+- estado: `DESIGNADO`; no cerrado
+- evidencia: `projects/hermes_ia/F03-BACKUP-RESTORE.md`
+- situación actual: respaldos visibles locales al VPS, sin cifrado portable, copia externa ni restauración completa, consistente y reproducible del conjunto actual
+- próxima acción: elegir destino externo, presupuesto, RPO/RTO, retención y custodia de clave antes de ejecutar Fase B
+- restricciones: no crear backup, transferir datos, instalar herramientas ni tocar servicios sin aprobación específica
+
 ## Bloqueos o dudas abiertas
 
 - cuando versionar oficialmente la skill derivada de captura movil
