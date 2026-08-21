@@ -15,12 +15,12 @@ Foto comprimida y operativa de `Hermes_Ia` para futuras sesiones de Codex.
 - Usuario operativo: `hermes`.
 - Backend actual: `local`.
 - Auth principal: `openai-codex`.
-- Modelo principal: `gpt-5.4`.
+- Modelo principal observado en el runtime el 2026-08-21: `gpt-5.6-terra`.
 - Fallback: OpenRouter.
 - Sync local, GitHub y VPS: Git operativo.
 - Telegram Gateway: operativo desde movil mediante bot autorizado.
 - Imagenes generadas: envio a Telegram con `scripts/send-telegram-photo.py`.
-- Captura Movil V1: operativa; almacenamiento privado fuera de Git.
+- Captura Movil V1: script y almacenamiento privado operativos fuera de Git; la skill puente historica esta ausente del runtime.
 - Personal Ops V1: activo en modo controlado desde Telegram para decisiones, prioridades y notas privadas.
 - Skills experimentales: permitidas en `HERMES_HOME` como incubadora de bajo riesgo.
 - Fase 0 documental: cerrada.
@@ -76,15 +76,15 @@ Hermes Builder mejora `Hermes_Ia` con docs, scripts y verificaciones. No toca `T
 
 ## Siguiente experimento seguro
 
-Validar capacidades reales de Mobile Ops V1:
+Validar Hermes Creador con cinco entradas reales enviadas en lenguaje natural desde el movil:
 
-1. probar `/whoami` y `/status` desde Telegram;
-2. probar envio de archivo, recepcion de imagen y nota de voz;
-3. probar `/background` con tarea pequena no destructiva;
-4. capturar idea desde Telegram y guardarla fuera de Git;
-5. convertirla en nota, borrador o pieza solo si aporta;
-6. aplicar `JUDGE.md` cuando haya salida concreta;
-7. registrar aprendizaje.
+1. mandar foto, voz o texto sin plantilla ni comando obligatorio;
+2. comprobar que Hermes elige un solo angulo y formato adecuado;
+3. exigir revision de privacidad sin recordarsela;
+4. aceptar como maximo una correccion por pieza;
+5. publicar manualmente al menos una pieza y registrar el resultado.
+
+Criterio: al menos cuatro de cinco entradas bien encaminadas, sin errores graves de privacidad. Durante esta prueba no se crean comandos, skills ni documentos nuevos.
 
 ## Futuro planificado
 

@@ -24,11 +24,11 @@ Convertir Hermes en el arnes personal de IA de Erick/CiudadanoInusual:
 - Workspace VPS: `/home/hermes/workspace/Hermes_Ia`.
 - Backend: `local`.
 - Proveedor principal: `openai-codex`.
-- Modelo principal: `gpt-5.4`.
+- Modelo principal observado en el runtime el 2026-08-21: `gpt-5.6-terra`.
 - Fallback: OpenRouter.
 - Sincronizacion: Git local -> GitHub `origin` y VPS `vps`.
 - Telegram Gateway: operativo como servicio de usuario `hermes-gateway.service`.
-- Version Hermes Agent: `0.20.0` (actualizado el 2026-08-08 desde `0.16.0`, 20883 commits de atraso; ver `learning/bitacora.md`). Pendiente aparte: migracion de config `v29 -> v33` (zona roja, requiere permiso explicito).
+- Version Hermes Agent: `0.20.0` (actualizado el 2026-08-08 desde `0.16.0`; ver `learning/bitacora.md`). La migracion de config `v29 -> v33` y `agent.verify_on_stop = "auto"` quedaron ejecutados y verificados ese mismo dia.
 - SSH del VPS endurecido el 2026-08-08: `PasswordAuthentication no` activo, `PermitRootLogin` ya estaba en `prohibit-password`. Pendiente aparte: `fail2ban`/`ufw`.
 - Imagenes generadas: envio a Telegram mediante `scripts/send-telegram-photo.py`.
 
@@ -58,7 +58,7 @@ Convertir Hermes en el arnes personal de IA de Erick/CiudadanoInusual:
 ### Operativo ahora
 
 - Hermes nativo en VPS.
-- `openai-codex` con `gpt-5.4`.
+- `openai-codex` con `gpt-5.6-terra` observado en el runtime el 2026-08-21.
 - OpenRouter como fallback.
 - Telegram Gateway para hablar con Hermes desde movil.
 - Envio de imagenes generadas a Telegram.
@@ -68,8 +68,9 @@ Convertir Hermes en el arnes personal de IA de Erick/CiudadanoInusual:
 
 ### Siguiente experimento seguro
 
-- Decidir que parte de la operativa siguiente queda en movil y que parte se reserva para portatil.
-- Elegir si el siguiente paso es implementar ya la skill oficial 1 o abrir primero `Personal Ops V1`.
+- Probar Hermes Creador con cinco entradas reales en lenguaje natural desde el movil.
+- Validar que al menos cuatro queden bien encaminadas, con una correccion como maximo y sin errores graves de privacidad.
+- Publicar manualmente al menos una pieza y registrar su resultado antes de ampliar comandos o skills.
 
 ### Futuro planificado
 
@@ -199,9 +200,9 @@ Personal Ops no publica, no toca secretos, no automatiza decisiones sensibles y 
 
 - El contrato minimo y su prueba documental sintetica estan diseñados en `projects/hermes_ia/EMPLEO-OPS-V0.md`.
 - CareerOps, JobSync y cualquier herramienta externa permanecen en `NO-GO`.
-- Los datos profesionales reales permanecen bloqueados por F-01, F-03 y F-10 de `AUDITORIA-INTEGRAL-2026-08-11.md`.
+- Los datos profesionales reales permanecen bloqueados por F-01 y por el alcance parcial de F-10 de `AUDITORIA-INTEGRAL-2026-08-11.md`; F-03 ya esta cerrado.
 - F-01 Fase A: `PARTIAL`; los scripts y pruebas están versionados, pero la protección global de terminal sigue abierta.
-- F-03 Fase A: `DESIGNADO`; el diseño de backup cifrado externo y restore verificable está en `projects/hermes_ia/F03-BACKUP-RESTORE.md`, sin ejecución real.
+- F-03: `CERRADO`; backup cifrado externo, checksum y restauracion aislada verificados el 2026-08-21.
 - Este experimento pertenece a Financial Ops y no desplaza la prioridad vigente de Hermes Creador.
 
 ## Track E: Automatizacion controlada
@@ -219,8 +220,9 @@ Personal Ops no publica, no toca secretos, no automatiza decisiones sensibles y 
 
 ## Tareas actuales
 
-1. Elegir si la siguiente implementacion oficial minima sera `ciudadanoinusual-captura-privada` o si primero se consolida una semana mas de uso.
-2. Probar dos usos reales mas de `Personal Ops V1` y registrar si reduce friccion de portatil.
+1. Probar cinco entradas reales de Hermes Creador mediante lenguaje natural y sin obligar a recordar comandos.
+2. Publicar manualmente al menos una pieza y registrar resultado a 24 horas y 7 dias.
+3. Probar dos usos reales mas de `Personal Ops V1` y registrar si reduce friccion de portatil.
 
 ## Regla de cierre operativo
 
@@ -255,7 +257,7 @@ Estado a 2026-06-21:
 
 - todas las condiciones anteriores ya quedaron cumplidas en uso real;
 - Mobile Ops V1 se considera cerrado;
-- la skill ya supero `3/3` y queda como candidata a formalizacion, no como oficial final.
+- la skill historica supero `3/3`, pero actualmente esta ausente del runtime y no se formaliza ni restaura sin una necesidad demostrada.
 - `/background` pequeno queda aceptado como experimento seguro para tareas no destructivas y registrables.
 
 Estado historico a 2026-06-22, sustituido para runtime por la comprobacion del 2026-08-21:

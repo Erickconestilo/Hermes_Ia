@@ -43,7 +43,7 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 
 - estado: cerrado
 - evidencia: `ROADMAP-HERMES.md` y `projects/hermes_ia/SKILLS-EXPERIMENTALES.md`
-- resultado: la skill sigue un ciclo mas en `HERMES_HOME` solo como puente, sin ganar alcance nuevo y con retirada prevista tras probar las dos skills oficiales minimas
+- resultado: la skill puente historica esta ausente de `HERMES_HOME`; el flujo sigue mediante scripts y lenguaje natural, sin restaurarla ni formalizarla hasta demostrar una necesidad real
 
 ## Peticion minima de tarea
 
@@ -65,7 +65,8 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 
 ## Pendientes cercanas
 
-- ejecutar una prueba real de cada comando vigente: `hoy`, `guion`, `post`, `publicado` (ver `COMANDOS.md`; nombres antiguos `¿Qué toca hoy?`/`Video`/`Historia`/`He publicado` ya sustituidos)
+- probar cinco entradas reales de Hermes Creador con lenguaje natural, sin exigir palabras clave, y comprobar que al menos cuatro queden bien encaminadas sin errores graves de privacidad
+- publicar manualmente al menos una de esas piezas y registrar resultado a 24 horas y 7 dias
 - probar dos usos reales mas de `Personal Ops V1` y medir si reduce friccion de portatil
 - abrir Banco 2 con vida real expandida: pareja, convivencia, hogar, recados, comida, ocio simple y mini viajes
 - seguir probando `guion`, `post` y `carrusel` con situaciones reales
@@ -98,8 +99,8 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 
 ## Bloqueos o dudas abiertas
 
-- cuando versionar oficialmente la skill derivada de captura movil
-- si `Personal Ops V1` debe entrar ya o esperar una semana mas de uso real
+- si el uso real demuestra una necesidad suficiente para restaurar o versionar una skill de captura movil
+- si dos usos reales adicionales de `Personal Ops V1` confirman que reduce friccion de portatil
 - que piezas publicadas realmente conectan con audiencia
 
 ## Completadas recientes
