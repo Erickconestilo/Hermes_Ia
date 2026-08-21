@@ -29,14 +29,14 @@ A fecha actual, ya se ha validado lo siguiente:
 - funcionamiento de Hermes con modelo principal y fallback
 - sincronización manual local ↔ VPS mediante Git local ya operativa para documentación y runbooks de `Hermes_Ia`
 - autenticación `openai-codex` validada en Hermes
-- respuesta funcional validada con `gpt-5.4`
+- respuesta funcional validada con `gpt-5.6-terra` en el runtime el 2026-08-21
 - Telegram Gateway configurado, autorizado solo para el usuario permitido y validado desde movil
 - servicio de usuario `hermes-gateway.service` activo con `systemd` y `linger` habilitado
 
 ## Configuración actual del modelo
 
 - proveedor principal: `openai-codex`
-- modelo principal activo: `gpt-5.4`
+- modelo principal activo observado el 2026-08-21: `gpt-5.6-terra`
 - fallback temporal: `OpenRouter`
 - modelo fallback actual: `nvidia/nemotron-3-ultra-550b-a55b:free`
 

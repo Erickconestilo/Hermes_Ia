@@ -108,7 +108,7 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 - instalación base de Hermes validada
 - OpenRouter operativo
 - `openai-codex` autenticado y operativo como proveedor principal
-- `gpt-5.4` validado como modelo principal por `openai-codex`
+- `gpt-5.6-terra` observado como modelo principal por `openai-codex` el 2026-08-21
 - usos oficiales iniciales definidos: `Research`, `Content` y `Builder`
 - `JUDGE.md` creado y regla minima de 8/10 adoptada para salidas validas
 - guía operativa diaria creada para trabajo local ↔ VPS ↔ Hermes

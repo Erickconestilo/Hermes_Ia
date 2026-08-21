@@ -126,7 +126,7 @@ Estado validado dentro de esta fase:
 - acceso SSH validado
 - usuario `hermes` creado
 - Hermes instalado y operativo
-- proveedor principal `openai-codex` con `gpt-5.4`
+- proveedor principal `openai-codex` con `gpt-5.6-terra`, observado en el runtime el 2026-08-21
 - OpenRouter configurado como fallback
 - sincronizacion local, GitHub y VPS por Git ya operativa
 - Telegram Gateway operativo desde movil

@@ -20,7 +20,7 @@ Está validado:
 - usuario `hermes`
 - backend `local`
 - `openai-codex` autenticado como proveedor principal
-- `gpt-5.4` funcionando como modelo principal
+- `gpt-5.6-terra` observado en el runtime como modelo principal el 2026-08-21
 - OpenRouter mantenido como fallback
 - sincronización local ↔ VPS por Git ya operativa
 - Telegram Gateway operativo desde movil

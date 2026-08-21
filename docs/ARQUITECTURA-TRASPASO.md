@@ -46,7 +46,7 @@ Estado tecnico documentado:
 - Workspace VPS: `/home/hermes/workspace/Hermes_Ia`.
 - Backend actual: `local`.
 - Proveedor principal: `openai-codex`.
-- Modelo principal: `gpt-5.4`.
+- Modelo principal observado en el runtime el 2026-08-21: `gpt-5.6-terra`.
 - Fallback: OpenRouter.
 - Telegram Gateway operativo como servicio de usuario `hermes-gateway.service`.
 - `systemd linger` habilitado para mantener el gateway tras cerrar SSH.
@@ -364,7 +364,7 @@ Tecnologias confirmadas por documentacion:
 - Usuario Linux `hermes`.
 - Hermes Agent instalado nativo.
 - OpenAI Codex como proveedor principal.
-- `gpt-5.4` como modelo principal.
+- `gpt-5.6-terra` como modelo principal observado en el runtime el 2026-08-21.
 - OpenRouter como fallback.
 - Telegram Bot / Gateway.
 - `systemd --user` y linger para persistencia del gateway.
