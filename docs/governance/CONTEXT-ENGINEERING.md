@@ -11,6 +11,8 @@ Más contexto no siempre significa mejor resultado.
 
 Cada agente recibe solo el contexto mínimo necesario para hacer bien su trabajo.
 
+`BOOTSTRAP.md` decide qué debe leerse al iniciar una sesión; este documento solo decide qué contexto adicional entra en una tarea concreta.
+
 ## Capas de contexto
 
 ### Constitución

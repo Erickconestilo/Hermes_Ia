@@ -394,3 +394,8 @@ Hermes respondio que el estado real ya incluye:
 
 - `scripts/verificar-secretos.sh` conserva la deteccion sobre archivos en stage, pero ya no imprime coincidencias ni contenido sensible.
 - Prueba sintetica: una clave OpenAI simulada y una IP de documentacion activan el fallo y solo muestran tipo, archivo y linea.
+
+## Consolidacion de gobernanza - 2026-08-21
+
+- Se eliminó `CODEX-KICKOFF.md`: duplicaba el arranque que ya gobierna `BOOTSTRAP.md`.
+- Los documentos de políticas secundarias ahora referencian la fuente canónica de permisos, contexto, memoria, modelos, agentes, loops y roadmap en lugar de repetirla.

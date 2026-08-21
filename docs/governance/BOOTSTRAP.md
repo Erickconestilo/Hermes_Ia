@@ -22,8 +22,10 @@ Con estos cuatro ya se puede actuar en la mayoría de tareas locales, reversible
 Lectura condicional, solo si la tarea la necesita:
 
 - `docs/governance/ORCHESTRATOR.md` — si la tarea implica coordinar varios dominios o agentes especializados.
-- `docs/governance/CODEX-OPERATING-POLICY.md` — si se opera específicamente como Codex y hay dudas sobre su política propia.
+- `docs/governance/AGENT-SPEC.md` — si se crea, cambia o evalúa un contrato de agente.
+- `docs/governance/CODEX-OPERATING-POLICY.md` — si se opera específicamente como Codex y hay dudas de implementación o commit.
 - `docs/governance/MASTER-PLAN.md` y `ROADMAP-HERMES.md` — si la tarea toca la fase actual, el plan por fases o una decisión de roadmap.
+- `CONTEXT-ENGINEERING.md`, `MEMORY-ENGINEERING.md`, `LOOP-ENGINEERING.md`, `MODEL-SELECTION-POLICY.md` o `EVOLUTION-POLICY.md` — solo si la tarea afecta directamente a esa responsabilidad.
 - Archivos específicos de la tarea actual — siempre, al final, sea cual sea la tarea.
 
 Esta reducción (2026-07-21) responde al propio Principio 4 de la Constitución: "si una función obliga al usuario a recordar demasiados pasos, la función está mal diseñada". El orden anterior exigía leer 9 documentos (~1.400 líneas) antes de tocar nada, incluso para un cambio trivial. `docs/CODEX-BRIEF.md` ya resume lo esencial de `MASTER-PLAN.md`, `ROADMAP-HERMES.md` y el estado operativo, por eso puede sustituirlos como lectura obligatoria por defecto.
@@ -31,12 +33,12 @@ Esta reducción (2026-07-21) responde al propio Principio 4 de la Constitución:
 Si hay conflicto entre documentos, prevalece este orden:
 
 1. Constitución.
-2. Política operativa de Codex.
-3. Roadmap.
-4. `AGENTS.md`.
-5. Documentación específica.
+2. `AGENTS.md` para permisos, semáforo y límites operativos.
+3. `CODEX-OPERATING-POLICY.md` para la forma de implementar y commitear con Codex.
+4. `ROADMAP-HERMES.md` y `MASTER-PLAN.md` para estado y dirección por fases.
+5. Documentación específica de la tarea.
 
-**Nota de reconciliación (2026-07-21):** esta lista resuelve contradicciones entre reglas escritas — no dice qué hay que leer siempre. `AGENTS.md` es lectura obligatoria (núcleo mínimo, arriba); Política operativa de Codex y Roadmap son lectura condicional. Que algo sea condicional no le da más peso en un conflicto: solo significa que no toda tarea obliga a leerlo. Si una tarea concreta sí activa la lectura de Política de Codex o Roadmap y algo ahí contradice a `AGENTS.md`, gana el que esté más arriba en esta lista.
+La Constitución no puede contradecirse. `AGENTS.md` es la fuente única de límites operativos; ningún documento de ejecución puede ampliarlos. El roadmap describe estado, no autoriza acciones rojas.
 
 ## Regla principal
 
@@ -68,9 +70,7 @@ Eso significa:
 
 ## Cuándo debe detenerse
 
-Codex debe parar y pedir confirmación si la acción entra en la zona roja del semáforo de `AGENTS.md` (sección "Autonomía operativa"): `.env`, secretos, SSH, firewall, usuarios, `sudo`, paquetes, servicios, Docker, cron recurrente, MCPs, Playwright, memoria externa, publicación automática, borrar datos, `hermes doctor --fix`, convertir una skill experimental en oficial versionada, cambios fuera de `Hermes_Ia`, o tocar `TopoField`/`TopoTask`.
-
-**Esta lista no se repite aquí para evitar que las dos versiones diverjan con el tiempo.** `AGENTS.md` es la fuente detallada; si alguna vez no coinciden, gana `AGENTS.md` en lo operativo (es más específico) salvo que contradiga la Constitución.
+Codex debe parar y pedir confirmación si la acción entra en la zona roja definida en `AGENTS.md` (sección "Autonomía operativa"). Esa lista vive solo allí.
 
 Además de la zona roja operativa, deben pararse por separado las decisiones de producto o arquitectura — estas no viven en el semáforo de `AGENTS.md` porque no son acciones del día a día:
 

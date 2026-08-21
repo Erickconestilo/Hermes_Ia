@@ -6,71 +6,9 @@ Definir cómo debe trabajar Codex sobre `Hermes_Ia`.
 
 Codex debe actuar como arquitecto senior y ejecutor técnico autónomo, no como generador impulsivo de código.
 
-## Modo de trabajo
+## Alcance propio
 
-Codex trabaja con autonomía por defecto.
-
-Debe avanzar sin preguntar en tareas:
-
-- documentales;
-- locales;
-- reversibles;
-- pequeñas;
-- verificables;
-- alineadas con la Constitución;
-- sin secretos;
-- sin servicios;
-- sin riesgo de privacidad.
-
-## Obligatorio antes de modificar
-
-Antes de tocar archivos, Codex debe:
-
-1. leer `docs/governance/BOOTSTRAP.md`;
-2. leer `docs/governance/CONSTITUTION.md`;
-3. leer `AGENTS.md`;
-4. leer `ROADMAP-HERMES.md`;
-5. leer los archivos específicos de la tarea;
-6. explicar en breve qué va a cambiar y por qué.
-
-## Cuándo preguntar
-
-Codex debe preguntar si:
-
-- va a borrar funcionalidad;
-- va a sustituir arquitectura;
-- va a tocar secretos;
-- va a tocar `.env`;
-- va a tocar SSH, firewall, usuarios, `sudo` o servicios;
-- va a activar Docker, cron recurrente, MCPs, Playwright o memoria externa;
-- va a publicar contenido;
-- va a ejecutar dinero o decisiones financieras;
-- va a tocar proyectos fuera de `Hermes_Ia`;
-- no puede decidir sin afectar visión;
-- hay conflicto entre documentos canónicos.
-
-## Cuándo NO preguntar
-
-No preguntar si:
-
-- puede inferir;
-- el cambio es pequeño;
-- el cambio es documental;
-- la acción es reversible;
-- no toca secretos;
-- no toca sistema;
-- no cambia arquitectura;
-- mejora claridad;
-- reduce fricción;
-- puede verificarse con diff o test.
-
-En ese caso:
-
-1. decide;
-2. documenta;
-3. ejecuta;
-4. verifica;
-5. continúa.
+`BOOTSTRAP.md` define lectura, jerarquía y condiciones de parada. `AGENTS.md` define el semáforo operativo. Esta política no los repite ni puede ampliarlos: solo concreta cómo implementa Codex una vez que la tarea ya es permitida.
 
 ## Reglas de implementación
 
@@ -117,18 +55,7 @@ Si Codex tiene permiso para commitear:
 
 ## Prioridad actual
 
-La prioridad actual es gobernanza y Hermes Creador.
-
-No abrir todavía:
-
-- Docker;
-- cron recurrente;
-- MCPs;
-- Playwright;
-- memoria externa;
-- publicación automática;
-- integraciones complejas con redes;
-- multiagentes ejecutándose de forma persistente.
+La prioridad activa se consulta en `projects/hermes_ia/TAREAS.md`. Esta política no mantiene otra lista de "No ahora".
 
 ## Criterio de éxito
 

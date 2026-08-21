@@ -12,6 +12,8 @@ Los modelos son motores intercambiables.
 
 Usar el modelo más barato que pueda resolver bien la tarea, y reservar modelos potentes para decisiones críticas.
 
+El Orquestador aplica esta política al enrutar una tarea; no mantiene una segunda tabla de elección de modelos.
+
 ## Herramientas consideradas
 
 ### ChatGPT / Codex

@@ -7,6 +7,8 @@ Definir qué debe recordar Hermes, dónde debe recordarlo y cuándo debe olvidar
 La memoria no es acumular todo.
 La memoria es conservar lo que mejora decisiones futuras.
 
+Este documento define persistencia, consolidación y olvido. La selección de contexto para la tarea actual vive en `CONTEXT-ENGINEERING.md`.
+
 ## Tipos de memoria
 
 ### Memoria constitucional

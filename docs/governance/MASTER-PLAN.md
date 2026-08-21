@@ -4,8 +4,7 @@
 
 Este documento organiza la evolución de Hermes en fases.
 
-No sustituye `ROADMAP-HERMES.md`.
-Lo complementa desde la arquitectura de gobernanza.
+`ROADMAP-HERMES.md` y `projects/hermes_ia/TAREAS.md` son la fuente del estado y prioridad actuales. Este documento solo conserva la dirección por fases y sus criterios de terminado.
 
 ## Norte
 
@@ -48,31 +47,11 @@ Criterio de terminado:
 
 ## Fase 1 - Hermes Creador mínimo
 
-Estado (2026-07-21): en marcha, con avance real verificado, no cerrada.
-
-Antes de esta fecha, la fase llevaba semanas marcada como "activa" sin evidencia de trabajo reciente (hallazgo 4.4 de `AUDITORIA-2026-07-21.md`). Lo que se resolvió hoy:
-
-- rediseño de comandos completo, ver `projects/hermes_ia/content/ciudadanoinusual/COMANDOS.md` (Nivel 0 a Nivel 3);
-- `AUDIENCIA.md` y `APRENDIZAJES.md` creados con patrones de voz y aprendizajes reales, no solo plan;
-- `JUDGE-REGISTRO.md` calibrado con 24 evaluaciones reales y distribución 5-9 (antes daba 8/10 plano);
-- se probó y se descartó el menú nativo de comandos de Telegram (`setMyCommands`) como solución a la fricción móvil — reemplaza en vez de fusionar el menú propio de Hermes Agent y se resetea en cada `hermes gateway restart` (detalle en `runbooks/10-telegram-comandos-nativos.md`); Nivel 0 (mandar contenido sin comando) quedó adoptado como la solución real.
-
-Lo que sigue sin resolver, y por eso la fase no está cerrada:
-
-- solo 1 de más de 20 piezas de contenido se ha publicado nunca; documentación adicional no resuelve esto, hace falta publicar de verdad;
-- 12 de 18 piezas publicables siguen bloqueadas por edición visual/privacidad pendiente;
-- `Hermes Creador mínimo` con Nivel 0 no se ha probado todavía en una situación real de calle.
-
 Objetivo:
 
 Reducir fricción para crear contenido.
 
-Comandos humanos mínimos (plan original de esta fase; los nombres reales quedaron simplificados despues, ver `projects/hermes_ia/content/ciudadanoinusual/COMANDOS.md`):
-
-- `¿Qué toca hoy?` -> hoy `hoy`
-- `Vídeo` -> hoy `guion`
-- `Historia` -> hoy `post` o Nivel 0
-- `He publicado` -> hoy `publicado`
+Comandos humanos vigentes: ver `projects/hermes_ia/content/ciudadanoinusual/COMANDOS.md`.
 
 Debe hacer:
 
@@ -90,7 +69,7 @@ No debe:
 - copiar tendencias;
 - ignorar identidad.
 
-Criterio de terminado (no cumplido aún):
+Criterio de terminado:
 
 - al menos una pieza publicada usando el flujo Nivel 0 completo, de idea a publicación;
 - registro de esa publicación en `INDICE-PUBLICACIONES.md` con métricas reales.

@@ -11,21 +11,14 @@ Hermes trabaja por objetivos persistentes.
 
 Cada ciclo sigue este orden:
 
-1. Detectar objetivo.
-2. Entender problema.
-3. Recuperar contexto.
-4. Revisar memoria.
-5. Clasificar dominio.
-6. Elegir modelo y herramientas.
-7. Elegir agentes.
-8. Planificar fase actual.
-9. Ejecutar.
-10. Verificar.
-11. Integrar resultados.
-12. Documentar.
-13. Actualizar memoria.
-14. Detectar siguiente acción.
-15. Continuar o detenerse según reglas.
+1. Definir objetivo, restricciones y criterio de terminado.
+2. Recuperar el contexto mínimo y memoria necesarios.
+3. Clasificar y enrutar la tarea al nivel o agente adecuado.
+4. Ejecutar una fase pequeña y verificable.
+5. Integrar y validar el resultado.
+6. Registrar solo lo que deba persistir y decidir cierre o siguiente acción.
+
+`ORCHESTRATOR.md` define quién coordina; `CONTEXT-ENGINEERING.md`, `MEMORY-ENGINEERING.md` y `MODEL-SELECTION-POLICY.md` definen los criterios especializados que este ciclo consume.
 
 ## Regla de autonomía
 

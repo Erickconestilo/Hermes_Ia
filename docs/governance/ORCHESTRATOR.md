@@ -66,6 +66,8 @@ Debe entregar a cada agente solo el contexto que necesita.
 
 No saturar agentes con todo el repositorio.
 
+Las capas y reglas concretas viven en `CONTEXT-ENGINEERING.md`.
+
 ### 4. Seleccionar agentes
 
 Debe seleccionar el agente adecuado según tarea.
@@ -85,6 +87,8 @@ Debe elegir motor según:
 - necesidad de velocidad.
 
 Modelo caro solo cuando aporta.
+
+Los criterios de proveedor, coste y nivel de riesgo viven en `MODEL-SELECTION-POLICY.md`.
 
 ### 6. Ejecutar por fases
 
@@ -106,75 +110,23 @@ Si el resultado es contenido, documentación crítica, decisión técnica o outp
 
 Debe decidir qué se recuerda, qué se archiva y qué se descarta.
 
+La política de memoria vive en `MEMORY-ENGINEERING.md`.
+
 ### 10. Dejar rastro
 
 Toda decisión relevante debe quedar registrada en el archivo correcto.
 
-## Agentes iniciales
+## Agentes disponibles
 
-### Orchestrator
-
-Coordina todo el sistema.
-
-### Architect
-
-Cuida arquitectura, coherencia, límites y evolución sostenible.
-
-### Builder
-
-Implementa cambios en docs, scripts y repo.
-
-### Research
-
-Investiga, contrasta fuentes y resume con riesgos.
-
-### Content
-
-Crea vídeos, historias, posts, carruseles y piezas para CiudadanoInusual.
-
-### Judge
-
-Evalúa calidad, privacidad, coherencia y utilidad.
-
-### Mobile Ops
-
-Gestiona flujos desde Telegram, captura móvil y fricción mínima.
-
-### Personal Ops
-
-Gestiona notas privadas, decisiones, prioridades y carga mental.
-
-### Financial Ops
-
-Investiga ahorro, ingresos, empleo, recompensas, cupones y oportunidades sin ejecutar dinero.
-
-### Inspiration
-
-Extrae ideas útiles de referentes externos sin copiarlas.
+Los contratos y responsabilidades de Architect, Builder, Research, Content, Judge, Mobile Ops, Personal Ops, Financial Ops e Inspiration viven en `AGENT-SPEC.md`. El Orquestador los selecciona; no redefine sus responsabilidades.
 
 ## Reglas de creación de agentes
 
-Se puede crear un agente nuevo solo si:
-
-- hay una tarea repetida;
-- la responsabilidad está clara;
-- no duplica otro agente;
-- reduce fricción;
-- tiene inputs y outputs definidos;
-- respeta la Constitución.
-
-Si no cumple, se usa un agente existente.
+Se puede proponer un agente nuevo solo si supera el contrato de `AGENT-SPEC.md` y los criterios de adopción de `EVOLUTION-POLICY.md`. Si no, se usa un agente existente o Hermes general.
 
 ## Reglas de retirada de agentes
 
-Un agente puede retirarse, fusionarse o archivarse si:
-
-- no se usa;
-- duplica responsabilidad;
-- genera ruido;
-- aumenta fricción;
-- rompe la Constitución;
-- no aporta evidencia de valor.
+La retirada, fusión o archivo de un agente sigue los criterios de descarte de `EVOLUTION-POLICY.md`.
 
 ## Conflictos entre agentes
 

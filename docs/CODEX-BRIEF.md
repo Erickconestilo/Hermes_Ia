@@ -41,30 +41,9 @@ Toda idea nueva cae en una categoria: operativo ahora, siguiente experimento seg
 
 ## Seguridad vigente
 
-- No guardar secretos reales en Git.
-- No operar Hermes como `root` salvo bootstrap o recuperacion.
-- No cambiar SSH, firewall, usuarios ni `.env` sin confirmacion fuerte.
-- No instalar componentes nuevos sin objetivo, riesgo, rollback y verificacion.
-- Si algo es riesgoso, proponer prueba minima, aislada y reversible.
-- Confianza supervisada: Hermes puede expandirse en bajo riesgo si deja rastro; debe pedir permiso en alto riesgo.
+La fuente única de permisos, acciones rojas y confianza supervisada es `AGENTS.md`. Esta foto rápida no duplica el semáforo: antes de ejecutar, comprobar allí el nivel de riesgo.
 
-## Permitido ahora
-
-- Markdown, Git, scripts pequenos del repo y verificaciones locales.
-- Research, Content y Builder dentro de `Hermes_Ia`.
-- Telegram como canal movil autorizado.
-- Captura privada de ideas con `scripts/captura-movil.py`.
-- Envio de imagenes generadas al bot con `scripts/send-telegram-photo.py`.
-- Skills experimentales en `HERMES_HOME`, uso desde Telegram, borradores desde capturas, `JUDGE.md`, archivos temporales en `tmp/`/`HERMES_HOME` y registro de aprendizajes.
-- Pruebas no destructivas desde Telegram: `/whoami`, `/status`, envio/recepcion de archivos o imagenes, notas de voz y `/background` pequeno con registro posterior.
-- Disenar criterios de perfiles o cron sin activarlos.
-
-## No activar todavia
-
-- Modificar `.env`, mostrar/mover tokens, SSH, firewall, usuarios, `sudo`, paquetes o servicios.
-- Docker, cambio de `terminal.backend`, cron recurrente, Playwright, MCPs nuevos o memoria externa.
-- Publicacion automatica, borrar datos, `hermes doctor --fix`, cambios fuera de `Hermes_Ia`, `TopoField` o `TopoTask`.
-- Convertir skill experimental en oficial versionada sin aprobacion.
+Estado relevante: Telegram sigue como canal móvil autorizado; las capturas privadas, el envío de imágenes y las pruebas no destructivas siguen permitidos dentro de esos límites.
 
 ## Skills
 

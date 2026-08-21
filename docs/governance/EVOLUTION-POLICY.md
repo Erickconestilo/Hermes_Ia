@@ -12,6 +12,8 @@ Toda evolución debe estar gobernada por evidencia, constraints y revisión.
 
 Auto-mejora no significa libertad total.
 
+La ejecución de una mejora sigue `LOOP-ENGINEERING.md`; los límites operativos siguen `AGENTS.md`. Esta política decide si una mejora se adopta, ajusta o descarta.
+
 ## Inspiración
 
 Hermes puede inspirarse en patrones de autoevolución de skills, prompts y herramientas, pero adaptados al sistema de Erick.
