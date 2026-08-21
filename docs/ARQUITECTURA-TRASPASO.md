@@ -62,7 +62,7 @@ Estado de producto/operacion:
 - Mobile Ops V1 cerrado con evidencia real.
 - Personal Ops V1 activo en modo controlado.
 - Primera publicacion externa asistida por Hermes registrada.
-- Skill experimental `ciudadanoinusual-mobile-intake` candidata a formalizacion, pero no oficial.
+- La skill experimental `ciudadanoinusual-mobile-intake` aparece en el historial, pero una comprobacion real del 2026-08-21 la encontro ausente y no detectable; no es una capacidad operativa actual.
 
 ## Arquitectura general
 
@@ -539,7 +539,7 @@ Decision correcta del proyecto:
 
 ### 1. Parte del comportamiento vive fuera del repo
 
-La skill `ciudadanoinusual-mobile-intake` y el parche de botones de copia viven en `HERMES_HOME`, no como artefactos versionados.
+La skill `ciudadanoinusual-mobile-intake` y el parche de botones de copia se documentaron como artefactos de `HERMES_HOME`; la presencia real debe verificarse antes de usarlos. La comprobacion del 2026-08-21 encontro la skill ausente.
 
 Esto era aceptable para incubar, pero no debe quedarse indefinidamente asi.
 
@@ -606,7 +606,7 @@ La decision estrategica esta tomada: separar en dos skills. Falta decidir cuando
 
 ### Duracion de la skill puente
 
-`ciudadanoinusual-mobile-intake` sigue un ciclo mas. Hay que evitar que se vuelva permanente por inercia.
+Historicamente se acordo mantener `ciudadanoinusual-mobile-intake` un ciclo mas. La comprobacion del 2026-08-21 la encontro ausente, por lo que ya no es un puente operativo vigente.
 
 ### Personal Ops V1
 
@@ -829,7 +829,7 @@ La base tecnica esta operativa: Hermes corre nativo en un VPS Hetzner con usuari
 
 El sistema ya demostro valor real: Research, Content, Builder, Mobile Ops y Personal Ops existen como usos operativos; Mobile Ops V1 esta cerrado con pruebas reales; Telegram recibe texto, imagenes, voz y PDFs; las capturas privadas se guardan fuera de Git; las recuperaciones humanas ya no dependen de memorizar ids largos.
 
-La principal deuda es que parte de la logica viva sigue en `HERMES_HOME`, especialmente la skill experimental `ciudadanoinusual-mobile-intake` y ajustes del gateway. Eso fue correcto para incubar rapido, pero no debe quedarse asi. La decision arquitectonica vigente es no versionar una skill monolitica: hay que separar en `ciudadanoinusual-captura-privada` y `ciudadanoinusual-conversion-ligera`.
+La principal deuda es que la documentacion describia logica viva en `HERMES_HOME`, especialmente la skill experimental `ciudadanoinusual-mobile-intake`, sin verificar su presencia. La comprobacion real del 2026-08-21 la encontro ausente. La decision arquitectonica vigente sigue siendo no versionar una skill monolitica: una futura implementacion debe separar `ciudadanoinusual-captura-privada` y `ciudadanoinusual-conversion-ligera`.
 
 El siguiente arquitecto no deberia abrir Docker, cron, MCPs, Playwright, memoria externa ni multiagentes todavia. El siguiente movimiento correcto es formalizar la skill oficial de captura privada, probarla desde Telegram con una captura real, despues implementar conversion ligera y retirar la skill puente cuando deje de ser necesaria.
 

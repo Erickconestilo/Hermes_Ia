@@ -70,7 +70,7 @@ Toda idea nueva cae en una categoria: operativo ahora, siguiente experimento seg
 
 - Experimental en `HERMES_HOME`: permitida con auditoria posterior.
 - Oficial versionada en repo: solo tras repeticion real y aprobacion.
-- `ciudadanoinusual-mobile-intake`: experimental activa para Captura Movil V1, Modo Calle y flujo Telegram.
+- `ciudadanoinusual-mobile-intake`: ausente del runtime y no detectable por Hermes el 2026-08-21; no depender de ella hasta una decision explicita.
 - Indice: `projects/hermes_ia/SKILLS-EXPERIMENTALES.md`.
 
 ## Root vs Docker

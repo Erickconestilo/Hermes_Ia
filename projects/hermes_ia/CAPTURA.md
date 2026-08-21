@@ -8,11 +8,11 @@ Consolida en un solo archivo lo que antes vivía repartido en `CONTRATO-CAPTURA-
 - tipo: futuras skills oficiales versionadas
 - origen: separación de la skill experimental `ciudadanoinusual-mobile-intake`
 - estado actual: contratos cerrados; implementación oficial pendiente
-- skill puente actual: `ciudadanoinusual-mobile-intake` sigue viva en `HERMES_HOME`, sin borrarse ni congelarse, hasta que las dos nuevas queden definidas y probadas
+- skill puente actual: `ciudadanoinusual-mobile-intake` no esta presente ni es detectable en `HERMES_HOME` desde la comprobacion real del 2026-08-21; no se restaura automaticamente
 
 ## Evidencia de partida
 
-La skill puente ya cumple, con evidencia real registrada en `learning/bitacora.md` y `JUDGE-REGISTRO.md`:
+El flujo historico de la skill puente cumplio, con evidencia registrada en `learning/bitacora.md` y `JUDGE-REGISTRO.md`:
 
 - `3/3` capturas reales útiles sin errores graves;
 - guardado privado fuera de Git;
@@ -22,7 +22,7 @@ La skill puente ya cumple, con evidencia real registrada en `learning/bitacora.m
 - recepción de imagen, voz y PDF validada desde Telegram;
 - entrada natural validada con foto + instrucción breve de guardado.
 
-Por eso su estado es `candidata a formalización`, no incubación temprana.
+Esa evidencia no prueba que siga instalada ni descubrible. Su estado actual es `ausente del runtime`; no puede considerarse candidata operativa hasta una nueva instalacion y prueba real.
 
 ## Decisión de arquitectura: Plan B
 

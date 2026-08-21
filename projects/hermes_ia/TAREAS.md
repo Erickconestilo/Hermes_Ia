@@ -7,7 +7,11 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 ## Siguiente tarea concreta
 
 - probar `Hermes Creador minimo` con una situacion real usando el Nivel 0 de `COMANDOS.md` (mandar foto o nota sin palabra clave) y verificar si de verdad reduce la friccion de calle que se reporto el 2026-07-21
-- decidir si se aplican las actualizaciones pendientes del VPS y se reinicia (detectado el 2026-08-08 durante el endurecimiento SSH: `System restart required`, 6 actualizaciones inmediatas + 13 via ESM Apps); no se toco por estar fuera de alcance de esa tarea
+- F-01 queda aceptado por ahora como mitigacion parcial verificada; no ampliar reglas sin un nuevo bloque de seguridad aprobado.
+
+## Estado de pruebas en Windows
+
+- Las 8 pruebas omitidas son esperadas: seis requieren `HERMES_AGENT_SOURCE` (checkout local de Hermes) y dos requieren privilegio de enlaces simbolicos no disponible en este Windows.
 
 ## Cerrado recientemente
 
@@ -88,11 +92,9 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 
 ## F-03 — Backup y restore verificable
 
-- estado: `DESIGNADO`; no cerrado
-- evidencia: `projects/hermes_ia/F03-BACKUP-RESTORE.md`
-- situación actual: respaldos visibles locales al VPS, sin cifrado portable, copia externa ni restauración completa, consistente y reproducible del conjunto actual
-- próxima acción: elegir destino externo, presupuesto, RPO/RTO, retención y custodia de clave antes de ejecutar Fase B
-- restricciones: no crear backup, transferir datos, instalar herramientas ni tocar servicios sin aprobación específica
+- estado: `CERRADO`; respaldo externo cifrado y restauracion aislada verificados el 2026-08-21
+- evidencia: `learning/bitacora.md` y `learning/MEMORIA.md`
+- resultado: copia GPG AES-256 creada antes de salir del VPS, checksum coincidente y restauracion de mensajes, sesiones y capturas validada; no se incluyen secretos en Git
 
 ## Bloqueos o dudas abiertas
 
@@ -122,12 +124,12 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 - primer flujo movil extremo a extremo cerrado: captura -> recuperacion -> borrador -> `JUDGE.md` -> registro
 - recepcion de documento PDF desde Telegram validada con ruta accesible
 - tercera captura real util guardada, convertida y evaluada con `JUDGE.md`
-- `ciudadanoinusual-mobile-intake` ya pasa a candidata a formalizacion tras `3/3` capturas reales utiles
+- `ciudadanoinusual-mobile-intake` alcanzo historicamente `3/3` capturas utiles, pero esta ausente del runtime desde la comprobacion del 2026-08-21
 - entrada natural validada en uso real con foto + instruccion breve de guardado
 - mini especificacion de formalizacion creada para decidir versionado oficial sin depender del chat
 - decision de arquitectura tomada: futura formalizacion separada en captura privada y conversion ligera
 - plan minimo de separacion creado para ejecutar la division sin romper Mobile Ops
-- skill puente `ciudadanoinusual-mobile-intake` mantenida un ciclo mas en `HERMES_HOME` con alcance congelado
+- la skill puente se planifico para un ciclo adicional, pero no existe actualmente en `HERMES_HOME`; no restaurar sin una decision y prueba separadas
 - `Personal Ops V1` activado en modo controlado para decisiones, prioridades y notas privadas
 - recuperacion humana validada con `ultimas 5`, `numero 2` y `mi ultima decision`
 - envio de imagenes generadas a Telegram validado con `scripts/send-telegram-photo.py`

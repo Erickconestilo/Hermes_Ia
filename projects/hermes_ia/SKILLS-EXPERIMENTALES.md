@@ -32,7 +32,7 @@ No permitido sin aprobacion:
 
 | Nombre | Ubicacion | Estado | Proposito | Fecha detectada | Evidencia de uso | Riesgos | Permisos | Limites | Condicion para formalizar | Condicion para archivar |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| `ciudadanoinusual-mobile-intake` | `/home/hermes/.hermes/skills/note-taking/ciudadanoinusual-mobile-intake/` | skill puente activa por un ciclo mas | Captura Movil V1, Modo Calle y flujo Telegram para CiudadanoInusual | 2026-06-21 | 3 capturas reales utiles; recuperacion privada; Judge aplicado; archivo e imagen recibidos por Telegram; foto + instruccion breve de guardado validada | conservar datos sensibles; cambiar flujo sin registro; seguir mezclando captura con redaccion si la intencion es ambigua; retrasar demasiado el versionado oficial | capturas privadas fuera de Git, recuperacion, borradores y registro posterior | no tocar Git, servicios, `.env`, secretos, cron recurrente ni sistema sin permiso; no ganar alcance nuevo | implementar la skill oficial 1 y mantener el flujo movil estable mientras actua como puente | archivar cuando la skill oficial 1 y la skill oficial 2 pasen prueba minima o si vuelve a meter plantillas en `original_text`, inventa, toca Git sin permiso, modifica sistema o empeora el flujo |
+| `ciudadanoinusual-mobile-intake` | ruta historica: `/home/hermes/.hermes/skills/note-taking/ciudadanoinusual-mobile-intake/` | ausente del runtime el 2026-08-21 | flujo historico de Captura Movil V1 y Modo Calle | 2026-06-21 | 3 capturas reales utiles; recuperacion privada; Judge aplicado; archivo e imagen recibidos por Telegram; foto + instruccion breve de guardado validada | documentacion puede prometer una capacidad no instalada | no aplica mientras este ausente | no restaurar ni ganar alcance sin aprobacion | decidir si se instala una skill oficial 1 y se prueba en real | archivar esta referencia si se sustituye el flujo o documentar reinstalacion verificada |
 
 ## Criterio de formalizacion
 
@@ -46,29 +46,10 @@ Una skill experimental puede pasar a skill oficial versionada solo si:
 
 ## Estado actual de decision
 
-`ciudadanoinusual-mobile-intake` ya no esta solo en incubacion temprana.
+La evidencia de uso es historica, no estado actual. La comprobacion real del 2026-08-21 encontro la ruta ausente, sin `SKILL.md`, y `hermes skills list` no devolvio la skill.
 
-Con `3/3` capturas reales utiles y uso real desde Telegram, pasa a candidata a formalizacion.
+Decision vigente:
 
-Todavia no debe considerarse oficial porque le falta una mejora minima:
-
-- aceptar mejor texto libre;
-- aceptar foto + contexto breve;
-- aceptar nota de voz + intencion explicita de guardado;
-- y, si la intencion no esta clara, preguntar una sola vez antes de desviarse a analisis o contenido.
-
-Estado tras la ultima prueba real:
-
-- foto + instruccion breve de guardado ya funciona;
-- la skill prioriza captura sobre analisis visual cuando la intencion es clara;
-- el siguiente umbral ya no es de uso basico, sino de decision de versionado oficial o permanencia en `HERMES_HOME`.
-
-Decision aprobada:
-
-- no oficializar una sola skill monolitica;
-- preparar separacion futura en:
-  - skill de captura/recuperacion privada;
-  - skill de conversion ligera a contenido.
-- mantener la skill actual un ciclo mas solo como puente operativo;
-- no darle mas alcance nuevo;
-- retirarla cuando las dos skills oficiales minimas ya esten probadas.
+- no restaurar automaticamente la skill ausente;
+- conservar los contratos de captura y conversion como diseno futuro;
+- decidir en una sesion separada si se instala una skill oficial minima o si el flujo queda limitado a scripts y prompts manuales.

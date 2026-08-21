@@ -46,7 +46,7 @@ Convertir Hermes en el arnes personal de IA de Erick/CiudadanoInusual:
 | Publicacion externa | Abierta | 1 publicacion LinkedIn registrada |
 | Telegram operativo base | Cerrado | `/whoami`, `/status`, imagen, voz y `/background` pequeno validados |
 | Flujo movil extremo a extremo | Cerrado | captura privada -> recuperacion -> borrador -> Judge -> registro completados |
-| Captura Movil V1 | Operativa | prueba real desde Telegram; placeholder corregido; skill experimental ajustada; validacion anti-plantillas |
+| Captura Movil V1 | Parcial | script versionado y pruebas historicas; skill experimental ausente del runtime el 2026-08-21 |
 | Personal Ops V1 | Activo en modo controlado | `projects/hermes_ia/PERSONAL-OPS-V1.md` |
 | Empleo Ops V0 | Futuro experimento controlado; no operativo | contrato y prueba sintetica en `projects/hermes_ia/EMPLEO-OPS-V0.md` |
 | Judge aplicado y registrado | Cerrado | `projects/hermes_ia/JUDGE-REGISTRO.md` con piezas reales evaluadas |
@@ -64,7 +64,7 @@ Convertir Hermes en el arnes personal de IA de Erick/CiudadanoInusual:
 - Envio de imagenes generadas a Telegram.
 - Git como mecanismo de sincronizacion.
 - Skills experimentales dentro de `HERMES_HOME` como incubadora de flujos repetibles de bajo riesgo.
-- Skill `ciudadanoinusual-mobile-intake` activa como skill puente de incubadora durante un ciclo mas.
+- No hay skill puente activa actualmente: `ciudadanoinusual-mobile-intake` esta ausente de `HERMES_HOME` y no es detectable por Hermes.
 
 ### Siguiente experimento seguro
 
@@ -95,7 +95,7 @@ Convertir Hermes en el arnes personal de IA de Erick/CiudadanoInusual:
 | Telegram Gateway con texto, imagenes, archivos y voz | texto, imagen, voz y PDF validados; `.asc` rechazado | medio | experimento seguro si no toca secretos ni servicios |
 | Comandos `/whoami` y `/status` | validados desde Telegram | bajo | permitidos con registro posterior |
 | `/background` desde mensajeria | validado en tareas pequenas no destructivas | medio | permitido solo para tareas no destructivas y registradas |
-| Skills experimentales | `ciudadanoinusual-mobile-intake` en `HERMES_HOME`, candidata a formalizacion con entrada natural ya validada | bajo-medio | permitidas como incubadora con auditoria posterior |
+| Skills experimentales | no hay una skill movil activa detectada; `ciudadanoinusual-mobile-intake` requiere decision explicita antes de restaurar o formalizar | bajo-medio | permitidas como incubadora con auditoria posterior |
 | Toolsets amplios por plataforma | disponibles segun instalacion | variable | usar solo capacidades necesarias; Docker/MCPs/Playwright siguen rojos |
 | Cron one-shot y recurrente | no activo | medio-alto | one-shot futuro con permiso; recurrente sigue rojo |
 | Context files `AGENTS.md` | activo como politica del repo | bajo | mantener actualizado y conciso |
@@ -121,7 +121,7 @@ Condiciones:
 
 | Skill | Estado | Ubicacion | Proposito | Condicion para formalizar |
 | --- | --- | --- | --- | --- |
-| `ciudadanoinusual-mobile-intake` | skill puente activa por un ciclo mas | `HERMES_HOME` | Captura Movil V1, Modo Calle y flujo Telegram para CiudadanoInusual | implementar y probar la skill oficial 1 sin romper el flujo movil |
+| `ciudadanoinusual-mobile-intake` | ausente del runtime el 2026-08-21 | no disponible en `HERMES_HOME` | flujo historico de Captura Movil V1 y Modo Calle | decidir si se recupera de forma controlada o se sustituye por skills oficiales |
 
 ## Track B: CiudadanoInusual y feedback real
 
@@ -258,21 +258,20 @@ Estado a 2026-06-21:
 - la skill ya supero `3/3` y queda como candidata a formalizacion, no como oficial final.
 - `/background` pequeno queda aceptado como experimento seguro para tareas no destructivas y registrables.
 
-Estado ampliado a 2026-06-22:
+Estado historico a 2026-06-22, sustituido para runtime por la comprobacion del 2026-08-21:
 
 - la recuperacion humana ya no depende solo de leer ids largos;
 - Telegram ya muestra botones de copia para `ultimas 5 capturas` en el runtime real de Hermes;
-- la mejora sigue siendo operativa-remota en `HERMES_HOME`, pendiente de decidir si merece formalizacion posterior.
+- la mejora se documento como operativa-remota en `HERMES_HOME`; actualmente no hay skill detectable ni se puede asumir disponible.
 
 ## Decision de arquitectura ya tomada
 
 Sobre `ciudadanoinusual-mobile-intake`:
 
-- sigue un ciclo mas en `HERMES_HOME`;
-- no gana mas alcance nuevo;
-- se usa solo como skill puente operativa;
+- su funcion de puente fue una decision historica, pero esta ausente del runtime actual;
+- no se restaura ni gana alcance nuevo sin aprobacion;
 - no se versiona como skill oficial monolitica;
-- debe retirarse en cuanto `ciudadanoinusual-captura-privada` y `ciudadanoinusual-conversion-ligera` tengan implementacion minima y prueba basica.
+- la siguiente decision separada es instalar y probar una skill oficial minima o mantener el flujo en scripts y prompts manuales.
 
 ## Regla de decision
 

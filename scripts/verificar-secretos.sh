@@ -11,8 +11,9 @@
 # Uso como hook (ver runbooks/02-seguridad.md para instalarlo):
 #   se ejecuta solo, antes de cada `git commit`.
 #
-# Si encuentra algo sospechoso, termina con codigo != 0 y lista los
-# archivos y lineas. No borra ni modifica nada.
+# Si encuentra algo sospechoso, termina con codigo != 0 y lista solo tipo,
+# archivo y linea. Nunca imprime el contenido que coincidio. No borra ni
+# modifica nada.
 
 set -euo pipefail
 
@@ -30,6 +31,39 @@ fi
 
 found=0
 
+# Muestra metadatos suficientes para localizar una coincidencia sin exponer
+# el secreto o la IP que activo el detector.
+report_match() {
+  local kind="$1"
+  local file="$2"
+  local line="$3"
+
+  printf 'POSIBLE %s: archivo=%q linea=%s\n' "$kind" "$file" "$line"
+}
+
+scan_staged_pattern() {
+  local kind="$1"
+  local regex="$2"
+  local file line
+  local -a lines
+
+  for file in "${staged_files[@]}"; do
+    # Se escanea el blob preparado para el commit, no el contenido sin guardar.
+    # Se conserva solo el numero de linea antes de informar la coincidencia.
+    mapfile -t lines < <(
+      git show ":$file" 2>/dev/null \
+        | grep -En -e "$regex" \
+        | cut -d: -f1 \
+        || true
+    )
+
+    for line in "${lines[@]}"; do
+      report_match "$kind" "$file" "$line"
+      found=1
+    done
+  done
+}
+
 # Patrones de secretos con forma reconocible.
 # Cada patron: descripcion | regex extendida (grep -E)
 patterns=(
@@ -45,27 +79,26 @@ echo "verificar-secretos: revisando ${#staged_files[@]} archivo(s) en stage..."
 for entry in "${patterns[@]}"; do
   desc="${entry%%|*}"
   regex="${entry#*|}"
-  matches="$(git diff --cached -U0 -- "${staged_files[@]}" 2>/dev/null | grep -EnH -e "$regex" || true)"
-  if [ -n "$matches" ]; then
-    echo ""
-    echo "POSIBLE SECRETO ($desc):"
-    echo "$matches"
-    found=1
-  fi
+  scan_staged_pattern "SECRETO tipo=$desc" "$regex"
 done
 
 # IPs publicas: en este repo la regla es no versionar la IP real del VPS,
 # siempre usar el placeholder <HETZNER_VPS_IP>. Se excluyen direcciones
 # de uso general que no son sensibles (loopback, sin sentido, comodines).
-ip_matches="$(git diff --cached -U0 -- "${staged_files[@]}" 2>/dev/null \
-  | grep -EnH -e '([0-9]{1,3}\.){3}[0-9]{1,3}' \
-  | grep -Ev -e '0\.0\.0\.0|127\.0\.0\.1|255\.255\.255\.255|<HETZNER_VPS_IP>' || true)"
-if [ -n "$ip_matches" ]; then
-  echo ""
-  echo "POSIBLE IP REAL VERSIONADA (deberia ser <HETZNER_VPS_IP> si es el VPS):"
-  echo "$ip_matches"
-  found=1
-fi
+for file in "${staged_files[@]}"; do
+  mapfile -t ip_lines < <(
+    git show ":$file" 2>/dev/null \
+      | grep -En -e '([0-9]{1,3}\.){3}[0-9]{1,3}' \
+      | grep -Ev -e '0\.0\.0\.0|127\.0\.0\.1|255\.255\.255\.255|<HETZNER_VPS_IP>' \
+      | cut -d: -f1 \
+      || true
+  )
+
+  for line in "${ip_lines[@]}"; do
+    report_match "IP REAL VERSIONADA" "$file" "$line"
+    found=1
+  done
+done
 
 if [ "$found" -eq 1 ]; then
   echo ""

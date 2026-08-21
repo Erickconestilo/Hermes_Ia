@@ -12,3 +12,9 @@ No sustituye la bitacora. No es lectura obligatoria de `BOOTSTRAP.md` (para no s
 - 2026-08-08: Hermes Agent actualizado 0.16.0 -> 0.20.0 (20883 commits). Detalle: bitacora.md
 - 2026-08-08: Hermes 0.20.0 trae panel web (`hermes dashboard`); apagado, no expuesto. Ver bitacora.
 - 2026-08-08: Config Hermes migrada v29->v33; verify_on_stop corregido a "auto". Ver bitacora.
+- 2026-08-21: F-03 validado: copia GPG externa y restauracion aislada con 1.427 mensajes, 41 sesiones y 11 capturas.
+- 2026-08-21: F-01: tres simulaciones de riesgo bloqueadas; proteccion textual parcial, sin cierre semantico.
+- 2026-08-21: VPS actualizado y reiniciado: kernel 6.8.0-138, sin actualizaciones estandar y gateway operativo.
+- 2026-08-21: Retencion minima de capturas probada con datos sinteticos; sesiones, logs y backups siguen pendientes.
+- 2026-08-21: Skill movil historica ausente del runtime; no se restaura sin decision y prueba reales.
+- 2026-08-21: Verificador de secretos ya redactor valores: solo informa tipo, archivo y linea; prueba sintetica aprobada.

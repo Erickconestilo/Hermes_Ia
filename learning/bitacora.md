@@ -355,3 +355,42 @@ Hermes respondio que el estado real ya incluye:
   - `agent.verify_on_stop` quedo en `false` tras la migracion (Hermes no exige verificar codigo editado antes de dar por terminada una respuesta). Corregido a `"auto"` (activo en CLI/TUI, apagado en mensajeria) con `hermes config set agent.verify_on_stop auto` -- mas alineado con el principio de evidencia antes que intuicion.
   - Warnings de toolset desconocido para `teams` y `google_chat`: sin impacto, plataformas no usadas ni configuradas.
 - Verificado con `hermes doctor`: `Config version up to date (v33)`, sin aviso de `verify_on_stop`. Quedan 4 avisos menores ya conocidos (vulnerabilidades npm de build-tool, API keys opcionales sin configurar) -- ninguno nuevo ni bloqueante.
+
+## F-03 backup externo cifrado y restauracion verificada - 2026-08-21
+
+- Se creo una copia de configuracion, datos operativos y workspace en el VPS sin detener el gateway.
+- La copia se cifro con GPG AES-256 antes de transferirla fuera del VPS; el checksum coincide en origen y destino.
+- La restauracion aislada valido 1.427 mensajes, 41 sesiones y 11 capturas; JSONL valido y directorio temporal eliminado.
+- No se modificaron servicios, paquetes ni configuracion. Tras autorizacion explicita, el TAR sin cifrar se elimino; se conserva solo la copia GPG y la copia externa.
+
+## F-01 despliegue parcial de approvals.deny - 2026-08-21
+
+- Se respaldo `config.yaml` con permisos 600 y se desplegaron tres reglas para cargas directas con `curl`; `hermes config check` valido la configuracion.
+- La simulacion seca de `curl --data-binary @...` devolvio `user-deny` con codigo 3, sin ejecutar trafico ni leer archivos reales.
+- La primera simulacion de destinatario Telegram arbitrario y de exportacion hacia `~/.ssh/authorized_keys` devolvio `allow`; se corrigio con dos reglas explicitas adicionales, tras nuevo backup privado de config.
+- Repeticion real: las tres simulaciones de riesgo devolvieron `user-deny` con codigo 3; lectura local y `curl` sin carga siguieron en `allow` con codigo 0.
+- El resultado cubre esas rutas textuales concretas. F-01 sigue siendo una mitigacion parcial: no constituye control semantico ni habilita datos reales.
+- Decision de alcance: se acepta esta proteccion limitada por ahora; cualquier ampliacion requerira un bloque de seguridad separado.
+
+## Mantenimiento del VPS y reinicio controlado - 2026-08-21
+
+- Se actualizaron 26 paquetes estandar de Ubuntu; no se instalaron ni eliminaron paquetes y no se activo Ubuntu Pro/ESM.
+- El VPS se reinicio de forma controlada para cargar el kernel `6.8.0-138-generic`; ya no existe marcador de reinicio pendiente ni actualizaciones estandar pendientes.
+- Tras el arranque, `hermes-gateway.service` quedo activo y Hermes conserva la version `0.20.0`.
+
+## F-10 retencion minima de capturas privadas - 2026-08-21
+
+- Se definio `RETENCION-DATOS.md` para capturas privadas: 30 dias descartadas, 90 inbox/reviewed y 180 convertidas; cualquier borrado exige revision previa y `--apply` explicito.
+- Se anadio `scripts/retencion-datos.py`, que no muestra cuerpos privados y queda en revision por defecto; no se ejecuto contra el almacen real.
+- Dos pruebas sinteticas pasaron: `--dry-run` no modifica el JSONL y `--apply` elimina solo registros vencidos de un directorio temporal.
+- Sesiones, logs, adjuntos y backups siguen fuera de este alcance; F-10 general no se declara cerrado.
+
+## Reconciliacion de skill movil - 2026-08-21
+
+- Evidencia real en VPS: la ruta de `ciudadanoinusual-mobile-intake` no existe, falta `SKILL.md` y `hermes skills list` no la detecta.
+- No se restauro ni creo ninguna skill. Se corrigieron los documentos operativos para no tratar una capacidad historica como runtime activo.
+
+## F-08 salida segura del verificador de secretos - 2026-08-21
+
+- `scripts/verificar-secretos.sh` conserva la deteccion sobre archivos en stage, pero ya no imprime coincidencias ni contenido sensible.
+- Prueba sintetica: una clave OpenAI simulada y una IP de documentacion activan el fallo y solo muestran tipo, archivo y linea.
