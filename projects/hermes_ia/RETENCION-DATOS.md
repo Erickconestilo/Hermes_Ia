@@ -2,7 +2,7 @@
 
 ## Alcance actual
 
-Esta politica cubre las capturas privadas de CiudadanoInusual almacenadas fuera de Git en `capturas.jsonl`. No borra ni modifica sesiones, logs, adjuntos, backups ni datos de otros sistemas.
+Esta politica cubre las capturas privadas de CiudadanoInusual almacenadas fuera de Git en `capturas.jsonl` y los trabajos privados de video de `CiudadanoInusual Shorts V1`. No borra ni modifica sesiones, logs, adjuntos ajenos al flujo, backups ni datos de otros sistemas.
 
 ## Regla de minimizacion
 
@@ -35,3 +35,15 @@ El vencimiento nunca borra datos por si solo. Primero se ejecuta una revision co
 - Backups: conservar segun la politica F-03; su purga se decide por separado.
 - Sesiones, logs y adjuntos requieren una politica posterior basada en su formato y valor operativo. Esta politica no afirma cubrirlos.
 - La primera aplicacion real requiere una sesion independiente y autorizacion para borrar datos.
+
+## Trabajos de video
+
+`scripts/video-social.py retention --dry-run` solo lista identificadores, estados y antiguedad. No tiene modo de borrado.
+
+| Estado | Plazo para aparecer como candidato |
+| --- | ---: |
+| `discarded` o `failed` | 7 dias |
+| `rendered` sin aprobar | 30 dias |
+| `exported` | 90 dias |
+
+El original, las previews y el export permanecen intactos aunque el trabajo aparezca como candidato. Cualquier limpieza posterior exige backup y aprobacion explicita.

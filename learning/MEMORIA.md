@@ -20,3 +20,4 @@ No sustituye la bitacora. No es lectura obligatoria de `BOOTSTRAP.md` (para no s
 - 2026-08-21: Verificador de secretos ya redactor valores: solo informa tipo, archivo y linea; prueba sintetica aprobada.
 - 2026-08-21: Gobernanza reducida: BOOTSTRAP es único arranque; políticas secundarias remiten a fuentes canónicas.
 - 2026-08-24: Video Telegram validado con fotogramas y transcripcion local; `video_analyze` nativo sigue desactivado.
+- 2026-08-24: Shorts V1 implementado y probado en Linux sintetico; despliegue y cuatro pruebas reales por Telegram pendientes.

@@ -248,6 +248,7 @@ Esta tabla recoge solo lo que ya fue probado en uso real.
 | --- | --- | --- | --- |
 | Imagen | valido | recibe, guarda en cache accesible, puede describirla, revisar privacidad y recomendar formato | imagen recibida y ruta accesible validada en `image_cache` |
 | Video | valido con flujo local | recibe y guarda el archivo; `scripts/preparar-video-social.py` extrae fotogramas y transcribe audio localmente para que Hermes recomiende mejoras, cortes, privacidad y formato | MP4 real reenviado desde Telegram y analisis recibido en el movil |
+| Video A/B/C de Shorts V1 | pendiente de validacion real | el motor versionado conserva el original, analiza, renderiza tres variantes y exporta la aprobada sin publicar | prueba sintetica completa en Linux; faltan tres cortos y un video largo reales enviados desde Telegram |
 | Nota de voz | valido | recibe audio, hace transcripcion o resumen fiel y recomienda formato | nota de voz validada con confirmacion y resumen |
 | PDF | valido | recibe, guarda en cache accesible y puede decir que contiene o extraer texto segun el flujo | PDF recibido con ruta accesible y lectura basica validada |
 | `.asc` | rechazado | no entra en este flujo de carga | rechazo observado por tipo no permitido |
@@ -259,6 +260,7 @@ Regla operativa:
 - si el tipo ya esta rechazado, decirlo claro;
 - si un tipo nuevo no fue probado, tratarlo como no validado todavia.
 - no usar `video_analyze` nativo: queda desactivado porque la ruta auxiliar devolvio falsos exitos; el soporte validado es el preparador local mas vision.
+- no presentar Shorts V1 como operativo en Telegram hasta completar la prueba real de tres cortos y un video de 2-15 minutos.
 
 ## Limites vigentes
 

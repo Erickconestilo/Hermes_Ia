@@ -406,3 +406,11 @@ Hermes respondio que el estado real ya incluye:
 - Se anadio `scripts/preparar-video-social.py`: valida videos de hasta 50 MB, extrae una hoja de nueve fotogramas y transcribe el audio localmente con `faster-whisper`.
 - La prueba sintetica completo preparacion y analisis visual; la prueba real recibio un MP4 desde Telegram, lo guardo en cache privada y devolvio el analisis al movil.
 - El video completo no se publica ni se envia al proveedor visual; Hermes analiza la hoja de fotogramas y usa la transcripcion privada como contexto.
+
+## CiudadanoInusual Shorts V1 - motor privado - 2026-08-24
+
+- Se implemento `scripts/video-social.py` con ingesta privada, checksum del original, analisis local, planes versionados, A/B/C, aprobacion, export, estado, descarte sin borrado y retencion solo `dry-run`.
+- Limites aplicados: cortos de hasta 60 segundos y 100 MB; largos de hasta 15 minutos y 1 GB; salidas de hasta 60 segundos, zoom `1.00-1.35` y maximo tres bloques de texto.
+- Una prueba sintetica real en Linux completo ingesta, analisis, A/B/C y aprobacion de B; el checksum del original no cambio y el export coincidio con la preview aprobada.
+- Un video sintetico de 66 segundos completo ingesta, analisis, hoja de 16 fotogramas y deteccion de escenas. La seleccion de tres momentos sigue siendo responsabilidad narrativa de Hermes.
+- El motor no publica, no borra y no instala dependencias. La integracion de lenguaje natural y entrega A/B/C por Telegram sigue pendiente de desplegar y probar con tres cortos y un video largo reales.

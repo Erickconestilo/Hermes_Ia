@@ -6,7 +6,7 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 
 ## Siguiente tarea concreta
 
-- probar `Hermes Creador minimo` con una situacion real usando el Nivel 0 de `COMANDOS.md` (mandar foto o nota sin palabra clave) y verificar si de verdad reduce la friccion de calle que se reporto el 2026-07-21
+- validar `CiudadanoInusual Shorts V1` con tres videos cortos y uno de 2-15 minutos: A/B/C, aprobacion natural por Telegram, export manual y maximo una correccion por pieza
 - F-01 queda aceptado por ahora como mitigacion parcial verificada; no ampliar reglas sin un nuevo bloque de seguridad aprobado.
 
 ## Estado de pruebas en Windows
@@ -53,6 +53,7 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 
 ## En curso
 
+- desplegar y validar en Telegram el motor privado `scripts/video-social.py`; su implementacion y prueba sintetica no equivalen a flujo movil validado
 - usar `Hermes Creador minimo` para decidir formato, revisar privacidad y preparar borradores de `CiudadanoInusual`
 - usar a Hermes como lector de contexto del proyecto piloto
 - usar a Hermes para priorizar la siguiente tarea pequena y util

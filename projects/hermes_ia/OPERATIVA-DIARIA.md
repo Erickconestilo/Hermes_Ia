@@ -197,9 +197,12 @@ Regla:
 - `hoy` decide solo una prioridad editorial o formato creativo; no deriva a Builder, productividad ni organizacion personal salvo peticion explicita.
 - `guion` crea guion corto vertical.
 - `post` crea un caption o story concreta, no decide formato general.
+- `Analiza este video para redes` activa Shorts V1: original privado, analisis local y A/B/C; en videos largos Hermes propone tres momentos antes de renderizar.
+- `Me quedo con la B`, `Cambia el texto de la A`, `Haz la B mas corta` y `Descarta este video` operan sobre el ultimo trabajo activo; si hay varios, Hermes pregunta cual.
 - Hermes pide contexto minimo.
 - El usuario conserva la decision final.
 - No hay publicacion automatica.
+- Las previews y el export aprobado siguen siendo privados hasta que el usuario publique manualmente.
 - Las publicaciones reales se registran solo en `content/ciudadanoinusual/publicaciones/INDICE-PUBLICACIONES.md`.
 
 ## Criterio de sesion util
