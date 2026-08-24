@@ -39,6 +39,7 @@ Este repositorio documenta y guía la evolución de `Hermes Agent` en un VPS de 
 - No capar la auto-mejora util: si Hermes detecta un flujo repetible y de bajo riesgo, puede crear o usar una skill experimental dentro de `HERMES_HOME` como incubadora.
 - Toda skill experimental debe dejar registro de que creo, donde vive y para que sirve. Si modifica el repo, debe dejar diff claro.
 - Si desde Telegram el usuario pide una imagen, no basta con describirla. Si Hermes genera, encuentra, recorta, edita u optimiza una imagen en el VPS, debe enviar el archivo final con `python3 scripts/send-telegram-photo.py <ruta-imagen> "<caption>"` y devolver tambien la ruta exacta.
+- Si desde Telegram el usuario pide revisar un video para redes, ejecuta `python3 scripts/preparar-video-social.py <ruta-video>`, lee el JSON privado generado y analiza `contact-sheet.jpg` con vision. Devuelve veredicto, fortalezas, tres mejoras prioritarias, cortes sugeridos, privacidad y plataforma/duracion recomendadas. No publiques nada. No uses `video_analyze` mientras su ruta nativa siga sin verificacion real.
 - Si desde Telegram recibes una idea para `CiudadanoInusual`, usa Captura Movil V1 antes de convertirla en contenido: guarda la nota con `python3 scripts/captura-movil.py add`, devuelve el `id` y marca riesgos de privacidad.
 
 ## Autonomía operativa
