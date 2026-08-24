@@ -413,6 +413,6 @@ Hermes respondio que el estado real ya incluye:
 - Limites aplicados: cortos de hasta 60 segundos y 100 MB; largos de hasta 15 minutos y 1 GB; salidas de hasta 60 segundos, zoom `1.00-1.35` y maximo tres bloques de texto.
 - Una prueba sintetica real en Linux completo ingesta, analisis, A/B/C y aprobacion de B; el checksum del original no cambio y el export coincidio con la preview aprobada.
 - Un video sintetico de 66 segundos completo ingesta, analisis, hoja de 16 fotogramas y deteccion de escenas. La seleccion de tres momentos sigue siendo responsabilidad narrativa de Hermes.
-- El motor no publica, no borra y no instala dependencias. La integracion de lenguaje natural y entrega A/B/C por Telegram sigue pendiente de desplegar y probar con tres cortos y un video largo reales.
+- El motor no publica, no borra y no instala dependencias. La integracion de lenguaje natural y entrega A/B/C ya esta desplegada; sigue pendiente probarla con tres cortos y un video largo reales.
 - Despliegue posterior: commits `15a357c` y `25f9744` sincronizados con VPS; 12 pruebas especificas correctas en Linux. La skill experimental `ciudadanoinusual-social-video` se actualizo de 0.1.0 a 0.2.0, quedo habilitada y conserva backup privado de la version anterior.
 - No se reinicio el gateway ni se cambio configuracion. La entrega real A/B/C y las respuestas naturales siguen pendientes de prueba con material del usuario.
