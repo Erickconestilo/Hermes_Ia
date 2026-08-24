@@ -399,3 +399,10 @@ Hermes respondio que el estado real ya incluye:
 
 - Se eliminó `CODEX-KICKOFF.md`: duplicaba el arranque que ya gobierna `BOOTSTRAP.md`.
 - Los documentos de políticas secundarias ahora referencian la fuente canónica de permisos, contexto, memoria, modelos, agentes, loops y roadmap en lugar de repetirla.
+
+## Analisis de video desde Telegram - 2026-08-24
+
+- La ruta nativa `video_analyze` se desactivo tras devolver falsos exitos cuando el proveedor auxiliar rechazo la peticion.
+- Se anadio `scripts/preparar-video-social.py`: valida videos de hasta 50 MB, extrae una hoja de nueve fotogramas y transcribe el audio localmente con `faster-whisper`.
+- La prueba sintetica completo preparacion y analisis visual; la prueba real recibio un MP4 desde Telegram, lo guardo en cache privada y devolvio el analisis al movil.
+- El video completo no se publica ni se envia al proveedor visual; Hermes analiza la hoja de fotogramas y usa la transcripcion privada como contexto.

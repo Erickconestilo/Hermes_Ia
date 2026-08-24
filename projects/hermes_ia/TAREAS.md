@@ -11,7 +11,7 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 
 ## Estado de pruebas en Windows
 
-- Las 8 pruebas omitidas son esperadas: seis requieren `HERMES_AGENT_SOURCE` (checkout local de Hermes) y dos requieren privilegio de enlaces simbolicos no disponible en este Windows.
+- Las 9 pruebas omitidas son esperadas: seis requieren `HERMES_AGENT_SOURCE` (checkout local de Hermes) y tres requieren privilegio de enlaces simbolicos no disponible en este Windows.
 
 ## Cerrado recientemente
 
@@ -31,7 +31,7 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 
 - estado: cerrado
 - evidencia: `runbooks/09-telegram-gateway.md`
-- resultado: PDF, imagen, voz y `.asc` ya quedaron documentados con su estado real observado
+- resultado: PDF, imagen, voz, video y `.asc` ya quedaron documentados con su estado real observado; el video usa preparacion local y no el analizador nativo no verificado
 
 ### 3. Decision sobre `Personal Ops V1`
 

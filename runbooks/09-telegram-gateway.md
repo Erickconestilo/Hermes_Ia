@@ -122,6 +122,7 @@ Resultado:
 | Envio de imagen al usuario | `scripts/send-telegram-photo.py` | probado | `ok: true` y `message_id` | no |
 | Captura Movil V1 | guardar nota privada desde Telegram | probado | captura real almacenada en JSONL y recuperada despues | no |
 | Analisis de imagen recibida | enviar foto desde movil y pedir revision | probado | Hermes confirmo recepcion, descripcion breve, privacidad y formato | no |
+| Analisis de video recibido | enviar MP4 desde movil y pedir revision para redes | probado | Telegram guardo el video en cache privada; Hermes extrajo fotogramas, reviso el contenido y respondio en el movil | no |
 | Recepcion de imagen con ruta accesible | enviar imagen desde Telegram y pedir tipo, nombre y ruta | probado | `img_a2a463577f73.jpg` en `/home/hermes/.hermes/image_cache/img_a2a463577f73.jpg` | no |
 | Documento PDF con ruta accesible | enviar PDF desde Telegram y pedir tipo, nombre y ruta | probado | `T05_260602 (1).pdf` en `/home/hermes/.hermes/cache/documents/doc_0c8906524a18_T05_260602 (1).pdf` | no |
 | Nota de voz / STT | enviar audio desde movil | probado | Hermes confirmo recepcion, resumen fiel y formato recomendado | no |
@@ -246,6 +247,7 @@ Esta tabla recoge solo lo que ya fue probado en uso real.
 | Tipo | Estado real | Que hace hoy Hermes | Evidencia resumida |
 | --- | --- | --- | --- |
 | Imagen | valido | recibe, guarda en cache accesible, puede describirla, revisar privacidad y recomendar formato | imagen recibida y ruta accesible validada en `image_cache` |
+| Video | valido con flujo local | recibe y guarda el archivo; `scripts/preparar-video-social.py` extrae fotogramas y transcribe audio localmente para que Hermes recomiende mejoras, cortes, privacidad y formato | MP4 real reenviado desde Telegram y analisis recibido en el movil |
 | Nota de voz | valido | recibe audio, hace transcripcion o resumen fiel y recomienda formato | nota de voz validada con confirmacion y resumen |
 | PDF | valido | recibe, guarda en cache accesible y puede decir que contiene o extraer texto segun el flujo | PDF recibido con ruta accesible y lectura basica validada |
 | `.asc` | rechazado | no entra en este flujo de carga | rechazo observado por tipo no permitido |
@@ -256,6 +258,7 @@ Regla operativa:
 - si el tipo ya esta validado, usarlo con prudencia;
 - si el tipo ya esta rechazado, decirlo claro;
 - si un tipo nuevo no fue probado, tratarlo como no validado todavia.
+- no usar `video_analyze` nativo: queda desactivado porque la ruta auxiliar devolvio falsos exitos; el soporte validado es el preparador local mas vision.
 
 ## Limites vigentes
 
