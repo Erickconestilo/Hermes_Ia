@@ -782,13 +782,32 @@ def list_states(data_root: Path) -> list[tuple[Path, dict[str, Any]]]:
 def status_result(data_root: Path, requested_job_id: str | None) -> dict[str, Any]:
     if requested_job_id:
         directory = job_path(data_root, requested_job_id)
-        return {**public_state(load_state(directory), directory), "active_jobs": None}
+        return {
+            **public_state(load_state(directory), directory),
+            "active_jobs": None,
+            "active_job_summaries": None,
+        }
     states = list_states(data_root)
     if not states:
         raise SocialVideoError("No hay trabajos de video social.")
     active = [item for item in states if item[1]["status"] in ACTIVE_STATES]
     selected = active[0] if active else states[0]
-    return {**public_state(selected[1], selected[0]), "active_jobs": len(active)}
+    summaries = [
+        {
+            "job_id": state["job_id"],
+            "original_name": state["source"]["original_name"],
+            "created_at": state["created_at"],
+            "status": state["status"],
+            "mode": state["mode"],
+            "duration_seconds": state["metadata"]["duration_seconds"],
+        }
+        for _, state in active[:5]
+    ]
+    return {
+        **public_state(selected[1], selected[0]),
+        "active_jobs": len(active),
+        "active_job_summaries": summaries,
+    }
 
 
 def retention_report(data_root: Path, now: datetime) -> dict[str, Any]:

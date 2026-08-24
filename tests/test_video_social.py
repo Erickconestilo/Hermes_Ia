@@ -264,6 +264,9 @@ class VideoSocialTests(unittest.TestCase):
         result = MODULE.status_result(self.data_root, None)
         self.assertEqual(result["job_id"], second["job_id"])
         self.assertEqual(result["active_jobs"], 2)
+        self.assertEqual(len(result["active_job_summaries"]), 2)
+        self.assertEqual(result["active_job_summaries"][0]["job_id"], second["job_id"])
+        self.assertEqual(result["active_job_summaries"][0]["original_name"], self.source.name)
 
     def test_retention_is_dry_run_and_does_not_delete(self):
         _, job_dir = self.ingest()
