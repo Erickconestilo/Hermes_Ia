@@ -20,7 +20,7 @@ Foto comprimida y operativa de `Hermes_Ia` para futuras sesiones de Codex.
 - Sync local, GitHub y VPS: Git operativo.
 - Telegram Gateway: operativo desde movil mediante bot autorizado.
 - Imagenes generadas: envio a Telegram con `scripts/send-telegram-photo.py`.
-- CiudadanoInusual Shorts V1: motor privado A/B/C implementado y probado con videos sinteticos en Linux; despliegue y validacion real por Telegram pendientes.
+- CiudadanoInusual Shorts V1: motor privado A/B/C desplegado y skill experimental 0.2.0 habilitada; validacion real por Telegram pendiente.
 - Captura Movil V1: script y almacenamiento privado operativos fuera de Git; la skill puente historica esta ausente del runtime.
 - Personal Ops V1: activo en modo controlado desde Telegram para decisiones, prioridades y notas privadas.
 - Skills experimentales: permitidas en `HERMES_HOME` como incubadora de bajo riesgo.

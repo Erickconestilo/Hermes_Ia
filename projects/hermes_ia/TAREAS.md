@@ -53,7 +53,7 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 
 ## En curso
 
-- desplegar y validar en Telegram el motor privado `scripts/video-social.py`; su implementacion y prueba sintetica no equivalen a flujo movil validado
+- validar en Telegram el motor privado ya desplegado `scripts/video-social.py`; su prueba sintetica no equivale a flujo movil validado
 - usar `Hermes Creador minimo` para decidir formato, revisar privacidad y preparar borradores de `CiudadanoInusual`
 - usar a Hermes como lector de contexto del proyecto piloto
 - usar a Hermes para priorizar la siguiente tarea pequena y util
