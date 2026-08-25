@@ -24,7 +24,7 @@ Este repositorio documenta y guía la evolución de `Hermes Agent` en un VPS de 
 - No exponer dashboard público.
 - No exponer API pública.
 - Telegram Gateway queda activado como experimento controlado de Fase 1 para acceso movil.
-- No activar MCPs o Playwright en la fase inicial salvo exigencia oficial.
+- MCPs y Playwright permanecen desactivados; cualquier activación requiere permiso fuerte previo.
 - No usar `--yolo`.
 - No guardar secretos reales en archivos versionados.
 
@@ -41,6 +41,23 @@ Este repositorio documenta y guía la evolución de `Hermes Agent` en un VPS de 
 - Si desde Telegram el usuario pide una imagen, no basta con describirla. Si Hermes genera, encuentra, recorta, edita u optimiza una imagen en el VPS, debe enviar el archivo final con `python3 scripts/send-telegram-photo.py <ruta-imagen> "<caption>"` y devolver tambien la ruta exacta.
 - Si desde Telegram el usuario dice `Analiza este video para redes` o una variante natural, usa `scripts/video-social.py`: ingesta primero el original privado y verificado, despues analiza fotogramas y audio localmente. Para un corto, crea un plan narrativo justificado y renderiza A minima, B dinamica y C experimental; para un video largo, propone primero tres momentos y espera a que el usuario elija uno antes de renderizar. Entrega los archivos por Telegram y acepta aprobacion o cambios en lenguaje natural sobre el ultimo trabajo activo. Nunca publiques ni programes nada. `scripts/preparar-video-social.py` queda como entrada compatible de solo analisis; no uses `video_analyze` mientras su ruta nativa siga sin verificacion real.
 - Si desde Telegram recibes una idea para `CiudadanoInusual`, usa Captura Movil V1 antes de convertirla en contenido: guarda la nota con `python3 scripts/captura-movil.py add`, devuelve el `id` y marca riesgos de privacidad.
+
+## Criterio de calidad
+
+Cuando la salida sea contenido, documentación crítica, una decisión técnica o
+un output reutilizable, aplicar `projects/hermes_ia/JUDGE.md` si el flujo lo
+permite. Si queda por debajo de 8/10, mejorarla antes de darla por válida y
+registrar la decisión cuando corresponda. Judge evalúa; no sustituye el
+criterio humano ni publica automáticamente.
+
+## Política de commits
+
+Cuando exista permiso para commitear:
+
+- mantener commits pequeños;
+- usar mensajes claros en español;
+- no mezclar temas no relacionados;
+- no hacer push a VPS o producción sin permiso explícito.
 
 ## Autonomía operativa
 

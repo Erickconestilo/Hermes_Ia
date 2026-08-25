@@ -9,7 +9,7 @@ Foto comprimida y operativa de `Hermes_Ia` para futuras sesiones de Codex.
 
 ## Estado actual real
 
-- Repo local: `C:\Users\guill\Documents\Hermes_Ia`
+- Repo local: workspace local del proyecto
 - VPS: `hermes-01`, Hetzner CX33 x86, Ubuntu 24.04.
 - Instalacion Hermes: nativa.
 - Usuario operativo: `hermes`.

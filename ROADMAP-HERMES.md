@@ -17,7 +17,7 @@ Convertir Hermes en el arnes personal de IA de Erick/CiudadanoInusual:
 
 ## Estado tecnico actual
 
-- Repo local: `C:\Users\guill\Documents\Hermes_Ia`
+- Repo local: workspace local del proyecto
 - VPS: `hermes-01` en Hetzner, Ubuntu 24.04, plan CX33 x86.
 - Usuario operativo: `hermes`.
 - Instalacion Hermes: nativa en `/home/hermes/.hermes`.
@@ -45,7 +45,7 @@ Convertir Hermes en el arnes personal de IA de Erick/CiudadanoInusual:
 | Telegram operativo base | Cerrado | `/whoami`, `/status`, imagen, voz y `/background` pequeno validados |
 | Flujo movil extremo a extremo | Cerrado | captura privada -> recuperacion -> borrador -> Judge -> registro completados |
 | Captura Movil V1 | Parcial | script versionado y pruebas historicas; skill experimental ausente del runtime el 2026-08-21 |
-| Personal Ops V1 | Activo en modo controlado | `projects/hermes_ia/PERSONAL-OPS-V1.md` |
+| Personal Ops V1 | Activo en modo controlado | `projects/hermes_ia/CAPTURA.md` y `projects/hermes_ia/TAREAS.md` |
 | Empleo Ops V0 | Futuro experimento controlado; no operativo | contrato y prueba sintetica en `projects/hermes_ia/EMPLEO-OPS-V0.md` |
 | Judge aplicado y registrado | Cerrado | `projects/hermes_ia/JUDGE-REGISTRO.md` con piezas reales evaluadas |
 | Banco 2 | Iniciado | vida real, convivencia, hogar, comida, trayectos |

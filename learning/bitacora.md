@@ -4,7 +4,7 @@
 
 - Se creó la estructura base del proyecto.
 - Se fijó la decisión inicial: Hermes nativo en VPS Hetzner con usuario `hermes`.
-- Se movió la transcripción del curso a [docs/curso-benjamin-hermes-transcripcion.md](/C:/Users/guill/Documents/Hermes_Ia/docs/curso-benjamin-hermes-transcripcion.md).
+- Se movió la transcripción del curso a [docs/curso-benjamin-hermes-transcripcion.md](../docs/curso-benjamin-hermes-transcripcion.md).
 - Se dejó explícito que esa transcripción sirve como contexto, no como fuente exacta de comandos.
 - Queda pendiente validar comandos con documentación oficial antes de tocar el VPS.
 
@@ -479,3 +479,10 @@ Hermes respondio que el estado real ya incluye:
 - La retencion identifica objetos expirados por identidad, evitando borrar registros validos con IDs duplicados y eliminando tambien registros sin ID.
 - El verificador de secretos soporta nombres Unicode, blobs binarios y lineas con IP permitida junto a IP real; se ampliaron las pruebas para GitHub, claves privadas y AWS sin filtrar valores.
 - La suite reproducible queda en `python -m unittest discover -s tests -t .`: 51 pruebas correctas y 10 omisiones esperadas en Windows o por dependencia externa.
+
+## Fase 4 - consolidacion documental - 2026-08-25
+
+- Se archivaron 14 documentos historicos sin perdida; se rescataron taxonomia activa, Judge, commits, contexto, Docker y estados.
+- Dominios activos por ejecucion real: Creador, Research, Mobile Ops y Personal Ops. Programador, Financial Ops, Operador, Builder, Arquitectura e Inspiration quedan fuera.
+- Se unifico la taxonomia del JSONL de capturas con `VALID_STATUSES`: `inbox`, `reviewed`, `converted` y `discarded`.
+- Metrica de cierre: 123 archivos Markdown recursivos y 109 activos fuera de `docs/archive/`.

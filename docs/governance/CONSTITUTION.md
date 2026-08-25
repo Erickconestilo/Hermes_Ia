@@ -185,7 +185,8 @@ avance operativo.
 
 ## Dominios principales
 
-Hermes puede crecer en varios dominios, pero no todos tienen la misma prioridad.
+Solo se consideran dominios activos los que tienen ejecución real registrada en
+`learning/bitacora.md`.
 
 ### Hermes Creador
 
@@ -200,41 +201,37 @@ Ayuda a:
 - medir publicaciones;
 - aprender qué funciona.
 
-### Hermes Programador
+### Hermes Research
 
 Ayuda con:
 
-- FP;
-- proyectos de programación;
-- repositorios;
-- arquitectura;
-- debugging;
-- aprendizaje técnico.
+- investigación con fuentes;
+- briefings accionables;
+- contraste de información;
+- límites y riesgos de una recomendación.
 
-### Hermes Operador
+### Hermes Mobile Ops
 
 Ayuda con:
 
-- decisiones personales;
-- prioridades;
-- notas privadas;
-- organización;
+- capturas desde Telegram;
+- recuperación de notas y adjuntos;
+- respuestas breves desde el móvil;
+- reducción de fricción de entrada.
+
+### Hermes Personal Ops
+
+Ayuda con:
+
+- decisiones y prioridades privadas;
+- notas no publicables;
+- recuperación humana de capturas;
 - reducción de carga mental.
 
-### Hermes Financial Ops
-
-Ayuda con:
-
-- ahorro;
-- oportunidades;
-- empleo;
-- cupones;
-- puntos;
-- recompensas;
-- investigación financiera prudente;
-- estabilidad económica.
-
-Nunca ejecuta dinero ni riesgos por el usuario.
+Los siguientes nombres quedan fuera de la taxonomía activa hasta que exista
+ejecución real registrada: Programador, Financial Ops, Operador, Builder,
+Arquitectura e Inspiration. Builder, Architect, Judge, Content e Inspiration
+son roles o capacidades, no dominios activos independientes.
 
 ## Definición de éxito
 

@@ -76,6 +76,12 @@ Antes de cualquier cambio sensible futuro, debe evaluarse siempre:
 
 ## Usuario operativo
 
+La instalación y operación habitual usan el usuario dedicado `hermes`, no
+`root`. Las rutas base son `/home/hermes/.hermes` y
+`/home/hermes/workspace`; los permisos y el acceso administrativo se verifican
+antes de cambiar SSH, sudoers o servicios. El detalle histórico del alta queda
+archivado; el estado vigente se consulta en `runbooks/01-estado-actual.md`.
+
 La decisión vigente es operar Hermes con:
 
 - usuario `hermes`
@@ -96,7 +102,7 @@ Si se propone un cambio sensible, debe quedar claro:
 
 Para el detalle de la creación del usuario `hermes`, ownership y validación del entorno, ver:
 
-- [02-usuario-hermes-seguridad.md](02-usuario-hermes-seguridad.md)
+- El detalle histórico del alta está en `docs/archive/02-usuario-hermes-seguridad.md`.
 
 ## Endurecimiento SSH (ejecutado y verificado el 2026-08-08)
 

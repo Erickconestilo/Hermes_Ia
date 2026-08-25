@@ -16,16 +16,14 @@ Núcleo minimo, siempre, para cualquier tarea por pequeña que sea:
 2. `AGENTS.md` — el semáforo verde/amarillo/rojo de autonomía.
 3. `docs/CODEX-BRIEF.md` — foto comprimida del estado real actual.
 4. `projects/hermes_ia/TAREAS.md` — qué toca hacer ahora.
+5. `learning/MEMORIA.md` — índice corto de decisiones y cambios recientes.
 
-Con estos cuatro ya se puede actuar en la mayoría de tareas locales, reversibles y documentales.
+Con estas cinco ya se puede actuar en la mayoría de tareas locales, reversibles y documentales.
 
 Lectura condicional, solo si la tarea la necesita:
 
-- `docs/governance/ORCHESTRATOR.md` — si la tarea implica coordinar varios dominios o agentes especializados.
-- `docs/governance/AGENT-SPEC.md` — si se crea, cambia o evalúa un contrato de agente.
-- `docs/governance/CODEX-OPERATING-POLICY.md` — si se opera específicamente como Codex y hay dudas de implementación o commit.
-- `docs/governance/MASTER-PLAN.md` y `ROADMAP-HERMES.md` — si la tarea toca la fase actual, el plan por fases o una decisión de roadmap.
-- `CONTEXT-ENGINEERING.md`, `MEMORY-ENGINEERING.md`, `LOOP-ENGINEERING.md`, `MODEL-SELECTION-POLICY.md` o `EVOLUTION-POLICY.md` — solo si la tarea afecta directamente a esa responsabilidad.
+- `docs/governance/LOOP-ENGINEERING.md`, `MEMORY-ENGINEERING.md` o `MODEL-SELECTION-POLICY.md` — solo si la tarea afecta directamente a esa responsabilidad.
+- `ROADMAP-HERMES.md` — si la tarea toca la fase actual, el plan por fases o una decisión de roadmap.
 - Archivos específicos de la tarea actual — siempre, al final, sea cual sea la tarea.
 
 Esta reducción (2026-07-21) responde al propio Principio 4 de la Constitución: "si una función obliga al usuario a recordar demasiados pasos, la función está mal diseñada". El orden anterior exigía leer 9 documentos (~1.400 líneas) antes de tocar nada, incluso para un cambio trivial. `docs/CODEX-BRIEF.md` ya resume lo esencial de `MASTER-PLAN.md`, `ROADMAP-HERMES.md` y el estado operativo, por eso puede sustituirlos como lectura obligatoria por defecto.
@@ -34,11 +32,10 @@ Si hay conflicto entre documentos, prevalece este orden:
 
 1. Constitución.
 2. `AGENTS.md` para permisos, semáforo y límites operativos.
-3. `CODEX-OPERATING-POLICY.md` para la forma de implementar y commitear con Codex.
-4. `ROADMAP-HERMES.md` y `MASTER-PLAN.md` para estado y dirección por fases.
-5. Documentación específica de la tarea.
+3. `ROADMAP-HERMES.md` para estado y dirección por fases.
+4. Documentación específica de la tarea.
 
-La Constitución no puede contradecirse. `AGENTS.md` es la fuente única de límites operativos; ningún documento de ejecución puede ampliarlos. El roadmap describe estado, no autoriza acciones rojas.
+La Constitución no puede contradecirse. `AGENTS.md` es la fuente única de límites operativos y de calidad de ejecución; ningún documento de ejecución puede ampliarlos. El roadmap describe estado, no autoriza acciones rojas.
 
 ## Regla principal
 

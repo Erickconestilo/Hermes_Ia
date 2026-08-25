@@ -48,6 +48,10 @@ Una vez que `Hermes IA` esté estable, el VPS puede evolucionar para alojar adem
 
 Pero esa evolución se documentará por fases. No se instalará “todo de golpe”.
 
+Docker solo se reconsidera cuando Hermes nativo funcione bien, exista un backup
+restaurado de verdad, el troubleshooting básico esté resuelto y haya una razón
+operativa concreta. Evaluarlo no autoriza instalarlo.
+
 ## Justificación
 
 - Menos capas implica menos puntos de fallo iniciales.

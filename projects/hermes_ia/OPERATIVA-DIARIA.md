@@ -91,7 +91,7 @@ Bloquear o pedir confirmacion fuerte para:
 
 Trabajar primero en local dentro de:
 
-- `C:\Users\guill\Documents\Hermes_Ia`
+- workspace local del proyecto
 
 Leer solo lo necesario:
 

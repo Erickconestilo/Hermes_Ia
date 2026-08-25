@@ -35,7 +35,7 @@ Sistema operativo personal de IA en evolución. No es un chatbot, es un agente a
 
 ### Cómo arrancar una sesión (ya no son 9 archivos)
 
-`docs/governance/BOOTSTRAP.md` se redujo a un núcleo de 4 lecturas obligatorias: `CONSTITUTION.md`, `AGENTS.md`, `docs/CODEX-BRIEF.md`, `projects/hermes_ia/TAREAS.md`. El resto (`ORCHESTRATOR.md`, `CODEX-OPERATING-POLICY.md`, `MASTER-PLAN.md`, `ROADMAP-HERMES.md`) es lectura condicional, solo si la tarea lo pide. Para arrancar Codex, usar directamente `docs/governance/BOOTSTRAP.md`; los prompts antiguos ya no forman parte del flujo.
+`docs/governance/BOOTSTRAP.md` define 5 lecturas obligatorias: `CONSTITUTION.md`, `AGENTS.md`, `docs/CODEX-BRIEF.md`, `projects/hermes_ia/TAREAS.md` y `learning/MEMORIA.md`. Los documentos históricos de gobernanza que ya no forman parte del flujo activo están en `docs/archive/`; para arrancar Codex se usa directamente `docs/governance/BOOTSTRAP.md`.
 
 ### Comandos vigentes de Hermes Creador
 
@@ -46,7 +46,7 @@ Ya no son `Modo guion`/`Modo post`/`Modo carrusel`/`Modo calle`/`¿Qué toca hoy
 - **Nivel 2:** `hoy`, `publicado`.
 - **Nivel 3:** `guarda` — nota privada.
 
-Se intentó publicitar estos comandos en el menú nativo `/` de Telegram (`setMyCommands`) y se abandonó: ese menú es propiedad de Hermes Agent y se resetea solo en cada `gateway restart`/`update`, sobrescribiendo cualquier lista personalizada. Detalle completo en `runbooks/10-telegram-comandos-nativos.md`.
+Se intentó publicitar estos comandos en el menú nativo `/` de Telegram (`setMyCommands`) y se abandonó: ese menú es propiedad de Hermes Agent y se resetea solo en cada `gateway restart`/`update`, sobrescribiendo cualquier lista personalizada. El detalle histórico está en `docs/archive/10-telegram-comandos-nativos.md`.
 
 ### Estado real auditado el 2026-07-21
 
@@ -57,7 +57,7 @@ Se intentó publicitar estos comandos en el menú nativo `/` de Telegram (`setMy
 - Capa de marca nueva: `AUDIENCIA.md` (audiencia primaria/secundaria/anti-audiencia, dos patrones de voz reproducibles: antítesis y anti-épica) y `APRENDIZAJES.md` (5 meta-aprendizajes del inventario, el principal: 12 de 18 piezas publicables están bloqueadas por trabajo visual, no editorial).
 - `COMANDOS.md` reescrito y toda la terminología vieja unificada en 12 archivos del repo.
 - `JUDGE-REGISTRO.md`: pasó de 5 evaluaciones (todas 8/10, sin discriminar nada) a 24, con distribución real de 5 a 9. Dos hallazgos: `guion-03` usa el nombre real de una compañera en el cuerpo del texto, no solo en notas — no publicable tal cual; `carrusel-03` se autodescalifica en su propio documento (usa una captura ajena de TikTok).
-- Deuda documental reducida: los prompts de arranque se consolidan en `BOOTSTRAP.md`. Cuatro documentos de captura móvil (798 líneas) → `CAPTURA.md` (209 líneas). `BOOTSTRAP.md` de 9 a 4 lecturas obligatorias.
+- Deuda documental reducida: los prompts de arranque se consolidan en `BOOTSTRAP.md`. Cuatro documentos de captura móvil (798 líneas) → `CAPTURA.md` (209 líneas). `BOOTSTRAP.md` pasó de 9 a 5 lecturas obligatorias al añadir el índice corto `learning/MEMORIA.md`.
 - Principio 16 añadido a la Constitución: todo documento de proceso nuevo necesita una ejecución real registrada, o se archiva a los 14 días.
 
 **Pendiente, requiere acción fuera de este chat (VPS o mundo real, no ejecutable desde una sesión de Cowork sin acceso SSH):**

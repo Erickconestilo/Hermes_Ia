@@ -18,7 +18,7 @@ Cada ciclo sigue este orden:
 5. Integrar y validar el resultado.
 6. Registrar solo lo que deba persistir y decidir cierre o siguiente acción.
 
-`ORCHESTRATOR.md` define quién coordina; `CONTEXT-ENGINEERING.md`, `MEMORY-ENGINEERING.md` y `MODEL-SELECTION-POLICY.md` definen los criterios especializados que este ciclo consume.
+`MEMORY-ENGINEERING.md` define la selección de contexto y memoria; `MODEL-SELECTION-POLICY.md` define los criterios de modelo que este ciclo consume.
 
 ## Regla de autonomía
 
@@ -136,3 +136,27 @@ Evitar:
 - crear agentes innecesarios;
 - convertir todo en documento;
 - ejecutar sin registrar.
+
+## Evolucion gobernada
+
+La evolución sigue este subciclo:
+
+1. detectar fricción repetida;
+2. formular una hipótesis;
+3. proponer una mejora pequeña;
+4. evaluar riesgo;
+5. ejecutar una prueba controlada;
+6. medir resultado;
+7. adoptar, ajustar o descartar;
+8. registrar el aprendizaje.
+
+Puede evolucionar prompts, skills, modos de contenido, criterios de Judge,
+scripts pequeños, plantillas, flujos de contexto, selección de modelos y
+memoria creativa. No evoluciona automáticamente publicación, dinero, secretos,
+infraestructura, servicios, SSH, firewall, cron recurrente, Docker, MCPs,
+Playwright, memoria externa ni la identidad fundacional.
+
+Una mejora se adopta si reduce fricción, mejora el resultado, no rompe
+privacidad, no aumenta deuda, tiene evidencia y puede revertirse. Se descarta
+si complica sin retorno, duplica algo existente, depende de una moda, no tiene
+prueba o crea riesgo innecesario.

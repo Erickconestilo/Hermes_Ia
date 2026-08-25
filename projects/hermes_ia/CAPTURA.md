@@ -1,6 +1,6 @@
 # CAPTURA - CiudadanoInusual
 
-Consolida en un solo archivo lo que antes vivía repartido en `CONTRATO-CAPTURA-PRIVADA.md`, `CONTRATO-CONVERSION-LIGERA.md`, `SPEC-FORMALIZACION-CAPTURA-MOVIL.md` y `PLAN-SEPARACION-SKILLS-CAPTURA.md` (798 líneas entre los cuatro, para un script de ~200 líneas que ya funciona: `scripts/captura-movil.py`). Los cuatro decían en gran parte lo mismo en distintos momentos de la decisión; este archivo se queda con la version final de cada parte.
+Consolida en un solo archivo lo que antes vivía repartido en cuatro especificaciones históricas de captura (798 líneas entre ellas, para un script de ~200 líneas que ya funciona: `scripts/captura-movil.py`). Esas especificaciones ya no forman parte del flujo activo; este archivo se queda con la versión final de cada parte.
 
 ## Estado
 
@@ -44,6 +44,20 @@ Si la intención no es clara, una sola pregunta y no más:
 > ¿Quieres que lo guarde como captura privada o que lo convierta ahora en contenido?
 
 ---
+
+## Taxonomia unica del JSONL
+
+El campo `status` solo acepta los valores de `VALID_STATUSES` en
+`scripts/captura-movil.py`:
+
+- `inbox`: capturada, no revisada;
+- `reviewed`: revisada y clasificada;
+- `converted`: usada para una pieza;
+- `discarded`: descartada.
+
+`nota_privada`, `tarea`, `backlog`, `revisar luego` y `descartar` son formatos o
+lanes de salida de Personal Ops, no estados del JSONL. No deben escribirse en
+el campo `status`.
 
 ## Skill 1 - `ciudadanoinusual-captura-privada`
 

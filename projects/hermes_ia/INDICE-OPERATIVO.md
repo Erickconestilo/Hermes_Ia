@@ -10,10 +10,10 @@ Saber que archivo abrir primero segun la necesidad real de la sesion.
 - si quiero recordar el rumbo del proyecto: `projects/hermes_ia/CONTEXTO.md`
 - si quiero saber la siguiente accion concreta: `projects/hermes_ia/TAREAS.md`
 - si quiero trabajar sin caer en bucle: `projects/hermes_ia/OPERATIVA-DIARIA.md`
-- si quiero planificar la semana movil/portatil: `projects/hermes_ia/OPERATIVA-SEMANAL.md`
-- si quiero capturar ideas desde movil sin meter datos privados en Git: `projects/hermes_ia/CAPTURA-MOVIL.md`
+- si quiero planificar movil/portatil: `projects/hermes_ia/OPERATIVA-DIARIA.md`
+- si quiero capturar ideas desde movil sin meter datos privados en Git: `projects/hermes_ia/CAPTURA.md`
 - si quiero ver que usos oficiales tiene Hermes: `projects/hermes_ia/USOS-OFICIALES.md`
-- si quiero saber que producir despues: `projects/hermes_ia/QUEUE.md`
+- si quiero saber que producir despues: `projects/hermes_ia/TAREAS.md`
 - si quiero evaluar si una salida merece guardarse: `projects/hermes_ia/JUDGE.md`
 - si quiero ver evaluaciones reales ya aplicadas: `projects/hermes_ia/JUDGE-REGISTRO.md`
 - si quiero aclarar terminos del proyecto: `projects/hermes_ia/GLOSARIO.md`

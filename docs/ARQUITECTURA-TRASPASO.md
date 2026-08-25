@@ -39,7 +39,7 @@ El proyecto tambien funciona como aprendizaje practico: Erick esta construyendo 
 
 Estado tecnico documentado:
 
-- Repo local principal: `C:\Users\guill\Documents\Hermes_Ia`.
+- Repo local principal: workspace local del proyecto.
 - VPS: `hermes-01`, Hetzner CX33 x86, Ubuntu 24.04.
 - Usuario operativo: `hermes`.
 - Hermes instalado de forma nativa en `/home/hermes/.hermes`.
@@ -318,7 +318,7 @@ Estado:
 
 ### Flujo local
 
-1. Erick trabaja en `C:\Users\guill\Documents\Hermes_Ia`.
+1. Erick trabaja en el workspace local del proyecto.
 2. Codex o Erick editan documentos/scripts.
 3. Se revisa diff.
 4. Se hace commit.

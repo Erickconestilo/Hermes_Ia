@@ -7,7 +7,22 @@ Definir qué debe recordar Hermes, dónde debe recordarlo y cuándo debe olvidar
 La memoria no es acumular todo.
 La memoria es conservar lo que mejora decisiones futuras.
 
-Este documento define persistencia, consolidación y olvido. La selección de contexto para la tarea actual vive en `CONTEXT-ENGINEERING.md`.
+Este documento define persistencia, selección de contexto, consolidación y olvido.
+
+## Seleccion de contexto
+
+Cada tarea recibe solo el contexto mínimo necesario. Antes de pasarlo a Hermes
+se elimina ruido, se resumen duplicados, se prioriza la fuente canónica y se
+mantienen rutas o citas internas cuando hagan falta.
+
+Las capas son: Constitución y bootstrap; gobernanza si la tarea es de sistema;
+proyecto según el objetivo; dominio según el trabajo; y tarea con objetivo,
+archivos, restricciones, verificación y criterio de terminado.
+
+Si falta contexto, buscar primero en fuentes canónicas, después en roadmap y
+tareas, luego en contratos específicos y finalmente en la bitácora. No pasar
+todo el repositorio a todos los agentes ni crear documentos nuevos para dudas
+menores.
 
 ## Tipos de memoria
 
@@ -50,7 +65,6 @@ Contiene lo que está activo ahora.
 Ubicación:
 
 - `projects/hermes_ia/TAREAS.md`
-- `projects/hermes_ia/QUEUE.md`
 - archivos de trabajo actuales.
 
 ### Memoria privada

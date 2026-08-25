@@ -43,7 +43,7 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 ### 3. Decision sobre `Personal Ops V1`
 
 - estado: cerrado
-- evidencia: `projects/hermes_ia/PERSONAL-OPS-V1.md` y `ROADMAP-HERMES.md`
+- evidencia: `projects/hermes_ia/CAPTURA.md` y `ROADMAP-HERMES.md`
 - resultado: Personal Ops V1 entra ya en modo controlado como uso movil privado no publicable
 
 ### 4. Formalizacion o incubacion extra de la skill remota
@@ -57,6 +57,12 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 - archivo:
 - cambio:
 - verificacion:
+
+## Cola consolidada
+
+- probar `/background` pequeño desde Telegram con una tarea no destructiva y registrar su límite;
+- pedir un briefing corto desde Telegram solo cuando aporte una decisión o pieza concreta;
+- revisar cualquier Builder móvil en el portátil antes de tocar configuración o servicios.
 
 ## En curso
 
