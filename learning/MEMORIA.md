@@ -31,3 +31,4 @@ No sustituye la bitacora. No es lectura obligatoria de `BOOTSTRAP.md` (para no s
 - 2026-08-25: Fase 3: perfiles y gateways aislados documentados; restore verifica ambos sin activar servicios.
 - 2026-08-25: Fase 4: 14 docs archivados; 109 activos y 123 totales; taxonomia y reglas consolidadas.
 - 2026-08-25: Recortar browser, code_execution, computer_use y cron en Telegram redujo el radio de daño de exfiltracion.
+- 2026-08-25: F-03 cerrado extremo a extremo: backup externo cifrado, descifrado probado y copia en Windows; mantenimiento VPS aplicado sin reinicio.

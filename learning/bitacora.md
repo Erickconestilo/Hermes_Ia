@@ -492,3 +492,11 @@ Hermes respondio que el estado real ya incluye:
 - La auditoría de `hermes egress` confirmó que iron-proxy solo protege sandboxes Docker; ambos perfiles usan `local`, por lo que no se activó.
 - El recorte de `browser`, `code_execution`, `computer_use` y `cron` en Telegram, hecho para ahorrar tokens, también redujo el radio de daño potencial de exfiltración.
 - Esta mejora reduce capacidades disponibles, pero no sustituye un firewall de red ni convierte F-01 en cobertura global.
+
+## F-03 cerrado de extremo a extremo - 2026-08-25
+
+- Tras cerrar las cuatro fases se creó `hermes-backup-2026-08-25-173548.zip` y se cifró dentro del VPS con `gpg -c --cipher-algo AES256`.
+- Solo el `.gpg` se copió a `C:\Users\guill\Documents\Hermes_Backups`; el `.zip` en claro se borró del VPS y de Windows.
+- Se instaló GnuPG en Windows con `winget GnuPG.GnuPG 2.5.21`, se verificó el descifrado con `gpg --decrypt` y se generó y borró el archivo de prueba.
+- F-03 queda completo de extremo a extremo: backup existente, externo, cifrado y recuperable.
+- La actualización de sistema del 2026-08-25 cubrió `console-setup`, `console-setup-linux`, `keyboard-configuration` y `open-vm-tools`; `byobu` quedó aplazado por phasing, no fue necesario reiniciar, ambos gateways siguieron activos y ESM no se activó.

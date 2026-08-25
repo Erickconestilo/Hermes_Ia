@@ -94,7 +94,17 @@ gateway. El estado de los servicios en produccion se comprueba aparte con
 
 Verificación de que la sesión sirvió: registrar en `learning/bitacora.md` la fecha, el nombre del backup probado, si `capturas.jsonl` fue válido, y si algo faltaba respecto a lo esperado.
 
+## F-03 cerrado de extremo a extremo — 2026-08-25
+
+- Backup creado tras cerrar las cuatro fases: `hermes-backup-2026-08-25-173548.zip`.
+- Cifrado realizado dentro del VPS con `gpg -c --cipher-algo AES256`.
+- Solo el archivo cifrado `.gpg` se copió a `C:\Users\guill\Documents\Hermes_Backups`.
+- El `.zip` en claro se eliminó tanto del VPS como de Windows.
+- GnuPG quedó instalado en Windows mediante `winget GnuPG.GnuPG 2.5.21`; antes no estaba disponible en la única máquina externa.
+- Descifrado verificado con `gpg --decrypt`: se generó un archivo de prueba, se comprobó y se eliminó después.
+- Resultado: F-03 queda cerrado de extremo a extremo: copia existente, externa, cifrada y recuperable.
+
 ## Pendiente
 
 - definir cadencia de backup (cron one-shot manual por ahora; cron recurrente sigue siendo rojo según `AGENTS.md`)
-- decidir destino externo del `.tar.gz` (fuera del VPS) y si conviene cifrarlo antes de moverlo
+- mantener una copia externa cifrada y repetir periódicamente la restauración de prueba; no automatizarlo con cron recurrente sin autorización

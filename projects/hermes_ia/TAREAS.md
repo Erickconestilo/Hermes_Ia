@@ -110,6 +110,7 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 - estado: `CERRADO`; respaldo externo cifrado y restauracion aislada verificados el 2026-08-21
 - evidencia: `learning/bitacora.md` y `learning/MEMORIA.md`
 - resultado: copia GPG AES-256 creada antes de salir del VPS, checksum coincidente y restauracion de mensajes, sesiones y capturas validada; no se incluyen secretos en Git
+- duda pendiente: `hermes -p <perfil> backup` produjo un archivo idéntico al backup general, con el mismo número de archivos y tamaño; verificar si el backup general ya incluye los perfiles o si el flag no hace lo que indica
 
 ## Bloqueos o dudas abiertas
 
