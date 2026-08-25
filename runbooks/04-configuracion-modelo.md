@@ -100,3 +100,11 @@ pasadas. No modifican proveedores, modelos ni secretos.
 Las claves viven solo en los `.env` de cada perfil y nunca deben aparecer en
 Git, chat, capturas ni salidas compartidas. Si una clave se expone, debe
 rotarse.
+## Historial temporal de proveedor
+
+En una ventana anterior se probó `gemini-3.6-flash` vía Google AI Studio porque
+`openai-codex` había devuelto `429 usage_limit_reached`. Esa transición fue
+temporal y no representa la configuración final verificada actualmente.
+
+También quedó validado que `gemini-3.7-flash` puede responder `503 high demand`
+y que los errores de proveedor deben diagnosticarse antes de cambiar el perfil.

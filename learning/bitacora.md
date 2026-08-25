@@ -454,3 +454,14 @@ Hermes respondio que el estado real ya incluye:
 - Los esquemas medidos bajaron de 31.228 a 24.769 B en `default` y de 31.250 a 24.791 B en `auscultacion`; `browser` y `bfl` ya no contribuian al JSON fijo medido, pero quedaron fuera por alcance operativo.
 - El prompt fijo total quedo en 42.710 B y 44.865 B, una reduccion adicional de 13,5% y 12,9% frente a la primera pasada; desde la linea base inicial, el ahorro acumulado es 20,7% y 22,8%.
 - Ambos gateways reiniciaron y quedaron activos. Telegram conserva `web`, `vision`, `file`, `memory`, `skills`, `todo` y `clarify`; la recuperacion de sesiones antiguas queda para la CLI.
+
+## Cambio temporal a Google AI Studio - 2026-08-25
+
+- Motivo: `gpt-5.6-terra` vía `openai-codex` quedó bloqueado por `429 usage_limit_reached` hasta el 2026-08-31; se necesitaba continuidad operativa sin tocar el resto del sistema.
+- Cambio: perfiles `default` y `auscultacion` configurados con `gemini-3.6-flash` vía Google AI Studio; cada perfil mantiene configuración, `.env` y gateway aislados.
+- Coste estimado: `0 €` mientras el uso permanezca dentro del nivel gratuito de Google AI Studio; sujeto a límites de tasa y cuota.
+- Ventajas: proveedor alternativo operativo; `gemini-3.6-flash` respondió correctamente; la integración compatible con OpenAI permite mantener el flujo de Hermes.
+- Riesgos: nivel gratuito con rate limits; `gemini-3.7-flash` devolvió `503` por alta demanda; cada mensaje arrastra ~15K tokens de prompt fijo según `hermes prompt-size`, lo que acelera el consumo de cuota.
+- Diagnóstico aprendido: `Provider authentication failed` no distingue falta de credenciales de saturación; verificar primero el `.env` del perfil y hacer `curl` directo al endpoint antes de cambiar configuración.
+- Rollback: backup previo `hermes-backup-2026-08-25-084745.zip`; a partir del 2026-08-31 comprobar la recuperación de cuota y revertir ambos perfiles a `openai-codex` si vuelve a responder, reiniciando después el gateway correcto de cada perfil.
+- Base URL validada para Google AI Studio en Hermes: `https://generativelanguage.googleapis.com/v1beta/openai`; `/v1beta` sin `/openai` no sirve para esta integración.

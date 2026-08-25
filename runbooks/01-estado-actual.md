@@ -34,6 +34,10 @@ A fecha actual, ya se ha validado lo siguiente:
 - servicios de usuario `hermes-gateway.service` y
   `hermes-gateway-auscultacion.service` activos con `systemd` y `linger`
   habilitado
+- Google AI Studio también se validó temporalmente mediante endpoint compatible
+  con OpenAI durante una ventana de cuota agotada.
+- el perfil `auscultacion` dispone de bot y gateway propios, aislados del perfil
+  `default`
 
 ## Configuracion final de modelos
 
@@ -65,24 +69,30 @@ de ese canal `session_search`, `browser` y `bfl`; `image_gen` solo queda en
   separadas por perfil.
 - Telegram usa token guardado en `/home/hermes/.hermes/.env`, no versionado en Git.
 
+La transición temporal a Google AI Studio por un `429` de cuota queda
+registrada en `learning/bitacora.md`; no es el estado final actual.
+
 ## Advertencias no bloqueantes
 
 Quedan abiertas, pero no impiden el uso actual:
 
-- `config.yaml` migrado y validado como `v29`
+- `config.yaml` migrado y validado como `v33`
 - Docker no instalado
 - Playwright Chromium no instalado
 - Discord no instalado
 - skills hub no inicializado
+- Google AI Studio usa nivel gratuito y está sujeto a límites de tasa/cuota
+- `hermes prompt-size` muestra aproximadamente 15K tokens de prompt fijo por mensaje
 
 ## Decisiones vigentes
 
 - Hermes corre de forma nativa
 - el usuario operativo es `hermes`
 - el backend actual es `local`
+- los perfiles son instancias aisladas y deben configurarse/reiniciarse explícitamente por perfil
 - no se expone dashboard público
 - no se expone API pública
-- Telegram Gateway queda operativo solo como canal movil autorizado
+- Telegram queda operativo solo como canal móvil autorizado
 - no se activan MCPs todavía
 - no se instala Playwright todavía salvo necesidad real
 
@@ -124,7 +134,7 @@ Esta fase no incluye:
 - Docker
 - Playwright
 - cron
-- cambios adicionales de Telegram fuera del gateway ya validado
+- cambios adicionales de Telegram fuera de los gateways ya validados
 - memoria externa
-- perfiles o subagentes
+- perfiles adicionales o subagentes sin necesidad demostrada
 - cambios sobre otros proyectos

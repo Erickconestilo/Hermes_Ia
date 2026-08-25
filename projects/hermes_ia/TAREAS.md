@@ -21,6 +21,7 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 
 ## Cerrado recientemente
 
+- Perfil `auscultacion` operativo y documentado: instancia aislada con configuración y `.env` propios, además de bot de Telegram y gateway propios; se probó temporalmente `gemini-3.6-flash` y el estado final volvió a Codex con fallback OpenRouter.
 - Migracion de config Hermes v29 -> v33 y correccion de `agent.verify_on_stop` a `"auto"`: ejecutado y verificado el 2026-08-08, ver `learning/bitacora.md`.
 - Hermes Agent actualizado de 0.16.0 a 0.20.0 (20883 commits): ejecutado y verificado el 2026-08-08, ver `learning/bitacora.md`. Backup completo tomado antes de actualizar. Gateway reiniciado y probado en real por Telegram (mensaje + `/whoami`). Hallazgo: trae panel web (`hermes dashboard`), apagado y no expuesto, sin conflicto con la politica de "sin dashboard publico".
 - endurecimiento SSH (`runbooks/02-seguridad.md`): ejecutado y verificado el 2026-08-08, ver `learning/bitacora.md`. `PasswordAuthentication no` activo; `PermitRootLogin` ya estaba correcto. Pendiente aparte y no bloqueante: `fail2ban`/`ufw`, requieren permiso explicito por ser cambio de sistema.
@@ -114,8 +115,9 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 
 - instalación base de Hermes validada
 - OpenRouter operativo
-- `openai-codex` autenticado y operativo como proveedor principal
+- `openai-codex` autenticado y operativo como proveedor principal antes del bloqueo temporal por cuota
 - `gpt-5.6-terra` observado como modelo principal por `openai-codex` el 2026-08-21
+- perfiles `default` y `auscultacion` tienen como estado final Codex por perfil con fallback OpenRouter; Gemini 3.6 fue una transición temporal documentada
 - usos oficiales iniciales definidos: `Research`, `Content` y `Builder`
 - `JUDGE.md` creado y regla minima de 8/10 adoptada para salidas validas
 - guía operativa diaria creada para trabajo local ↔ VPS ↔ Hermes

@@ -21,9 +21,8 @@ No sustituye la bitacora. No es lectura obligatoria de `BOOTSTRAP.md` (para no s
 - 2026-08-21: Gobernanza reducida: BOOTSTRAP es único arranque; políticas secundarias remiten a fuentes canónicas.
 - 2026-08-24: Video Telegram validado con fotogramas y transcripcion local; `video_analyze` nativo sigue desactivado.
 - 2026-08-24: Shorts V1 desplegado con skill 0.2.0; faltan tres cortos y un largo reales por Telegram.
-
 - 2026-08-25: Telegram optimizado: max_turns 20 y menos herramientas no usadas; gateways activos. Ver bitacora.
-
 - 2026-08-25: Segunda pasada Telegram: session_search, browser y video fuera; image_gen solo en default. Ver bitacora.
 - 2026-08-25: Perfiles finales: terra/luna por Codex y Gemini 3.7 fallback; Telegram recortado. Ver bitacora.
 - 2026-08-25: Google: probar endpoint directo antes de atribuir un 503 o URL incorrecta a autenticacion. Ver bitacora.
+- 2026-08-25: `default` y `auscultacion` pasan a Gemini 3.6 Flash vía Google AI Studio por cuota de Codex.
