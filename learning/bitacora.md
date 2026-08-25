@@ -416,3 +416,17 @@ Hermes respondio que el estado real ya incluye:
 - El motor no publica, no borra y no instala dependencias. La integracion de lenguaje natural y entrega A/B/C ya esta desplegada; sigue pendiente probarla con tres cortos y un video largo reales.
 - Despliegue posterior: commits `15a357c` y `25f9744` sincronizados con VPS; 12 pruebas especificas correctas en Linux. La skill experimental `ciudadanoinusual-social-video` se actualizo de 0.1.0 a 0.2.0, quedo habilitada y conserva backup privado de la version anterior.
 - No se reinicio el gateway ni se cambio configuracion. La entrega real A/B/C y las respuestas naturales siguen pendientes de prueba con material del usuario.
+
+## Reduccion de coste fijo de Telegram - 2026-08-25
+
+- `max_turns` quedo en 20 para `default` y `auscultacion` (antes 60 y 150).
+- Telegram desactivo `delegation` y `tts` en ambos perfiles; Auscultacion tambien desactivo `code_execution`, `computer_use` y `cronjob`.
+- Los gateways de ambos perfiles reiniciaron y quedaron activos; `vision`, `file`, `memory`, `skills`, `todo` y `clarify` se conservaron.
+- El prompt fijo total se redujo 8,3% en `default` y 11,4% en `auscultacion`; los esquemas solos bajaron 16,8% y 21,3%. El bloque de sistema cambio por un ajuste concurrente de modelos y no se atribuye a esta optimizacion.
+
+## Segunda pasada de reduccion de coste fijo de Telegram - 2026-08-25
+
+- En Telegram se desactivaron `session_search`, `browser` y `bfl` en ambos perfiles; `image_gen` se mantuvo en `default` y se desactivo en `auscultacion`.
+- Los esquemas medidos bajaron de 31.228 a 24.769 B en `default` y de 31.250 a 24.791 B en `auscultacion`; `browser` y `bfl` ya no contribuian al JSON fijo medido, pero quedaron fuera por alcance operativo.
+- El prompt fijo total quedo en 42.710 B y 44.865 B, una reduccion adicional de 13,5% y 12,9% frente a la primera pasada; desde la linea base inicial, el ahorro acumulado es 20,7% y 22,8%.
+- Ambos gateways reiniciaron y quedaron activos. Telegram conserva `web`, `vision`, `file`, `memory`, `skills`, `todo` y `clarify`; la recuperacion de sesiones antiguas queda para la CLI.
