@@ -470,6 +470,10 @@ Hermes respondio que el estado real ya incluye:
 
 - Se corrigieron exposicion real de Telegram, rotacion por perfil, cierre verificable de F-03, estado de F-01 como mitigacion parcial y referencias al bloque canonico de proveedores en `docs/CODEX-BRIEF.md`.
 
+## Fase 3 - perfiles aislados - 2026-08-25
+
+- Se documentaron los dos perfiles y gateways, el diagnostico de 429 y la restauracion con ambos perfiles y unidades; no hubo cambios de runtime.
+
 ## Fase 1 - correcciones de retencion y secretos - 2026-08-25
 
 - La retencion identifica objetos expirados por identidad, evitando borrar registros validos con IDs duplicados y eliminando tambien registros sin ID.

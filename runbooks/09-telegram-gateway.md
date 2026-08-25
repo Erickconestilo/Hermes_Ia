@@ -8,7 +8,12 @@ Registrar como quedo activado el acceso movil a Hermes mediante Telegram, sin gu
 
 - Telegram Gateway esta operativo en Fase 1 como experimento controlado.
 - El bot responde desde el movil.
-- El gateway corre como servicio de usuario `hermes-gateway.service`.
+- El perfil `default` corre como servicio de usuario `hermes-gateway.service`.
+- El perfil `auscultacion` corre como servicio aislado
+  `hermes-gateway-auscultacion.service`.
+- Ambos servicios se validan por separado; un estado activo de uno no valida el
+  otro.
+- Cada perfil mantiene su propio `.env`, contexto, memoria y datos.
 - `systemd linger` esta habilitado para que el servicio sobreviva al cierre de SSH.
 - El backend de Hermes sigue siendo `local`.
 - El proveedor principal sigue siendo `openai-codex`.
@@ -17,7 +22,9 @@ Registrar como quedo activado el acceso movil a Hermes mediante Telegram, sin gu
 
 ## Seguridad aplicada
 
-- El token de Telegram se guardo en `/home/hermes/.hermes/.env`.
+- El token del perfil `default` se guardo en `/home/hermes/.hermes/.env`.
+- El token del perfil `auscultacion` se guarda, si esta configurado, en
+  `/home/hermes/.hermes/profiles/auscultacion/.env`.
 - El token no se copio al chat ni se versiono en Git.
 - Se configuro allowlist de Telegram para limitar el uso al usuario autorizado.
 - No se documenta el token ni el ID numerico del usuario.
@@ -46,10 +53,22 @@ Ver estado del gateway:
 hermes gateway status
 ```
 
+Ver el gateway del perfil tecnico:
+
+```bash
+hermes -p auscultacion gateway status
+```
+
 Reiniciar el gateway:
 
 ```bash
 hermes gateway restart
+```
+
+Reiniciar solo el perfil tecnico:
+
+```bash
+hermes -p auscultacion gateway restart
 ```
 
 Enviar una imagen al chat de Telegram:
@@ -64,10 +83,22 @@ Ver logs recientes:
 journalctl --user -u hermes-gateway -n 80 --no-pager
 ```
 
+Logs del perfil tecnico:
+
+```bash
+journalctl --user -u hermes-gateway-auscultacion -n 80 --no-pager
+```
+
 Seguir logs en vivo:
 
 ```bash
 journalctl --user -u hermes-gateway -f
+```
+
+Seguir logs del perfil tecnico:
+
+```bash
+journalctl --user -u hermes-gateway-auscultacion -f
 ```
 
 ## Verificaciones realizadas
@@ -118,6 +149,8 @@ Resultado:
 | --- | --- | --- | --- | --- |
 | Respuesta basica | enviar `hola` desde movil | probado | respuesta rapida observada | no |
 | Servicio persistente | `hermes gateway status` | probado | `User gateway service is running` | no |
+| Gateway del perfil `auscultacion` | `systemctl --user is-active hermes-gateway-auscultacion.service` | probado | servicio de usuario activo en VPS | no |
+| Aislamiento de perfiles | `stat` sobre ambos `.env` | probado | ambos modos `600`, sin leer contenido | no |
 | Lectura de contexto | pedir resumen de `docs/CODEX-BRIEF.md` | probado | respuesta con estado actualizado | no |
 | Envio de imagen al usuario | `scripts/send-telegram-photo.py` | probado | `ok: true` y `message_id` | no |
 | Captura Movil V1 | guardar nota privada desde Telegram | probado | captura real almacenada en JSONL y recuperada despues | no |
@@ -176,6 +209,16 @@ Systemd linger is enabled
 ```
 
 El bot respondio desde el movil despues de arrancar el servicio.
+
+Estado de los dos servicios en la verificacion de perfiles:
+
+```text
+hermes-gateway.service: active
+hermes-gateway-auscultacion.service: active
+```
+
+La respuesta de Telegram debe atribuirse siempre al perfil y al bot que se
+probaron; no se infiere capacidad del segundo gateway a partir del primero.
 
 ## Imagenes generadas, encontradas o editadas
 

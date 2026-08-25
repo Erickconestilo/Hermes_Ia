@@ -28,3 +28,4 @@ No sustituye la bitacora. No es lectura obligatoria de `BOOTSTRAP.md` (para no s
 - 2026-08-25: `default` y `auscultacion` pasan a Gemini 3.6 Flash vía Google AI Studio por cuota de Codex.
 - 2026-08-25: Fase 1: retencion y secretos corregidos; suite unittest 51 OK y 10 omisiones explicadas. Ver bitacora.
 - 2026-08-25: Fase 2: runbooks y estados corregidos; F-03 cerrado y proveedores centralizados en CODEX-BRIEF. Ver bitacora.
+- 2026-08-25: Fase 3: perfiles y gateways aislados documentados; restore verifica ambos sin activar servicios.

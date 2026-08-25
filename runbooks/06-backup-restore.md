@@ -8,6 +8,7 @@ Respaldar el estado mínimo de Hermes sin mezclar secretos en el repositorio.
 
 - `/home/hermes/.hermes`
 - `/home/hermes/workspace`
+- `/home/hermes/.config/systemd/user` (unidades de gateway, sin activarlas al restaurar)
 
 ## Reglas
 
@@ -23,7 +24,7 @@ Ejecutar como usuario `hermes` en el VPS. Genera un tar comprimido con fecha en 
 mkdir -p /home/hermes/backups
 FECHA="$(date +%Y%m%d-%H%M%S)"
 tar -czf "/home/hermes/backups/hermes-backup-${FECHA}.tar.gz" \
-  -C /home/hermes .hermes workspace
+  -C /home/hermes .hermes workspace .config/systemd/user
 ls -lh /home/hermes/backups/
 ```
 
@@ -56,6 +57,15 @@ ls /home/hermes/restore-test/workspace
 test -f /home/hermes/restore-test/.hermes/data/ciudadanoinusual/capturas.jsonl && echo "capturas.jsonl OK"
 test -f /home/hermes/restore-test/.hermes/.env && echo ".env OK"
 
+# 3b. Verificar ambos perfiles sin leer el contenido de sus secretos
+test "$(stat -c '%a' /home/hermes/restore-test/.hermes/.env)" = "600" && echo "default .env mode OK"
+test -f /home/hermes/restore-test/.hermes/profiles/auscultacion/.env && echo "auscultacion .env OK"
+test "$(stat -c '%a' /home/hermes/restore-test/.hermes/profiles/auscultacion/.env)" = "600" && echo "auscultacion .env mode OK"
+
+# 3c. Verificar que las dos unidades se restauraron como archivos
+test -f /home/hermes/restore-test/.config/systemd/user/hermes-gateway.service && echo "default unit OK"
+test -f /home/hermes/restore-test/.config/systemd/user/hermes-gateway-auscultacion.service && echo "auscultacion unit OK"
+
 # 4. Verificar que capturas.jsonl es JSON valido linea a linea
 python3 -c "
 import json
@@ -76,6 +86,11 @@ rm -rf /home/hermes/restore-test
 ```
 
 Rollback: el paso 5 es el propio rollback; la prueba nunca toca `/home/hermes/.hermes` ni `/home/hermes/workspace` reales.
+
+La comprobacion anterior valida presencia, permisos y archivos de unidad
+restaurados. No ejecuta `systemctl`, no instala las unidades y no activa ningun
+gateway. El estado de los servicios en produccion se comprueba aparte con
+`systemctl --user is-active` para cada unidad.
 
 Verificación de que la sesión sirvió: registrar en `learning/bitacora.md` la fecha, el nombre del backup probado, si `capturas.jsonl` fue válido, y si algo faltaba respecto a lo esperado.
 

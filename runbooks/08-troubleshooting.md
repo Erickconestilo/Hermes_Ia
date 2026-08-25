@@ -19,6 +19,42 @@ Ante cualquier problema, registrar siempre:
 - proveedor de modelo mal configurado
 - archivos de configuración en rutas inesperadas
 
+## 429 o limite de `openai-codex`
+
+### Sintoma
+
+El chat o Telegram devuelve `429`, `usage_limit_reached` o un mensaje de cuota
+agotada. Esto no demuestra por si solo que el gateway este caido ni que la
+credencial sea invalida.
+
+### Diagnostico minimo
+
+Comprobar el perfil y el servicio por separado, sin cambiar proveedores de
+forma impulsiva:
+
+```bash
+hermes -p default gateway status
+hermes -p auscultacion gateway status
+journalctl --user -u hermes-gateway.service -n 80 --no-pager
+journalctl --user -u hermes-gateway-auscultacion.service -n 80 --no-pager
+```
+
+Un `429` del proveedor y un proceso `active (running)` pueden coexistir. La
+cuota, el modelo y el fallback vigente deben comprobarse contra
+`docs/CODEX-BRIEF.md` y la configuracion del perfil correcto. No leer ni pegar
+`.env` en el chat.
+
+### Seguimiento en vivo
+
+```bash
+journalctl --user -u hermes-gateway.service -f
+journalctl --user -u hermes-gateway-auscultacion.service -f
+```
+
+No reiniciar repetidamente para ocultar un `429`. Si se autoriza un cambio de
+proveedor o modelo, configurar primero el perfil afectado, reiniciar despues su
+gateway y verificar el resultado.
+
 ## Regla
 
 No aplicar cambios acumulativos a ciegas. Hacer una corrección por vez y verificar.
