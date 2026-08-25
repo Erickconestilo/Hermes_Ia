@@ -166,6 +166,23 @@ Si un proceso lleva 14 días documentado sin una sola ejecución, el documento s
 
 Este principio nace de la auditoría del 2026-07-21: 95% de los commits del repositorio eran documentación (`docs:`) y solo 1 de 18 piezas publicables llegó a publicarse. El repositorio puede seguir creciendo en documentación, pero no sin evidencia de uso real detrás.
 
+### 17. Un documento debe ganarse su existencia
+
+Un documento nuevo solo se crea si cumple al menos una de estas condiciones:
+
+- cambia una decisión;
+- reduce un riesgo;
+- permite ejecutar algo.
+
+Si no cumple ninguna, el contenido se añade como una línea en
+`learning/bitacora.md`. Antes de crear un archivo, se debe comprobar si cabe en
+un archivo existente; ampliar un runbook vigente es la opción preferida.
+
+El número total de archivos `.md` debe bajar o mantenerse igual por defecto.
+Cualquier aumento requiere una justificación explícita. Este principio da
+seguimiento al hallazgo F-11 y evita confundir producción documental con
+avance operativo.
+
 ## Dominios principales
 
 Hermes puede crecer en varios dominios, pero no todos tienen la misma prioridad.

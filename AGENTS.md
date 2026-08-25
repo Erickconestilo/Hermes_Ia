@@ -64,6 +64,9 @@ Regla principal: Hermes puede expandirse en bajo riesgo si deja rastro. Hermes d
 ## Convenciones de documentación
 
 - Usar placeholders, nunca secretos reales.
+- Usar Markdown para lo que se lee: decisiones, reglas, runbooks, contexto y aprendizajes.
+- Usar YAML, JSON, JSONL o CSV para lo que leen los scripts: configuración, estado, inventarios y registros.
+- Esta separación es una convención práctica, no una ley; la autoridad sobre cuándo crear un documento está en `docs/governance/CONSTITUTION.md`.
 - Documentar por fases, distinguiendo entre operativo ahora, siguiente experimento seguro, futuro planificado y descartado por ahora.
 - Registrar decisiones y dudas abiertas en los runbooks y en la bitácora.
 - Mantener el camino de migración futura a `terminal.backend = docker` sin implementarlo todavía.
