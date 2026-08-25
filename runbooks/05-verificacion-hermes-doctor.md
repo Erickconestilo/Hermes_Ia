@@ -34,7 +34,7 @@ Registrar:
 
 ## Advertencias no bloqueantes observadas
 
-- `Config version outdated (v0 -> v29)`
+- `Config version outdated (v0 -> v33)`
 - `docker not found (optional)`
 - `Playwright Chromium not installed`
 - paquetes opcionales de Telegram y Discord no instalados
@@ -50,7 +50,7 @@ Registrar:
 
 ## Pruebas funcionales posteriores
 
-- Hermes respondió: `Estoy usando nex-agi/nex-n2-pro:free a través de OpenRouter.`
+- Hermes respondio usando el proveedor y modelo del perfil activo. No se fija un modelo comunitario antiguo en este runbook; la configuracion vigente esta en `docs/CODEX-BRIEF.md`.
 - Hermes confirmó:
   - identidad: `Hermes Agent`
   - backend: terminal Linux integrado
@@ -65,5 +65,5 @@ Registrar:
 La instalacion estuvo sin actualizar de junio a agosto y acumulo 20883 commits de atraso (ver `learning/bitacora.md`, "Hermes Agent actualizado de 0.16.0 a 0.20.0"). Para no repetirlo:
 
 - revisar `hermes update --check` aproximadamente una vez al mes (chequeo manual, no cron; sigue en zona roja segun `AGENTS.md`).
-- si hay atraso grande, seguir el mismo procedimiento verificado: `hermes update --backup` -> no restaurar cambios locales sin motivo conocido -> `hermes gateway restart` -> validar con `hermes doctor`, `hermes --version`, `hermes gateway status` y una prueba real desde Telegram.
+- si hay atraso grande, seguir el mismo procedimiento verificado: `hermes update --backup` -> no restaurar cambios locales sin motivo conocido -> reiniciar y validar ambos perfiles: `hermes gateway restart` y `hermes -p auscultacion gateway restart`; comprobar `hermes doctor`, `hermes -p auscultacion doctor`, las dos versiones, los dos estados y una prueba real desde cada bot.
 - registrar el resultado en `learning/bitacora.md`.

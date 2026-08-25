@@ -1,103 +1,88 @@
-# 11 - Rotación de tokens y claves
+# 11 - Rotacion de tokens y claves
 
 ## Objetivo
 
-Tener un procedimiento escrito para cuando un secreto se filtra o simplemente toca renovarlo, en vez de improvisar en caliente. Cubre los cuatro secretos reales que usa `Hermes_Ia` hoy: token de bot de Telegram, `OPENROUTER_API_KEY`, autenticación de `openai-codex`, y la clave SSH del VPS.
+Rotar secretos sin mezclar los perfiles `default` y `auscultacion`, sin escribir valores en Git y verificando el gateway correcto despues de cada cambio.
 
-Motivo: señalado como hueco en `AUDITORIA-2026-07-21.md` — la higiene de secretos del repo es buena (nada versionado, `.gitignore` correcto, ahora además con `scripts/verificar-secretos.sh` como red de seguridad automática), pero no había ningún procedimiento de qué hacer el día que algo se filtra de verdad.
+## Regla general
 
-## Regla general antes de rotar cualquier cosa
+1. Generar el secreto nuevo antes de revocar el anterior cuando el proveedor lo permita.
+2. Actualizar solo el `.env` del perfil que usa ese secreto.
+3. Mantener permisos restrictivos y no imprimir el valor.
+4. Reiniciar y verificar el servicio del perfil afectado.
+5. Revocar el secreto anterior solo despues de validar el nuevo.
+6. Registrar el hecho en `learning/bitacora.md`, nunca el valor.
 
-1. Confirmar que realmente hace falta rotar (filtración real, sospecha razonable, o rotación preventiva programada).
-2. Generar el secreto nuevo ANTES de revocar el viejo, cuando el proveedor lo permita — evita una ventana sin servicio.
-3. Actualizar `/home/hermes/.hermes/.env` en el VPS con el valor nuevo.
-4. Verificar que el servicio afectado sigue funcionando con el valor nuevo.
-5. Solo entonces revocar el valor viejo en el proveedor.
-6. Registrar en `learning/bitacora.md`: qué se rotó, por qué, y el resultado de la verificación. Nunca registrar el secreto en sí, solo el hecho de la rotación.
+## Perfiles y servicios
 
----
+| Perfil | Configuracion | Gateway |
+| --- | --- | --- |
+| `default` | `/home/hermes/.hermes/.env` | `hermes-gateway.service` |
+| `auscultacion` | `/home/hermes/.hermes/profiles/auscultacion/.env` | `hermes-gateway-auscultacion.service` |
 
-## Token de bot de Telegram
+Usar siempre `hermes -p <perfil>` o el wrapper del perfil para comprobar el estado correcto. No asumir que cambiar el `.env` principal actualiza `auscultacion`.
 
-**Dónde vive:** `TELEGRAM_BOT_TOKEN` en `/home/hermes/.hermes/.env`.
+## Inventario de secretos
 
-**Riesgo si se filtra:** alguien puede enviar mensajes como el bot, leer comandos configurados, o interferir con el gateway. No da acceso al VPS en sí.
+- `TELEGRAM_BOT_TOKEN`: `.env` del perfil cuyo bot se rota.
+- `OPENROUTER_API_KEY`: `.env` de cada perfil que lo use.
+- `GOOGLE_API_KEY`: `.env` de cada perfil que use Google AI Studio o el fallback correspondiente.
+- `FAL_KEY`: `.env` del perfil que use generacion de imagenes.
+- Autenticacion `openai-codex`: estado de autenticacion interno del perfil, no un valor para copiar al repositorio.
+- Clave SSH del VPS: privada en el equipo local y publica en `authorized_keys` del VPS.
 
-**Pasos:**
+## Telegram
 
-1. En Telegram, hablar con `@BotFather`.
-2. `/mybots` → seleccionar el bot de Hermes → `API Token` → `Revoke current token`. BotFather genera uno nuevo automáticamente al revocar.
-3. Copiar el token nuevo.
-4. En el VPS: editar `/home/hermes/.hermes/.env` y reemplazar `TELEGRAM_BOT_TOKEN` por el valor nuevo.
-5. `hermes gateway restart`.
-6. Verificación: mandar `hola` al bot desde Telegram y confirmar respuesta (mismo test que `runbooks/09-telegram-gateway.md`).
-7. El token viejo queda inválido automáticamente al revocarlo en el paso 2 — no hace falta ningún paso adicional de revocación.
+1. Revocar y generar el token desde `@BotFather`.
+2. Escribirlo en el `.env` del perfil correcto con permisos `600`.
+3. Reiniciar solo el gateway correspondiente:
 
-**Rollback si algo falla:** si el gateway no responde tras el paso 5, revisar que no haya espacios o comillas accidentales al pegar el token nuevo en `.env`. El token viejo ya no sirve una vez revocado, así que no hay vuelta atrás — si el nuevo falla, hay que generar otro repitiendo el proceso.
+```bash
+hermes gateway restart
+hermes gateway status
+hermes -p auscultacion gateway restart
+hermes -p auscultacion gateway status
+```
 
----
+4. Enviar `hola` desde el movil y confirmar respuesta.
 
-## `OPENROUTER_API_KEY`
+Rollback: el token anterior deja de ser valido al revocarlo; si el nuevo falla, generar otro y repetir. No existe rollback al token revocado.
 
-**Dónde vive:** `/home/hermes/.hermes/.env`, fallback del proveedor principal.
+## OpenRouter, Google AI Studio y FAL
 
-**Riesgo si se filtra:** uso no autorizado de la cuenta de OpenRouter, coste económico.
+1. Crear una clave nueva en el proveedor.
+2. Actualizar la variable en el `.env` del perfil afectado.
+3. Comprobar con `hermes -p <perfil> doctor` o una peticion inocua del perfil.
+4. Reiniciar y verificar `hermes-gateway.service` o `hermes-gateway-auscultacion.service`.
+5. Revocar la clave antigua.
 
-**Pasos:**
+Rollback: conservar la clave anterior hasta comprobar el nuevo flujo; si ya fue revocada, generar una nueva en el proveedor.
 
-1. Entrar a [openrouter.ai](https://openrouter.ai), sección de API keys.
-2. Crear una key nueva.
-3. En el VPS: actualizar `OPENROUTER_API_KEY` en `/home/hermes/.hermes/.env`.
-4. Verificar con `hermes doctor` que valida "OpenRouter API" (ver `runbooks/01-estado-actual.md`).
-5. Volver a OpenRouter y revocar/borrar la key vieja.
+## Autenticacion openai-codex
 
-**Rollback:** si `hermes doctor` falla con la key nueva, revisar que se copió completa y sin espacios antes de revocar la vieja.
+Gestionarla con el flujo oficial de autenticacion del perfil. Verificar primero el comando disponible y ejecutar logout/login solo en el perfil afectado. Comprobar despues `hermes -p <perfil> doctor` y su gateway.
 
----
+Rollback: repetir la autenticacion oficial con una sesion valida; no copiar tokens de autenticacion entre perfiles.
 
-## Autenticación de `openai-codex`
+## Clave SSH del VPS
 
-**Dónde vive:** gestionada por el propio `hermes`, no es una variable de `.env` de texto plano sino un estado de autenticación interno.
+1. Generar una clave nueva en el equipo local.
+2. Añadir la clave publica al `authorized_keys` del usuario `hermes`.
+3. Probar una segunda conexion con la clave nueva.
+4. Solo entonces retirar la clave antigua y actualizar el alias local.
 
-**Riesgo si se filtra:** depende de cómo esté implementada la sesión (token OAuth, API key); en general, acceso a la cuenta de OpenAI/Codex asociada.
+Rollback: conservar la clave antigua hasta verificar la nueva; si se retiro, añadir de nuevo su clave publica desde una sesion aun abierta o mediante el acceso administrativo autorizado.
 
-**Pasos:**
+## Rotacion tras incidente
 
-1. En el VPS, como `hermes`: consultar la documentación oficial de `openai-codex` para el comando de logout/re-auth (típicamente algo como `codex auth logout` seguido de `codex auth login`, verificar el nombre exacto del comando instalado antes de ejecutar nada).
-2. Volver a autenticar siguiendo el flujo oficial (probablemente un link OAuth a abrir desde el navegador).
-3. Verificar con `hermes doctor` que "OpenAI Codex auth" sigue validando correctamente.
-4. Si la sesión vieja no se invalida automáticamente al re-autenticar, revisar el panel de la cuenta OpenAI/Codex para revocar sesiones activas antiguas manualmente.
-
-**Nota:** este es el secreto menos documentado de los cuatro porque nunca se ha rotado en la práctica. La primera vez que se ejecute este procedimiento, actualizar esta sección con los comandos exactos reales que funcionaron.
-
----
-
-## Clave SSH del VPS (`hermes_hetzner_ed25519`)
-
-**Dónde vive:** privada en `C:\Users\guill\.ssh\hermes_hetzner_ed25519` (local), pública en `~/.ssh/authorized_keys` del usuario `hermes` (y de `root` si aplica) en el VPS.
-
-**Riesgo si se filtra la clave privada:** acceso completo al VPS como el usuario correspondiente. Es el secreto de mayor impacto de los cuatro.
-
-**Pasos:**
-
-1. Generar un par de claves nuevo en local:
-   ```
-   ssh-keygen -t ed25519 -f C:\Users\guill\.ssh\hermes_hetzner_nueva -C "hermes-vps-rotada-$(date +%Y%m%d)"
-   ```
-2. Copiar la clave **pública** nueva al VPS. Si todavía se puede entrar con la clave vieja:
-   ```
-   ssh -i C:\Users\guill\.ssh\hermes_hetzner_ed25519 hermes@<HETZNER_VPS_IP> "echo '<contenido-de-la-clave-publica-nueva>' >> ~/.ssh/authorized_keys"
-   ```
-3. **Antes de borrar nada**, verificar que la clave nueva entra: abrir una terminal distinta y probar `ssh -i C:\Users\guill\.ssh\hermes_hetzner_nueva hermes@<HETZNER_VPS_IP>`.
-4. Solo si el paso 3 funciona: editar `~/.ssh/authorized_keys` en el VPS y quitar la línea de la clave vieja.
-5. Actualizar el alias local `hermes` en `C:\Users\guill\.ssh\config` para que apunte al archivo de clave nuevo.
-6. Actualizar `core.sshCommand` en la configuración de Git del repo si apunta a la ruta de la clave vieja (`git config core.sshCommand`).
-7. Borrar el archivo de la clave privada vieja en local, o guardarlo fuera del alcance normal si se prefiere conservar un tiempo por si acaso.
-
-**Rollback:** no borrar la clave vieja del VPS (paso 4) hasta confirmar que la nueva funciona (paso 3). Mismo principio que el endurecimiento SSH de este mismo runbook: nunca cerrar el único camino de entrada sin haber verificado el nuevo primero.
-
----
+1. Tratar el secreto como comprometido y no esperar a confirmar el alcance.
+2. Revocar primero en el proveedor, salvo que se necesite una ventana controlada para evitar caida.
+3. Generar un valor nuevo y actualizar todos los perfiles donde aparecia el secreto.
+4. Reiniciar y verificar cada gateway afectado por separado.
+5. Revisar Git, logs y sesiones para retirar copias expuestas sin imprimirlas.
+6. Revisar permisos, allowlists y destinos autorizados.
+7. Registrar fecha, secreto afectado, alcance, verificacion y acciones pendientes sin escribir el valor.
 
 ## Registro
 
-Cada rotación real ejecutada debe dejar una entrada en `learning/bitacora.md` con: fecha, qué se rotó, motivo (filtración / rutina / sospecha), y resultado de la verificación. Nunca escribir el valor del secreto, ni el viejo ni el nuevo.
+Toda rotacion real debe dejar una entrada breve en `learning/bitacora.md`. Nunca escribir el secreto viejo, el nuevo, tokens, cookies ni credenciales.

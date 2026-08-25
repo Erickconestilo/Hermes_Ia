@@ -23,9 +23,7 @@ Convertir Hermes en el arnes personal de IA de Erick/CiudadanoInusual:
 - Instalacion Hermes: nativa en `/home/hermes/.hermes`.
 - Workspace VPS: `/home/hermes/workspace/Hermes_Ia`.
 - Backend: `local`.
-- Proveedor principal: `openai-codex`.
-- Modelo principal observado en el runtime el 2026-08-21: `gpt-5.6-terra`.
-- Fallback: OpenRouter.
+- Proveedores y modelos por perfil: ver [`docs/CODEX-BRIEF.md`](docs/CODEX-BRIEF.md#estado-de-proveedores-y-modelos-fuente-unica).
 - Sincronizacion: Git local -> GitHub `origin` y VPS `vps`.
 - Telegram Gateway: operativo como servicio de usuario `hermes-gateway.service`.
 - Version Hermes Agent: `0.20.0` (actualizado el 2026-08-08 desde `0.16.0`; ver `learning/bitacora.md`). La migracion de config `v29 -> v33` y `agent.verify_on_stop = "auto"` quedaron ejecutados y verificados ese mismo dia.
@@ -58,8 +56,7 @@ Convertir Hermes en el arnes personal de IA de Erick/CiudadanoInusual:
 ### Operativo ahora
 
 - Hermes nativo en VPS.
-- `openai-codex` con `gpt-5.6-terra` observado en el runtime el 2026-08-21.
-- OpenRouter como fallback.
+- Estado vigente de proveedores y modelos: ver [`docs/CODEX-BRIEF.md`](docs/CODEX-BRIEF.md#estado-de-proveedores-y-modelos-fuente-unica).
 - Telegram Gateway para hablar con Hermes desde movil.
 - Envio de imagenes generadas a Telegram.
 - Git como mecanismo de sincronizacion.

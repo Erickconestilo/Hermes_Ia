@@ -14,9 +14,7 @@ Foto comprimida y operativa de `Hermes_Ia` para futuras sesiones de Codex.
 - Instalacion Hermes: nativa.
 - Usuario operativo: `hermes`.
 - Backend actual: `local`.
-- Auth principal: `openai-codex`.
-- Modelo principal observado en el runtime el 2026-08-21: `gpt-5.6-terra`.
-- Fallback: OpenRouter.
+- Auth y modelos: ver el bloque canonico `Estado de proveedores y modelos` mas abajo.
 - Sync local, GitHub y VPS: Git operativo.
 - Telegram Gateway: operativo desde movil mediante bot autorizado.
 - Imagenes generadas: envio a Telegram con `scripts/send-telegram-photo.py`.
@@ -27,6 +25,17 @@ Foto comprimida y operativa de `Hermes_Ia` para futuras sesiones de Codex.
 - Fase 0 documental: cerrada.
 - Fase 1: activa en modo controlado.
 - `CiudadanoInusual`: sistema editorial activo.
+
+### Estado de proveedores y modelos (fuente unica)
+
+Este es el unico bloque que debe contener el estado vigente de proveedores y modelos. Los demas documentos deben enlazar aqui, no copiar estos valores.
+
+| Perfil | Principal | Fallback |
+| --- | --- | --- |
+| `default` / CiudadanoInusual | `gpt-5.6-terra` via `openai-codex` | `google/gemini-3.7-flash` via OpenRouter |
+| `auscultacion` | `gpt-5.6-luna` via `openai-codex` | `google/gemini-3.7-flash` via OpenRouter |
+
+El saldo prepago de emergencia de OpenRouter tiene un tope de 5 EUR. La configuracion esta aislada por perfil: cada perfil conserva su propio `.env`, autenticacion y gateway. La fecha de una comprobacion concreta debe registrarse en `learning/bitacora.md`; este bloque describe la configuracion vigente declarada, no sustituye una comprobacion viva del VPS.
 
 ## Norte estrategico
 `Hermes_Ia` es el arnes personal de IA de Erick/CiudadanoInusual.

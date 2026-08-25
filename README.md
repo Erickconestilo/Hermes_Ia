@@ -126,8 +126,7 @@ Estado validado dentro de esta fase:
 - acceso SSH validado
 - usuario `hermes` creado
 - Hermes instalado y operativo
-- proveedor principal `openai-codex` con `gpt-5.6-terra`, observado en el runtime el 2026-08-21
-- OpenRouter configurado como fallback
+- proveedores y modelos por perfil: ver [`docs/CODEX-BRIEF.md`](docs/CODEX-BRIEF.md#estado-de-proveedores-y-modelos-fuente-unica)
 - sincronizacion local, GitHub y VPS por Git ya operativa
 - Telegram Gateway operativo desde movil
 - Captura Movil V1 cerrada con evidencia real

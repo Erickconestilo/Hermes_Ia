@@ -466,6 +466,10 @@ Hermes respondio que el estado real ya incluye:
 - Rollback: backup previo `hermes-backup-2026-08-25-084745.zip`; a partir del 2026-08-31 comprobar la recuperación de cuota y revertir ambos perfiles a `openai-codex` si vuelve a responder, reiniciando después el gateway correcto de cada perfil.
 - Base URL validada para Google AI Studio en Hermes: `https://generativelanguage.googleapis.com/v1beta/openai`; `/v1beta` sin `/openai` no sirve para esta integración.
 
+## Fase 2 - correccion de documentos de estado - 2026-08-25
+
+- Se corrigieron exposicion real de Telegram, rotacion por perfil, cierre verificable de F-03, estado de F-01 como mitigacion parcial y referencias al bloque canonico de proveedores en `docs/CODEX-BRIEF.md`.
+
 ## Fase 1 - correcciones de retencion y secretos - 2026-08-25
 
 - La retencion identifica objetos expirados por identidad, evitando borrar registros validos con IDs duplicados y eliminando tambien registros sin ID.

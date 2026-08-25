@@ -1,5 +1,11 @@
 # Auditoría integral de Hermes IA previa a Empleo Ops
 
+## Actualizacion de estado - 2026-08-25
+
+- F-03: cerrado con backup externo cifrado y restauracion aislada verificada el 2026-08-21.
+- F-06 y F-08: parciales; las correcciones y evidencias existentes no equivalen a un cierre global de sus controles.
+- F-09: corregido en el alcance probado; conservar la verificacion real y no extender el cierre a flujos no cubiertos.
+
 **Fecha:** 2026-08-11
 
 **Modalidad:** diagnóstico exclusivamente; sin correcciones, instalaciones, reinicios, despliegues, commits ni envíos

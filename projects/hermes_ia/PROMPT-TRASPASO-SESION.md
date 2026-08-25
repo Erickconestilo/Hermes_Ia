@@ -26,7 +26,7 @@ Sistema operativo personal de IA en evolución. No es un chatbot, es un agente a
 
 - VPS Hetzner Ubuntu 24.04 (`hermes-01`, CX33 x86, Nuremberg), usuario operativo `hermes`
 - Instalación nativa de Hermes Agent, backend `local`
-- Proveedor principal: `openai-codex` / modelo observado `gpt-5.6-terra`; fallback OpenRouter
+- Estado de proveedores y modelos: consultar la fuente unica `docs/CODEX-BRIEF.md`.
 - Sync por Git entre local, GitHub y VPS (remoto `vps` por SSH, remoto `origin` en GitHub, repo público)
 - Telegram Gateway activo para uso móvil, con menú nativo `/` propio de Hermes Agent (no personalizado — ver sección de comandos)
 - Acceso SSH local vía alias `ssh hermes` (definido en `~/.ssh/config`; si falla, forma larga con la clave `hermes_hetzner_ed25519`)

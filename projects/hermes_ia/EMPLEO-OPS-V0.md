@@ -1,4 +1,6 @@
-# Empleo Ops V0
+# Empleo Ops V0 - APARCADO
+
+> Aparcado por decision del usuario: duplicaba InfoJobs sin un problema repetido que justificara mantener este contrato activo. No es una hoja de ruta viva ni una autorizacion de implementacion.
 
 ## Estado
 
@@ -267,7 +269,3 @@ No se emite puntuación ATS. La recomendación es cualitativa y expone los dos b
 - no persiste estado operativo, no exporta, no envía y no activa ninguna herramienta.
 
 La copia de trabajo se considera eliminada al cerrar esta revisión documental. Sólo permanece esta fixture sintética versionable y su resultado como evidencia del contrato; no contiene datos profesionales reales.
-
-## Criterio para una siguiente ejecución
-
-No se autoriza una prueba con datos reales. La próxima acción posterior es corregir F-01 y repetir sus simulaciones con fixtures ficticios, incluyendo casos permitidos y denegados. Después deberán cerrarse F-03 y la parte operativa de F-10 antes de crear el perfil maestro o cualquier derivado persistente.

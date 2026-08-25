@@ -18,13 +18,9 @@ Usuario operativo del VPS y tambien nombre del agente CLI instalado de forma nat
 
 Etapa actual del proyecto: Hermes ya funciona y Telegram Gateway esta operativo como canal movil controlado, pero no se activan todavia Docker, cron recurrente, MCPs ni memoria externa.
 
-### openai-codex
+### Proveedores y modelos
 
-Proveedor principal actual de Hermes autenticado con login de ChatGPT/Codex y usado para el trabajo normal del proyecto.
-
-### OpenRouter fallback
-
-Proveedor de respaldo que permanece configurado para Hermes solo si falla `openai-codex`; no es ya el proveedor principal.
+El estado vigente por perfil, autenticacion, fallback y tope de OpenRouter vive en la fuente unica `docs/CODEX-BRIEF.md`. Este glosario no debe duplicar modelos ni valores de configuracion.
 
 ### ritual de arranque
 

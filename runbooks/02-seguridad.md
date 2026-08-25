@@ -46,15 +46,23 @@ No deben entrar en Git:
 
 ## Postura actual de exposición
 
-Actualmente no se expone:
+No se exponen como servicios HTTP publicos:
 
 - dashboard público
 - API pública
-- Telegram
-- Discord
 - WebUI pública
 
-La postura por defecto sigue siendo privada y conservadora.
+Telegram si esta expuesto como canal externo de mensajeria: existen dos bots operativos, uno para `default` y otro para `auscultacion`, cada uno con su gateway y allowlist. No equivale a una API publica del VPS, pero si aumenta la superficie de entrada y debe tratarse como canal externo autorizado.
+
+### Mitigacion parcial de exfiltracion
+
+La mitigacion disponible esta desplegada en los scripts versionados y probada con fixtures sinteticos, no como una proteccion global del runtime de Hermes. `scripts/verificar-secretos.sh` bloquea patrones conocidos en archivos staged y redacta sus valores; los scripts de envio y captura aplican allowlists, validacion de rutas y salidas sin cuerpos privados.
+
+Cubre: secretos reconocibles en commits, destinos no autorizados de los scripts protegidos, rutas sensibles y algunos escapes por symlink.
+
+No cubre: cualquier comando arbitrario que Hermes pueda ejecutar desde terminal, todas las formas de ofuscacion o exfiltracion, ni un bloqueo semantico global de red. F-01 permanece parcial hasta validar esa capa en el runtime real.
+
+La postura por defecto sigue siendo privada y conservadora: Telegram esta permitido solo para los bots autorizados y no hay publicacion automatica.
 
 ## Regla de cambios sensibles
 
