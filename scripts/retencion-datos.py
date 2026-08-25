@@ -104,7 +104,8 @@ def main(argv: list[str] | None = None) -> int:
     candidate_ids = {record.get("id", "<missing-id>") for record in candidates}
 
     if args.apply:
-        write_records(path, [record for record in records if record.get("id") not in candidate_ids])
+        expired_objects = {id(record) for record in candidates}
+        write_records(path, [record for record in records if id(record) not in expired_objects])
 
     print(
         json.dumps(

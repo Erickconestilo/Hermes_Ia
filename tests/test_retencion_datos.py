@@ -55,6 +55,26 @@ class RetentionDataTests(unittest.TestCase):
             remaining = [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines()]
             self.assertEqual([record["id"] for record in remaining], ["recent-inbox"])
 
+    def test_apply_removes_expired_duplicate_and_missing_ids_by_record_identity(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            path = Path(temporary) / "capturas.jsonl"
+            records = [
+                {"id": "duplicate", "created_at": "2026-01-01T00:00:00+00:00", "status": "discarded"},
+                {"id": "duplicate", "created_at": "2026-01-02T00:00:00+00:00", "status": "discarded"},
+                {"created_at": "2026-01-03T00:00:00+00:00", "status": "discarded"},
+                {"id": "keep", "created_at": "2026-08-20T00:00:00+00:00", "status": "inbox"},
+            ]
+            path.write_text("".join(json.dumps(record) + "\n" for record in records), encoding="utf-8")
+
+            code, result = self.run_main([
+                "--store", str(path), "--now", "2026-08-21T00:00:00+00:00", "--apply"
+            ])
+
+            self.assertEqual(code, 0)
+            self.assertEqual(result["candidate_count"], 3)
+            remaining = [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines()]
+            self.assertEqual(remaining, [{"id": "keep", "created_at": "2026-08-20T00:00:00+00:00", "status": "inbox"}])
+
 
 if __name__ == "__main__":
     unittest.main()

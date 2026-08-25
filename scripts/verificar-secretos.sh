@@ -22,7 +22,9 @@ cd "$repo_root"
 
 # Archivos que van a entrar en el proximo commit (staged), excluyendo
 # los que ya se borraron (no tiene sentido escanear un archivo eliminado).
-mapfile -t staged_files < <(git diff --cached --name-only --diff-filter=ACMR)
+mapfile -d '' -t staged_files < <(
+  git -c core.quotePath=false diff --cached --name-only -z --diff-filter=ACMR
+)
 
 if [ "${#staged_files[@]}" -eq 0 ]; then
   echo "verificar-secretos: no hay archivos en stage, nada que revisar."
@@ -52,7 +54,7 @@ scan_staged_pattern() {
     # Se conserva solo el numero de linea antes de informar la coincidencia.
     mapfile -t lines < <(
       git show ":$file" 2>/dev/null \
-        | grep -En -e "$regex" \
+        | grep -aEn -e "$regex" \
         | cut -d: -f1 \
         || true
     )
@@ -87,11 +89,22 @@ done
 # de uso general que no son sensibles (loopback, sin sentido, comodines).
 for file in "${staged_files[@]}"; do
   mapfile -t ip_lines < <(
-    git show ":$file" 2>/dev/null \
-      | grep -En -e '([0-9]{1,3}\.){3}[0-9]{1,3}' \
-      | grep -Ev -e '0\.0\.0\.0|127\.0\.0\.1|255\.255\.255\.255|<HETZNER_VPS_IP>' \
-      | cut -d: -f1 \
-      || true
+    while IFS=: read -r line content; do
+      has_real_ip=0
+      while IFS= read -r ip; do
+        case "$ip" in
+          0.0.0.0|127.0.0.1|255.255.255.255|'<HETZNER_VPS_IP>') ;;
+          *) has_real_ip=1; break ;;
+        esac
+      done < <(printf '%s\n' "$content" | grep -aoE '([0-9]{1,3}\.){3}[0-9]{1,3}' || true)
+      if [ "$has_real_ip" -eq 1 ]; then
+        printf '%s\n' "$line"
+      fi
+    done < <(
+      git show ":$file" 2>/dev/null \
+        | grep -aEn -e '([0-9]{1,3}\.){3}[0-9]{1,3}' \
+        || true
+    )
   )
 
   for line in "${ip_lines[@]}"; do
