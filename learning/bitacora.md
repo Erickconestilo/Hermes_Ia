@@ -250,6 +250,30 @@ Hermes respondio que el estado real ya incluye:
 - La ultima prueba real devolvio `id`, `estado`, `privacy_flags`, `suggested_format` y ruta del almacen, en vez de desviarse a descripcion o redaccion.
 - El cuello de botella principal deja de ser la entrada natural y pasa a ser la decision de versionado oficial o no.
 
+## Cierre de configuracion y optimizacion de Telegram - 2026-08-25
+
+- Se confirmaron dos perfiles aislados: `default` para CiudadanoInusual con
+  `gpt-5.6-terra` via `openai-codex`, y `auscultacion` con `gpt-5.6-luna` via
+  `openai-codex`.
+- Ambos perfiles usan `google/gemini-3.7-flash` via OpenRouter como fallback.
+  El saldo prepago de OpenRouter queda fijado operativamente en 5 EUR como
+  tope de emergencia.
+- En la primera pasada, `agent.max_turns` bajo de 60 a 20 en `default` y de
+  150 a 20 en `auscultacion`; se retiraron herramientas no usadas desde
+  Telegram.
+- En la segunda pasada se desactivaron `session_search`, `browser` y `bfl` en
+  ambos perfiles; `image_gen` quedo solo en `default`.
+- El prompt fijo total quedo en 42.710 B para `default` y 44.865 B para
+  `auscultacion`, frente a 53.843 B y 58.119 B de linea base: reduccion
+  acumulada de 20,7% y 22,8%. Los gateways quedaron activos despues de cada
+  reinicio.
+- Se resolvio una incidencia de Google AI Studio: una base URL nativa
+  `/v1beta`, credenciales ausentes en el `.env` del perfil y saturacion de
+  `gemini-3.7-flash` se presentaban como el mismo error de autenticacion.
+- La practica corregida es probar primero con `curl` contra el endpoint
+  compatible, despues configurar el perfil, reiniciar el gateway correcto y
+  verificarlo. Las credenciales no se imprimen ni se versionan.
+
 ## Recuperacion humana con copia - 2026-06-22
 
 - Se parcheo el gateway real de Telegram en `HERMES_HOME` para anadir botones de copia en respuestas con ids o rutas reutilizables.

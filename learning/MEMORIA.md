@@ -25,3 +25,5 @@ No sustituye la bitacora. No es lectura obligatoria de `BOOTSTRAP.md` (para no s
 - 2026-08-25: Telegram optimizado: max_turns 20 y menos herramientas no usadas; gateways activos. Ver bitacora.
 
 - 2026-08-25: Segunda pasada Telegram: session_search, browser y video fuera; image_gen solo en default. Ver bitacora.
+- 2026-08-25: Perfiles finales: terra/luna por Codex y Gemini 3.7 fallback; Telegram recortado. Ver bitacora.
+- 2026-08-25: Google: probar endpoint directo antes de atribuir un 503 o URL incorrecta a autenticacion. Ver bitacora.

@@ -9,6 +9,12 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 - validar `CiudadanoInusual Shorts V1` con tres videos cortos y uno de 2-15 minutos: A/B/C, aprobacion natural por Telegram, export manual y maximo una correccion por pieza
 - F-01 queda aceptado por ahora como mitigacion parcial verificada; no ampliar reglas sin un nuevo bloque de seguridad aprobado.
 
+## Configuracion final de perfiles
+
+- `default` es el perfil editorial de CiudadanoInusual y usa el bot editorial.
+- `auscultacion` es un perfil tecnico aislado para auscultacion, topografia, equipos y herramientas, con su propio bot y gateway.
+- El gateway tecnico es `hermes-gateway-auscultacion.service`; no publica contenido ni comparte memoria con `default`.
+
 ## Estado de pruebas en Windows
 
 - Las 9 pruebas omitidas son esperadas: seis requieren `HERMES_AGENT_SOURCE` (checkout local de Hermes) y tres requieren privilegio de enlaces simbolicos no disponible en este Windows.
