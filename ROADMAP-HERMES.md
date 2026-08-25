@@ -197,8 +197,8 @@ Personal Ops no publica, no toca secretos, no automatiza decisiones sensibles y 
 
 - El contrato minimo y su prueba documental sintetica estan diseñados en `projects/hermes_ia/EMPLEO-OPS-V0.md`.
 - CareerOps, JobSync y cualquier herramienta externa permanecen en `NO-GO`.
-- Los datos profesionales reales permanecen bloqueados por F-01 y por el alcance parcial de F-10 de `AUDITORIA-INTEGRAL-2026-08-11.md`; F-03 ya esta cerrado.
-- F-01 Fase A: `PARTIAL`; los scripts y pruebas están versionados, pero la protección global de terminal sigue abierta.
+- Los datos profesionales reales no se habilitan automáticamente: F-01 queda como mitigación parcial aceptada y F-10 mantiene alcance parcial; F-03 ya esta cerrado.
+- F-01 Fase A: `PARTIAL ACEPTADA`; tres rutas concretas devuelven `user-deny`. La protección global del proceso host, sockets directos y dominios permitidos queda fuera de alcance; el cierre completo requeriría Docker, descartado por ahora.
 - F-03: `CERRADO`; backup cifrado externo, checksum y restauracion aislada verificados el 2026-08-21.
 - Este experimento pertenece a Financial Ops y no desplaza la prioridad vigente de Hermes Creador.
 

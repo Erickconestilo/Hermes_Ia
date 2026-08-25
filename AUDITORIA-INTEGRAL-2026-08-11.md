@@ -3,6 +3,7 @@
 ## Actualizacion de estado - 2026-08-25
 
 - F-03: cerrado con backup externo cifrado y restauracion aislada verificada el 2026-08-21.
+- F-01: mitigación parcial aceptada; tres rutas concretas verificadas con `user-deny`. El proceso host, los sockets directos y los dominios permitidos quedan fuera de cobertura.
 - F-06 y F-08: parciales; las correcciones y evidencias existentes no equivalen a un cierre global de sus controles.
 - F-09: corregido en el alcance probado; conservar la verificacion real y no extender el cierre a flujos no cubiertos.
 
@@ -92,7 +93,7 @@ La arquitectura es deliberadamente de baja exposición: gateway local, Telegram 
 
 | ID | Severidad | Hallazgo | Estado | Bloquea Empleo Ops |
 |---|---|---|---|---|
-| F-01 | Alta | Las aprobaciones permiten exfiltración y escrituras indirectas a través de scripts/comandos | Verificado | Sí |
+| F-01 | Alta | Las aprobaciones tienen cobertura parcial frente a exfiltración y escrituras indirectas | Mitigación parcial aceptada | Limitación para datos reales y automatización saliente |
 | F-02 | Media | Captura móvil documentada y comportamiento instalado divergen | Verificado/inferido | Sí, si se reutiliza |
 | F-03 | Alta | No hay respaldo completo, actual, externo y restaurado; copias sensibles en el mismo host | Verificado | Sí |
 | F-04 | Media | Runtime 0.20.0 atrasado 536 commits y superficie de suministro permisiva | Verificado | No para V0 manual; sí para expansión |
@@ -113,19 +114,19 @@ La arquitectura es deliberadamente de baja exposición: gateway local, Telegram 
 
 - **Severidad:** Alta.
 - **Superficie:** VPS, `HERMES_HOME`, scripts y gateway.
-- **Estado:** Verificado mediante simulación seca; no se ejecutó ninguna acción.
-- **Evidencia exacta:** `hermes approvals test` devolvió `allow / no guard matched` para (a) `curl --data-binary @.../.env`, (b) `send-telegram-photo.py ... --chat-id <arbitrario>` y (c) `captura-movil.py export-curated --output ~/.ssh/authorized_keys`.
+- **Estado:** **MITIGACIÓN PARCIAL ACEPTADA**.
+- **Evidencia exacta:** la repetición real registrada el 2026-08-21 devolvió `user-deny` (código 3) para tres rutas concretas: (a) `curl` con carga directa de archivo, (b) `send-telegram-photo.py` a un destinatario Telegram arbitrario y (c) `captura-movil.py export-curated` hacia `~/.ssh/authorized_keys`.
 - **Impacto:** exfiltración de credenciales/archivos, envío a destinatarios no autorizados o sobrescritura de archivos sensibles aunque la acción exterior parezca una herramienta interna.
 - **Probabilidad:** Media; requiere una instrucción maliciosa, confusa o una cadena de herramientas, pero el control actual no la detiene.
-- **Corrección propuesta:** modelar efectos por datos y destino; negar lectura de secretos, validar el destinatario contra la allowlist, restringir exportaciones a una raíz dedicada, activar aprobación de escritura y hacer que Tirith falle cerrado en operaciones sensibles.
+- **Corrección propuesta:** mantener estas tres reglas como mitigación aceptada. El cierre completo requeriría una capa de aislamiento/egress para el backend Docker; Docker está descartado por ahora en el roadmap y no se activa en esta fase.
 - **Riesgo del arreglo:** Medio; controles demasiado amplios pueden bloquear operaciones legítimas y dejar Telegram inutilizable.
 - **Rollback:** conservar configuración y scripts previos; revertir una regla cada vez si falla una prueba legítima.
-- **Verificación posterior:** repetir exactamente las tres simulaciones y exigir `deny` o aprobación explícita contextual; ejecutar además casos positivos inocuos.
+- **Verificación posterior:** conservar la repetición de las tres simulaciones como regresión; no presentar sus resultados como cobertura global.
 - **¿Bloquea Empleo Ops?:** Sí. Un CV o historial profesional amplía el valor de los datos exfiltrables.
 
-#### Fase A de corrección — resultado `PARTIAL` (2026-08-11)
+#### Fase A de corrección — resultado `PARTIAL ACEPTADO` (2026-08-11, revisado 2026-08-25)
 
-La Fase A utilizó exclusivamente fixtures ficticios y temporales. Endurece los dos scripts versionados y prepara una mitigación textual para una familia de comandos, pero **no cierra F-01**: continúa abierta la ejecución genérica por terminal y no se aplicó ningún cambio al runtime.
+La Fase A utilizó exclusivamente fixtures ficticios y temporales. Endurece los dos scripts versionados y mantiene tres reglas concretas verificadas con `deny`. La ejecución genérica por terminal continúa fuera de cobertura, pero esta limitación queda aceptada por ahora; no se presenta como un cierre global ni se amplía sin un nuevo bloque de seguridad aprobado.
 
 **Descubrimiento del control real:**
 
@@ -145,13 +146,13 @@ La Fase A utilizó exclusivamente fixtures ficticios y temporales. Endurece los 
 | Listado que expone cuerpos o interpreta mal límite cero | Cuerpos excluidos por defecto; `--limit 0` devuelve cero filas | `PASS` sintético |
 | Instrucción de entrada que intenta cambiar la política | Rechazo antes de persistir y sin repetir el cuerpo | `PASS` sintético |
 | `curl` directo con carga de archivo | Patrones candidatos en fixture de `approvals.deny` | `PASS` aislado sólo para las formas cubiertas; no aplicado |
-| Exfiltración genérica por terminal o intérpretes alternativos | No existe control oficial path-aware demostrado en `0.20.0` | **Pendiente; mantiene F-01 abierto** |
+| Exfiltración genérica por terminal o intérpretes alternativos | No existe control path-aware demostrado en `0.20.0` | **Fuera de cobertura; limitación aceptada** |
 
 **Resultados reproducibles:** la suite ampliada terminó `OK` en Windows con 25 casos; 6 approvals se omiten allí porque el checkout oficial Linux no está disponible y 2 casos de symlink requieren un privilegio que ese Windows no concede. En Linux, con el venv oficial y el checkout instalado, pasaron 19/19 pruebas de scripts y 6/6 de approvals, incluidos symlinks, invocación histórica, `add/show/update-status/export`, interrupción atómica y la ausencia de resolución de efectos en approvals. La CLI oficial aislada produjo tres `user-deny` (código 3) para cargas ficticias y dos `allow` (código 0) para comandos inocuos. El timeout SSH observado antes fue intermitente: una comprobación posterior confirmó TCP/22, handshake, autenticación pública y ejecución de `true`; el alias DNS `hermes` no resuelve por sí mismo, pero `ssh_config` lo traduce a la IP configurada. No se ejecutó `curl`, no hubo tráfico Telegram ni lectura del estado real.
 
 La publicación mediante `os.replace` evita archivos JSONL parcialmente escritos y la interrupción deja intacto el archivo anterior. No hay todavía un bloqueo que serialice el ciclo completo leer-modificar-escribir: dos escritores concurrentes pueden perder la última actualización aunque no corrompan el formato. Esa limitación queda pendiente y no se presenta como resuelta por Fase A.
 
-**Cobertura pendiente:** comandos equivalentes mediante Python u otros binarios, sustituciones y variables de shell, scripts intermediarios, interpretación de efectos por archivo/destino, comportamiento humano ante solicitudes de aprobación y despliegue/verificación en el runtime vivo.
+**Limitación aceptada:** no cubre comandos equivalentes mediante Python u otros binarios, sustituciones y variables de shell, scripts intermediarios, interpretación de efectos por archivo/destino, el proceso host de Hermes, sockets directos ni exfiltración hacia dominios permitidos. El cierre completo requeriría backend Docker con una política de egress; ese backend está descartado por ahora en el roadmap.
 
 **Aplicación futura con rollback:** (1) registrar versión y hashes y respaldar los dos scripts y la configuración activa sin mostrar secretos; (2) desplegar primero los scripts y repetir pruebas sintéticas y `--dry-run`; (3) tras aprobación específica, añadir una regla candidata cada vez y verificar casos negativos y positivos; (4) evaluar fail-closed y sandbox/aprobación humana obligatoria sin considerar Tirith suficiente por sí solo; (5) ante regresión, restaurar los archivos respaldados, retirar la última regla y repetir la batería. Hasta demostrar un control global, la alternativa mínima es desactivar la ejecución terminal sensible o exigir aprobación humana y aislamiento.
 

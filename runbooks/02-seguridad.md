@@ -60,9 +60,25 @@ La mitigacion disponible esta desplegada en los scripts versionados y probada co
 
 Cubre: secretos reconocibles en commits, destinos no autorizados de los scripts protegidos, rutas sensibles y algunos escapes por symlink.
 
-No cubre: cualquier comando arbitrario que Hermes pueda ejecutar desde terminal, todas las formas de ofuscacion o exfiltracion, ni un bloqueo semantico global de red. F-01 permanece parcial hasta validar esa capa en el runtime real.
+No cubre: cualquier comando arbitrario que Hermes pueda ejecutar desde terminal, todas las formas de ofuscacion o exfiltracion, ni un bloqueo semantico global de red. F-01 queda como mitigacion parcial aceptada; el cierre global no forma parte del alcance actual.
 
 La postura por defecto sigue siendo privada y conservadora: Telegram esta permitido solo para los bots autorizados y no hay publicacion automatica.
+
+### `hermes egress` / iron-proxy — alcance comprobado (2026-08-25)
+
+La auditoría de solo lectura confirmó que `hermes egress` está desactivado en
+ambos perfiles: no hay binario, configuración, CA ni proceso activo. La función
+es un firewall de salida con inyección de credenciales para **sandboxes Docker**:
+el sandbox recibe tokens opacos, las peticiones pasan por el proxy TLS local y
+solo se reenvían a hosts permitidos.
+
+No protege el proceso host de Hermes ni sus llamadas LLM realizadas directamente
+desde el backend `local`. Tampoco cubre sockets que evitan el proxy, archivos de
+credenciales montados en el sandbox ni exfiltración hacia un dominio que ya esté
+permitido. Por tanto, no sustituye la mitigación parcial actual de F-01 y no
+aplica al backend vigente; solo debe reevaluarse si se aprueba migrar a Docker.
+
+Documentación oficial: [Egress proxy de Hermes](https://hermes-agent.nousresearch.com/docs/user-guide/egress/iron-proxy).
 
 ## Regla de cambios sensibles
 

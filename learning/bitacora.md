@@ -486,3 +486,9 @@ Hermes respondio que el estado real ya incluye:
 - Dominios activos por ejecucion real: Creador, Research, Mobile Ops y Personal Ops. Programador, Financial Ops, Operador, Builder, Arquitectura e Inspiration quedan fuera.
 - Se unifico la taxonomia del JSONL de capturas con `VALID_STATUSES`: `inbox`, `reviewed`, `converted` y `discarded`.
 - Metrica de cierre: 123 archivos Markdown recursivos y 109 activos fuera de `docs/archive/`.
+
+## F-01 — egress y reducción de superficie - 2026-08-25
+
+- La auditoría de `hermes egress` confirmó que iron-proxy solo protege sandboxes Docker; ambos perfiles usan `local`, por lo que no se activó.
+- El recorte de `browser`, `code_execution`, `computer_use` y `cron` en Telegram, hecho para ahorrar tokens, también redujo el radio de daño potencial de exfiltración.
+- Esta mejora reduce capacidades disponibles, pero no sustituye un firewall de red ni convierte F-01 en cobertura global.

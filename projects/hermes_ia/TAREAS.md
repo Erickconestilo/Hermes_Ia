@@ -100,9 +100,9 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 - estado: contrato sintetico diseñado y prueba documental `PASS`; no operativo
 - evidencia unica: `projects/hermes_ia/EMPLEO-OPS-V0.md`
 - herramientas externas: `NO-GO` actual para CareerOps, JobSync y equivalentes
-- datos reales: bloqueados por F-01, F-03 y F-10 de `AUDITORIA-INTEGRAL-2026-08-11.md`
-- F-01 Fase A: `PARTIAL`; los dos scripts versionados tienen correcciones probadas con fixtures ficticios, pero la ejecución genérica por terminal sigue abierta y nada se aplicó al runtime
-- proxima accion posterior: revisar y, sólo con aprobación, aplicar de forma reversible los scripts y reglas candidatas; mantener F-01 abierto hasta probar protección global
+- datos reales: no se habilitan automáticamente; F-01 queda como mitigación parcial aceptada y F-10 mantiene alcance parcial en `AUDITORIA-INTEGRAL-2026-08-11.md`
+- F-01 Fase A: `PARTIAL ACEPTADA`; tres rutas concretas verificadas con `user-deny`, mientras la ejecución genérica por terminal, sockets directos y dominios permitidos quedan fuera de cobertura
+- proxima accion posterior: no ampliar F-01 sin un bloque de seguridad separado y una decisión explícita sobre Docker
 - prioridad: no desplaza la siguiente tarea concreta ni la Fase 1 de Hermes Creador
 
 ## F-03 — Backup y restore verificable
