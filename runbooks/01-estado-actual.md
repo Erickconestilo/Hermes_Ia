@@ -25,26 +25,44 @@ A fecha actual, ya se ha validado lo siguiente:
 - funcionamiento de:
   - `hermes --version`
   - `node --version`
-- configuración de OpenRouter
-- funcionamiento de Hermes con modelo principal y fallback
+- configuración de `openai-codex` con fallback `openrouter`
+- funcionamiento de Hermes con el modelo principal y fallback finales
 - sincronización manual local ↔ VPS mediante Git local ya operativa para documentación y runbooks de `Hermes_Ia`
 - autenticación `openai-codex` validada en Hermes
 - respuesta funcional validada con `gpt-5.6-terra` en el runtime el 2026-08-21
 - Telegram Gateway configurado, autorizado solo para el usuario permitido y validado desde movil
-- servicio de usuario `hermes-gateway.service` activo con `systemd` y `linger` habilitado
+- servicios de usuario `hermes-gateway.service` y
+  `hermes-gateway-auscultacion.service` activos con `systemd` y `linger`
+  habilitado
 
-## Configuración actual del modelo
+## Configuracion final de modelos
 
-- proveedor principal: `openai-codex`
-- modelo principal activo observado el 2026-08-21: `gpt-5.6-terra`
-- fallback temporal: `OpenRouter`
-- modelo fallback actual: `nvidia/nemotron-3-ultra-550b-a55b:free`
+| Perfil | Proveedor principal | Modelo principal | Fallback | Base fallback |
+|---|---|---|---|---|
+| `default` | `openai-codex` | `gpt-5.6-terra` | `google/gemini-3.7-flash` | `openrouter` |
+| `auscultacion` | `openai-codex` | `gpt-5.6-luna` | `google/gemini-3.7-flash` | `openrouter` |
+
+Ambos perfiles usan backend terminal `local`, tienen `agent.max_turns: 20` y
+mantienen sus configuraciones y `.env` aislados.
+
+OpenRouter tiene un saldo prepago de 5 EUR definido como tope operativo de
+emergencia. No se versionan claves ni credenciales.
+
+## Estado final de Telegram
+
+Telegram sigue limitado a uso móvil autorizado. En ambos perfiles se retiraron
+de ese canal `session_search`, `browser` y `bfl`; `image_gen` solo queda en
+`default`. Se conservan `vision`, `file`, `memory`, `skills`, `todo`,
+`clarify` y `web`. La tabla completa y los rollbacks están en
+`runbooks/04-configuracion-modelo.md`.
 
 ## Estado de credenciales
 
 - `openai-codex` ya está autenticado en Hermes.
-- OpenRouter se mantiene configurado como fallback mediante entorno local, sin documentar ni versionar la clave.
-- `hermes doctor` ya valida `OpenAI Codex auth` y `OpenRouter API`.
+- OpenRouter se mantiene configurado como fallback mediante el entorno de cada
+  perfil, sin documentar ni versionar la clave.
+- La autenticacion de `openai-codex` y la credencial de OpenRouter se mantienen
+  separadas por perfil.
 - Telegram usa token guardado en `/home/hermes/.hermes/.env`, no versionado en Git.
 
 ## Advertencias no bloqueantes

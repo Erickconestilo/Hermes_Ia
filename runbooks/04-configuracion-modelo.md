@@ -1,73 +1,102 @@
-# 04 - Configuración del modelo
+# 04 - Configuracion del modelo
 
 ## Objetivo
 
-Configurar el proveedor de modelo más adecuado para una primera prueba estable.
+Mantener dos perfiles aislados, con un proveedor principal estable, fallback
+controlado y un coste operativo entendible.
 
-## Criterios
+## Proveedores soportados y alcance
 
-- simplicidad operativa
-- documentación oficial clara
-- bajo riesgo de bloqueo por credenciales o límites
-- sin guardar secretos en archivos versionados
+Hermes permite configurar proveedores compatibles mediante su configuracion de
+modelo y fallback. En esta instalacion solo se han validado en uso real:
 
-## Placeholders relevantes
+- `openai-codex` como proveedor principal.
+- `openrouter` como proveedor compatible de fallback.
 
-- `<OPENAI_API_KEY>`
-- `<OPENROUTER_API_KEY>`
+Esto no es una lista exhaustiva de todos los proveedores que Hermes puede
+admitir. Cualquier proveedor adicional requiere una prueba separada.
 
-## Dudas a resolver
+## Configuracion final aplicada
 
-- Qué proveedores soporta oficialmente Hermes hoy.
-- Qué flujo es más estable para una primera instalación: API key, OAuth u otro método oficial.
-- Qué implicaciones de coste, rate limits y privacidad tiene cada opción.
+| Perfil | Uso | Principal | Fallback | Backend |
+|---|---|---|---|---|
+| `default` | CiudadanoInusual | `gpt-5.6-terra` via `openai-codex` | `google/gemini-3.7-flash` via `openrouter` | `local` |
+| `auscultacion` | apoyo tecnico de campo | `gpt-5.6-luna` via `openai-codex` | `google/gemini-3.7-flash` via `openrouter` | `local` |
 
-## Decisión ejecutada
+Cada perfil tiene configuracion y secretos separados:
 
-- Proveedor elegido para la primera etapa: `OpenRouter`
-- Motivo:
-  - permite probar gratis primero
-  - evita meter varias claves de varios proveedores
-  - encaja con la prioridad actual de simplicidad
+- `/home/hermes/.hermes/config.yaml` y `/home/hermes/.hermes/.env`
+- `/home/hermes/.hermes/profiles/auscultacion/config.yaml` y
+  `/home/hermes/.hermes/profiles/auscultacion/.env`
 
-## Configuración aplicada
+El saldo prepago de OpenRouter queda limitado operativamente a 5 EUR como tope
+de emergencia. Es una medida de presupuesto, no un secreto ni una garantia de
+que un proveedor externo interprete el limite de la misma forma.
 
-- Modelo principal:
-  - `nex-agi/nex-n2-pro:free`
-- Fallback:
-  - `nvidia/nemotron-3-ultra-550b-a55b:free`
-- Backend terminal actual:
-  - `local`
+## Base URL y compatibilidad
 
-## Archivos tocados
+- `openai-codex` usa la base compatible del runtime:
+  `https://chatgpt.com/backend-api/codex`.
+- OpenRouter usa `https://openrouter.ai/api/v1`.
+- Para Google AI Studio con cliente compatible OpenAI, la base correcta es
+  `https://generativelanguage.googleapis.com/v1beta/openai`, no la API nativa
+  `https://generativelanguage.googleapis.com/v1beta`.
 
-- `/home/hermes/.hermes/config.yaml`
-- `/home/hermes/.hermes/.env`
+La URL debe corresponder al formato de API que espera el cliente. Una URL nativa
+de Google y una URL compatible OpenAI no son intercambiables.
 
-## Incidencia encontrada
+## Orden operativo obligatorio
 
-- La clave de OpenRouter se escribió inicialmente comentada en `.env`:
+1. Configurar el perfil correcto y revisar la configuracion no sensible.
+2. Verificar proveedor, modelo, base URL y credencial sin imprimir secretos.
+3. Reiniciar el gateway del mismo perfil.
+4. Comprobar el servicio correcto:
+   - `hermes-gateway.service` para `default`.
+   - `hermes-gateway-auscultacion.service` para `auscultacion`.
+5. Probar una peticion minima desde el canal correspondiente.
 
-```env
-# OPENROUTER_API_KEY=...
+No reiniciar el gateway de otro perfil como sustituto. Los perfiles son
+instancias aisladas.
+
+## Optimizacion final de Telegram
+
+Ambos perfiles quedaron con `agent.max_turns: 20`.
+
+En Telegram se desactivaron en ambos perfiles:
+
+- `session_search`
+- `browser`
+- `bfl` (video generation / BFL FLUX 3 Video)
+
+Ademas, `image_gen` se mantiene en `default` y esta desactivado en
+`auscultacion`. Se conservaron `vision`, `file`, `memory`, `skills`, `todo`,
+`clarify` y `web`.
+
+## Rollback completo de las dos pasadas
+
+El rollback se ejecuta por perfil y despues reinicia su gateway.
+
+### `default`
+
+```bash
+/home/hermes/.local/bin/hermes config set agent.max_turns 60
+/home/hermes/.local/bin/hermes tools enable --platform telegram session_search browser bfl delegation tts
+/home/hermes/.local/bin/hermes gateway restart
 ```
 
-- Mientras la línea estuvo comentada, `hermes doctor` reportó correctamente que no había credenciales disponibles para `openrouter`.
+### `auscultacion`
 
-## Corrección aplicada
-
-- Se activó la variable quitando el `#`.
-- Se dejó la clave sin comillas ni espacios extra:
-
-```env
-OPENROUTER_API_KEY=<OPENROUTER_API_KEY>
+```bash
+/home/hermes/.local/bin/hermes -p auscultacion config set agent.max_turns 150
+/home/hermes/.local/bin/hermes -p auscultacion tools enable --platform telegram session_search browser bfl image_gen delegation tts code_execution computer_use cronjob
+/home/hermes/.local/bin/hermes -p auscultacion gateway restart
 ```
 
-## Resultado alcanzado
+Estos comandos restauran los limites y herramientas desactivados en ambas
+pasadas. No modifican proveedores, modelos ni secretos.
 
-- `hermes doctor` pasó a validar `OpenRouter API`.
-- Hermes respondió con el modelo principal configurado a través de OpenRouter.
+## Nota sobre secretos
 
-## Nota operativa
-
-- Si una key aparece en chat, capturas o historial compartido, debe asumirse expuesta y conviene rotarla.
+Las claves viven solo en los `.env` de cada perfil y nunca deben aparecer en
+Git, chat, capturas ni salidas compartidas. Si una clave se expone, debe
+rotarse.
