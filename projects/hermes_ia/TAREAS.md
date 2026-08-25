@@ -15,6 +15,7 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 
 ## Cerrado recientemente
 
+- Perfil `auscultacion` operativo y documentado: instancia aislada con configuración y `.env` propios, además de bot de Telegram y gateway propios; desde 2026-08-25 usa `gemini-3.6-flash` vía Google AI Studio.
 - Migracion de config Hermes v29 -> v33 y correccion de `agent.verify_on_stop` a `"auto"`: ejecutado y verificado el 2026-08-08, ver `learning/bitacora.md`.
 - Hermes Agent actualizado de 0.16.0 a 0.20.0 (20883 commits): ejecutado y verificado el 2026-08-08, ver `learning/bitacora.md`. Backup completo tomado antes de actualizar. Gateway reiniciado y probado en real por Telegram (mensaje + `/whoami`). Hallazgo: trae panel web (`hermes dashboard`), apagado y no expuesto, sin conflicto con la politica de "sin dashboard publico".
 - endurecimiento SSH (`runbooks/02-seguridad.md`): ejecutado y verificado el 2026-08-08, ver `learning/bitacora.md`. `PasswordAuthentication no` activo; `PermitRootLogin` ya estaba correcto. Pendiente aparte y no bloqueante: `fail2ban`/`ufw`, requieren permiso explicito por ser cambio de sistema.
@@ -66,6 +67,7 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 
 ## Pendientes cercanas
 
+- a partir del 2026-08-31, comprobar que la cuota de `openai-codex` volvió y revertir `default` y `auscultacion` desde Gemini al proveedor principal si la validación es correcta; reiniciar cada gateway de perfil después de configurar
 - probar cinco entradas reales de Hermes Creador con lenguaje natural, sin exigir palabras clave, y comprobar que al menos cuatro queden bien encaminadas sin errores graves de privacidad
 - publicar manualmente al menos una de esas piezas y registrar resultado a 24 horas y 7 dias
 - probar dos usos reales mas de `Personal Ops V1` y medir si reduce friccion de portatil
@@ -108,8 +110,9 @@ Mantener una lista mínima, clara y útil de trabajo para el proyecto piloto `He
 
 - instalación base de Hermes validada
 - OpenRouter operativo
-- `openai-codex` autenticado y operativo como proveedor principal
+- `openai-codex` autenticado y operativo como proveedor principal antes del bloqueo temporal por cuota
 - `gpt-5.6-terra` observado como modelo principal por `openai-codex` el 2026-08-21
+- perfiles `default` y `auscultacion` configurados temporalmente con `gemini-3.6-flash` vía Google AI Studio el 2026-08-25
 - usos oficiales iniciales definidos: `Research`, `Content` y `Builder`
 - `JUDGE.md` creado y regla minima de 8/10 adoptada para salidas validas
 - guía operativa diaria creada para trabajo local ↔ VPS ↔ Hermes

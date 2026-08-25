@@ -25,46 +25,55 @@ A fecha actual, ya se ha validado lo siguiente:
 - funcionamiento de:
   - `hermes --version`
   - `node --version`
-- configuración de OpenRouter
-- funcionamiento de Hermes con modelo principal y fallback
+- configuración histórica de OpenRouter
 - sincronización manual local ↔ VPS mediante Git local ya operativa para documentación y runbooks de `Hermes_Ia`
 - autenticación `openai-codex` validada en Hermes
 - respuesta funcional validada con `gpt-5.6-terra` en el runtime el 2026-08-21
-- Telegram Gateway configurado, autorizado solo para el usuario permitido y validado desde movil
-- servicio de usuario `hermes-gateway.service` activo con `systemd` y `linger` habilitado
+- Google AI Studio validado como proveedor temporal mediante endpoint compatible con OpenAI
+- perfiles `default` y `auscultacion` configurados con `gemini-3.6-flash` el 2026-08-25
+- Telegram Gateway configurado y autorizado solo para el usuario permitido
+- el perfil `auscultacion` dispone de bot y gateway propios, aislados del perfil `default`
 
 ## Configuración actual del modelo
 
-- proveedor principal: `openai-codex`
-- modelo principal activo observado el 2026-08-21: `gpt-5.6-terra`
-- fallback temporal: `OpenRouter`
-- modelo fallback actual: `nvidia/nemotron-3-ultra-550b-a55b:free`
+- perfil `default`:
+  - proveedor actual: `Google AI Studio` mediante compatibilidad OpenAI
+  - modelo actual: `gemini-3.6-flash`
+- perfil `auscultacion`:
+  - proveedor actual: `Google AI Studio` mediante compatibilidad OpenAI
+  - modelo actual: `gemini-3.6-flash`
+- proveedor principal anterior: `openai-codex`
+- modelo principal anterior: `gpt-5.6-terra`
+- bloqueo actual del principal anterior: `429 usage_limit_reached` hasta el 2026-08-31
 
 ## Estado de credenciales
 
-- `openai-codex` ya está autenticado en Hermes.
-- OpenRouter se mantiene configurado como fallback mediante entorno local, sin documentar ni versionar la clave.
-- `hermes doctor` ya valida `OpenAI Codex auth` y `OpenRouter API`.
-- Telegram usa token guardado en `/home/hermes/.hermes/.env`, no versionado en Git.
+- Cada perfil mantiene su propio `.env` en `/home/hermes/.hermes/profiles/<perfil>/.env`; no se versionan secretos.
+- La presencia de una credencial en `hermes auth list` no sustituye la comprobación del `.env` del perfil.
+- `openai-codex` ya fue autenticado y validado antes del bloqueo por cuota.
+- OpenRouter queda como integración histórica validada, no como proveedor activo actual.
 
 ## Advertencias no bloqueantes
 
 Quedan abiertas, pero no impiden el uso actual:
 
-- `config.yaml` migrado y validado como `v29`
+- `config.yaml` migrado y validado como `v33`
 - Docker no instalado
 - Playwright Chromium no instalado
 - Discord no instalado
 - skills hub no inicializado
+- Google AI Studio usa nivel gratuito y está sujeto a límites de tasa/cuota
+- `hermes prompt-size` muestra aproximadamente 15K tokens de prompt fijo por mensaje
 
 ## Decisiones vigentes
 
 - Hermes corre de forma nativa
 - el usuario operativo es `hermes`
 - el backend actual es `local`
+- los perfiles son instancias aisladas y deben configurarse/reiniciarse explícitamente por perfil
 - no se expone dashboard público
 - no se expone API pública
-- Telegram Gateway queda operativo solo como canal movil autorizado
+- Telegram queda operativo solo como canal móvil autorizado
 - no se activan MCPs todavía
 - no se instala Playwright todavía salvo necesidad real
 
@@ -106,7 +115,7 @@ Esta fase no incluye:
 - Docker
 - Playwright
 - cron
-- cambios adicionales de Telegram fuera del gateway ya validado
+- cambios adicionales de Telegram fuera de los gateways ya validados
 - memoria externa
-- perfiles o subagentes
+- perfiles adicionales o subagentes sin necesidad demostrada
 - cambios sobre otros proyectos

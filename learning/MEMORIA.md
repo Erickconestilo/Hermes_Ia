@@ -21,3 +21,4 @@ No sustituye la bitacora. No es lectura obligatoria de `BOOTSTRAP.md` (para no s
 - 2026-08-21: Gobernanza reducida: BOOTSTRAP es único arranque; políticas secundarias remiten a fuentes canónicas.
 - 2026-08-24: Video Telegram validado con fotogramas y transcripcion local; `video_analyze` nativo sigue desactivado.
 - 2026-08-24: Shorts V1 desplegado con skill 0.2.0; faltan tres cortos y un largo reales por Telegram.
+- 2026-08-25: `default` y `auscultacion` pasan a Gemini 3.6 Flash vía Google AI Studio por cuota de Codex.
