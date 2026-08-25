@@ -136,6 +136,16 @@ Estado validado dentro de esta fase:
 
 La siguiente prioridad no es abrir integraciones pesadas. Es consolidar gobernanza, Hermes Creador y la formalizacion gradual de skills ya probadas.
 
+## Verificacion local
+
+La suite completa se ejecuta desde la raiz del repositorio con un unico comando:
+
+```text
+python -m unittest discover -s tests -t .
+```
+
+La linea base actual pasa con 51 pruebas. Se omiten 6 pruebas de `test_f01_approvals.py` porque requieren `HERMES_AGENT_SOURCE` apuntando a un checkout instalado de Hermes Agent, que no forma parte de este repositorio. En Windows pueden omitirse ademas 4 pruebas que necesitan crear enlaces simbolicos y el proceso no tiene ese privilegio; ambas omisiones son esperadas y quedan visibles en la salida de unittest.
+
 ## Fuentes
 
 - Documentacion oficial de Hermes / Nous Research: obligatoria antes de instalar.

@@ -26,3 +26,4 @@ No sustituye la bitacora. No es lectura obligatoria de `BOOTSTRAP.md` (para no s
 - 2026-08-25: Perfiles finales: terra/luna por Codex y Gemini 3.7 fallback; Telegram recortado. Ver bitacora.
 - 2026-08-25: Google: probar endpoint directo antes de atribuir un 503 o URL incorrecta a autenticacion. Ver bitacora.
 - 2026-08-25: `default` y `auscultacion` pasan a Gemini 3.6 Flash vía Google AI Studio por cuota de Codex.
+- 2026-08-25: Fase 1: retencion y secretos corregidos; suite unittest 51 OK y 10 omisiones explicadas. Ver bitacora.

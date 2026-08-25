@@ -465,3 +465,9 @@ Hermes respondio que el estado real ya incluye:
 - Diagnóstico aprendido: `Provider authentication failed` no distingue falta de credenciales de saturación; verificar primero el `.env` del perfil y hacer `curl` directo al endpoint antes de cambiar configuración.
 - Rollback: backup previo `hermes-backup-2026-08-25-084745.zip`; a partir del 2026-08-31 comprobar la recuperación de cuota y revertir ambos perfiles a `openai-codex` si vuelve a responder, reiniciando después el gateway correcto de cada perfil.
 - Base URL validada para Google AI Studio en Hermes: `https://generativelanguage.googleapis.com/v1beta/openai`; `/v1beta` sin `/openai` no sirve para esta integración.
+
+## Fase 1 - correcciones de retencion y secretos - 2026-08-25
+
+- La retencion identifica objetos expirados por identidad, evitando borrar registros validos con IDs duplicados y eliminando tambien registros sin ID.
+- El verificador de secretos soporta nombres Unicode, blobs binarios y lineas con IP permitida junto a IP real; se ampliaron las pruebas para GitHub, claves privadas y AWS sin filtrar valores.
+- La suite reproducible queda en `python -m unittest discover -s tests -t .`: 51 pruebas correctas y 10 omisiones esperadas en Windows o por dependencia externa.
